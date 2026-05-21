@@ -1,0 +1,5021 @@
+{
+  "count": 56,
+  "source": "Ashby App A (6th ed., 2025)",
+  "materials": [
+    {
+      "id": "cast-iron-ductile",
+      "name": "Cast iron, ductile (nodular)",
+      "family": "metals",
+      "short_name": "Cast iron (ductile)",
+      "subfamily": "ferrous-metals",
+      "applications": [
+        "Engine block castings",
+        "Heavy machinery frames",
+        "Wear-resistant components"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 7100.0,
+          "max": 7300.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 0.4,
+          "max": 0.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 170.0,
+          "max": 180.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 250.0,
+          "max": 680.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 410.0,
+          "max": 830.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 22.0,
+          "max": 54.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 1100.0,
+          "max": 1200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 460.0,
+          "max": 500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 29.0,
+          "max": 44.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 10.0,
+          "max": 13.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 49.0,
+          "max": 56.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 30.0,
+          "max": 30.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.2,
+          "max": 2.2,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 45.0,
+          "max": 45.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.69,
+          "max": 0.69,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "cast-iron-gray",
+      "name": "Cast iron, gray",
+      "family": "metals",
+      "short_name": "Cast iron (gray)",
+      "subfamily": "ferrous-metals",
+      "applications": [
+        "Engine castings",
+        "Vibration-damped machine bases",
+        "Cast cookware"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 7100.0,
+          "max": 7300.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 0.36,
+          "max": 0.36,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 80.0,
+          "max": 140.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 140.0,
+          "max": 420.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 140.0,
+          "max": 450.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 10.0,
+          "max": 24.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 1100.0,
+          "max": 1400.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 430.0,
+          "max": 500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 40.0,
+          "max": 72.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 11.0,
+          "max": 13.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 62.0,
+          "max": 86.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 29.0,
+          "max": 29.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.1,
+          "max": 2.1,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 45.0,
+          "max": 45.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.69,
+          "max": 0.69,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "high-carbon-steel",
+      "name": "High carbon steel",
+      "family": "metals",
+      "short_name": "Steel (high C)",
+      "subfamily": "ferrous-metals",
+      "applications": [
+        "Wear-tolerant tooling",
+        "Heavy springs",
+        "Rail track and rolling stock"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 7800.0,
+          "max": 7900.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 0.76,
+          "max": 0.76,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 200.0,
+          "max": 220.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 400.0,
+          "max": 1200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 550.0,
+          "max": 1600.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 27.0,
+          "max": 92.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 1300.0,
+          "max": 1500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 440.0,
+          "max": 510.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 47.0,
+          "max": 53.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 11.0,
+          "max": 14.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 17.0,
+          "max": 20.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 32.0,
+          "max": 32.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.4,
+          "max": 2.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 45.0,
+          "max": 45.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.42,
+          "max": 0.42,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 8.5,
+          "max": 8.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.67,
+          "max": 0.67,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "low-alloy-steel",
+      "name": "Low alloy steel",
+      "family": "metals",
+      "short_name": "Steel (low alloy)",
+      "subfamily": "ferrous-metals",
+      "applications": [
+        "Engineered springs",
+        "Rolling-element bearings",
+        "High-fatigue parts"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 7800.0,
+          "max": 7900.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 0.84,
+          "max": 0.84,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 210.0,
+          "max": 220.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 400.0,
+          "max": 1500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 550.0,
+          "max": 1800.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 14.0,
+          "max": 200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 1400.0,
+          "max": 1500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 410.0,
+          "max": 530.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 34.0,
+          "max": 55.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 11.0,
+          "max": 14.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 15.0,
+          "max": 35.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 31.0,
+          "max": 31.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.5,
+          "max": 2.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 49.0,
+          "max": 49.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.42,
+          "max": 0.42,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 9.0,
+          "max": 9.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.65,
+          "max": 0.65,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "low-carbon-steel",
+      "name": "Low carbon steel",
+      "family": "metals",
+      "short_name": "Steel (low C)",
+      "subfamily": "ferrous-metals",
+      "applications": [
+        "General structural shapes",
+        "Automotive sheet stock",
+        "Pressed containers"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 7800.0,
+          "max": 7900.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 0.76,
+          "max": 0.76,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 200.0,
+          "max": 220.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 250.0,
+          "max": 400.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 350.0,
+          "max": 580.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 41.0,
+          "max": 82.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 1470.0,
+          "max": 1500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 460.0,
+          "max": 510.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 49.0,
+          "max": 54.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 12.0,
+          "max": 13.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 15.0,
+          "max": 20.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 31.0,
+          "max": 31.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.3,
+          "max": 2.3,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 46.0,
+          "max": 46.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.42,
+          "max": 0.42,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 8.1,
+          "max": 8.1,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.64,
+          "max": 0.64,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "medium-carbon-steel",
+      "name": "Medium carbon steel",
+      "family": "metals",
+      "short_name": "Steel (med C)",
+      "subfamily": "ferrous-metals",
+      "applications": [
+        "Power-transmission components",
+        "Hand-tool stock",
+        "Quenched and tempered shafts"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 7800.0,
+          "max": 7900.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 0.76,
+          "max": 0.76,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 200.0,
+          "max": 220.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 310.0,
+          "max": 900.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 410.0,
+          "max": 1200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 12.0,
+          "max": 92.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 1400.0,
+          "max": 1500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 440.0,
+          "max": 520.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 45.0,
+          "max": 55.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 10.0,
+          "max": 14.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 15.0,
+          "max": 22.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 32.0,
+          "max": 32.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.4,
+          "max": 2.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 47.0,
+          "max": 47.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.42,
+          "max": 0.42,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 8.5,
+          "max": 8.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.67,
+          "max": 0.67,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "stainless-steel",
+      "name": "Stainless steel",
+      "family": "metals",
+      "short_name": "Stainless steel",
+      "subfamily": "ferrous-metals",
+      "applications": [
+        "Food and pharma equipment",
+        "Corrosion-resistant pipework",
+        "Surgical instruments"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 7600.0,
+          "max": 8100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 3.6,
+          "max": 3.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 190.0,
+          "max": 210.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 170.0,
+          "max": 1000.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 480.0,
+          "max": 2200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 62.0,
+          "max": 150.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 1350.0,
+          "max": 1400.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 450.0,
+          "max": 530.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 12.0,
+          "max": 24.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 13.0,
+          "max": 20.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 64.0,
+          "max": 110.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 73.0,
+          "max": 73.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 5.4,
+          "max": 5.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 130.0,
+          "max": 130.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.37,
+          "max": 0.37,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 16.0,
+          "max": 16.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 1.2,
+          "max": 1.2,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "aluminum-alloys",
+      "name": "Aluminum alloys",
+      "family": "metals",
+      "short_name": "Al alloys",
+      "subfamily": "nonferrous-metals",
+      "applications": [
+        "Lightweight aerospace components",
+        "Drawn beverage containers",
+        "Building cladding"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 2500.0,
+          "max": 2900.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 2.6,
+          "max": 2.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 68.0,
+          "max": 82.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 30.0,
+          "max": 500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 58.0,
+          "max": 550.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 22.0,
+          "max": 35.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 470.0,
+          "max": 680.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 860.0,
+          "max": 990.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 76.0,
+          "max": 240.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 21.0,
+          "max": 24.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 3.8,
+          "max": 6.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 190.0,
+          "max": 190.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 12.0,
+          "max": 12.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 1000.0,
+          "max": 1000.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.43,
+          "max": 0.43,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 33.0,
+          "max": 33.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 2.6,
+          "max": 2.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "copper-alloys",
+      "name": "Copper alloys",
+      "family": "metals",
+      "short_name": "Cu alloys",
+      "subfamily": "nonferrous-metals",
+      "applications": [
+        "Power and electronics conductors",
+        "Heat-exchange coils",
+        "Decorative brasswork"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 8900.0,
+          "max": 8900.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 5.6,
+          "max": 5.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 110.0,
+          "max": 150.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 30.0,
+          "max": 500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 100.0,
+          "max": 550.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 30.0,
+          "max": 90.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 980.0,
+          "max": 1100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 370.0,
+          "max": 390.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 160.0,
+          "max": 390.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 17.0,
+          "max": 18.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 1.7,
+          "max": 5.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 59.0,
+          "max": 59.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 3.6,
+          "max": 3.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 310.0,
+          "max": 310.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.43,
+          "max": 0.43,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 13.0,
+          "max": 13.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 1.1,
+          "max": 1.1,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "lead-alloys",
+      "name": "Lead alloys",
+      "family": "metals",
+      "short_name": "Pb alloys",
+      "subfamily": "nonferrous-metals",
+      "applications": [
+        "Radiation shielding",
+        "Solder alloys",
+        "Lead-acid battery plates"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 10000.0,
+          "max": 11000.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 3.9,
+          "max": 3.9,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 13.0,
+          "max": 15.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 8.0,
+          "max": 14.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 12.0,
+          "max": 20.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 5.0,
+          "max": 15.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 320.0,
+          "max": 330.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 120.0,
+          "max": 150.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 22.0,
+          "max": 36.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 18.0,
+          "max": 32.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 15.0,
+          "max": 22.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 32.0,
+          "max": 32.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.6,
+          "max": 2.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 480.0,
+          "max": 480.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.72,
+          "max": 0.72,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 8.6,
+          "max": 8.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.67,
+          "max": 0.67,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "magnesium-alloys",
+      "name": "Magnesium alloys",
+      "family": "metals",
+      "short_name": "Mg alloys",
+      "subfamily": "nonferrous-metals",
+      "applications": [
+        "Lightweight die castings",
+        "Power-tool housings",
+        "Aerospace and motorsport parts"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1700.0,
+          "max": 2000.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 3.4,
+          "max": 3.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 42.0,
+          "max": 47.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 70.0,
+          "max": 400.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 190.0,
+          "max": 480.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 12.0,
+          "max": 18.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 450.0,
+          "max": 650.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 960.0,
+          "max": 1100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 50.0,
+          "max": 160.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 25.0,
+          "max": 28.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 5.5,
+          "max": 15.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 320.0,
+          "max": 320.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 45.0,
+          "max": 45.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 980.0,
+          "max": 980.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.39,
+          "max": 0.39,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 49.0,
+          "max": 49.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 3.8,
+          "max": 3.8,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "nickel-alloys",
+      "name": "Nickel alloys",
+      "family": "metals",
+      "short_name": "Ni alloys",
+      "subfamily": "nonferrous-metals",
+      "applications": [
+        "High-temperature turbine blades",
+        "Chemical plant equipment",
+        "Thermocouple wires"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 8800.0,
+          "max": 9000.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 15.0,
+          "max": 15.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 190.0,
+          "max": 220.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 70.0,
+          "max": 1100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 350.0,
+          "max": 1200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 80.0,
+          "max": 110.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 1400.0,
+          "max": 1500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 450.0,
+          "max": 460.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 67.0,
+          "max": 91.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 12.0,
+          "max": 14.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 8.0,
+          "max": 10.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 220.0,
+          "max": 220.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 12.0,
+          "max": 12.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 260.0,
+          "max": 260.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.24,
+          "max": 0.24,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 37.0,
+          "max": 37.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 2.9,
+          "max": 2.9,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "titanium-alloys",
+      "name": "Titanium alloys",
+      "family": "metals",
+      "short_name": "Ti alloys",
+      "subfamily": "nonferrous-metals",
+      "applications": [
+        "Aerospace airframe parts",
+        "Biocompatible implants",
+        "High-strength corrosion-resistant components"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 4400.0,
+          "max": 4800.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 24.0,
+          "max": 24.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 90.0,
+          "max": 120.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 250.0,
+          "max": 1200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 300.0,
+          "max": 1600.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 14.0,
+          "max": 120.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 1500.0,
+          "max": 1700.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 520.0,
+          "max": 600.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 7.0,
+          "max": 14.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 7.9,
+          "max": 11.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 100.0,
+          "max": 170.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 620.0,
+          "max": 620.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 36.0,
+          "max": 36.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 290.0,
+          "max": 290.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.23,
+          "max": 0.23,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 81.0,
+          "max": 81.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 6.4,
+          "max": 6.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "tungsten-alloys",
+      "name": "Tungsten alloys",
+      "family": "metals",
+      "short_name": "W alloys",
+      "subfamily": "nonferrous-metals",
+      "applications": [
+        "Dense counterweights",
+        "High-temperature electrodes",
+        "Radiation shielding"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 10800.0,
+          "max": 20000.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 62.0,
+          "max": 62.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 310.0,
+          "max": 380.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 530.0,
+          "max": 800.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 720.0,
+          "max": 1500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 50.0,
+          "max": 60.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 3200.0,
+          "max": 3400.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 130.0,
+          "max": 140.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 100.0,
+          "max": 140.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 4.5,
+          "max": 6.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 10.0,
+          "max": 14.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 550.0,
+          "max": 550.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 36.0,
+          "max": 36.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 160.0,
+          "max": 160.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.36,
+          "max": 0.36,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 75.0,
+          "max": 75.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 5.9,
+          "max": 5.9,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "zinc-alloys",
+      "name": "Zinc alloys",
+      "family": "metals",
+      "short_name": "Zn alloys",
+      "subfamily": "nonferrous-metals",
+      "applications": [
+        "Low-temperature die castings",
+        "Sacrificial coatings",
+        "Hardware fittings"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 5000.0,
+          "max": 7000.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 3.4,
+          "max": 3.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 68.0,
+          "max": 95.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 80.0,
+          "max": 450.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 140.0,
+          "max": 520.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 10.0,
+          "max": 100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 370.0,
+          "max": 490.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 410.0,
+          "max": 540.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 100.0,
+          "max": 140.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 23.0,
+          "max": 28.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 5.4,
+          "max": 7.2,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 52.0,
+          "max": 52.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 4.0,
+          "max": 4.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 380.0,
+          "max": 380.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.22,
+          "max": 0.22,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 12.0,
+          "max": 12.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.97,
+          "max": 0.97,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "borosilicate-glass",
+      "name": "Borosilicate glass",
+      "family": "glasses",
+      "short_name": "Borosilicate",
+      "applications": [
+        "Thermal-shock-resistant labware",
+        "Lighting envelopes",
+        "Cookware"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 2200.0,
+          "max": 2300.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 5.4,
+          "max": 5.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 61.0,
+          "max": 64.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 22.0,
+          "max": 32.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 22.0,
+          "max": 32.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.5,
+          "max": 0.7,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 450.0,
+          "max": 600.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 760.0,
+          "max": 800.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 1.0,
+          "max": 1.3,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 3.2,
+          "max": 4.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "dielectric_constant": {
+          "min": 4.7,
+          "max": 6.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 29.0,
+          "max": 29.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 1.7,
+          "max": 1.7,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 15.0,
+          "max": 15.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.24,
+          "max": 0.24,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 24.0,
+          "max": 24.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 1.2,
+          "max": 1.2,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "silica-glass",
+      "name": "Silica glass",
+      "family": "glasses",
+      "short_name": "Silica glass",
+      "applications": [
+        "Fused-quartz crucibles",
+        "UV-transparent optics",
+        "High-temperature furnace components"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 2200.0,
+          "max": 2200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 7.4,
+          "max": 7.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 68.0,
+          "max": 74.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 45.0,
+          "max": 160.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 45.0,
+          "max": 160.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.6,
+          "max": 0.8,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 960.0,
+          "max": 1600.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 680.0,
+          "max": 730.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 1.4,
+          "max": 1.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 0.55,
+          "max": 0.75,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "dielectric_constant": {
+          "min": 3.7,
+          "max": 3.9,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 39.0,
+          "max": 39.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.3,
+          "max": 2.3,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 1.4,
+          "max": 1.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.25,
+          "max": 0.25,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 32.0,
+          "max": 32.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 1.6,
+          "max": 1.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "soda-lime-glass",
+      "name": "Soda-lime glass",
+      "family": "glasses",
+      "short_name": "Soda-lime",
+      "applications": [
+        "Architectural glazing",
+        "Container glass",
+        "Display screens"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 2400.0,
+          "max": 2500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 1.5,
+          "max": 1.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 68.0,
+          "max": 72.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 30.0,
+          "max": 35.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 31.0,
+          "max": 35.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.55,
+          "max": 0.7,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 440.0,
+          "max": 590.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 850.0,
+          "max": 950.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 2.4,
+          "max": 2.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 1.4,
+          "max": 1.7,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "dielectric_constant": {
+          "min": 7.0,
+          "max": 7.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 11.0,
+          "max": 11.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 0.76,
+          "max": 0.76,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 14.0,
+          "max": 14.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.24,
+          "max": 0.24,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 8.7,
+          "max": 8.7,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.53,
+          "max": 0.53,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "alumina",
+      "name": "Alumina",
+      "family": "ceramics-technical",
+      "short_name": "Al2O3",
+      "applications": [
+        "Insulator substrates",
+        "Wear-tool inserts",
+        "Spark-plug bodies"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 3800.0,
+          "max": 4000.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 25.0,
+          "max": 25.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 340.0,
+          "max": 390.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 350.0,
+          "max": 590.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 350.0,
+          "max": 590.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 3.3,
+          "max": 4.8,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 2000.0,
+          "max": 2100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 790.0,
+          "max": 820.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 26.0,
+          "max": 39.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 7.0,
+          "max": 7.9,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "dielectric_constant": {
+          "min": 6.5,
+          "max": 6.8,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 52.0,
+          "max": 52.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.8,
+          "max": 2.8,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 55.0,
+          "max": 55.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "aluminum-nitride",
+      "name": "Aluminum nitride",
+      "family": "ceramics-technical",
+      "short_name": "AlN",
+      "applications": [
+        "High-conductivity electronic substrates",
+        "RF-package heat spreaders"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 3300.0,
+          "max": 3300.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 130.0,
+          "max": 130.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 300.0,
+          "max": 350.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 300.0,
+          "max": 350.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 300.0,
+          "max": 350.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 2.5,
+          "max": 3.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 2400.0,
+          "max": 2500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 780.0,
+          "max": 820.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 140.0,
+          "max": 200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 4.9,
+          "max": 5.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "dielectric_constant": {
+          "min": 8.3,
+          "max": 9.3,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 230.0,
+          "max": 230.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 13.0,
+          "max": 13.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 240.0,
+          "max": 240.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "silicon",
+      "name": "Silicon",
+      "family": "ceramics-technical",
+      "short_name": "Si",
+      "applications": [
+        "Semiconductor wafers",
+        "MEMS devices",
+        "Solar cells"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 2300.0,
+          "max": 2400.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 11.0,
+          "max": 11.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 140.0,
+          "max": 160.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 160.0,
+          "max": 180.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 160.0,
+          "max": 180.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.83,
+          "max": 0.94,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 1400.0,
+          "max": 1400.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 670.0,
+          "max": 720.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 140.0,
+          "max": 150.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 2.0,
+          "max": 3.2,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "dielectric_constant": {
+          "min": 11.0,
+          "max": 12.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 120.0,
+          "max": 120.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 5.0,
+          "max": 5.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 24.0,
+          "max": 24.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "silicon-carbide",
+      "name": "Silicon carbide",
+      "family": "ceramics-technical",
+      "short_name": "SiC",
+      "applications": [
+        "High-temperature shaft seals",
+        "Cutting and grinding abrasives",
+        "Light armor plate"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 3100.0,
+          "max": 3200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 16.0,
+          "max": 16.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 400.0,
+          "max": 460.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 400.0,
+          "max": 610.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 400.0,
+          "max": 610.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 3.0,
+          "max": 5.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 2200.0,
+          "max": 2500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 660.0,
+          "max": 800.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 80.0,
+          "max": 130.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 4.0,
+          "max": 4.8,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "dielectric_constant": {
+          "min": 6.3,
+          "max": 9.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 170.0,
+          "max": 170.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 7.2,
+          "max": 7.2,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 58.0,
+          "max": 58.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "tungsten-carbide",
+      "name": "Tungsten carbide",
+      "family": "ceramics-technical",
+      "short_name": "WC",
+      "applications": [
+        "Carbide cutting inserts",
+        "Rock-drilling bits",
+        "Wear plates"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 10500.0,
+          "max": 10600.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 22.0,
+          "max": 22.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 630.0,
+          "max": 700.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 340.0,
+          "max": 550.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 370.0,
+          "max": 550.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 2.0,
+          "max": 3.8,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 2800.0,
+          "max": 2900.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 180.0,
+          "max": 290.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 55.0,
+          "max": 88.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 5.2,
+          "max": 7.1,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 20.0,
+          "max": 100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 580.0,
+          "max": 580.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 38.0,
+          "max": 38.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 83.0,
+          "max": 83.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.31,
+          "max": 0.31,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "brick",
+      "name": "Brick",
+      "family": "ceramics-nontechnical",
+      "short_name": "Brick",
+      "applications": [
+        "Masonry construction",
+        "Facade cladding"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1600.0,
+          "max": 2100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 1.0,
+          "max": 1.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 15.0,
+          "max": 30.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 5.0,
+          "max": 14.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 5.0,
+          "max": 14.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 1.0,
+          "max": 2.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 930.0,
+          "max": 1200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 750.0,
+          "max": 850.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.46,
+          "max": 0.73,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 5.0,
+          "max": 8.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 3.0,
+          "max": 3.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 0.24,
+          "max": 0.24,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 5.5,
+          "max": 5.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.17,
+          "max": 0.17,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "concrete",
+      "name": "Concrete",
+      "family": "ceramics-nontechnical",
+      "short_name": "Concrete",
+      "applications": [
+        "Civil structural construction",
+        "Foundations and slabs"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 2300.0,
+          "max": 2600.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 0.05,
+          "max": 0.05,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 15.0,
+          "max": 25.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 1.0,
+          "max": 3.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 1.0,
+          "max": 1.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.35,
+          "max": 0.45,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 930.0,
+          "max": 1200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 840.0,
+          "max": 1100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.8,
+          "max": 2.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 6.0,
+          "max": 13.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 0.82,
+          "max": 0.82,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 0.12,
+          "max": 0.12,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 3.4,
+          "max": 3.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.13,
+          "max": 0.13,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 0.8,
+          "max": 0.8,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.07,
+          "max": 0.07,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "stone",
+      "name": "Stone",
+      "family": "ceramics-nontechnical",
+      "short_name": "Stone",
+      "applications": [
+        "Cut stone facades",
+        "Monumental construction",
+        "Pavers and tiles"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 2000.0,
+          "max": 2600.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 0.5,
+          "max": 0.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 20.0,
+          "max": 60.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 2.0,
+          "max": 25.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 2.0,
+          "max": 25.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.7,
+          "max": 1.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 1200.0,
+          "max": 1400.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 840.0,
+          "max": 920.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 5.4,
+          "max": 6.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 3.7,
+          "max": 6.3,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 1.0,
+          "max": 1.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 0.06,
+          "max": 0.06,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 3.4,
+          "max": 3.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "butyl-rubber",
+      "name": "Butyl rubber",
+      "family": "elastomers",
+      "short_name": "Butyl rubber",
+      "applications": [
+        "Inner tubes and tire liners",
+        "Vibration mounts",
+        "Chemical-resistant tubing"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 900.0,
+          "max": 920.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 2.3,
+          "max": 2.3,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.001,
+          "max": 0.002,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 2.0,
+          "max": 3.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 5.0,
+          "max": 10.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.07,
+          "max": 0.1,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": -73.0,
+          "max": -63.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1800.0,
+          "max": 2500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.08,
+          "max": 0.1,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 120.0,
+          "max": 300.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 95.0,
+          "max": 95.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 4.4,
+          "max": 4.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 110.0,
+          "max": 110.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.028,
+          "max": 0.028,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "eva",
+      "name": "Ethylene vinyl acetate",
+      "family": "elastomers",
+      "short_name": "EVA",
+      "applications": [
+        "Athletic-shoe midsoles",
+        "Flexible film packaging",
+        "Adhesive hot-melt formulations"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 950.0,
+          "max": 960.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 1.8,
+          "max": 1.8,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.01,
+          "max": 0.04,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 12.0,
+          "max": 18.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 16.0,
+          "max": 20.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.5,
+          "max": 0.7,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": -73.0,
+          "max": -23.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 2000.0,
+          "max": 2200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.3,
+          "max": 0.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 160.0,
+          "max": 190.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 79.0,
+          "max": 79.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.1,
+          "max": 2.1,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 2.8,
+          "max": 2.8,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.001,
+          "max": 0.001,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "natural-rubber",
+      "name": "Natural rubber",
+      "family": "elastomers",
+      "short_name": "NR",
+      "applications": [
+        "Tire treads and inner tubes",
+        "Latex gloves and films",
+        "Vibration-damping mounts"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 920.0,
+          "max": 930.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 1.6,
+          "max": 1.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.0015,
+          "max": 0.0025,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 20.0,
+          "max": 30.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 22.0,
+          "max": 32.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.15,
+          "max": 0.25,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": -78.0,
+          "max": -63.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1800.0,
+          "max": 2500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.1,
+          "max": 0.14,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 150.0,
+          "max": 450.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 78.0,
+          "max": 78.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.0,
+          "max": 2.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 17000.0,
+          "max": 17000.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.001,
+          "max": 0.001,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "polychloroprene",
+      "name": "Polychloroprene (Neoprene)",
+      "family": "elastomers",
+      "short_name": "Neoprene",
+      "applications": [
+        "Marine and outdoor seals",
+        "Wetsuit material",
+        "Oil-resistant gaskets"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1200.0,
+          "max": 1300.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 4.7,
+          "max": 4.7,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.0007,
+          "max": 0.002,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 3.4,
+          "max": 24.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 3.4,
+          "max": 24.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.1,
+          "max": 0.3,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": -48.0,
+          "max": -43.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 2000.0,
+          "max": 2200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.1,
+          "max": 0.12,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 580.0,
+          "max": 610.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 64.0,
+          "max": 64.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 1.5,
+          "max": 1.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 220.0,
+          "max": 220.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.014,
+          "max": 0.014,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "silicone-elastomers",
+      "name": "Silicone elastomers",
+      "family": "elastomers",
+      "short_name": "Silicone",
+      "applications": [
+        "Medical implant components",
+        "Electronics potting compounds",
+        "High-temperature seals"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1300.0,
+          "max": 1800.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 5.4,
+          "max": 5.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.005,
+          "max": 0.022,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 2.4,
+          "max": 5.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 2.4,
+          "max": 5.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.033,
+          "max": 0.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": -120.0,
+          "max": -73.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1100.0,
+          "max": 1300.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.3,
+          "max": 1.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 250.0,
+          "max": 300.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 120.0,
+          "max": 120.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 6.5,
+          "max": 6.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 3.3,
+          "max": 3.3,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.001,
+          "max": 0.001,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "abs",
+      "name": "Acrylonitrile butadiene styrene (ABS)",
+      "family": "polymers",
+      "short_name": "ABS",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Injection-molded enclosures",
+        "Automotive trim",
+        "Consumer-product housings"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1000.0,
+          "max": 1200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 1.9,
+          "max": 1.9,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 1.1,
+          "max": 2.9,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 19.0,
+          "max": 51.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 28.0,
+          "max": 55.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 1.2,
+          "max": 4.3,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": 88.0,
+          "max": 130.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1400.0,
+          "max": 1900.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.19,
+          "max": 0.34,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 85.0,
+          "max": 230.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 92.0,
+          "max": 92.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 3.4,
+          "max": 3.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 170.0,
+          "max": 170.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.04,
+          "max": 0.04,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 32.0,
+          "max": 32.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 1.2,
+          "max": 1.2,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "polyamide",
+      "name": "Polyamides (nylons, PA)",
+      "family": "polymers",
+      "short_name": "Nylon",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Wear-resistant gears and bearings",
+        "Textile fibers",
+        "Engineered plumbing fittings"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1100.0,
+          "max": 1100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 5.3,
+          "max": 5.3,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 2.6,
+          "max": 3.2,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 50.0,
+          "max": 95.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 90.0,
+          "max": 170.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 2.2,
+          "max": 5.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 44.0,
+          "max": 56.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1600.0,
+          "max": 1700.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.23,
+          "max": 0.25,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 140.0,
+          "max": 150.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 140.0,
+          "max": 140.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 7.0,
+          "max": 7.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 380.0,
+          "max": 380.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.007,
+          "max": 0.007,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 43.0,
+          "max": 43.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 3.0,
+          "max": 3.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "polycarbonate",
+      "name": "Polycarbonate (PC)",
+      "family": "polymers",
+      "short_name": "PC",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Impact-resistant glazing",
+        "Protective eyewear",
+        "Medical-device housings"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1100.0,
+          "max": 1200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 3.4,
+          "max": 3.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 2.0,
+          "max": 2.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 59.0,
+          "max": 70.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 60.0,
+          "max": 72.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 2.1,
+          "max": 4.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": 140.0,
+          "max": 200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1500.0,
+          "max": 1600.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.19,
+          "max": 0.22,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 120.0,
+          "max": 140.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 110.0,
+          "max": 110.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 4.8,
+          "max": 4.8,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 170.0,
+          "max": 170.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.007,
+          "max": 0.007,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 37.0,
+          "max": 37.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 2.4,
+          "max": 2.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "peek",
+      "name": "Polyetheretherketone (PEEK)",
+      "family": "polymers",
+      "short_name": "PEEK",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "High-temperature engineered components",
+        "Aerospace bearings",
+        "Surgical implant subassemblies"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1300.0,
+          "max": 1300.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 92.0,
+          "max": 92.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 3.8,
+          "max": 4.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 65.0,
+          "max": 95.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 70.0,
+          "max": 100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 2.7,
+          "max": 4.3,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 140.0,
+          "max": 200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1400.0,
+          "max": 1500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.24,
+          "max": 0.26,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 72.0,
+          "max": 190.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 300.0,
+          "max": 300.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 17.0,
+          "max": 17.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 920.0,
+          "max": 920.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.014,
+          "max": 0.014,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 100.0,
+          "max": 100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 5.7,
+          "max": 5.7,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "polyethylene",
+      "name": "Polyethylene (PE)",
+      "family": "polymers",
+      "short_name": "PE",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Flexible packaging films",
+        "Blow-molded bottles",
+        "Joint-replacement bearings"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 940.0,
+          "max": 960.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 1.6,
+          "max": 1.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.62,
+          "max": 0.9,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 18.0,
+          "max": 29.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 21.0,
+          "max": 45.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 1.4,
+          "max": 1.7,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 120.0,
+          "max": 130.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1800.0,
+          "max": 1900.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.4,
+          "max": 0.44,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 130.0,
+          "max": 200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 75.0,
+          "max": 75.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 1.9,
+          "max": 1.9,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 58.0,
+          "max": 58.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.084,
+          "max": 0.084,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 27.0,
+          "max": 27.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.94,
+          "max": 0.94,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "pet",
+      "name": "Polyethylene terephthalate (PET)",
+      "family": "polymers",
+      "short_name": "PET",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Beverage bottles",
+        "Industrial fibers and tapes",
+        "Food-grade packaging"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1300.0,
+          "max": 1400.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 1.4,
+          "max": 1.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 2.8,
+          "max": 4.1,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 57.0,
+          "max": 62.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 48.0,
+          "max": 72.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 4.5,
+          "max": 5.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 68.0,
+          "max": 80.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1400.0,
+          "max": 1500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.14,
+          "max": 0.15,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 110.0,
+          "max": 120.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 73.0,
+          "max": 73.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.7,
+          "max": 2.7,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 130.0,
+          "max": 130.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.21,
+          "max": 0.21,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 28.0,
+          "max": 28.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 1.5,
+          "max": 1.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "pmma",
+      "name": "Polymethyl methacrylate (PMMA)",
+      "family": "polymers",
+      "short_name": "PMMA",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Optical-quality glazing",
+        "Display covers",
+        "Light-pipe components"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1200.0,
+          "max": 1200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 4.3,
+          "max": 4.3,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 2.2,
+          "max": 3.8,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 54.0,
+          "max": 72.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 48.0,
+          "max": 80.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.7,
+          "max": 1.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": 85.0,
+          "max": 160.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1500.0,
+          "max": 1600.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.084,
+          "max": 0.25,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 72.0,
+          "max": 160.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "refractive_index": {
+          "min": 1.49,
+          "max": 1.49,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 100.0,
+          "max": 100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 4.9,
+          "max": 4.9,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 76.0,
+          "max": 76.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.007,
+          "max": 0.007,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 38.0,
+          "max": 38.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 2.2,
+          "max": 2.2,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "pom",
+      "name": "Polyoxymethylene (Acetal, POM)",
+      "family": "polymers",
+      "short_name": "POM",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Precision gears and snaps",
+        "Small mechanism parts",
+        "Appliance internals"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1400.0,
+          "max": 1400.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 2.9,
+          "max": 2.9,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 2.5,
+          "max": 5.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 49.0,
+          "max": 72.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 60.0,
+          "max": 90.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 1.7,
+          "max": 4.2,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 160.0,
+          "max": 180.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1400.0,
+          "max": 1400.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.22,
+          "max": 0.35,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 76.0,
+          "max": 200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 86.0,
+          "max": 86.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 3.2,
+          "max": 3.2,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 250.0,
+          "max": 250.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.001,
+          "max": 0.001,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 36.0,
+          "max": 36.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 1.8,
+          "max": 1.8,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "polypropylene",
+      "name": "Polypropylene (PP)",
+      "family": "polymers",
+      "short_name": "PP",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Living-hinge containers",
+        "Chemical-resistant piping",
+        "Synthetic fibers"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 890.0,
+          "max": 910.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 1.4,
+          "max": 1.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.9,
+          "max": 1.55,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 21.0,
+          "max": 37.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 28.0,
+          "max": 41.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 3.0,
+          "max": 4.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 150.0,
+          "max": 170.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1900.0,
+          "max": 2000.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.11,
+          "max": 0.17,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 120.0,
+          "max": 180.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 80.0,
+          "max": 80.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.9,
+          "max": 2.9,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 39.0,
+          "max": 39.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.055,
+          "max": 0.055,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 23.0,
+          "max": 23.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.99,
+          "max": 0.99,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "polystyrene",
+      "name": "Polystyrene (PS)",
+      "family": "polymers",
+      "short_name": "PS",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Disposable packaging",
+        "Optical clarity products",
+        "Foamed insulation board"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1000.0,
+          "max": 1100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 2.2,
+          "max": 2.2,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 1.2,
+          "max": 2.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 29.0,
+          "max": 56.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 36.0,
+          "max": 57.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.7,
+          "max": 1.1,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": 74.0,
+          "max": 110.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1700.0,
+          "max": 1800.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.12,
+          "max": 0.13,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 90.0,
+          "max": 150.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 82.0,
+          "max": 82.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.5,
+          "max": 2.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 150.0,
+          "max": 150.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.06,
+          "max": 0.06,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 29.0,
+          "max": 29.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 1.3,
+          "max": 1.3,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "ptfe",
+      "name": "Polytetrafluoroethylene (PTFE/Teflon)",
+      "family": "polymers",
+      "short_name": "PTFE",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Low-friction bearings",
+        "Chemical-process gaskets",
+        "Wire insulation"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 2100.0,
+          "max": 2200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 13.0,
+          "max": 13.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.4,
+          "max": 0.55,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 15.0,
+          "max": 25.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 20.0,
+          "max": 30.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 1.3,
+          "max": 1.8,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 110.0,
+          "max": 120.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1000.0,
+          "max": 1100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.24,
+          "max": 0.26,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 130.0,
+          "max": 220.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 300.0,
+          "max": 300.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 16.0,
+          "max": 16.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 450.0,
+          "max": 450.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.007,
+          "max": 0.007,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 39.0,
+          "max": 39.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 1.9,
+          "max": 1.9,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "pvc",
+      "name": "Polyvinylchloride (PVC)",
+      "family": "polymers",
+      "short_name": "PVC",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Plumbing and drainage pipe",
+        "Window-frame extrusions",
+        "Flexible film products"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1300.0,
+          "max": 1600.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 2.6,
+          "max": 2.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 2.1,
+          "max": 4.1,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 35.0,
+          "max": 52.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 41.0,
+          "max": 65.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 1.5,
+          "max": 5.1,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": 75.0,
+          "max": 100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1400.0,
+          "max": 1400.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.15,
+          "max": 0.29,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 100.0,
+          "max": 150.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 65.0,
+          "max": 65.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.7,
+          "max": 2.7,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 190.0,
+          "max": 190.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.015,
+          "max": 0.015,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 23.0,
+          "max": 23.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 1.1,
+          "max": 1.1,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "epoxy",
+      "name": "Epoxies",
+      "family": "polymers",
+      "short_name": "Epoxy",
+      "subfamily": "thermosets",
+      "applications": [
+        "Structural adhesives",
+        "Composite-matrix resin",
+        "Encapsulation compounds"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1100.0,
+          "max": 1400.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 2.6,
+          "max": 2.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 2.4,
+          "max": 3.1,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 36.0,
+          "max": 72.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 45.0,
+          "max": 90.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.4,
+          "max": 2.2,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": 67.0,
+          "max": 170.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1500.0,
+          "max": 1700.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.18,
+          "max": 0.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 58.0,
+          "max": 120.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 130.0,
+          "max": 130.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 6.6,
+          "max": 6.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 28.0,
+          "max": 28.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.007,
+          "max": 0.007,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "phenolic",
+      "name": "Phenolics",
+      "family": "polymers",
+      "short_name": "Phenolic",
+      "subfamily": "thermosets",
+      "applications": [
+        "Heat-resistant electrical fittings",
+        "Press-molded handles",
+        "Wood-product adhesives"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1200.0,
+          "max": 1300.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 1.8,
+          "max": 1.8,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 2.8,
+          "max": 4.8,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 28.0,
+          "max": 50.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 35.0,
+          "max": 62.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.79,
+          "max": 1.2,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": 170.0,
+          "max": 270.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1500.0,
+          "max": 1500.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.14,
+          "max": 0.15,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 120.0,
+          "max": 120.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 77.0,
+          "max": 77.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 1.9,
+          "max": 1.9,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 51.0,
+          "max": 51.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.007,
+          "max": 0.007,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "polyester-thermoset",
+      "name": "Polyester (thermoset)",
+      "family": "polymers",
+      "short_name": "Polyester",
+      "subfamily": "thermosets",
+      "applications": [
+        "Marine and recreational composites",
+        "Glass-fiber bodywork",
+        "Architectural panels"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1000.0,
+          "max": 1400.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 4.1,
+          "max": 4.1,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 2.1,
+          "max": 4.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 33.0,
+          "max": 40.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 41.0,
+          "max": 90.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 1.1,
+          "max": 1.7,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": 150.0,
+          "max": 210.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1500.0,
+          "max": 1600.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.29,
+          "max": 0.3,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 99.0,
+          "max": 180.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 71.0,
+          "max": 71.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.5,
+          "max": 2.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 200.0,
+          "max": 200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.001,
+          "max": 0.001,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "flexible-foam-ld",
+      "name": "Flexible polymer foam (low density)",
+      "family": "foams",
+      "short_name": "Flex foam LD",
+      "applications": [
+        "Cushion stuffing",
+        "Protective-packaging inserts",
+        "Bedding fillers"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 38.0,
+          "max": 70.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 2.7,
+          "max": 2.7,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.001,
+          "max": 0.003,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 0.02,
+          "max": 0.3,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 0.24,
+          "max": 2.4,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.015,
+          "max": 0.05,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": -110.0,
+          "max": -13.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1800.0,
+          "max": 2300.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.04,
+          "max": 0.059,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 120.0,
+          "max": 220.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 90.0,
+          "max": 90.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 3.2,
+          "max": 3.2,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 170.0,
+          "max": 170.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.084,
+          "max": 0.084,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "flexible-foam-md",
+      "name": "Flexible polymer foam (medium density)",
+      "family": "foams",
+      "short_name": "Flex foam MD",
+      "applications": [
+        "Upholstery foam",
+        "Acoustic-damping pads",
+        "Filtration sponges"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 70.0,
+          "max": 120.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 2.7,
+          "max": 2.7,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.004,
+          "max": 0.012,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 0.048,
+          "max": 0.7,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 0.43,
+          "max": 3.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.03,
+          "max": 0.09,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": -110.0,
+          "max": -13.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1800.0,
+          "max": 2300.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.041,
+          "max": 0.078,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 120.0,
+          "max": 220.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 90.0,
+          "max": 90.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 3.2,
+          "max": 3.2,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 170.0,
+          "max": 170.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "rigid-foam-hd",
+      "name": "Rigid polymer foam (high density)",
+      "family": "foams",
+      "short_name": "Rigid foam HD",
+      "applications": [
+        "Building-board insulation",
+        "Structural sandwich cores",
+        "Buoyancy modules"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 170.0,
+          "max": 470.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 15.0,
+          "max": 15.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.2,
+          "max": 0.48,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 0.8,
+          "max": 12.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 1.2,
+          "max": 12.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.024,
+          "max": 0.09,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": 67.0,
+          "max": 170.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1000.0,
+          "max": 1900.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.034,
+          "max": 0.063,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 22.0,
+          "max": 70.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 80.0,
+          "max": 80.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 5.1,
+          "max": 5.1,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 450.0,
+          "max": 450.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "rigid-foam-ld",
+      "name": "Rigid polymer foam (low density)",
+      "family": "foams",
+      "short_name": "Rigid foam LD",
+      "applications": [
+        "Cold-storage insulation",
+        "Shock-absorbing voids",
+        "Foam-board cores"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 36.0,
+          "max": 70.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 15.0,
+          "max": 15.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.023,
+          "max": 0.08,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 0.3,
+          "max": 1.7,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 0.45,
+          "max": 2.3,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.002,
+          "max": 0.02,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": 67.0,
+          "max": 170.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1100.0,
+          "max": 1900.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.023,
+          "max": 0.04,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 20.0,
+          "max": 80.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 80.0,
+          "max": 80.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 5.1,
+          "max": 5.1,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 450.0,
+          "max": 450.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "cork",
+      "name": "Cork",
+      "family": "natural",
+      "short_name": "Cork",
+      "applications": [
+        "Sealing closures",
+        "Acoustic-damping panels",
+        "Flooring underlay"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 120.0,
+          "max": 240.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 6.0,
+          "max": 6.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.013,
+          "max": 0.05,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 0.3,
+          "max": 1.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 0.5,
+          "max": 2.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.05,
+          "max": 0.1,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.035,
+          "max": 0.05,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 130.0,
+          "max": 230.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "paper",
+      "name": "Paper and cardboard",
+      "family": "natural",
+      "short_name": "Paper",
+      "applications": [
+        "Box and bag stock",
+        "Print substrates",
+        "Honeycomb cores"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 480.0,
+          "max": 860.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 1.2,
+          "max": 1.2,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 3.0,
+          "max": 8.9,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 15.0,
+          "max": 34.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 23.0,
+          "max": 51.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 6.0,
+          "max": 10.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 47.0,
+          "max": 67.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1300.0,
+          "max": 1400.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.06,
+          "max": 0.17,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 5.0,
+          "max": 20.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 28.0,
+          "max": 28.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 0.71,
+          "max": 0.71,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 1700.0,
+          "max": 1700.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.72,
+          "max": 0.72,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 22.0,
+          "max": 22.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.7,
+          "max": 0.7,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "softwood",
+      "name": "Softwood",
+      "family": "natural",
+      "short_name": "Softwood",
+      "applications": [
+        "Framing lumber",
+        "Joinery and trim",
+        "Pulp and pallets"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 660.0,
+          "max": 800.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 0.6,
+          "max": 0.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 6.0,
+          "max": 20.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 30.0,
+          "max": 70.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 60.0,
+          "max": 100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 5.0,
+          "max": 9.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 77.0,
+          "max": 100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1700.0,
+          "max": 1700.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.31,
+          "max": 0.38,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 2.0,
+          "max": 11.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 11.0,
+          "max": 11.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 0.37,
+          "max": 0.37,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 700.0,
+          "max": 700.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.09,
+          "max": 0.09,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "hardwood",
+      "name": "Hardwood",
+      "family": "natural",
+      "short_name": "Hardwood",
+      "applications": [
+        "Furniture stock",
+        "Cabinet and flooring boards",
+        "Marine planking"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 600.0,
+          "max": 800.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 2.0,
+          "max": 2.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 6.0,
+          "max": 20.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 30.0,
+          "max": 70.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 60.0,
+          "max": 100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 5.0,
+          "max": 9.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "melting_point_C": {
+          "min": 77.0,
+          "max": 100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1700.0,
+          "max": 1700.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.31,
+          "max": 0.38,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 2.0,
+          "max": 11.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 12.0,
+          "max": 12.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 0.6,
+          "max": 0.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 700.0,
+          "max": 700.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "recycle_fraction": {
+          "min": 0.09,
+          "max": 0.09,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "cfrp",
+      "name": "Carbon-fiber reinforced polymer (CFRP)",
+      "family": "composites",
+      "short_name": "CFRP",
+      "applications": [
+        "Aerospace primary structure",
+        "Sporting-good composite frames",
+        "High-performance pressure vessels"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1500.0,
+          "max": 1600.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 36.0,
+          "max": 36.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 69.0,
+          "max": 150.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 550.0,
+          "max": 1100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 550.0,
+          "max": 1100.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 6.1,
+          "max": 20.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": 100.0,
+          "max": 180.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 900.0,
+          "max": 1000.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 1.3,
+          "max": 2.6,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 1.0,
+          "max": 4.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 475.0,
+          "max": 475.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 34.5,
+          "max": 34.5,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 1400.0,
+          "max": 1400.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "gfrp",
+      "name": "Glass-fiber reinforced polymer (GFRP)",
+      "family": "composites",
+      "short_name": "GFRP",
+      "applications": [
+        "Marine hull laminates",
+        "Lightweight enclosures",
+        "Wind-turbine blade skins"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1800.0,
+          "max": 2000.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 27.0,
+          "max": 27.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 15.0,
+          "max": 28.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 110.0,
+          "max": 190.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 140.0,
+          "max": 240.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 7.0,
+          "max": 23.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "glass_temperature_C": {
+          "min": 150.0,
+          "max": 200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1000.0,
+          "max": 1200.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.4,
+          "max": 0.55,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 8.6,
+          "max": 33.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 160.0,
+          "max": 160.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 10.0,
+          "max": 10.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "water_demand_L_kg": {
+          "min": 160.0,
+          "max": 160.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    }
+  ]
+}

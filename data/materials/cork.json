@@ -1,0 +1,53 @@
+{
+  "id": "cork",
+  "name": "Cork",
+  "family": "natural",
+  "short_name": "Cork",
+  "applications": [
+    "Sealing closures",
+    "Acoustic-damping panels",
+    "Flooring underlay"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 120.0,
+      "max": 240.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "price_USD_kg": {
+      "min": 6.0,
+      "max": 6.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 0.013,
+      "max": 0.05,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "yield_strength_MPa": {
+      "min": 0.3,
+      "max": 1.5,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 0.5,
+      "max": 2.5,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 0.05,
+      "max": 0.1,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.035,
+      "max": 0.05,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_expansion_uK": {
+      "min": 130.0,
+      "max": 230.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    }
+  }
+}

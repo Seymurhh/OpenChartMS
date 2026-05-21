@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openchartms.example/material.schema.json",
+  "title": "OpenChartMS material record",
+  "description": "One engineering material with property ranges, sourced from Ashby Appendix A.",
+  "type": "object",
+  "required": ["id", "name", "family", "properties"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "description": "Kebab-case unique identifier; must match filename stem."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "description": "Human-readable material name."
+    },
+    "short_name": {
+      "type": "string",
+      "description": "Short label for chart annotations."
+    },
+    "family": {
+      "type": "string",
+      "enum": [
+        "metals",
+        "ceramics-technical",
+        "ceramics-nontechnical",
+        "glasses",
+        "polymers",
+        "elastomers",
+        "composites",
+        "foams",
+        "natural"
+      ]
+    },
+    "subfamily": {
+      "type": "string",
+      "description": "Optional finer grouping such as ferrous-metals, thermoplastics, thermosets."
+    },
+    "applications": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1
+    },
+    "notes": {"type": "string"},
+    "properties": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 2,
+      "properties": {
+        "density_kg_m3":                {"$ref": "#/$defs/range"},
+        "price_USD_kg":                 {"$ref": "#/$defs/range"},
+        "youngs_modulus_GPa":           {"$ref": "#/$defs/range"},
+        "yield_strength_MPa":           {"$ref": "#/$defs/range"},
+        "ultimate_strength_MPa":        {"$ref": "#/$defs/range"},
+        "fracture_toughness_MPa_sqrt_m":{"$ref": "#/$defs/range"},
+        "elongation":                   {"$ref": "#/$defs/range"},
+        "loss_coefficient":             {"$ref": "#/$defs/range"},
+        "melting_point_C":              {"$ref": "#/$defs/range"},
+        "glass_temperature_C":          {"$ref": "#/$defs/rangeSigned"},
+        "specific_heat_J_kgK":          {"$ref": "#/$defs/range"},
+        "thermal_conductivity_W_mK":    {"$ref": "#/$defs/range"},
+        "thermal_expansion_uK":         {"$ref": "#/$defs/range"},
+        "electrical_resistivity_uohm_cm":{"$ref": "#/$defs/range"},
+        "dielectric_constant":          {"$ref": "#/$defs/range"},
+        "refractive_index":             {"$ref": "#/$defs/range"},
+        "embodied_energy_MJ_kg":        {"$ref": "#/$defs/range"},
+        "co2_footprint_kg_kg":          {"$ref": "#/$defs/range"},
+        "water_demand_L_kg":            {"$ref": "#/$defs/range"},
+        "recycle_fraction":             {"$ref": "#/$defs/range"},
+        "recycle_energy_MJ_kg":         {"$ref": "#/$defs/range"},
+        "recycle_co2_kg_kg":            {"$ref": "#/$defs/range"}
+      },
+      "required": ["density_kg_m3", "youngs_modulus_GPa"]
+    }
+  },
+  "$defs": {
+    "range": {
+      "type": "object",
+      "required": ["min", "max"],
+      "additionalProperties": false,
+      "properties": {
+        "min": {"type": "number", "minimum": 0},
+        "max": {"type": "number", "minimum": 0},
+        "source": {"type": "string"}
+      }
+    },
+    "rangeSigned": {
+      "type": "object",
+      "required": ["min", "max"],
+      "additionalProperties": false,
+      "properties": {
+        "min": {"type": "number"},
+        "max": {"type": "number"},
+        "source": {"type": "string"}
+      }
+    }
+  }
+}

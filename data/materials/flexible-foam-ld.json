@@ -1,0 +1,83 @@
+{
+  "id": "flexible-foam-ld",
+  "name": "Flexible polymer foam (low density)",
+  "family": "foams",
+  "short_name": "Flex foam LD",
+  "applications": [
+    "Cushion stuffing",
+    "Protective-packaging inserts",
+    "Bedding fillers"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 38.0,
+      "max": 70.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "price_USD_kg": {
+      "min": 2.7,
+      "max": 2.7,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 0.001,
+      "max": 0.003,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "yield_strength_MPa": {
+      "min": 0.02,
+      "max": 0.3,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 0.24,
+      "max": 2.4,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 0.015,
+      "max": 0.05,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "glass_temperature_C": {
+      "min": -110.0,
+      "max": -13.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1800.0,
+      "max": 2300.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.04,
+      "max": 0.059,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_expansion_uK": {
+      "min": 120.0,
+      "max": 220.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 90.0,
+      "max": 90.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 3.2,
+      "max": 3.2,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "water_demand_L_kg": {
+      "min": 170.0,
+      "max": 170.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_fraction": {
+      "min": 0.084,
+      "max": 0.084,
+      "source": "Ashby App A (6th ed., 2025)"
+    }
+  }
+}

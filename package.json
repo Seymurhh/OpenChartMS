@@ -1,0 +1,29 @@
+{
+  "name": "openchartms",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Open-source, browser-based Ashby material-selection charts for teaching.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "data:build": "python3 scripts/build_materials.py",
+    "data:validate": "python3 scripts/validate.py"
+  },
+  "dependencies": {
+    "plotly.js": "^2.35.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-plotly.js": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/plotly.js": "^2.33.4",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/react-plotly.js": "^2.6.3",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2"
+  }
+}

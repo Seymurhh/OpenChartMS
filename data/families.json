@@ -1,0 +1,59 @@
+{
+  "$schema_note": "Display-layer metadata for material families: color palette + ordering. Colors match Ashby textbook chart conventions as closely as possible.",
+  "families": [
+    {
+      "id": "metals",
+      "label": "Metals",
+      "color": "#E63946",
+      "description": "The metals and alloys of engineering."
+    },
+    {
+      "id": "ceramics-technical",
+      "label": "Technical ceramics",
+      "color": "#F4A261",
+      "description": "Fine ceramics capable of load-bearing application."
+    },
+    {
+      "id": "ceramics-nontechnical",
+      "label": "Non-technical ceramics",
+      "color": "#E9C46A",
+      "description": "Porous ceramics of construction (brick, concrete, stone)."
+    },
+    {
+      "id": "glasses",
+      "label": "Glasses",
+      "color": "#F2CC8F",
+      "description": "Silicate and oxide glasses."
+    },
+    {
+      "id": "polymers",
+      "label": "Polymers",
+      "color": "#264653",
+      "description": "Thermoplastics and thermosets."
+    },
+    {
+      "id": "elastomers",
+      "label": "Elastomers",
+      "color": "#2A9D8F",
+      "description": "Engineering rubbers, natural and synthetic."
+    },
+    {
+      "id": "composites",
+      "label": "Composites",
+      "color": "#A663CC",
+      "description": "Fiber-reinforced polymer composites (CFRP, GFRP)."
+    },
+    {
+      "id": "foams",
+      "label": "Foams",
+      "color": "#43AA8B",
+      "description": "Flexible and rigid polymer foams."
+    },
+    {
+      "id": "natural",
+      "label": "Natural materials",
+      "color": "#6A994E",
+      "description": "Wood, cork, paper, leather."
+    }
+  ]
+}

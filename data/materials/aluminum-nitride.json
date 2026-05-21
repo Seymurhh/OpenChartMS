@@ -1,0 +1,82 @@
+{
+  "id": "aluminum-nitride",
+  "name": "Aluminum nitride",
+  "family": "ceramics-technical",
+  "short_name": "AlN",
+  "applications": [
+    "High-conductivity electronic substrates",
+    "RF-package heat spreaders"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 3300.0,
+      "max": 3300.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "price_USD_kg": {
+      "min": 130.0,
+      "max": 130.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 300.0,
+      "max": 350.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "yield_strength_MPa": {
+      "min": 300.0,
+      "max": 350.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 300.0,
+      "max": 350.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 2.5,
+      "max": 3.4,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "melting_point_C": {
+      "min": 2400.0,
+      "max": 2500.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 780.0,
+      "max": 820.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 140.0,
+      "max": 200.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_expansion_uK": {
+      "min": 4.9,
+      "max": 5.5,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "dielectric_constant": {
+      "min": 8.3,
+      "max": 9.3,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 230.0,
+      "max": 230.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 13.0,
+      "max": 13.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "water_demand_L_kg": {
+      "min": 240.0,
+      "max": 240.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    }
+  }
+}

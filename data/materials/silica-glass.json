@@ -1,0 +1,98 @@
+{
+  "id": "silica-glass",
+  "name": "Silica glass",
+  "family": "glasses",
+  "short_name": "Silica glass",
+  "applications": [
+    "Fused-quartz crucibles",
+    "UV-transparent optics",
+    "High-temperature furnace components"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 2200.0,
+      "max": 2200.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "price_USD_kg": {
+      "min": 7.4,
+      "max": 7.4,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 68.0,
+      "max": 74.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "yield_strength_MPa": {
+      "min": 45.0,
+      "max": 160.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 45.0,
+      "max": 160.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 0.6,
+      "max": 0.8,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "melting_point_C": {
+      "min": 960.0,
+      "max": 1600.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 680.0,
+      "max": 730.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 1.4,
+      "max": 1.5,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_expansion_uK": {
+      "min": 0.55,
+      "max": 0.75,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "dielectric_constant": {
+      "min": 3.7,
+      "max": 3.9,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 39.0,
+      "max": 39.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 2.3,
+      "max": 2.3,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "water_demand_L_kg": {
+      "min": 1.4,
+      "max": 1.4,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_fraction": {
+      "min": 0.25,
+      "max": 0.25,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 32.0,
+      "max": 32.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 1.6,
+      "max": 1.6,
+      "source": "Ashby App A (6th ed., 2025)"
+    }
+  }
+}

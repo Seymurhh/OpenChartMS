@@ -1,0 +1,78 @@
+{
+  "id": "stone",
+  "name": "Stone",
+  "family": "ceramics-nontechnical",
+  "short_name": "Stone",
+  "applications": [
+    "Cut stone facades",
+    "Monumental construction",
+    "Pavers and tiles"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 2000.0,
+      "max": 2600.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "price_USD_kg": {
+      "min": 0.5,
+      "max": 0.5,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 20.0,
+      "max": 60.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "yield_strength_MPa": {
+      "min": 2.0,
+      "max": 25.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 2.0,
+      "max": 25.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 0.7,
+      "max": 1.4,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "melting_point_C": {
+      "min": 1200.0,
+      "max": 1400.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 840.0,
+      "max": 920.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 5.4,
+      "max": 6.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_expansion_uK": {
+      "min": 3.7,
+      "max": 6.3,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 1.0,
+      "max": 1.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 0.06,
+      "max": 0.06,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "water_demand_L_kg": {
+      "min": 3.4,
+      "max": 3.4,
+      "source": "Ashby App A (6th ed., 2025)"
+    }
+  }
+}

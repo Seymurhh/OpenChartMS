@@ -1,0 +1,94 @@
+{
+  "id": "polycarbonate",
+  "name": "Polycarbonate (PC)",
+  "family": "polymers",
+  "short_name": "PC",
+  "subfamily": "thermoplastics",
+  "applications": [
+    "Impact-resistant glazing",
+    "Protective eyewear",
+    "Medical-device housings"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 1100.0,
+      "max": 1200.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "price_USD_kg": {
+      "min": 3.4,
+      "max": 3.4,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 2.0,
+      "max": 2.4,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "yield_strength_MPa": {
+      "min": 59.0,
+      "max": 70.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 60.0,
+      "max": 72.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 2.1,
+      "max": 4.6,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "glass_temperature_C": {
+      "min": 140.0,
+      "max": 200.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1500.0,
+      "max": 1600.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.19,
+      "max": 0.22,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_expansion_uK": {
+      "min": 120.0,
+      "max": 140.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 110.0,
+      "max": 110.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 4.8,
+      "max": 4.8,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "water_demand_L_kg": {
+      "min": 170.0,
+      "max": 170.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_fraction": {
+      "min": 0.007,
+      "max": 0.007,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 37.0,
+      "max": 37.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 2.4,
+      "max": 2.4,
+      "source": "Ashby App A (6th ed., 2025)"
+    }
+  }
+}

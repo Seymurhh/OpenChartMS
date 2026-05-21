@@ -1,0 +1,94 @@
+{
+  "id": "pom",
+  "name": "Polyoxymethylene (Acetal, POM)",
+  "family": "polymers",
+  "short_name": "POM",
+  "subfamily": "thermoplastics",
+  "applications": [
+    "Precision gears and snaps",
+    "Small mechanism parts",
+    "Appliance internals"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 1400.0,
+      "max": 1400.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "price_USD_kg": {
+      "min": 2.9,
+      "max": 2.9,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 2.5,
+      "max": 5.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "yield_strength_MPa": {
+      "min": 49.0,
+      "max": 72.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 60.0,
+      "max": 90.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 1.7,
+      "max": 4.2,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "melting_point_C": {
+      "min": 160.0,
+      "max": 180.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1400.0,
+      "max": 1400.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.22,
+      "max": 0.35,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_expansion_uK": {
+      "min": 76.0,
+      "max": 200.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 86.0,
+      "max": 86.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 3.2,
+      "max": 3.2,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "water_demand_L_kg": {
+      "min": 250.0,
+      "max": 250.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_fraction": {
+      "min": 0.001,
+      "max": 0.001,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 36.0,
+      "max": 36.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 1.8,
+      "max": 1.8,
+      "source": "Ashby App A (6th ed., 2025)"
+    }
+  }
+}

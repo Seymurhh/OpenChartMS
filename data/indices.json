@@ -1,0 +1,96 @@
+{
+  "$schema_note": "Catalog of standard material indices from Ashby, Materials Selection in Mechanical Design (6th ed.), Appendix C. 'maximize' means materials with the highest value of the expression are best for that function. expr uses these tokens: E (Young's modulus, GPa), G (shear modulus, GPa), sigma_f (failure strength, MPa), rho (density, kg/m^3), Cm (price USD/kg), Cp (specific heat J/kg/K), lambda (thermal conductivity W/m/K), alpha (thermal expansion 1/K), rho_e (electrical resistivity), eta (loss coefficient), K1c (fracture toughness MPa*m^0.5), nu (Poisson's ratio). All indices listed assume the index is to be MAXIMIZED unless stated otherwise.",
+  "groups": [
+    {
+      "id": "stiffness-limited-min-mass",
+      "label": "Stiffness-limited design at minimum mass",
+      "source": "Table C.2",
+      "indices": [
+        {"id": "tie-stiffness",        "function": "Tie (tensile strut), stiffness & length specified, section area free",                "expr": "E/rho",       "slope": 1,    "x": "rho", "y": "E"},
+        {"id": "beam-stiffness-shape", "function": "Beam loaded in bending, shape specified, section area free",                          "expr": "E^(1/2)/rho", "slope": 2,    "x": "rho", "y": "E"},
+        {"id": "beam-stiffness-height","function": "Beam loaded in bending, height specified, width free",                                "expr": "E/rho",       "slope": 1,    "x": "rho", "y": "E"},
+        {"id": "beam-stiffness-width", "function": "Beam loaded in bending, width specified, height free",                                "expr": "E^(1/3)/rho", "slope": 3,    "x": "rho", "y": "E"},
+        {"id": "column-buckling",      "function": "Column, elastic buckling, section area free",                                         "expr": "E^(1/2)/rho", "slope": 2,    "x": "rho", "y": "E"},
+        {"id": "panel-bending",        "function": "Panel (flat plate) loaded in bending, thickness free",                                "expr": "E^(1/3)/rho", "slope": 3,    "x": "rho", "y": "E"},
+        {"id": "shaft-torsion-shape",  "function": "Shaft loaded in torsion, shape specified, section area free",                         "expr": "G^(1/2)/rho", "slope": 2,    "x": "rho", "y": "E"},
+        {"id": "shaft-torsion-or",     "function": "Shaft loaded in torsion, outer radius specified, wall thickness free",                "expr": "G/rho",       "slope": 1,    "x": "rho", "y": "E"}
+      ]
+    },
+    {
+      "id": "strength-limited-min-mass",
+      "label": "Strength-limited design at minimum mass",
+      "source": "Table C.3",
+      "indices": [
+        {"id": "tie-strength",         "function": "Tie (tensile strut), strength & length specified, section area free",                 "expr": "sigma_f/rho",       "slope": 1,    "x": "rho", "y": "sigma_f"},
+        {"id": "beam-strength-shape",  "function": "Beam loaded in bending, shape specified, section area free",                          "expr": "sigma_f^(2/3)/rho", "slope": 1.5,  "x": "rho", "y": "sigma_f"},
+        {"id": "beam-strength-height", "function": "Beam loaded in bending, height specified, width free",                                "expr": "sigma_f/rho",       "slope": 1,    "x": "rho", "y": "sigma_f"},
+        {"id": "beam-strength-width",  "function": "Beam loaded in bending, width specified, height free",                                "expr": "sigma_f^(1/2)/rho", "slope": 2,    "x": "rho", "y": "sigma_f"},
+        {"id": "panel-strength",       "function": "Panel loaded in bending, thickness free",                                             "expr": "sigma_f^(1/2)/rho", "slope": 2,    "x": "rho", "y": "sigma_f"},
+        {"id": "column-strength",      "function": "Column loaded in compression, shape specified, section area free",                    "expr": "sigma_f/rho",       "slope": 1,    "x": "rho", "y": "sigma_f"},
+        {"id": "pressure-vessel-thinwall", "function": "Cylinder with internal pressure, wall thickness free",                            "expr": "sigma_f/rho",       "slope": 1,    "x": "rho", "y": "sigma_f"},
+        {"id": "flywheel-energy",      "function": "Flywheel, maximum energy storage per unit mass, no failure",                          "expr": "sigma_f/rho",       "slope": 1,    "x": "rho", "y": "sigma_f"}
+      ]
+    },
+    {
+      "id": "springs-and-hinges",
+      "label": "Strength-limited design: springs and hinges",
+      "source": "Table C.4",
+      "indices": [
+        {"id": "spring-energy-volume", "function": "Springs: maximum stored elastic energy per unit volume, no failure",                  "expr": "sigma_f^2/E",       "x": "E",   "y": "sigma_f"},
+        {"id": "spring-energy-mass",   "function": "Springs: maximum stored elastic energy per unit mass, no failure",                    "expr": "sigma_f^2/(E*rho)", "x": "E",   "y": "sigma_f"},
+        {"id": "elastic-hinge",        "function": "Elastic hinges: minimum radius of bend (max flexibility without failure)",            "expr": "sigma_f/E",         "x": "E",   "y": "sigma_f"},
+        {"id": "knife-edge",           "function": "Knife edges, pivots: minimum contact area, maximum bearing load",                     "expr": "sigma_f^3/E^2",     "x": "E",   "y": "sigma_f"},
+        {"id": "diaphragm",            "function": "Diaphragms: maximum deflection under specified pressure or force",                    "expr": "sigma_f^(3/2)/E",   "x": "E",   "y": "sigma_f"}
+      ]
+    },
+    {
+      "id": "vibration-limited",
+      "label": "Vibration-limited design",
+      "source": "Table C.5",
+      "indices": [
+        {"id": "tie-vibration",        "function": "Ties, columns: maximum longitudinal vibration frequencies",          "expr": "E/rho",         "slope": 1, "x": "rho", "y": "E"},
+        {"id": "beam-vibration-fixed", "function": "Beams (all dimensions prescribed): maximum flexural vibration frequencies", "expr": "E/rho",  "slope": 1, "x": "rho", "y": "E"},
+        {"id": "beam-vibration-free",  "function": "Beams (length & stiffness prescribed): maximum flexural vibration frequencies", "expr": "E^(1/2)/rho", "slope": 2, "x": "rho", "y": "E"},
+        {"id": "damped-tie",           "function": "Ties: minimum longitudinal excitation from external drivers",        "expr": "eta*E/rho",     "x": "rho", "y": "E"},
+        {"id": "damped-beam",          "function": "Beams: minimum flexural excitation from external drivers",           "expr": "eta*E^(1/2)/rho","x": "rho", "y": "E"}
+      ]
+    },
+    {
+      "id": "damage-tolerant",
+      "label": "Damage-tolerant design",
+      "source": "Table C.6",
+      "indices": [
+        {"id": "tie-fracture-load",    "function": "Tie, max flaw tolerance and strength, load-controlled",   "expr": "K1c",              "x": "sigma_f", "y": "K1c"},
+        {"id": "tie-fracture-disp",    "function": "Tie, max flaw tolerance and strength, displacement-controlled", "expr": "K1c/E",       "x": "sigma_f", "y": "K1c"},
+        {"id": "tie-fracture-energy",  "function": "Tie, max flaw tolerance and strength, energy-controlled", "expr": "K1c^2/E",          "x": "sigma_f", "y": "K1c"},
+        {"id": "pressure-vessel-yield-before-break", "function": "Pressure vessel: yield before break",       "expr": "K1c/sigma_f",      "x": "sigma_f", "y": "K1c"},
+        {"id": "pressure-vessel-leak-before-break",  "function": "Pressure vessel: leak before break",        "expr": "K1c^2/sigma_f",    "x": "sigma_f", "y": "K1c"}
+      ]
+    },
+    {
+      "id": "thermal",
+      "label": "Thermal and thermo-mechanical design",
+      "source": "Table C.7",
+      "indices": [
+        {"id": "thermal-insulation-steady",  "function": "Thermal insulation at steady state, thickness specified",   "expr": "1/lambda",                 "x": "lambda", "y": "rho*Cp"},
+        {"id": "thermal-insulation-cycle",   "function": "Thermal insulation, minimize energy in thermal cycle",      "expr": "sqrt(a)/lambda",           "x": "lambda", "y": "alpha"},
+        {"id": "thermal-storage-mass",       "function": "Thermal storage, maximize energy stored per unit mass",     "expr": "lambda/sqrt(a)",           "x": "lambda", "y": "rho*Cp"},
+        {"id": "precision-instrument",       "function": "Precision device, minimize thermal distortion",             "expr": "lambda/alpha",             "x": "alpha",  "y": "lambda"},
+        {"id": "thermal-shock",              "function": "Thermal shock resistance, max delta-T without failure",     "expr": "sigma_f/(E*alpha)",        "x": "alpha",  "y": "sigma_f/E"},
+        {"id": "heat-sink-mass",             "function": "Heat sinks, max heat flux per unit mass; expansion limited","expr": "lambda/(rho*alpha)",       "x": "alpha",  "y": "lambda"},
+        {"id": "heat-exchanger-mass",        "function": "Heat exchangers (pressure limited), max heat flux per mass","expr": "lambda*sigma_f/rho",       "x": "rho",    "y": "lambda"}
+      ]
+    },
+    {
+      "id": "electromechanical",
+      "label": "Electro-mechanical design",
+      "source": "Table C.8",
+      "indices": [
+        {"id": "bus-bar",                "function": "Bus bars: minimum life cost, high current conductor",          "expr": "1/(rho_e*rho*Cm)", "x": "rho_e", "y": "Cm*rho"},
+        {"id": "windings-shortpulse",    "function": "Electromagnet windings, short pulse: no mechanical failure",   "expr": "sigma_f",          "x": "rho_e", "y": "sigma_f"},
+        {"id": "windings-highspeed",     "function": "High-speed electric motor windings: max rotational speed",     "expr": "sigma_f/rho_e",    "x": "rho_e", "y": "sigma_f"},
+        {"id": "relay-arm",              "function": "Relay arms: minimum response time, no fatigue failure",        "expr": "sigma_f/(E*rho_e)","x": "rho_e", "y": "sigma_f/E"}
+      ]
+    }
+  ]
+}

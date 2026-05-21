@@ -1,0 +1,89 @@
+{
+  "id": "cast-iron-gray",
+  "name": "Cast iron, gray",
+  "family": "metals",
+  "short_name": "Cast iron (gray)",
+  "subfamily": "ferrous-metals",
+  "applications": [
+    "Engine castings",
+    "Vibration-damped machine bases",
+    "Cast cookware"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 7100.0,
+      "max": 7300.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "price_USD_kg": {
+      "min": 0.36,
+      "max": 0.36,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 80.0,
+      "max": 140.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "yield_strength_MPa": {
+      "min": 140.0,
+      "max": 420.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 140.0,
+      "max": 450.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 10.0,
+      "max": 24.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "melting_point_C": {
+      "min": 1100.0,
+      "max": 1400.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 430.0,
+      "max": 500.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 40.0,
+      "max": 72.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_expansion_uK": {
+      "min": 11.0,
+      "max": 13.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 62.0,
+      "max": 86.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 29.0,
+      "max": 29.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 2.1,
+      "max": 2.1,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "water_demand_L_kg": {
+      "min": 45.0,
+      "max": 45.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_fraction": {
+      "min": 0.69,
+      "max": 0.69,
+      "source": "Ashby App A (6th ed., 2025)"
+    }
+  }
+}

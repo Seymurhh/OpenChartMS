@@ -1,0 +1,22 @@
+node_modules/
+dist/
+dist-ssr/
+.DS_Store
+*.local
+*.log
+
+.vite/
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Private notes and Claude Code workspace state.
+# Removed from the public repo to keep paraphrased-vs-quoted boundaries clear
+# (notes summarize chapters of the textbook). Drop this line if you decide to
+# publish your notes under fair-use educational summary terms.
+.claude/

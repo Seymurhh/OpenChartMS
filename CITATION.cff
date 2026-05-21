@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+title: "OpenChartMS"
+message: >-
+  If you use OpenChartMS in teaching or research, please cite both this
+  software and the textbook whose methodology and reference data it relies on.
+type: software
+authors:
+  - family-names: Hasanov
+    given-names: Seymur
+    affiliation: Harvard University
+url: "https://github.com/Seymurhh/OpenChartMS"
+license: MIT
+abstract: >-
+  An open-source, browser-based implementation of Mike Ashby's
+  material-selection charts and methods (Ashby, Materials Selection in
+  Mechanical Design, 6th ed., Elsevier, 2025). Built as a free alternative
+  to Ansys Granta EduPack for undergraduate teaching of material selection.
+keywords:
+  - material selection
+  - Ashby chart
+  - Ashby method
+  - engineering education
+  - sustainability
+preferred-citation:
+  type: software
+  title: "OpenChartMS"
+  authors:
+    - family-names: Hasanov
+      given-names: Seymur
+  year: 2026
+references:
+  - type: book
+    title: "Materials Selection in Mechanical Design"
+    authors:
+      - family-names: Ashby
+        given-names: Michael F.
+    edition: "6"
+    publisher:
+      name: "Butterworth-Heinemann / Elsevier"
+    year: 2025
+    isbn: "978-0-443-16028-8"
+    notes: >-
+      Source of methodology, chart conventions, material indices catalog
+      (Appendix C), and the reference property ranges used to seed the
+      bundled material corpus (Appendix A). The textbook preface
+      explicitly authorizes reproduction of the charts for teaching
+      purposes with attribution.

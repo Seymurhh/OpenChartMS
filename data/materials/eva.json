@@ -1,0 +1,83 @@
+{
+  "id": "eva",
+  "name": "Ethylene vinyl acetate",
+  "family": "elastomers",
+  "short_name": "EVA",
+  "applications": [
+    "Athletic-shoe midsoles",
+    "Flexible film packaging",
+    "Adhesive hot-melt formulations"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 950.0,
+      "max": 960.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "price_USD_kg": {
+      "min": 1.8,
+      "max": 1.8,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 0.01,
+      "max": 0.04,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "yield_strength_MPa": {
+      "min": 12.0,
+      "max": 18.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 16.0,
+      "max": 20.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 0.5,
+      "max": 0.7,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "glass_temperature_C": {
+      "min": -73.0,
+      "max": -23.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 2000.0,
+      "max": 2200.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.3,
+      "max": 0.4,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_expansion_uK": {
+      "min": 160.0,
+      "max": 190.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 79.0,
+      "max": 79.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 2.1,
+      "max": 2.1,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "water_demand_L_kg": {
+      "min": 2.8,
+      "max": 2.8,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_fraction": {
+      "min": 0.001,
+      "max": 0.001,
+      "source": "Ashby App A (6th ed., 2025)"
+    }
+  }
+}

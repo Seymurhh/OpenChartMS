@@ -1,0 +1,83 @@
+{
+  "id": "natural-rubber",
+  "name": "Natural rubber",
+  "family": "elastomers",
+  "short_name": "NR",
+  "applications": [
+    "Tire treads and inner tubes",
+    "Latex gloves and films",
+    "Vibration-damping mounts"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 920.0,
+      "max": 930.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "price_USD_kg": {
+      "min": 1.6,
+      "max": 1.6,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 0.0015,
+      "max": 0.0025,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "yield_strength_MPa": {
+      "min": 20.0,
+      "max": 30.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 22.0,
+      "max": 32.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 0.15,
+      "max": 0.25,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "glass_temperature_C": {
+      "min": -78.0,
+      "max": -63.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1800.0,
+      "max": 2500.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.1,
+      "max": 0.14,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_expansion_uK": {
+      "min": 150.0,
+      "max": 450.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 78.0,
+      "max": 78.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 2.0,
+      "max": 2.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "water_demand_L_kg": {
+      "min": 17000.0,
+      "max": 17000.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_fraction": {
+      "min": 0.001,
+      "max": 0.001,
+      "source": "Ashby App A (6th ed., 2025)"
+    }
+  }
+}

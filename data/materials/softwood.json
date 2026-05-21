@@ -1,0 +1,83 @@
+{
+  "id": "softwood",
+  "name": "Softwood",
+  "family": "natural",
+  "short_name": "Softwood",
+  "applications": [
+    "Framing lumber",
+    "Joinery and trim",
+    "Pulp and pallets"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 660.0,
+      "max": 800.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "price_USD_kg": {
+      "min": 0.6,
+      "max": 0.6,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 6.0,
+      "max": 20.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "yield_strength_MPa": {
+      "min": 30.0,
+      "max": 70.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 60.0,
+      "max": 100.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 5.0,
+      "max": 9.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "melting_point_C": {
+      "min": 77.0,
+      "max": 100.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1700.0,
+      "max": 1700.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.31,
+      "max": 0.38,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_expansion_uK": {
+      "min": 2.0,
+      "max": 11.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 11.0,
+      "max": 11.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 0.37,
+      "max": 0.37,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "water_demand_L_kg": {
+      "min": 700.0,
+      "max": 700.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_fraction": {
+      "min": 0.09,
+      "max": 0.09,
+      "source": "Ashby App A (6th ed., 2025)"
+    }
+  }
+}

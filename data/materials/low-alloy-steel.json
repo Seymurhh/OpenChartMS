@@ -1,0 +1,99 @@
+{
+  "id": "low-alloy-steel",
+  "name": "Low alloy steel",
+  "family": "metals",
+  "short_name": "Steel (low alloy)",
+  "subfamily": "ferrous-metals",
+  "applications": [
+    "Engineered springs",
+    "Rolling-element bearings",
+    "High-fatigue parts"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 7800.0,
+      "max": 7900.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "price_USD_kg": {
+      "min": 0.84,
+      "max": 0.84,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 210.0,
+      "max": 220.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "yield_strength_MPa": {
+      "min": 400.0,
+      "max": 1500.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 550.0,
+      "max": 1800.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 14.0,
+      "max": 200.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "melting_point_C": {
+      "min": 1400.0,
+      "max": 1500.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 410.0,
+      "max": 530.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 34.0,
+      "max": 55.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_expansion_uK": {
+      "min": 11.0,
+      "max": 14.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 15.0,
+      "max": 35.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 31.0,
+      "max": 31.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 2.5,
+      "max": 2.5,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "water_demand_L_kg": {
+      "min": 49.0,
+      "max": 49.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_fraction": {
+      "min": 0.42,
+      "max": 0.42,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 9.0,
+      "max": 9.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.65,
+      "max": 0.65,
+      "source": "Ashby App A (6th ed., 2025)"
+    }
+  }
+}

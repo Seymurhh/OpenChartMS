@@ -1,0 +1,99 @@
+{
+  "id": "titanium-alloys",
+  "name": "Titanium alloys",
+  "family": "metals",
+  "short_name": "Ti alloys",
+  "subfamily": "nonferrous-metals",
+  "applications": [
+    "Aerospace airframe parts",
+    "Biocompatible implants",
+    "High-strength corrosion-resistant components"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 4400.0,
+      "max": 4800.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "price_USD_kg": {
+      "min": 24.0,
+      "max": 24.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 90.0,
+      "max": 120.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "yield_strength_MPa": {
+      "min": 250.0,
+      "max": 1200.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 300.0,
+      "max": 1600.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 14.0,
+      "max": 120.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "melting_point_C": {
+      "min": 1500.0,
+      "max": 1700.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 520.0,
+      "max": 600.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 7.0,
+      "max": 14.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_expansion_uK": {
+      "min": 7.9,
+      "max": 11.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 100.0,
+      "max": 170.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 620.0,
+      "max": 620.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 36.0,
+      "max": 36.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "water_demand_L_kg": {
+      "min": 290.0,
+      "max": 290.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_fraction": {
+      "min": 0.23,
+      "max": 0.23,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 81.0,
+      "max": 81.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 6.4,
+      "max": 6.4,
+      "source": "Ashby App A (6th ed., 2025)"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "cast-iron-ductile",
+  "name": "Cast iron, ductile (nodular)",
+  "family": "metals",
+  "short_name": "Cast iron (ductile)",
+  "subfamily": "ferrous-metals",
+  "applications": [
+    "Engine block castings",
+    "Heavy machinery frames",
+    "Wear-resistant components"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 7100.0,
+      "max": 7300.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "price_USD_kg": {
+      "min": 0.4,
+      "max": 0.4,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 170.0,
+      "max": 180.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "yield_strength_MPa": {
+      "min": 250.0,
+      "max": 680.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 410.0,
+      "max": 830.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 22.0,
+      "max": 54.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "melting_point_C": {
+      "min": 1100.0,
+      "max": 1200.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 460.0,
+      "max": 500.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 29.0,
+      "max": 44.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_expansion_uK": {
+      "min": 10.0,
+      "max": 13.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 49.0,
+      "max": 56.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 30.0,
+      "max": 30.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 2.2,
+      "max": 2.2,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "water_demand_L_kg": {
+      "min": 45.0,
+      "max": 45.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_fraction": {
+      "min": 0.69,
+      "max": 0.69,
+      "source": "Ashby App A (6th ed., 2025)"
+    }
+  }
+}

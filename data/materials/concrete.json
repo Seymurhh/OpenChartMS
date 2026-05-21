@@ -1,0 +1,92 @@
+{
+  "id": "concrete",
+  "name": "Concrete",
+  "family": "ceramics-nontechnical",
+  "short_name": "Concrete",
+  "applications": [
+    "Civil structural construction",
+    "Foundations and slabs"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 2300.0,
+      "max": 2600.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "price_USD_kg": {
+      "min": 0.05,
+      "max": 0.05,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 15.0,
+      "max": 25.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "yield_strength_MPa": {
+      "min": 1.0,
+      "max": 3.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 1.0,
+      "max": 1.5,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 0.35,
+      "max": 0.45,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "melting_point_C": {
+      "min": 930.0,
+      "max": 1200.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 840.0,
+      "max": 1100.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.8,
+      "max": 2.4,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_expansion_uK": {
+      "min": 6.0,
+      "max": 13.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 0.82,
+      "max": 0.82,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 0.12,
+      "max": 0.12,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "water_demand_L_kg": {
+      "min": 3.4,
+      "max": 3.4,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_fraction": {
+      "min": 0.13,
+      "max": 0.13,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 0.8,
+      "max": 0.8,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.07,
+      "max": 0.07,
+      "source": "Ashby App A (6th ed., 2025)"
+    }
+  }
+}

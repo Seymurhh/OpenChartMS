@@ -1,0 +1,83 @@
+{
+  "id": "alumina",
+  "name": "Alumina",
+  "family": "ceramics-technical",
+  "short_name": "Al2O3",
+  "applications": [
+    "Insulator substrates",
+    "Wear-tool inserts",
+    "Spark-plug bodies"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 3800.0,
+      "max": 4000.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "price_USD_kg": {
+      "min": 25.0,
+      "max": 25.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 340.0,
+      "max": 390.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "yield_strength_MPa": {
+      "min": 350.0,
+      "max": 590.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 350.0,
+      "max": 590.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 3.3,
+      "max": 4.8,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "melting_point_C": {
+      "min": 2000.0,
+      "max": 2100.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 790.0,
+      "max": 820.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 26.0,
+      "max": 39.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_expansion_uK": {
+      "min": 7.0,
+      "max": 7.9,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "dielectric_constant": {
+      "min": 6.5,
+      "max": 6.8,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 52.0,
+      "max": 52.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 2.8,
+      "max": 2.8,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "water_demand_L_kg": {
+      "min": 55.0,
+      "max": 55.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    }
+  }
+}

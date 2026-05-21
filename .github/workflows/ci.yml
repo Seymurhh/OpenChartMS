@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate-data:
+    name: Validate material corpus
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install jsonschema
+        run: pip install jsonschema
+      - name: Rebuild materials from source script
+        run: python3 scripts/build_materials.py
+      - name: Validate against schema + family palette
+        run: python3 scripts/validate.py
+      - name: Fail if rebuild produced uncommitted changes
+        run: |
+          if [[ -n "$(git status --porcelain data/)" ]]; then
+            echo "build_materials.py produced changes not present in data/." >&2
+            git status data/
+            git diff data/
+            exit 1
+          fi
+
+  build-app:
+    name: Type-check + Vite build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build
