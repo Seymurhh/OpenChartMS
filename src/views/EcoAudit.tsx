@@ -3,6 +3,7 @@ import Plot from 'react-plotly.js';
 import type { Layout, PlotData } from 'plotly.js';
 import { materials, familyById } from '../data/loadMaterials';
 import type { Material, Range } from '../data/types';
+import { AXIS_STYLE, HOVER_LABEL, LEGEND_STYLE, PAPER_BG, PLOT_BG } from '../lib/chartStyle';
 
 interface BOMRow {
   id: string;
@@ -11,6 +12,57 @@ interface BOMRow {
 }
 
 type Metric = 'energy' | 'co2';
+
+type TransportMode = 'sea' | 'rail' | 'truck' | 'air';
+
+// Per Ashby Table 15.4 — embodied energy of freight (MJ per tonne·km) and
+// well-to-wheel CO₂ (kg per tonne·km). Order-of-magnitude for teaching.
+const TRANSPORT_FACTORS: Record<
+  TransportMode,
+  { label: string; mj_t_km: number; co2_t_km: number }
+> = {
+  sea: { label: 'Ocean freight', mj_t_km: 0.16, co2_t_km: 0.011 },
+  rail: { label: 'Rail (electric)', mj_t_km: 0.25, co2_t_km: 0.022 },
+  truck: { label: 'Truck (diesel)', mj_t_km: 0.94, co2_t_km: 0.067 },
+  air: { label: 'Air freight', mj_t_km: 23, co2_t_km: 1.6 },
+};
+
+interface UsePreset {
+  id: string;
+  label: string;
+  energy: number;
+  co2: number;
+}
+
+// Use-phase presets — typical lifetime energy + CO₂ for common products.
+// Sources: Ashby Ch.15 worked examples + standard fuel/grid emission factors.
+const USE_PRESETS: UsePreset[] = [
+  { id: 'none', label: 'None (static product)', energy: 0, co2: 0 },
+  {
+    id: 'car',
+    label: 'Small car · 180,000 km · 8 L/100 km gasoline',
+    energy: 518000,
+    co2: 33400,
+  },
+  {
+    id: 'hvac',
+    label: 'Building HVAC · 1 kW · 8 h/day · 20 yr',
+    energy: 210000,
+    co2: 23000,
+  },
+  {
+    id: 'fridge',
+    label: 'Refrigerator · 300 W · continuous · 10 yr',
+    energy: 94600,
+    co2: 10500,
+  },
+  {
+    id: 'computer',
+    label: 'Computer · 100 W · 4 h/day · 5 yr',
+    energy: 2630,
+    co2: 290,
+  },
+];
 
 const matById: Record<string, Material> = Object.fromEntries(
   materials.map((m) => [m.id, m]),
@@ -59,10 +111,43 @@ interface ComponentImpact {
 
 export function EcoAudit() {
   const [bom, setBom] = useState<BOMRow[]>(initialBOM);
+  const [mfgEnergyPerKg, setMfgEnergyPerKg] = useState<number>(15); // MJ/kg, typical shaping
+  const [mfgCO2PerKg, setMfgCO2PerKg] = useState<number>(1.0); // kg CO₂ / kg
+  const [transportDistance_km, setTransportDistance] = useState<number>(0);
+  const [transportMode, setTransportMode] = useState<TransportMode>('truck');
   const [useEnergy, setUseEnergy] = useState<number>(0);
   const [useCO2, setUseCO2] = useState<number>(0);
+  const [usePresetId, setUsePresetId] = useState<string>('none');
   const [recycleEnabled, setRecycleEnabled] = useState(true);
   const [metric, setMetric] = useState<Metric>('energy');
+
+  const totalMass_kg = useMemo(() => bom.reduce((s, r) => s + r.mass_kg, 0), [bom]);
+
+  const manufacture = useMemo(
+    () => ({
+      energy: totalMass_kg * mfgEnergyPerKg,
+      co2: totalMass_kg * mfgCO2PerKg,
+    }),
+    [totalMass_kg, mfgEnergyPerKg, mfgCO2PerKg],
+  );
+
+  const transport = useMemo(() => {
+    const f = TRANSPORT_FACTORS[transportMode];
+    const t_km = (totalMass_kg / 1000) * transportDistance_km;
+    return {
+      energy: t_km * f.mj_t_km,
+      co2: t_km * f.co2_t_km,
+    };
+  }, [totalMass_kg, transportDistance_km, transportMode]);
+
+  const applyUsePreset = (id: string) => {
+    setUsePresetId(id);
+    const preset = USE_PRESETS.find((p) => p.id === id);
+    if (preset) {
+      setUseEnergy(preset.energy);
+      setUseCO2(preset.co2);
+    }
+  };
 
   const addRow = () =>
     setBom([...bom, { id: genId(), materialId: ecoMaterials[0].id, mass_kg: 1 }]);
@@ -107,6 +192,8 @@ export function EcoAudit() {
   const totals = useMemo(() => {
     const t = {
       materials: { energy: 0, co2: 0 },
+      manufacture: { energy: manufacture.energy, co2: manufacture.co2 },
+      transport: { energy: transport.energy, co2: transport.co2 },
       use: { energy: useEnergy, co2: useCO2 },
       eol: { energy: 0, co2: 0 },
     };
@@ -117,18 +204,27 @@ export function EcoAudit() {
       t.eol.co2 += c.eol_co2;
     }
     return t;
-  }, [breakdown, useEnergy, useCO2]);
+  }, [breakdown, useEnergy, useCO2, manufacture, transport]);
 
   const grandTotal =
     metric === 'energy'
-      ? totals.materials.energy + totals.use.energy + totals.eol.energy
-      : totals.materials.co2 + totals.use.co2 + totals.eol.co2;
+      ? totals.materials.energy +
+        totals.manufacture.energy +
+        totals.transport.energy +
+        totals.use.energy +
+        totals.eol.energy
+      : totals.materials.co2 +
+        totals.manufacture.co2 +
+        totals.transport.co2 +
+        totals.use.co2 +
+        totals.eol.co2;
 
   const unit = metric === 'energy' ? 'MJ' : 'kg CO₂';
 
-  // Stacked bar chart: phases on x, components stacked. Use phase is one trace.
+  // Stacked bar chart: 5 phases on x, BOM components stacked in materials/EoL.
+  // Aggregate "global" phases (manufacture/transport/use) get one trace each.
   const traces = useMemo<Partial<PlotData>[]>(() => {
-    const phases = ['Materials', 'Use', 'End-of-Life'];
+    const phases = ['Materials', 'Manufacture', 'Transport', 'Use', 'End-of-Life'];
 
     const componentTraces: Partial<PlotData>[] = breakdown.map((c) => {
       const color = familyById[c.material.family].color;
@@ -138,11 +234,35 @@ export function EcoAudit() {
         type: 'bar',
         name: c.material.short_name ?? c.material.name,
         x: phases,
-        y: [mat, 0, eol],
+        y: [mat, 0, 0, 0, eol],
         marker: { color },
         hovertemplate: `<b>%{fullData.name}</b><br>%{x}: %{y:.3g} ${unit}<extra></extra>`,
       };
     });
+
+    const mfgVal = metric === 'energy' ? manufacture.energy : manufacture.co2;
+    if (mfgVal !== 0) {
+      componentTraces.push({
+        type: 'bar',
+        name: 'Manufacture',
+        x: phases,
+        y: [0, mfgVal, 0, 0, 0],
+        marker: { color: '#8A6E3E' },
+        hovertemplate: `<b>Manufacture</b><br>%{y:.3g} ${unit}<extra></extra>`,
+      });
+    }
+
+    const trpVal = metric === 'energy' ? transport.energy : transport.co2;
+    if (trpVal !== 0) {
+      componentTraces.push({
+        type: 'bar',
+        name: 'Transport',
+        x: phases,
+        y: [0, 0, trpVal, 0, 0],
+        marker: { color: '#6B8E9F' },
+        hovertemplate: `<b>Transport</b><br>%{y:.3g} ${unit}<extra></extra>`,
+      });
+    }
 
     const usePhaseValue = metric === 'energy' ? useEnergy : useCO2;
     if (usePhaseValue !== 0) {
@@ -150,25 +270,34 @@ export function EcoAudit() {
         type: 'bar',
         name: 'Use phase',
         x: phases,
-        y: [0, usePhaseValue, 0],
+        y: [0, 0, 0, usePhaseValue, 0],
         marker: { color: '#555' },
         hovertemplate: `<b>Use phase</b><br>%{y:.3g} ${unit}<extra></extra>`,
       });
     }
 
     return componentTraces;
-  }, [breakdown, metric, useEnergy, useCO2, unit]);
+  }, [breakdown, metric, useEnergy, useCO2, manufacture, transport, unit]);
 
   const layout: Partial<Layout> = {
-    title: { text: `Life-cycle ${metric === 'energy' ? 'energy' : 'CO₂'} by phase`, font: { size: 16 } },
+    title: { text: `Life-cycle ${metric === 'energy' ? 'energy' : 'CO₂'} by phase`, font: { size: 16, color: '#2a2a26', family: 'Inter, sans-serif' } },
     barmode: 'relative',
-    xaxis: { title: { text: 'Lifecycle phase' } },
-    yaxis: { title: { text: `${metric === 'energy' ? 'Energy' : 'CO₂'} (${unit})` }, zeroline: true, zerolinecolor: '#999' },
+    xaxis: {
+      ...AXIS_STYLE,
+      title: { text: 'Lifecycle phase', font: { color: '#52524E', size: 13 } },
+    },
+    yaxis: {
+      ...AXIS_STYLE,
+      title: { text: `${metric === 'energy' ? 'Energy' : 'CO₂'} (${unit})`, font: { color: '#52524E', size: 13 } },
+      zeroline: true,
+      zerolinecolor: '#C0BFB6',
+    },
     showlegend: true,
-    legend: { x: 1.02, y: 1, xanchor: 'left' },
+    legend: LEGEND_STYLE,
     margin: { l: 80, r: 200, t: 60, b: 60 },
-    plot_bgcolor: '#fafafa',
-    paper_bgcolor: 'white',
+    plot_bgcolor: PLOT_BG,
+    paper_bgcolor: PAPER_BG,
+    hoverlabel: HOVER_LABEL,
   };
 
   return (
@@ -237,11 +366,102 @@ export function EcoAudit() {
       </section>
 
       <section className="eco-section">
-        <h2>2. Use phase</h2>
+        <h2>2. Manufacture phase</h2>
         <p className="eco-help">
-          Energy and CO₂ consumed across the product's service lifetime. Enter totals (e.g., for a car:
-          fuel energy × kilometres driven over lifetime).
+          Energy spent shaping the raw material into finished components (casting, machining,
+          molding, etc.). Typical defaults from Ashby Table 15.2: ~15 MJ/kg for casting and
+          molding, 5–10 MJ/kg for forging, 30+ MJ/kg for CNC machining of metals.
         </p>
+        <div className="use-phase-grid">
+          <label>
+            Manufacturing energy (MJ/kg of BOM)
+            <input
+              type="number"
+              min={0}
+              step={0.5}
+              value={mfgEnergyPerKg}
+              onChange={(e) => setMfgEnergyPerKg(Math.max(0, parseFloat(e.target.value) || 0))}
+            />
+          </label>
+          <label>
+            Manufacturing CO₂ (kg/kg of BOM)
+            <input
+              type="number"
+              min={0}
+              step={0.1}
+              value={mfgCO2PerKg}
+              onChange={(e) => setMfgCO2PerKg(Math.max(0, parseFloat(e.target.value) || 0))}
+            />
+          </label>
+        </div>
+        <p className="phase-note">
+          Total mass = {totalMass_kg.toFixed(2)} kg ⇒ manufacture ={' '}
+          {fmt(manufacture.energy)} MJ, {fmt(manufacture.co2)} kg CO₂.
+        </p>
+      </section>
+
+      <section className="eco-section">
+        <h2>3. Transport phase</h2>
+        <p className="eco-help">
+          Energy and CO₂ for shipping the finished product. Per Ashby Table 15.4: sea ≈ 0.16,
+          rail ≈ 0.25, truck ≈ 0.94, air ≈ 23 MJ per tonne·km. Air freight is two orders of
+          magnitude worse than sea — picking the mode dominates the result.
+        </p>
+        <div className="use-phase-grid">
+          <label>
+            Distance (km)
+            <input
+              type="number"
+              min={0}
+              value={transportDistance_km}
+              onChange={(e) =>
+                setTransportDistance(Math.max(0, parseFloat(e.target.value) || 0))
+              }
+            />
+          </label>
+          <label>
+            Mode
+            <select
+              value={transportMode}
+              onChange={(e) => setTransportMode(e.target.value as TransportMode)}
+            >
+              {(Object.keys(TRANSPORT_FACTORS) as TransportMode[]).map((m) => (
+                <option key={m} value={m}>
+                  {TRANSPORT_FACTORS[m].label} · {TRANSPORT_FACTORS[m].mj_t_km} MJ/(t·km)
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
+        <p className="phase-note">
+          {totalMass_kg.toFixed(2)} kg × {transportDistance_km.toLocaleString()} km ={' '}
+          {((totalMass_kg / 1000) * transportDistance_km).toFixed(3)} t·km ⇒ transport ={' '}
+          {fmt(transport.energy)} MJ, {fmt(transport.co2)} kg CO₂.
+        </p>
+      </section>
+
+      <section className="eco-section">
+        <h2>4. Use phase</h2>
+        <p className="eco-help">
+          Energy and CO₂ consumed across the product's service lifetime. Pick a preset for a
+          typical product, or enter totals directly.
+        </p>
+        <div className="controls" style={{ marginTop: 0, marginBottom: 12 }}>
+          <div className="control-group">
+            <label htmlFor="use-preset">Use-phase preset:</label>
+            <select
+              id="use-preset"
+              value={usePresetId}
+              onChange={(e) => applyUsePreset(e.target.value)}
+            >
+              {USE_PRESETS.map((p) => (
+                <option key={p.id} value={p.id}>
+                  {p.label}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
         <div className="use-phase-grid">
           <label>
             Energy over lifetime (MJ)
@@ -249,7 +469,10 @@ export function EcoAudit() {
               type="number"
               min={0}
               value={useEnergy}
-              onChange={(e) => setUseEnergy(Math.max(0, parseFloat(e.target.value) || 0))}
+              onChange={(e) => {
+                setUseEnergy(Math.max(0, parseFloat(e.target.value) || 0));
+                setUsePresetId('');
+              }}
             />
           </label>
           <label>
@@ -258,14 +481,17 @@ export function EcoAudit() {
               type="number"
               min={0}
               value={useCO2}
-              onChange={(e) => setUseCO2(Math.max(0, parseFloat(e.target.value) || 0))}
+              onChange={(e) => {
+                setUseCO2(Math.max(0, parseFloat(e.target.value) || 0));
+                setUsePresetId('');
+              }}
             />
           </label>
         </div>
       </section>
 
       <section className="eco-section">
-        <h2>3. End-of-Life</h2>
+        <h2>5. End-of-Life</h2>
         <label className="checkbox">
           <input
             type="checkbox"
@@ -282,7 +508,7 @@ export function EcoAudit() {
       </section>
 
       <section className="eco-section">
-        <h2>4. Results</h2>
+        <h2>6. Results</h2>
         <div className="controls" style={{ marginTop: 0 }}>
           <div className="control-group">
             <label htmlFor="metric">Metric:</label>
@@ -298,6 +524,18 @@ export function EcoAudit() {
             <div className="total-label">Materials</div>
             <div className="total-value">
               {fmt(metric === 'energy' ? totals.materials.energy : totals.materials.co2)} <span className="unit">{unit}</span>
+            </div>
+          </div>
+          <div className="total-card">
+            <div className="total-label">Manufacture</div>
+            <div className="total-value">
+              {fmt(metric === 'energy' ? totals.manufacture.energy : totals.manufacture.co2)} <span className="unit">{unit}</span>
+            </div>
+          </div>
+          <div className="total-card">
+            <div className="total-label">Transport</div>
+            <div className="total-value">
+              {fmt(metric === 'energy' ? totals.transport.energy : totals.transport.co2)} <span className="unit">{unit}</span>
             </div>
           </div>
           <div className="total-card">
@@ -332,9 +570,14 @@ export function EcoAudit() {
       <footer className="app-footer">
         <p>
           Eco-Audit follows the bill-of-materials method described in Ashby, <em>Materials Selection
-          in Mechanical Design</em> (6th ed., 2025), Chapter 15. Phase 4 MVP simplifies to three
-          phases: <em>materials production</em>, <em>use</em>, <em>end-of-life</em>. Manufacturing
-          and transport phases will be added when process-energy data is available.
+          in Mechanical Design</em> (6th ed., 2025), Chapter 15. All five lifecycle phases are now
+          modelled: <em>materials production</em> (mass × embodied energy from the material data),
+          <em>manufacture</em> (mass × shaping energy intensity, Table 15.2), <em>transport</em>{' '}
+          (tonne-km × mode factor, Table 15.4), <em>use</em> (lifetime totals or presets from
+          Ch. 15 worked examples), and <em>end-of-life</em> recycle credit (mass × recycle fraction
+          × avoided virgin-production energy, Eq 15.6). The relative dominance of phases is the
+          teaching takeaway: for static products, materials usually win; for cars and appliances,
+          the use phase dwarfs everything else.
         </p>
       </footer>
     </>

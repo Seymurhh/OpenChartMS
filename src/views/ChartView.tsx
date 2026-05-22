@@ -5,6 +5,7 @@ import { SelectedMaterialsPanel, type SelectedItem } from '../components/Selecte
 import type { PropertyKey } from '../data/types';
 import { materials } from '../data/loadMaterials';
 import { CHART_INDICES, makeCustomIndex, type MaterialIndex } from '../data/chartIndices';
+import { WORKED_EXAMPLES } from '../data/examples';
 import { PROPERTY_META } from '../data/types';
 
 interface ChartPreset {
@@ -40,6 +41,22 @@ export function ChartView() {
   const [bExp, setBExp] = useState(1);
   const [lassoMode, setLassoMode] = useState(false);
   const [graphicalSelection, setGraphicalSelection] = useState<Set<string> | undefined>(undefined);
+  const [activeExampleId, setActiveExampleId] = useState<string>('');
+
+  const activeExample = WORKED_EXAMPLES.find((e) => e.id === activeExampleId);
+
+  const loadExample = (exId: string) => {
+    if (!exId) {
+      setActiveExampleId('');
+      return;
+    }
+    const ex = WORKED_EXAMPLES.find((e) => e.id === exId);
+    if (!ex) return;
+    setActiveExampleId(ex.id);
+    setPresetId(ex.presetId);
+    setActiveIndexId(ex.indexId);
+    setSliderPos(50);
+  };
 
   const preset = PRESETS.find((p) => p.id === presetId)!;
   const indicesForPreset: MaterialIndex[] = CHART_INDICES[preset.id] ?? [];
@@ -124,11 +141,38 @@ export function ChartView() {
     setPresetId(id);
     setActiveIndexId('none');
     setSliderPos(50);
+    setActiveExampleId('');
     // limits intentionally retained — they apply across presets.
   };
 
   return (
     <>
+      <div className="examples-bar">
+        <div className="control-group">
+          <label htmlFor="example">Worked example:</label>
+          <select
+            id="example"
+            value={activeExampleId}
+            onChange={(e) => loadExample(e.target.value)}
+          >
+            <option value="">— none —</option>
+            {WORKED_EXAMPLES.map((ex) => (
+              <option key={ex.id} value={ex.id}>
+                {ex.label} ({ex.chapter})
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+
+      {activeExample && (
+        <div className="example-card">
+          <div className="ex-chapter">{activeExample.chapter}</div>
+          <div className="ex-title">{activeExample.label}</div>
+          <div className="ex-desc">{activeExample.description}</div>
+        </div>
+      )}
+
       <div className="controls">
         <div className="control-group">
           <label htmlFor="preset">Chart:</label>
@@ -191,6 +235,7 @@ export function ChartView() {
             onChange={(e) => {
               setActiveIndexId(e.target.value);
               setSliderPos(50);
+              setActiveExampleId('');
             }}
           >
             <option value="none">— none —</option>
@@ -250,23 +295,29 @@ export function ChartView() {
         )}
 
         {activeIndex && (
-          <div className="index-row slider-row">
-            <label htmlFor="m-slider">
-              Cutoff: <strong>{activeIndex.expr} = {sel.M.toPrecision(3)}</strong>
-            </label>
-            <input
-              id="m-slider"
-              type="range"
-              min={0}
-              max={100}
-              step={0.5}
-              value={sliderPos}
-              onChange={(e) => setSliderPos(parseFloat(e.target.value))}
-            />
-            <span className="slider-bounds">
-              {sel.Mmin.toPrecision(2)} ↔ {sel.Mmax.toPrecision(2)}
-            </span>
-          </div>
+          <>
+            <div className="index-row slider-row">
+              <label htmlFor="m-slider">
+                Cutoff: <strong>{activeIndex.expr} ≥ {sel.M.toPrecision(3)}</strong>
+              </label>
+              <input
+                id="m-slider"
+                type="range"
+                min={0}
+                max={100}
+                step={0.5}
+                value={sliderPos}
+                onChange={(e) => setSliderPos(parseFloat(e.target.value))}
+              />
+              <span className="slider-bounds">
+                {sel.Mmin.toPrecision(2)} ↔ {sel.Mmax.toPrecision(2)}
+              </span>
+            </div>
+            <p className="slider-hint">
+              Materials with M ≥ cutoff stay vivid; the rest dim. Drag right to keep only top
+              performers.
+            </p>
+          </>
         )}
       </div>
 

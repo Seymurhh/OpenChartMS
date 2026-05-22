@@ -17,6 +17,7 @@ export function MultiConstraint() {
   const [ccSliderPos, setCcSliderPos] = useState(50);
   const [showPareto, setShowPareto] = useState(true);
   const [showSelectionBox, setShowSelectionBox] = useState(true);
+  const [showLabels, setShowLabels] = useState(false);
 
   const index1 = CONSTRAINT_INDICES.find((i) => i.id === i1Id) ?? CONSTRAINT_INDICES[0];
   const index2 = CONSTRAINT_INDICES.find((i) => i.id === i2Id) ?? CONSTRAINT_INDICES[1];
@@ -132,11 +133,29 @@ export function MultiConstraint() {
             />
             Pareto front
           </label>
+          <label className="checkbox">
+            <input
+              type="checkbox"
+              checked={showLabels}
+              onChange={(e) => setShowLabels(e.target.checked)}
+            />
+            Material labels
+          </label>
+        </div>
+        <div className="quick-picks" style={{ marginTop: 8 }}>
+          <span className="qp-label">Tilt:</span>
+          <button onClick={() => setCcSliderPos(15)}>← Small Cc (C2 binds)</button>
+          <button onClick={() => setCcSliderPos(35)}>Lean C2</button>
+          <button onClick={() => setCcSliderPos(50)}>Balanced</button>
+          <button onClick={() => setCcSliderPos(65)}>Lean C1</button>
+          <button onClick={() => setCcSliderPos(85)}>Large Cc (C1 binds) →</button>
         </div>
         <p className="phase-note">
-          Default Cc = {defaultCc.toPrecision(2)} (median ratio of the data). Slide to encode
-          your specific geometry: in Ashby's tie example, Cc = L*·S* / F_f* where L* is length,
-          S* the stiffness target, F_f* the failure-load target.
+          Default Cc = {defaultCc.toPrecision(2)} (median ratio of the data — a neutral starting
+          point, not a physical value). For real design, set Cc from geometry: in Ashby's tie
+          example, Cc = L*·S* / F_f* where L* is length, S* the stiffness target, F_f* the
+          failure-load target. Small Cc ⇒ constraint 2 (y-axis) tends to bind; large Cc ⇒
+          constraint 1 (x-axis) tends to bind.
         </p>
       </section>
 
@@ -146,6 +165,7 @@ export function MultiConstraint() {
         Cc={Cc}
         showPareto={showPareto}
         showSelectionBox={showSelectionBox}
+        showLabels={showLabels}
       />
 
       <section className="trade-off-section">

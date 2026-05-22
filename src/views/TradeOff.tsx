@@ -1,8 +1,10 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { TradeOffChart } from '../components/TradeOffChart';
 import { materials, familyById } from '../data/loadMaterials';
 import { PROPERTY_META, type Material, type PropertyKey } from '../data/types';
 import { paretoFront } from '../lib/pareto';
+
+const PARETO_PAGE_SIZE = 3;
 
 // Properties that make sense as minimization objectives
 const MINIMIZE_PROPERTIES: PropertyKey[] = [
@@ -27,7 +29,9 @@ export function TradeOff() {
   const [yKey, setYKey] = useState<PropertyKey>('density_kg_m3');
   const [alphaSliderPos, setAlphaSliderPos] = useState(50);
   const [showContours, setShowContours] = useState(true);
+  const [showLabels, setShowLabels] = useState(false);
   const [baselineId, setBaselineId] = useState<string>('');
+  const [paretoPage, setParetoPage] = useState(0);
 
   const xMeta = PROPERTY_META[xKey];
   const yMeta = PROPERTY_META[yKey];
@@ -71,6 +75,18 @@ export function TradeOff() {
     const pareto = points.filter((p) => paretoIds.has(p.id)).sort((a, b) => a.x - b.x);
     return { paretoMaterials: pareto, optimum: best, optimumZ: minZ };
   }, [points, alpha]);
+
+  const paretoPageCount = Math.max(1, Math.ceil(paretoMaterials.length / PARETO_PAGE_SIZE));
+  const paretoPageItems = paretoMaterials.slice(
+    paretoPage * PARETO_PAGE_SIZE,
+    (paretoPage + 1) * PARETO_PAGE_SIZE,
+  );
+  const paretoGlobalStart = paretoPage * PARETO_PAGE_SIZE;
+
+  // Reset to first page whenever the list changes (axis change, α change, etc.)
+  useEffect(() => {
+    setParetoPage(0);
+  }, [paretoMaterials]);
 
   return (
     <>
@@ -147,10 +163,32 @@ export function TradeOff() {
             />
             Penalty contours
           </label>
+          <label className="checkbox">
+            <input
+              type="checkbox"
+              checked={showLabels}
+              onChange={(e) => setShowLabels(e.target.checked)}
+            />
+            Material labels
+          </label>
+        </div>
+        <div className="quick-picks" style={{ marginTop: 8 }}>
+          <span className="qp-label">Tilt:</span>
+          <button onClick={() => setAlphaSliderPos(15)}>
+            ← Strongly favor {xMeta.symbol || 'X'}
+          </button>
+          <button onClick={() => setAlphaSliderPos(35)}>Favor {xMeta.symbol || 'X'}</button>
+          <button onClick={() => setAlphaSliderPos(50)}>Balanced</button>
+          <button onClick={() => setAlphaSliderPos(65)}>Favor {yMeta.symbol || 'Y'}</button>
+          <button onClick={() => setAlphaSliderPos(85)}>
+            Strongly favor {yMeta.symbol || 'Y'} →
+          </button>
         </div>
         <p className="phase-note">
           Default α = {defaultAlpha.toPrecision(2)} (natural data scale: x-range / y-range).
-          Slide left → cheaper Y dominates; slide right → cheaper X dominates.
+          Slide left → low X (cheaper) matters more; slide right → low Y matters more. The optimum
+          shifts along the Pareto front as α changes. For design-level mass–cost analyses, Ashby
+          Table 9.2 gives exchange constants from ~$1/kg (cars) to ~$5,000/kg (spacecraft).
         </p>
       </section>
 
@@ -188,10 +226,11 @@ export function TradeOff() {
         alpha={alpha}
         showContours={showContours}
         baselineId={baselineId || undefined}
+        showLabels={showLabels}
       />
 
       <section className="trade-off-section">
-        <h2>3. Results</h2>
+        <h2>4. Results</h2>
         <div className="totals-grid">
           <div className="total-card grand">
             <div className="total-label">Optimum (min Z)</div>
@@ -213,18 +252,45 @@ export function TradeOff() {
               Pareto-front materials{' '}
               <span className="count-badge dark">{paretoMaterials.length}</span>
             </h3>
-            <span className="sort-note">non-dominated · ranked by {xMeta.label}</span>
+            <div className="selected-header-right">
+              <span className="sort-note">non-dominated · ranked by {xMeta.label}</span>
+              {paretoPageCount > 1 && (
+                <div className="pagination">
+                  <button
+                    className="page-btn"
+                    onClick={() => setParetoPage((p) => p - 1)}
+                    disabled={paretoPage === 0}
+                    aria-label="Previous page"
+                  >
+                    ‹
+                  </button>
+                  <span className="page-info">
+                    {paretoGlobalStart + 1}–
+                    {Math.min(paretoGlobalStart + PARETO_PAGE_SIZE, paretoMaterials.length)} of{' '}
+                    {paretoMaterials.length}
+                  </span>
+                  <button
+                    className="page-btn"
+                    onClick={() => setParetoPage((p) => p + 1)}
+                    disabled={paretoPage >= paretoPageCount - 1}
+                    aria-label="Next page"
+                  >
+                    ›
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
           {paretoMaterials.length === 0 ? (
             <p className="empty-note">No materials available for the chosen axes.</p>
           ) : (
             <ol className="selected-list">
-              {paretoMaterials.map((p, i) => {
+              {paretoPageItems.map((p, i) => {
                 const family = familyById[p.material.family];
                 const Z = p.x + alpha * p.y;
                 return (
                   <li key={p.id} className="selected-row">
-                    <span className="rank">{i + 1}</span>
+                    <span className="rank">{paretoGlobalStart + i + 1}</span>
                     <span
                       className="family-chip small"
                       style={{ background: family.color }}

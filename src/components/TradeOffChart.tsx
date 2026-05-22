@@ -4,6 +4,7 @@ import type { Annotations, Layout, PlotData, Shape } from 'plotly.js';
 import { families, materials } from '../data/loadMaterials';
 import { PROPERTY_META, type Material, type PropertyKey } from '../data/types';
 import { paretoFront, paretoFrontOrdered, type ParetoPoint } from '../lib/pareto';
+import { AXIS_STYLE, HOVER_LABEL, LEGEND_STYLE, PAPER_BG, PLOT_BG } from '../lib/chartStyle';
 
 interface Props {
   xKey: PropertyKey;
@@ -11,13 +12,21 @@ interface Props {
   alpha: number; // exchange constant: Z = x + alpha * y
   showContours: boolean;
   baselineId?: string; // when set, draws quadrant lines through the baseline's coords
+  showLabels?: boolean;
 }
 
 interface MaterialPoint extends ParetoPoint {
   material: Material;
 }
 
-export function TradeOffChart({ xKey, yKey, alpha, showContours, baselineId }: Props) {
+export function TradeOffChart({
+  xKey,
+  yKey,
+  alpha,
+  showContours,
+  baselineId,
+  showLabels = false,
+}: Props) {
   const xMeta = PROPERTY_META[xKey];
   const yMeta = PROPERTY_META[yKey];
 
@@ -59,10 +68,15 @@ export function TradeOffChart({ xKey, yKey, alpha, showContours, baselineId }: P
       const items = points.filter((p) => p.material.family === f.id);
       return {
         type: 'scatter',
-        mode: 'markers',
+        mode: showLabels ? 'text+markers' : 'markers',
         name: f.label,
         x: items.map((p) => p.x),
         y: items.map((p) => p.y),
+        text: items.map((p) =>
+          showLabels ? (p.material.short_name ?? p.material.name) : '',
+        ),
+        textposition: 'top center',
+        textfont: { size: 9, color: '#2a2a26', family: 'Inter, sans-serif' },
         customdata: items.map((p) => [
           p.material.name,
           paretoIds.has(p.id) ? '★ Pareto-optimal' : '',
@@ -84,7 +98,7 @@ export function TradeOffChart({ xKey, yKey, alpha, showContours, baselineId }: P
           `<extra>${f.label}</extra>`,
       };
     });
-  }, [points, paretoIds, alpha, xMeta, yMeta]);
+  }, [points, paretoIds, alpha, xMeta, yMeta, showLabels]);
 
   // Pareto front polyline (drawn before the markers so it sits underneath).
   const paretoTrace: Partial<PlotData> = useMemo(
@@ -287,34 +301,35 @@ export function TradeOffChart({ xKey, yKey, alpha, showContours, baselineId }: P
   const layout: Partial<Layout> = {
     title: {
       text: `${yMeta.label} vs ${xMeta.label} — trade-off`,
-      font: { size: 18 },
+      font: { size: 16, color: '#2a2a26', family: 'Inter, sans-serif' },
     },
     xaxis: {
+      ...AXIS_STYLE,
       title: {
-        text: `${xMeta.label}${xMeta.symbol ? ` (${xMeta.symbol})` : ''}  [${xMeta.unit}] →  cheaper / lower`,
+        text: `${xMeta.label}${xMeta.symbol ? ` (${xMeta.symbol})` : ''}  [${xMeta.unit}]  →  larger (worse)`,
+        font: { color: '#52524E', size: 13 },
       },
       type: 'log',
       range: xRange,
-      gridcolor: '#e5e5e5',
-      zeroline: false,
     },
     yaxis: {
+      ...AXIS_STYLE,
       title: {
-        text: `${yMeta.label}${yMeta.symbol ? ` (${yMeta.symbol})` : ''}  [${yMeta.unit}] ↑  heavier / higher`,
+        text: `${yMeta.label}${yMeta.symbol ? ` (${yMeta.symbol})` : ''}  [${yMeta.unit}]  ↑  larger (worse)`,
+        font: { color: '#52524E', size: 13 },
       },
       type: 'log',
       range: yRange,
-      gridcolor: '#e5e5e5',
-      zeroline: false,
     },
     shapes: [...baselineShapes, ...isoZShapes],
     annotations: [...annotations, ...baselineAnnotations],
     showlegend: true,
-    legend: { x: 1.02, y: 1, xanchor: 'left', yanchor: 'top' },
+    legend: LEGEND_STYLE,
     margin: { l: 90, r: 220, t: 60, b: 80 },
-    plot_bgcolor: '#fafafa',
-    paper_bgcolor: 'white',
+    plot_bgcolor: PLOT_BG,
+    paper_bgcolor: PAPER_BG,
     hovermode: 'closest',
+    hoverlabel: HOVER_LABEL,
   };
 
   return (

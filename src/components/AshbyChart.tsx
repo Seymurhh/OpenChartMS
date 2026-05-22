@@ -1,9 +1,10 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Plot from 'react-plotly.js';
 import type { Annotations, Layout, PlotData, Shape } from 'plotly.js';
-import { families, familyById, materials } from '../data/loadMaterials';
-import { PROPERTY_META, type PropertyKey } from '../data/types';
+import { families, materials } from '../data/loadMaterials';
+import { PROPERTY_META, type FamilyId, type PropertyKey } from '../data/types';
 import { convexHull, type Point } from '../lib/hull';
+import { AXIS_STYLE, HOVER_LABEL, LEGEND_STYLE, PAPER_BG, PLOT_BG } from '../lib/chartStyle';
 
 export interface IndexLineSpec {
   expr: string;
@@ -42,15 +43,22 @@ export function AshbyChart({
   const xMeta = PROPERTY_META[xKey];
   const yMeta = PROPERTY_META[yKey];
 
+  // Track which families have been toggled off via legend click. Plotly hides the
+  // family's scatter trace by default, but the ellipses and envelopes are shapes,
+  // not traces — so we filter them here. Reset whenever the chart preset changes.
+  const [hiddenFamilies, setHiddenFamilies] = useState<Set<FamilyId>>(new Set());
+  useEffect(() => {
+    setHiddenFamilies(new Set());
+  }, [xKey, yKey]);
+
   const valid = useMemo(
     () => materials.filter((m) => m.properties[xKey] && m.properties[yKey]),
     [xKey, yKey],
   );
 
-  // Axis data range, used to extend the index line across the chart.
+  // Data ranges for both axes — used to lock the view and extend the index line.
   const xRange = useMemo(() => {
-    let lo = Infinity;
-    let hi = -Infinity;
+    let lo = Infinity, hi = -Infinity;
     for (const m of valid) {
       const r = m.properties[xKey]!;
       if (r.min < lo) lo = r.min;
@@ -59,17 +67,32 @@ export function AshbyChart({
     return { lo, hi };
   }, [valid, xKey]);
 
+  const yRange = useMemo(() => {
+    let lo = Infinity, hi = -Infinity;
+    for (const m of valid) {
+      const r = m.properties[yKey]!;
+      if (r.min < lo) lo = r.min;
+      if (r.max > hi) hi = r.max;
+    }
+    return { lo, hi };
+  }, [valid, yKey]);
+
   const isDimmed = (id: string): boolean => {
     if (!selectedIds) return false;
     return !selectedIds.has(id);
   };
 
-  // Family envelopes: convex hull of all member materials' bounding-box corners in log space.
-  const envelopes: Partial<Shape>[] = useMemo(() => {
-    if (!showEnvelopes) return [];
-    return families.flatMap((f) => {
+  // Family envelopes: convex hull smoothed with quadratic Bézier curves (textbook blob style),
+  // plus a family-name label at the centroid so the chart is legible without the legend.
+  const envelopeData = useMemo(() => {
+    const shapes: Partial<Shape>[] = [];
+    const labels: Partial<Annotations>[] = [];
+    if (!showEnvelopes) return { shapes, labels };
+
+    for (const f of families) {
+      if (hiddenFamilies.has(f.id)) continue;
       const items = valid.filter((m) => m.family === f.id);
-      if (items.length < 2) return [];
+      if (items.length < 2) continue;
 
       const pts: Point[] = [];
       for (const m of items) {
@@ -84,33 +107,65 @@ export function AshbyChart({
       }
 
       const hull = convexHull(pts);
-      if (hull.length < 3) return [];
+      if (hull.length < 3) continue;
 
-      const path =
-        hull
-          .map((p, i) => `${i === 0 ? 'M' : 'L'} ${Math.pow(10, p.x)},${Math.pow(10, p.y)}`)
-          .join(' ') + ' Z';
+      // Inflate hull outward from centroid in log space for a bit of breathing room.
+      const cx = hull.reduce((s, p) => s + p.x, 0) / hull.length;
+      const cy = hull.reduce((s, p) => s + p.y, 0) / hull.length;
+      const inflated = hull.map((p) => ({
+        x: cx + (p.x - cx) * 1.12,
+        y: cy + (p.y - cy) * 1.12,
+      }));
 
-      return [
-        {
-          type: 'path',
-          path,
-          xref: 'x',
-          yref: 'y',
-          fillcolor: f.color,
-          opacity: 0.10,
-          line: { color: f.color, width: 0 },
-          layer: 'below',
-        } satisfies Partial<Shape>,
-      ];
-    });
-  }, [valid, xKey, yKey, showEnvelopes]);
+      // Smooth the polygon: midpoints of each edge become the Bézier anchors,
+      // original vertices become control points → gives the organic blob look.
+      const n = inflated.length;
+      const mids = inflated.map((p, i) => ({
+        x: (p.x + inflated[(i + 1) % n].x) / 2,
+        y: (p.y + inflated[(i + 1) % n].y) / 2,
+      }));
+      const L = (p: Point) => `${Math.pow(10, p.x)},${Math.pow(10, p.y)}`;
+      const start = mids[0];
+      let path = `M ${L(start)}`;
+      for (let i = 0; i < n; i++) {
+        path += ` Q ${L(inflated[(i + 1) % n])} ${L(mids[(i + 1) % n])}`;
+      }
+      path += ' Z';
 
-  // Material ellipses; opacity drops if the material is dimmed by the current selection.
+      shapes.push({
+        type: 'path',
+        path,
+        xref: 'x',
+        yref: 'y',
+        fillcolor: f.color,
+        opacity: 0.18,
+        line: { color: f.color, width: 1.2 },
+        layer: 'below',
+      } satisfies Partial<Shape>);
+
+      // Textbook style: bold family name in family color, no pill background.
+      labels.push({
+        x: Math.pow(10, cx),
+        y: Math.pow(10, cy),
+        xref: 'x',
+        yref: 'y',
+        text: `<b>${f.label}</b>`,
+        showarrow: false,
+        font: { size: 14, color: f.color, family: 'Inter, sans-serif' },
+      });
+    }
+
+    return { shapes, labels };
+  }, [valid, xKey, yKey, showEnvelopes, hiddenFamilies]);
+
+  // Material ellipses — white fill with family-colored border (textbook style).
+  // Hidden families are dropped entirely so the legend-click toggle clears both
+  // markers AND ellipses.
   const ellipses: Partial<Shape>[] = useMemo(
     () =>
-      valid.map((m) => {
-        const color = familyById[m.family].color;
+      valid
+        .filter((m) => !hiddenFamilies.has(m.family))
+        .map((m) => {
         const xr = m.properties[xKey]!;
         const yr = m.properties[yKey]!;
         const dimmed = isDimmed(m.id);
@@ -122,14 +177,14 @@ export function AshbyChart({
           x1: xr.max,
           y0: yr.min,
           y1: yr.max,
-          fillcolor: color,
-          opacity: dimmed ? 0.08 : 0.55,
-          line: { color, width: dimmed ? 0 : 1 },
+          fillcolor: dimmed ? 'rgba(220,218,210,0.08)' : 'rgba(255,255,255,0.88)',
+          opacity: 1,
+          line: { color: dimmed ? 'rgba(180,178,170,0.2)' : '#2a2a26', width: dimmed ? 0.5 : 1 },
           layer: 'below',
         } satisfies Partial<Shape>;
       }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [valid, xKey, yKey, selectedIds],
+    [valid, xKey, yKey, selectedIds, hiddenFamilies],
   );
 
   // Iso-M index line, dashed, drawn above ellipses.
@@ -146,7 +201,7 @@ export function AshbyChart({
       y0: indexLine.lineY(xLo, indexLine.M),
       x1: xHi,
       y1: indexLine.lineY(xHi, indexLine.M),
-      line: { color: '#1a1a1a', width: 2, dash: 'dash' },
+      line: { color: '#2558C8', width: 2, dash: 'dash' },
       layer: 'above',
     } satisfies Partial<Shape>;
   }, [indexLine, xRange]);
@@ -159,13 +214,13 @@ export function AshbyChart({
       y: indexLine.lineY(xMid, indexLine.M),
       xref: 'x',
       yref: 'y',
-      text: `${indexLine.expr} = ${indexLine.M.toPrecision(3)}`,
+      text: `<b>${indexLine.expr} ≥ ${indexLine.M.toPrecision(3)}</b><br><span style="font-size:10px">↑ selected region</span>`,
       showarrow: false,
       bgcolor: 'rgba(255,255,255,0.92)',
-      bordercolor: '#1a1a1a',
+      bordercolor: '#2558C8',
       borderwidth: 1,
-      borderpad: 4,
-      font: { size: 12, color: '#1a1a1a' },
+      borderpad: 5,
+      font: { size: 12, color: '#2558C8', family: 'Inter, sans-serif' },
       xanchor: 'left',
       yanchor: 'bottom',
     };
@@ -182,9 +237,10 @@ export function AshbyChart({
           name: f.label,
           x: items.map((m) => geomean(m.properties[xKey]!.min, m.properties[xKey]!.max)),
           y: items.map((m) => geomean(m.properties[yKey]!.min, m.properties[yKey]!.max)),
-          text: items.map((m) => m.short_name ?? m.name),
+          // Only show label text for non-dimmed materials to prevent overlap when filtering.
+          text: items.map((m) => (showLabels && !isDimmed(m.id)) ? (m.short_name ?? m.name) : ''),
           textposition: 'top center',
-          textfont: { size: 9, color: '#222' },
+          textfont: { size: 9, color: '#2a2a26', family: 'Inter, sans-serif' },
           customdata: items.map((m) => [
             m.id,
             m.name,
@@ -210,46 +266,64 @@ export function AshbyChart({
     [valid, xKey, yKey, xMeta, yMeta, showLabels, selectedIds],
   );
 
-  const shapes: Partial<Shape>[] = [...envelopes, ...ellipses];
+  const shapes: Partial<Shape>[] = [...envelopeData.shapes, ...ellipses];
   if (indexLineShape) shapes.push(indexLineShape);
 
+  const allAnnotations: Partial<Annotations>[] = [
+    ...envelopeData.labels,
+    ...(indexAnnotation ? [indexAnnotation] : []),
+  ];
+
   const layout: Partial<Layout> = {
-    title: { text: `${yMeta.label} vs ${xMeta.label}`, font: { size: 18 } },
+    title: {
+      text: `${yMeta.label} vs ${xMeta.label}`,
+      font: { size: 16, color: '#2a2a26', family: 'Inter, sans-serif' },
+    },
     xaxis: {
+      ...AXIS_STYLE,
       title: {
         text: `${xMeta.label}${xMeta.symbol ? ` (${xMeta.symbol})` : ''}  [${xMeta.unit}]`,
+        font: { color: '#52524E', size: 13, family: 'Inter, sans-serif' },
       },
       type: 'log',
-      gridcolor: '#e5e5e5',
-      zeroline: false,
+      // Lock range from data + 0.5-decade padding so the index line never expands the axes.
+      range: [Math.log10(xRange.lo) - 0.5, Math.log10(xRange.hi) + 0.5],
+      autorange: false,
       showspikes: true,
       spikemode: 'across',
       spikethickness: 1,
-      spikecolor: '#aaa',
+      spikecolor: '#C0BFB6',
       spikedash: 'dot',
     },
     yaxis: {
+      ...AXIS_STYLE,
       title: {
         text: `${yMeta.label}${yMeta.symbol ? ` (${yMeta.symbol})` : ''}  [${yMeta.unit}]`,
+        font: { color: '#52524E', size: 13, family: 'Inter, sans-serif' },
       },
       type: 'log',
-      gridcolor: '#e5e5e5',
-      zeroline: false,
+      // Lock range from data + 0.5-decade padding.
+      range: [Math.log10(yRange.lo) - 0.5, Math.log10(yRange.hi) + 0.5],
+      autorange: false,
       showspikes: true,
       spikemode: 'across',
       spikethickness: 1,
-      spikecolor: '#aaa',
+      spikecolor: '#C0BFB6',
       spikedash: 'dot',
     },
     shapes,
-    annotations: indexAnnotation ? [indexAnnotation] : [],
+    annotations: allAnnotations,
     showlegend: true,
-    legend: { x: 1.02, y: 1, xanchor: 'left', yanchor: 'top' },
+    legend: LEGEND_STYLE,
     margin: { l: 80, r: 220, t: 60, b: 70 },
-    plot_bgcolor: '#fafafa',
-    paper_bgcolor: 'white',
+    plot_bgcolor: PLOT_BG,
+    paper_bgcolor: PAPER_BG,
     hovermode: 'closest',
     dragmode: dragMode,
+    hoverlabel: HOVER_LABEL,
+    // Preserve zoom/pan when slider or filter changes; only reset when the chart type changes.
+    uirevision: `${xKey}-${yKey}`,
+    transition: { duration: 250, easing: 'cubic-in-out' },
   };
 
   return (
@@ -264,6 +338,32 @@ export function AshbyChart({
       }}
       style={{ width: '100%', height: '720px' }}
       useResizeHandler
+      onLegendClick={(event) => {
+        const f = families[event.curveNumber];
+        if (!f) return true;
+        setHiddenFamilies((prev) => {
+          const next = new Set(prev);
+          if (next.has(f.id)) next.delete(f.id);
+          else next.add(f.id);
+          return next;
+        });
+        return true; // let Plotly also toggle the trace marker visibility
+      }}
+      onLegendDoubleClick={(event) => {
+        // Plotly's default double-click "isolates" — show only this family.
+        // Mirror that: hide every other family.
+        const f = families[event.curveNumber];
+        if (!f) return true;
+        setHiddenFamilies((prev) => {
+          const visibleCount = families.length - prev.size;
+          const onlyThisVisible = visibleCount === 1 && !prev.has(f.id);
+          if (onlyThisVisible) return new Set();
+          const next = new Set<FamilyId>();
+          for (const other of families) if (other.id !== f.id) next.add(other.id);
+          return next;
+        });
+        return true;
+      }}
       onSelected={(event) => {
         if (!onLassoSelect) return;
         if (!event || !event.points || event.points.length === 0) {

@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg:        #F8F7F2;
+  --surface:   #FFFFFF;
+  --surface-2: #F2F1EB;
+  --border:    #D8D7CF;
+  --border-sub:#E6E5DE;
+  --text:      #1A1A18;
+  --text-2:    #52524E;
+  --text-3:    #8A8A84;
+  --accent:    #2558C8;
+  --danger:    #C0392B;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -5,8 +20,21 @@
 html, body, #root {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  color: #1a1a1a;
-  background: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
   -webkit-font-smoothing: antialiased;
+}
+
+/* Plotly modebar styling */
+.modebar { background: transparent !important; }
+.modebar-btn path { fill: var(--text-3) !important; }
+.modebar-btn:hover path { fill: var(--accent) !important; }
+
+/* Plotly ellipse/envelope transition when filtering */
+.js-plotly-plot .layer-below path {
+  transition: opacity 0.35s ease;
+}
+.js-plotly-plot .scatterlayer .point path {
+  transition: opacity 0.35s ease;
 }

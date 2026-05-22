@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import Plot from 'react-plotly.js';
 import type { Layout, PlotData, Shape } from 'plotly.js';
-import { families, familyById, materials } from '../data/loadMaterials';
+import { families, materials } from '../data/loadMaterials';
 import { PROPERTY_META, type Material } from '../data/types';
 import {
   voigtComposite,
@@ -11,6 +11,7 @@ import {
   sandwichPanel,
   type HybridResult,
 } from '../lib/hybrid';
+import { AXIS_STYLE, HOVER_LABEL, LEGEND_STYLE, PAPER_BG, PLOT_BG } from '../lib/chartStyle';
 
 type HybridKind = 'composite' | 'foam-open' | 'foam-closed' | 'sandwich';
 
@@ -22,7 +23,6 @@ const ELIGIBLE = materials.filter(
   (m) => m.properties.youngs_modulus_GPa && m.properties.density_kg_m3,
 );
 
-const FAMILY_COLOR = (m: Material): string => familyById[m.family].color;
 
 // Build a sweep of f ∈ [0, 1] for composites, ρ̄ ∈ [0.01, 0.5] for foams, t/c ∈ [0.02, 0.4] for sandwiches.
 function sweep(kind: HybridKind, m1: Material, m2: Material): HybridResult[] {
@@ -61,6 +61,7 @@ export function HybridSynth() {
   const [m1Id, setM1Id] = useState('cfrp');
   const [m2Id, setM2Id] = useState('epoxy');
   const [fSlider, setFSlider] = useState(50); // 0..100, used for f, ρ̄, or t/c depending on kind
+  const [showLabels, setShowLabels] = useState(false);
 
   const m1 = ELIGIBLE.find((m) => m.id === m1Id) ?? ELIGIBLE[0];
   const m2 = ELIGIBLE.find((m) => m.id === m2Id) ?? ELIGIBLE[0];
@@ -95,13 +96,13 @@ export function HybridSynth() {
 
   const sweepPoints = useMemo(() => sweep(kind, m1, m2), [kind, m1, m2]);
 
-  // Family-colored ellipses for context (same look as Material charts E–ρ).
+  // Textbook-style material ellipses: white fill, thin dark outline. Family
+  // identity comes from the marker dots and legend, not the ellipse fill.
   const ellipses: Partial<Shape>[] = useMemo(
     () =>
       ELIGIBLE.map((m) => {
         const r = m.properties.density_kg_m3!;
         const e = m.properties.youngs_modulus_GPa!;
-        const color = FAMILY_COLOR(m);
         return {
           type: 'circle',
           xref: 'x',
@@ -110,22 +111,29 @@ export function HybridSynth() {
           x1: r.max,
           y0: e.min,
           y1: e.max,
-          fillcolor: color,
-          opacity: 0.25,
-          line: { color, width: 0.5 },
+          fillcolor: 'rgba(255,255,255,0.85)',
+          opacity: 1,
+          line: { color: '#2a2a26', width: 1 },
           layer: 'below',
         } satisfies Partial<Shape>;
       }),
     [],
   );
 
+  // In foam mode, highlight real foams (the family the prediction targets); dim
+  // others so students can see whether actual foam data sits on the predicted
+  // scaling line.
+  const isFoamMode = kind === 'foam-open' || kind === 'foam-closed';
+
   const familyTraces: Partial<PlotData>[] = useMemo(
     () =>
       families.map((f) => {
         const items = ELIGIBLE.filter((m) => m.family === f.id);
+        const isHighlighted = isFoamMode && f.id === 'foams';
+        const isDimmed = isFoamMode && f.id !== 'foams';
         return {
           type: 'scatter',
-          mode: 'markers',
+          mode: showLabels ? 'text+markers' : 'markers',
           name: f.label,
           x: items.map((m) =>
             geomean(m.properties.density_kg_m3!.min, m.properties.density_kg_m3!.max),
@@ -134,23 +142,61 @@ export function HybridSynth() {
             geomean(m.properties.youngs_modulus_GPa!.min, m.properties.youngs_modulus_GPa!.max),
           ),
           text: items.map((m) => m.short_name ?? m.name),
-          marker: { color: f.color, size: 6, line: { color: 'white', width: 1 } },
+          textposition: 'top center',
+          textfont: { size: 9, color: '#2a2a26', family: 'Inter, sans-serif' },
+          marker: {
+            color: f.color,
+            size: isHighlighted ? 11 : 6,
+            opacity: isDimmed ? 0.25 : 1,
+            line: {
+              color: isHighlighted ? '#1a1a1a' : 'white',
+              width: isHighlighted ? 2 : 1,
+            },
+          },
           hovertemplate: '<b>%{text}</b><br>ρ=%{x:.3g} kg/m³<br>E=%{y:.3g} GPa<extra></extra>',
         };
       }),
-    [],
+    [isFoamMode, showLabels],
   );
 
-  // Sweep trace (Voigt curve, Reuss curve, foam scaling line, etc.)
+  // Sweep trace (Voigt curve, Reuss curve, foam scaling line, etc.) For composites
+  // the Voigt and Reuss curves bracket the "all real composites live in here"
+  // region — render that band as a filled polygon for visual emphasis.
   const sweepTraces: Partial<PlotData>[] = useMemo(() => {
     const out: Partial<PlotData>[] = [];
     if (kind === 'composite') {
       const voigt = sweepPoints.filter((p) => p.kind === 'composite-voigt');
       const reuss = sweepPoints.filter((p) => p.kind === 'composite-reuss');
+
+      // Voigt and Reuss share density (same rule of mixtures), so the polygon
+      // formed by Voigt forward + Reuss reversed has non-zero area only in y.
+      if (voigt.length > 1 && reuss.length > 1) {
+        const polyX = [
+          ...voigt.map((p) => p.rho_kg_m3),
+          ...[...reuss].reverse().map((p) => p.rho_kg_m3),
+        ];
+        const polyY = [
+          ...voigt.map((p) => p.E_GPa),
+          ...[...reuss].reverse().map((p) => p.E_GPa),
+        ];
+        out.push({
+          type: 'scatter',
+          mode: 'lines',
+          name: 'V–R envelope (real composites)',
+          x: polyX,
+          y: polyY,
+          fill: 'toself',
+          fillcolor: 'rgba(26, 26, 26, 0.08)',
+          line: { color: 'rgba(0,0,0,0)', width: 0 },
+          hoverinfo: 'skip',
+          showlegend: true,
+        });
+      }
+
       out.push({
         type: 'scatter',
         mode: 'lines',
-        name: 'Voigt bound',
+        name: 'Voigt (upper bound)',
         x: voigt.map((p) => p.rho_kg_m3),
         y: voigt.map((p) => p.E_GPa),
         line: { color: '#1a1a1a', width: 2 },
@@ -159,7 +205,7 @@ export function HybridSynth() {
       out.push({
         type: 'scatter',
         mode: 'lines',
-        name: 'Reuss bound',
+        name: 'Reuss (lower bound)',
         x: reuss.map((p) => p.rho_kg_m3),
         y: reuss.map((p) => p.E_GPa),
         line: { color: '#1a1a1a', width: 2, dash: 'dash' },
@@ -169,7 +215,7 @@ export function HybridSynth() {
       out.push({
         type: 'scatter',
         mode: 'lines',
-        name: kind === 'sandwich' ? 'Sandwich sweep' : 'Foam scaling',
+        name: kind === 'sandwich' ? 'Sandwich sweep (E_eq vs t/H)' : 'Foam scaling',
         x: sweepPoints.map((p) => p.rho_kg_m3),
         y: sweepPoints.map((p) => p.E_GPa),
         line: { color: '#1a1a1a', width: 2 },
@@ -179,7 +225,9 @@ export function HybridSynth() {
     return out;
   }, [kind, sweepPoints]);
 
-  // Current hybrid point(s) — one or two markers depending on kind
+  // Current hybrid point(s) — one or two markers depending on kind. In composite
+  // mode Voigt and Reuss share x (same density), so distinct symbols stop them
+  // from visually overlapping.
   const currentTrace: Partial<PlotData> = useMemo(
     () => ({
       type: 'scatter',
@@ -187,31 +235,51 @@ export function HybridSynth() {
       name: 'Current hybrid',
       x: current.map((p) => p.rho_kg_m3),
       y: current.map((p) => p.E_GPa),
-      text: current.map((p) => p.label),
+      text: current.map((p) => {
+        if (p.kind === 'composite-voigt') return 'Voigt (upper)';
+        if (p.kind === 'composite-reuss') return 'Reuss (lower)';
+        return p.label;
+      }),
       textposition: 'top right',
       textfont: { size: 10, color: '#c00' },
       marker: {
         color: '#c00',
         size: 14,
-        symbol: 'diamond',
+        symbol: current.map((p) =>
+          p.kind === 'composite-voigt'
+            ? 'triangle-up'
+            : p.kind === 'composite-reuss'
+              ? 'triangle-down'
+              : 'diamond',
+        ),
         line: { color: 'white', width: 2 },
       },
-      hovertemplate: '%{text}<br>ρ=%{x:.3g} kg/m³<br>E=%{y:.3g} GPa<extra>Hybrid</extra>',
+      hovertemplate:
+        '<b>%{text}</b><br>ρ=%{x:.3g} kg/m³<br>E=%{y:.3g} GPa<extra>Hybrid</extra>',
     }),
     [current],
   );
 
   const layout: Partial<Layout> = {
-    title: { text: 'Hybrid synthesizer · E vs ρ', font: { size: 18 } },
-    xaxis: { title: { text: 'Density ρ [kg/m³]' }, type: 'log', gridcolor: '#e5e5e5' },
-    yaxis: { title: { text: "Young's modulus E [GPa]" }, type: 'log', gridcolor: '#e5e5e5' },
+    title: { text: 'Hybrid synthesizer · E vs ρ', font: { size: 16, color: '#2a2a26', family: 'Inter, sans-serif' } },
+    xaxis: {
+      ...AXIS_STYLE,
+      title: { text: 'Density ρ [kg/m³]', font: { color: '#52524E', size: 13 } },
+      type: 'log',
+    },
+    yaxis: {
+      ...AXIS_STYLE,
+      title: { text: "Young's modulus E [GPa]", font: { color: '#52524E', size: 13 } },
+      type: 'log',
+    },
     shapes: ellipses,
     showlegend: true,
-    legend: { x: 1.02, y: 1, xanchor: 'left', yanchor: 'top' },
+    legend: LEGEND_STYLE,
     margin: { l: 80, r: 220, t: 60, b: 70 },
-    plot_bgcolor: '#fafafa',
-    paper_bgcolor: 'white',
+    plot_bgcolor: PLOT_BG,
+    paper_bgcolor: PAPER_BG,
     hovermode: 'closest',
+    hoverlabel: HOVER_LABEL,
   };
 
   const needsTwoMaterials = kind === 'composite' || kind === 'sandwich';
@@ -222,8 +290,8 @@ export function HybridSynth() {
 
   const paramLabel = () => {
     if (kind === 'composite') return `f (volume fraction of ${m1.short_name ?? m1.name})`;
-    if (kind === 'sandwich') return `t/c (face thickness fraction)`;
-    return 'ρ̄ (relative density)';
+    if (kind === 'sandwich') return 't/H (per-face fraction of total panel thickness)';
+    return 'ρ̄ (relative density = ρ_foam / ρ_solid)';
   };
 
   return (
@@ -250,6 +318,14 @@ export function HybridSynth() {
               {k === 'sandwich' && 'Sandwich panel'}
             </label>
           ))}
+          <label className="checkbox">
+            <input
+              type="checkbox"
+              checked={showLabels}
+              onChange={(e) => setShowLabels(e.target.checked)}
+            />
+            Material labels
+          </label>
         </div>
       </section>
 
@@ -300,10 +376,10 @@ export function HybridSynth() {
           />
         </div>
         <p className="phase-note">
-          {kind === 'composite' && 'f = 0 ⇒ pure material 2; f = 1 ⇒ pure material 1. Voigt is the upper bound (aligned fibers); Reuss is the lower bound (transverse loading).'}
-          {kind === 'foam-open' && 'ρ̄ = ρ_foam / ρ_solid. Lower relative density ⇒ lighter and softer. E*/E_s ≈ ρ̄² (bend-dominated cell walls).'}
-          {kind === 'foam-closed' && 'Closed-cell foams are stiffer than open-cell at the same ρ̄ because cell faces also carry stretch loads.'}
-          {kind === 'sandwich' && 'Faces are stiff but heavy; core is light but compliant. Thicker faces ⇒ more stiffness AND more mass.'}
+          {kind === 'composite' && 'f = 0 ⇒ pure material 2; f = 1 ⇒ pure material 1. Voigt is the upper bound (continuous aligned fibres, loaded along their length); Reuss is the lower bound (transverse / series loading). Every real composite lies in the shaded band between them.'}
+          {kind === 'foam-open' && 'Lower relative density ⇒ lighter and softer. The scaling E*/Es ≈ ρ̄² comes from bend-dominated cell-edge deformation. Real foams in the dataset (highlighted) cluster along this line.'}
+          {kind === 'foam-closed' && 'Closed-cell foams add a stretch-dominated term: E*/Es = Φ²·ρ̄² + (1−Φ)·ρ̄ with Φ ≈ 0.7. They are stiffer than open-cell at the same ρ̄ because the membrane-like faces also carry load.'}
+          {kind === 'sandwich' && 'Faces are stiff but heavy; the core is light but compliant. t/H is the per-face thickness as a fraction of total panel thickness H = 2t + c. The bending-equivalent modulus E_eq = E_face·[1 − (1−2t/H)³] rises quickly with t/H while density rises only linearly — the sandwich advantage.'}
         </p>
       </section>
 

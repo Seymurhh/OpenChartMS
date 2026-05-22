@@ -15,11 +15,29 @@ export type ProcessFamily =
   | 'shape-additive'
   | 'shape-sheet';
 
+// Part shape classes from Ashby §7.3 Fig 7.1 ("shape classification matrix").
+// A process must be able to make the chosen shape to pass screening.
+export type ShapeClass =
+  | 'solid-3D'      // bulky 3D shape (block, casting, machined part)
+  | 'hollow-3D'     // 3D shape with internal cavity (bottle, housing)
+  | 'sheet'         // thin flat or formed sheet (panel, can, bracket)
+  | 'prismatic'     // long with uniform cross-section (rod, bar, tube, extrusion)
+  | 'complex';      // intricate / branched geometry (impeller, gear with internal features)
+
+export const SHAPE_CLASS_LABEL: Record<ShapeClass, string> = {
+  'solid-3D': 'Solid 3D',
+  'hollow-3D': 'Hollow 3D',
+  sheet: 'Sheet',
+  prismatic: 'Prismatic',
+  complex: 'Complex',
+};
+
 export interface ProcessDef {
   id: string;
   name: string;
   family: ProcessFamily;
   compatibleFamilies: FamilyId[];
+  shapes: ShapeClass[];      // shape classes the process can produce
   // attribute ranges (order-of-magnitude)
   sectionMin_mm: number;     // smallest section thickness
   sectionMax_mm: number;
@@ -50,6 +68,7 @@ export const PROCESSES: ProcessDef[] = [
     name: 'Sand casting',
     family: 'shape-casting',
     compatibleFamilies: ['metals'],
+    shapes: ['solid-3D', 'hollow-3D', 'prismatic', 'complex'],
     sectionMin_mm: 3,
     sectionMax_mm: 1000,
     toleranceMin_mm: 1,
@@ -66,6 +85,7 @@ export const PROCESSES: ProcessDef[] = [
     name: 'Die casting',
     family: 'shape-casting',
     compatibleFamilies: ['metals'],
+    shapes: ['solid-3D', 'hollow-3D', 'complex'],
     sectionMin_mm: 1,
     sectionMax_mm: 100,
     toleranceMin_mm: 0.1,
@@ -82,6 +102,7 @@ export const PROCESSES: ProcessDef[] = [
     name: 'Injection molding',
     family: 'shape-molding',
     compatibleFamilies: ['polymers'],
+    shapes: ['solid-3D', 'hollow-3D', 'complex'],
     sectionMin_mm: 1,
     sectionMax_mm: 50,
     toleranceMin_mm: 0.1,
@@ -98,6 +119,7 @@ export const PROCESSES: ProcessDef[] = [
     name: 'CNC machining',
     family: 'shape-machining',
     compatibleFamilies: ['metals', 'polymers', 'composites'],
+    shapes: ['solid-3D', 'hollow-3D', 'sheet', 'prismatic', 'complex'],
     sectionMin_mm: 0.1,
     sectionMax_mm: 1000,
     toleranceMin_mm: 0.01,
@@ -114,6 +136,7 @@ export const PROCESSES: ProcessDef[] = [
     name: 'Forging (closed-die)',
     family: 'shape-deformation',
     compatibleFamilies: ['metals'],
+    shapes: ['solid-3D', 'complex'],
     sectionMin_mm: 5,
     sectionMax_mm: 500,
     toleranceMin_mm: 0.5,
@@ -130,6 +153,7 @@ export const PROCESSES: ProcessDef[] = [
     name: 'Sheet stamping',
     family: 'shape-sheet',
     compatibleFamilies: ['metals'],
+    shapes: ['sheet'],
     sectionMin_mm: 0.1,
     sectionMax_mm: 6,
     toleranceMin_mm: 0.05,
@@ -146,6 +170,7 @@ export const PROCESSES: ProcessDef[] = [
     name: 'Additive manufacturing (powder bed)',
     family: 'shape-additive',
     compatibleFamilies: ['metals', 'polymers', 'ceramics-technical'],
+    shapes: ['solid-3D', 'hollow-3D', 'prismatic', 'complex'],
     sectionMin_mm: 0.2,
     sectionMax_mm: 500,
     toleranceMin_mm: 0.1,
@@ -162,6 +187,7 @@ export const PROCESSES: ProcessDef[] = [
     name: 'Hot isostatic pressing (HIPing)',
     family: 'shape-powder',
     compatibleFamilies: ['metals', 'ceramics-technical'],
+    shapes: ['solid-3D', 'complex'],
     sectionMin_mm: 1,
     sectionMax_mm: 1000,
     toleranceMin_mm: 0.5,
@@ -177,6 +203,7 @@ export const PROCESSES: ProcessDef[] = [
     name: 'Thermoset compression molding',
     family: 'shape-molding',
     compatibleFamilies: ['polymers', 'composites'],
+    shapes: ['solid-3D', 'sheet', 'complex'],
     sectionMin_mm: 1,
     sectionMax_mm: 50,
     toleranceMin_mm: 0.2,
@@ -193,6 +220,7 @@ export const PROCESSES: ProcessDef[] = [
     name: 'Extrusion',
     family: 'shape-deformation',
     compatibleFamilies: ['metals', 'polymers'],
+    shapes: ['prismatic'],
     sectionMin_mm: 1,
     sectionMax_mm: 500,
     toleranceMin_mm: 0.2,
@@ -206,6 +234,28 @@ export const PROCESSES: ProcessDef[] = [
   },
 ];
 
+export interface CostBreakdown {
+  total: number;     // USD per part
+  material: number;  // material cost component
+  tooling: number;   // amortized tooling
+  capital: number;   // capital + overhead per part
+}
+
+/** Per-part cost breakdown (USD) for a given batch and material price. */
+export function processUnitCostBreakdown(
+  p: ProcessDef,
+  batchSize: number,
+  massKg: number,
+  materialPriceUSDperKg: number,
+  utilization = 0.5,
+): CostBreakdown {
+  const material = massKg * materialPriceUSDperKg;
+  const tooling = p.toolingUSD / Math.max(batchSize, 1);
+  const machineHoursPerPart = p.cycleTime_s / 3600 / Math.max(utilization, 0.05);
+  const capital = p.capitalRateUSD_h * machineHoursPerPart;
+  return { material, tooling, capital, total: material + tooling + capital };
+}
+
 /** Per-part cost (USD) for a given batch and material price. */
 export function processUnitCost(
   p: ProcessDef,
@@ -214,9 +264,5 @@ export function processUnitCost(
   materialPriceUSDperKg: number,
   utilization = 0.5,
 ): number {
-  const materialCost = massKg * materialPriceUSDperKg;
-  const toolingPerPart = p.toolingUSD / Math.max(batchSize, 1);
-  const machineHoursPerPart = p.cycleTime_s / 3600 / Math.max(utilization, 0.05);
-  const capitalPerPart = p.capitalRateUSD_h * machineHoursPerPart;
-  return materialCost + toolingPerPart + capitalPerPart;
+  return processUnitCostBreakdown(p, batchSize, massKg, materialPriceUSDperKg, utilization).total;
 }

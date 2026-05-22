@@ -89,18 +89,22 @@ export function closedCellFoam(solid: Material, relDensity: number, phi = 0.7): 
   };
 }
 
-// Sandwich panel: face material + core material. Equivalent "smeared" properties
-// when bending dominates: effective E* ≈ E_face · (t/c)·η scaled to total mass.
-// We use a simple bending-stiffness-per-mass surrogate: at face thickness fraction
-// `tFrac` of total panel thickness, the panel's effective E and ρ for an
-// equivalent-thickness solid plate are computed.
+// Sandwich panel: stiff faces (each of thickness t) bonded to a light core
+// (thickness c). Let tFrac = t / H be the per-face thickness fraction of total
+// panel thickness H = 2t + c. Assuming the core contributes negligibly to
+// bending (Ashby Ch.13 "thin-skin" limit), the parallel-axis theorem gives:
 //
-// For a sandwich with face thickness t and core thickness c (t/(t+c) = tFrac):
-//   ρ_eff = 2·tFrac·ρ_face + (1−2·tFrac)·ρ_core
-//   E_eff_bending = E_face · [1 − (1 − 2tFrac)³]   (per unit-thickness panel)
+//   D     = E_face · (H³ − c³) / 12
+//   D_eq  = E_eq  · H³ / 12          ⇒   E_eq = E_face · [1 − (c/H)³]
 //
-// This captures the qualitative win — light core with stiff skins — without
-// requiring core/face mass ratios from the user.
+// With c/H = (1 − 2·tFrac), this collapses to E_eq = E_face · [1 − (1−2t)³].
+// Density follows the rule of mixtures by volume fraction:
+//   ρ_eff = 2·tFrac·ρ_face + (1 − 2·tFrac)·ρ_core
+//
+// E_eq is the *bending-equivalent* modulus — i.e., the modulus of an
+// equal-thickness solid plate that would have the same flexural rigidity. It
+// is NOT a tensile modulus and should not be substituted into a tie-stiffness
+// index.
 export function sandwichPanel(
   face: Material,
   core: Material,
@@ -114,11 +118,14 @@ export function sandwichPanel(
   const rhoEff = 2 * tt * rhoF + (1 - 2 * tt) * rhoC;
   const coreRatio = 1 - 2 * tt;
   const Ebend = Ef * (1 - coreRatio * coreRatio * coreRatio);
+  const faceName = face.short_name ?? face.name;
+  const coreName = core.short_name ?? core.name;
   return {
     E_GPa: Ebend,
     rho_kg_m3: rhoEff,
-    label: `Sandwich: ${(tt * 100).toFixed(0)}%/${tt * 100}% ${face.short_name ?? face.name} faces + ${core.short_name ?? core.name} core`,
+    label: `Sandwich · t/H = ${tt.toFixed(2)} per face (${faceName} faces, ${coreName} core)`,
     kind: 'sandwich',
-    detail: 'E_eff_bending = E_face·[1 − (1−2·tFrac)³]  ·  faces dominate bending stiffness',
+    detail:
+      'E_eq = E_face·[1 − (1−2·t/H)³]  ·  bending-equivalent modulus (thin-skin limit, core ignored)',
   };
 }

@@ -5,6 +5,7 @@ import { families, materials } from '../data/loadMaterials';
 import type { Material } from '../data/types';
 import type { ConstraintIndex } from '../data/constraintIndices';
 import { paretoFront, paretoFrontOrdered, type ParetoPoint } from '../lib/pareto';
+import { AXIS_STYLE, HOVER_LABEL, LEGEND_STYLE, PAPER_BG, PLOT_BG } from '../lib/chartStyle';
 
 interface Props {
   index1: ConstraintIndex;
@@ -12,6 +13,7 @@ interface Props {
   Cc: number; // coupling constant: optimum is min over materials of max(I1, I2/Cc)
   showPareto: boolean;
   showSelectionBox: boolean;
+  showLabels?: boolean;
 }
 
 interface MaterialPoint extends ParetoPoint {
@@ -19,7 +21,14 @@ interface MaterialPoint extends ParetoPoint {
   minmax: number; // max(I1, I2/Cc)
 }
 
-export function CouplingChart({ index1, index2, Cc, showPareto, showSelectionBox }: Props) {
+export function CouplingChart({
+  index1,
+  index2,
+  Cc,
+  showPareto,
+  showSelectionBox,
+  showLabels = false,
+}: Props) {
   const points: MaterialPoint[] = useMemo(() => {
     return materials
       .map((m) => {
@@ -103,10 +112,15 @@ export function CouplingChart({ index1, index2, Cc, showPareto, showSelectionBox
       const items = points.filter((p) => p.material.family === f.id);
       return {
         type: 'scatter',
-        mode: 'markers',
+        mode: showLabels ? 'text+markers' : 'markers',
         name: f.label,
         x: items.map((p) => p.x),
         y: items.map((p) => p.y),
+        text: items.map((p) =>
+          showLabels ? (p.material.short_name ?? p.material.name) : '',
+        ),
+        textposition: 'top center',
+        textfont: { size: 9, color: '#2a2a26', family: 'Inter, sans-serif' },
         customdata: items.map((p) => [
           p.material.name,
           paretoIds.has(p.id) ? '★ Pareto-optimal' : '',
@@ -130,7 +144,33 @@ export function CouplingChart({ index1, index2, Cc, showPareto, showSelectionBox
           `<extra>${f.label}</extra>`,
       };
     });
-  }, [points, paretoIds, index1, index2]);
+  }, [points, paretoIds, index1, index2, showLabels]);
+
+  // Optimum overlay — a guaranteed-visible red star at the optimum material's
+  // position, drawn as a trace (annotations can fall behind legend/quadrant pills
+  // depending on where the optimum lands).
+  const optimumTrace: Partial<PlotData> | null = useMemo(() => {
+    if (!optimum.point) return null;
+    return {
+      type: 'scatter',
+      mode: 'text+markers',
+      name: '★ Optimum (min m̃)',
+      x: [optimum.point.x],
+      y: [optimum.point.y],
+      text: [`<b>${optimum.point.material.short_name ?? optimum.point.material.name}</b>`],
+      textposition: 'top right',
+      textfont: { size: 12, color: '#c00', family: 'Inter, sans-serif' },
+      marker: {
+        color: '#c00',
+        size: 22,
+        symbol: 'star',
+        line: { color: 'white', width: 2.5 },
+      },
+      hovertemplate:
+        `<b>Optimum (min m̃)</b><br>${optimum.point.material.name}<br>m̃ = ${optimum.mm.toPrecision(3)}<extra></extra>`,
+      showlegend: true,
+    };
+  }, [optimum]);
 
   // Optional Pareto-front polyline (lower-left non-dominated subset).
   const paretoTrace: Partial<PlotData> | null = useMemo(() => {
@@ -147,34 +187,14 @@ export function CouplingChart({ index1, index2, Cc, showPareto, showSelectionBox
     };
   }, [showPareto, paretoLine]);
 
-  // Optimum annotation. axref/ayref MUST be set to 'pixel' explicitly: Plotly's
-  // default for axref is the same as xref, which on log axes treats ax as a data
-  // value (not a pixel offset) and pushes the annotation light-years off-chart.
+  // Optimum + reference annotations. Order matters: later entries draw on top, so
+  // the optimum annotation is placed LAST to ensure it sits above the quadrant
+  // pills and any selection-box overlay. axref/ayref MUST be 'pixel' explicitly:
+  // Plotly's default copies xref, which on log axes treats ax as a data value
+  // and pushes the annotation light-years off-chart.
   const annotations: Partial<Annotations>[] = useMemo(() => {
     if (!optimum.point) return [];
     return [
-      {
-        x: optimum.point.x,
-        y: optimum.point.y,
-        xref: 'x',
-        yref: 'y',
-        ax: 70,
-        ay: -60,
-        axref: 'pixel',
-        ayref: 'pixel',
-        text:
-          `<b>Optimum (min m̃)</b><br>${optimum.point.material.short_name ?? optimum.point.material.name}<br>` +
-          `m̃ = ${optimum.mm.toPrecision(3)}`,
-        showarrow: true,
-        arrowhead: 4,
-        arrowsize: 1.2,
-        bgcolor: 'rgba(255,255,255,0.95)',
-        bordercolor: '#c00',
-        borderwidth: 1.5,
-        borderpad: 6,
-        font: { size: 11, color: '#1a1a1a' },
-        align: 'left',
-      },
       // Coupling-line label, anchored to paper coords so it can't push out the axes.
       {
         x: 0.98,
@@ -190,6 +210,66 @@ export function CouplingChart({ index1, index2, Cc, showPareto, showSelectionBox
         font: { size: 11, color: '#c00' },
         xanchor: 'right',
         yanchor: 'bottom',
+      },
+      // Quadrant labels — which constraint is active in each half-plane (Ashby §9.2).
+      // Above the coupling line: I₂ > Cc·I₁ ⇒ m̃ = I₂/Cc ⇒ constraint 2 binds.
+      // Below the coupling line: I₂ < Cc·I₁ ⇒ m̃ = I₁  ⇒ constraint 1 binds.
+      {
+        x: 0.03,
+        y: 0.97,
+        xref: 'paper',
+        yref: 'paper',
+        text: `<b>Constraint 2 binds</b><br><span style="font-size:10px">I₂ &gt; Cc·I₁  ⇒  m̃ = I₂ / Cc</span>`,
+        showarrow: false,
+        bgcolor: 'rgba(255,255,255,0.82)',
+        bordercolor: '#8A8A84',
+        borderwidth: 1,
+        borderpad: 5,
+        font: { size: 11, color: '#52524E', family: 'Inter, sans-serif' },
+        xanchor: 'left',
+        yanchor: 'top',
+        align: 'left',
+      },
+      {
+        x: 0.97,
+        y: 0.35,
+        xref: 'paper',
+        yref: 'paper',
+        text: `<b>Constraint 1 binds</b><br><span style="font-size:10px">I₂ &lt; Cc·I₁  ⇒  m̃ = I₁</span>`,
+        showarrow: false,
+        bgcolor: 'rgba(255,255,255,0.82)',
+        bordercolor: '#8A8A84',
+        borderwidth: 1,
+        borderpad: 5,
+        font: { size: 11, color: '#52524E', family: 'Inter, sans-serif' },
+        xanchor: 'right',
+        yanchor: 'top',
+        align: 'left',
+      },
+      // Optimum callout — last so it draws above quadrant pills.
+      {
+        x: optimum.point.x,
+        y: optimum.point.y,
+        xref: 'x',
+        yref: 'y',
+        ax: 100,
+        ay: -90,
+        axref: 'pixel',
+        ayref: 'pixel',
+        text:
+          `<b>Optimum (min m̃)</b><br>${optimum.point.material.short_name ?? optimum.point.material.name}<br>` +
+          `m̃ = ${optimum.mm.toPrecision(3)}`,
+        showarrow: true,
+        arrowhead: 4,
+        arrowsize: 1.3,
+        arrowwidth: 2,
+        arrowcolor: '#c00',
+        bgcolor: '#ffffff',
+        bordercolor: '#c00',
+        borderwidth: 2,
+        borderpad: 7,
+        font: { size: 12, color: '#1a1a1a', family: 'Inter, sans-serif' },
+        align: 'left',
       },
     ];
   }, [optimum, Cc]);
@@ -212,35 +292,37 @@ export function CouplingChart({ index1, index2, Cc, showPareto, showSelectionBox
   if (selectionBoxShape) allShapes.push(selectionBoxShape);
   if (couplingLineShape) allShapes.push(couplingLineShape);
 
-  const data: Partial<PlotData>[] = paretoTrace ? [paretoTrace, ...familyTraces] : familyTraces;
+  const baseData: Partial<PlotData>[] = paretoTrace
+    ? [paretoTrace, ...familyTraces]
+    : familyTraces;
+  const data: Partial<PlotData>[] = optimumTrace ? [...baseData, optimumTrace] : baseData;
 
   const layout: Partial<Layout> = {
     title: {
       text: `Coupling chart: ${index2.label} vs ${index1.label}`,
-      font: { size: 16 },
+      font: { size: 16, color: '#2a2a26', family: 'Inter, sans-serif' },
     },
     xaxis: {
-      title: { text: `I₁ = ${index1.expr}  (${index1.label})  →  better is smaller` },
+      ...AXIS_STYLE,
+      title: { text: `I₁ = ${index1.expr}  (${index1.label})  →  better is smaller`, font: { color: '#52524E', size: 13 } },
       type: 'log',
       range: xRange,
-      gridcolor: '#e5e5e5',
-      zeroline: false,
     },
     yaxis: {
-      title: { text: `I₂ = ${index2.expr}  (${index2.label})  ↑  better is smaller` },
+      ...AXIS_STYLE,
+      title: { text: `I₂ = ${index2.expr}  (${index2.label})  ↑  better is smaller`, font: { color: '#52524E', size: 13 } },
       type: 'log',
       range: yRange,
-      gridcolor: '#e5e5e5',
-      zeroline: false,
     },
     shapes: allShapes,
     annotations,
     showlegend: true,
-    legend: { x: 1.02, y: 1, xanchor: 'left', yanchor: 'top' },
+    legend: LEGEND_STYLE,
     margin: { l: 100, r: 220, t: 60, b: 80 },
-    plot_bgcolor: '#fafafa',
-    paper_bgcolor: 'white',
+    plot_bgcolor: PLOT_BG,
+    paper_bgcolor: PAPER_BG,
     hovermode: 'closest',
+    hoverlabel: HOVER_LABEL,
   };
 
   return (

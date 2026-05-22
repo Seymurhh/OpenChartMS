@@ -4,55 +4,55 @@
     {
       "id": "metals",
       "label": "Metals",
-      "color": "#E63946",
+      "color": "#C0392B",
       "description": "The metals and alloys of engineering."
     },
     {
       "id": "ceramics-technical",
       "label": "Technical ceramics",
-      "color": "#F4A261",
+      "color": "#D4681A",
       "description": "Fine ceramics capable of load-bearing application."
     },
     {
       "id": "ceramics-nontechnical",
       "label": "Non-technical ceramics",
-      "color": "#E9C46A",
+      "color": "#B8860B",
       "description": "Porous ceramics of construction (brick, concrete, stone)."
     },
     {
       "id": "glasses",
       "label": "Glasses",
-      "color": "#F2CC8F",
+      "color": "#2980B9",
       "description": "Silicate and oxide glasses."
     },
     {
       "id": "polymers",
       "label": "Polymers",
-      "color": "#264653",
+      "color": "#1A5276",
       "description": "Thermoplastics and thermosets."
     },
     {
       "id": "elastomers",
       "label": "Elastomers",
-      "color": "#2A9D8F",
+      "color": "#148F77",
       "description": "Engineering rubbers, natural and synthetic."
     },
     {
       "id": "composites",
       "label": "Composites",
-      "color": "#A663CC",
+      "color": "#6C3483",
       "description": "Fiber-reinforced polymer composites (CFRP, GFRP)."
     },
     {
       "id": "foams",
       "label": "Foams",
-      "color": "#43AA8B",
+      "color": "#1E8449",
       "description": "Flexible and rigid polymer foams."
     },
     {
       "id": "natural",
       "label": "Natural materials",
-      "color": "#6A994E",
+      "color": "#5D6A12",
       "description": "Wood, cork, paper, leather."
     }
   ]
