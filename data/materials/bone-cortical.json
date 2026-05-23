@@ -1,0 +1,55 @@
+{
+  "id": "bone-cortical",
+  "name": "Bone, cortical (human femur)",
+  "family": "natural",
+  "short_name": "Cortical bone",
+  "subfamily": "natural-bio",
+  "applications": [
+    "Biomedical reference material",
+    "Scaffold design target",
+    "Orthopaedic implant benchmarking"
+  ],
+  "notes": "Properties along the longitudinal axis. Wide range reflects age/anatomical variation.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 1700,
+      "max": 2000,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 7,
+      "max": 25,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "yield_strength_MPa": {
+      "min": 100,
+      "max": 200,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 120,
+      "max": 230,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 2.5,
+      "max": 7.0,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "elongation": {
+      "min": 0.01,
+      "max": 0.03,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1100,
+      "max": 1300,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.4,
+      "max": 0.8,
+      "source": "Cambridge Materials Data Book (2011)"
+    }
+  }
+}

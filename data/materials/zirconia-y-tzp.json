@@ -1,0 +1,71 @@
+{
+  "id": "zirconia-y-tzp",
+  "name": "Zirconia, Y-TZP (yttria-stabilized tetragonal)",
+  "family": "ceramics-technical",
+  "short_name": "Zirconia Y-TZP",
+  "subfamily": "oxide-ceramics",
+  "applications": [
+    "Dental crowns",
+    "Fuel cell electrolytes",
+    "Hip-joint heads",
+    "Oxygen sensors"
+  ],
+  "notes": "Transformation-toughened zirconia \u2014 highest fracture toughness of oxide ceramics (8\u201312 MPa\u221am).",
+  "properties": {
+    "density_kg_m3": {
+      "min": 5600,
+      "max": 6100,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "price_USD_kg": {
+      "min": 40,
+      "max": 120,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "youngs_modulus_GPa": {
+      "min": 190,
+      "max": 210,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "yield_strength_MPa": {
+      "min": 900,
+      "max": 1200,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 8,
+      "max": 12,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "melting_point_C": {
+      "min": 2715,
+      "max": 2715,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "specific_heat_J_kgK": {
+      "min": 450,
+      "max": 470,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 2.0,
+      "max": 2.5,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "thermal_expansion_uK": {
+      "min": 10.0,
+      "max": 11.0,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 200,
+      "max": 350,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 12,
+      "max": 22,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

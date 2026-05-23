@@ -1,0 +1,100 @@
+{
+  "id": "magnesium-az91d",
+  "name": "Magnesium AZ91D (die cast)",
+  "family": "metals",
+  "short_name": "Mg AZ91D",
+  "subfamily": "magnesium-alloys",
+  "applications": [
+    "Automotive gearbox housings",
+    "Power tool cases",
+    "Steering wheel frames"
+  ],
+  "notes": "Most common Mg die-casting alloy. T4 treated. Very good castability.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 1810,
+      "max": 1820,
+      "source": "ASM Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 3.5,
+      "max": 5.5,
+      "source": "ASM Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 44,
+      "max": 47,
+      "source": "ASM Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 150,
+      "max": 200,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 230,
+      "max": 290,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 13,
+      "max": 22,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.03,
+      "max": 0.07,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 468,
+      "max": 598,
+      "source": "ASM Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1000,
+      "max": 1050,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 72,
+      "max": 80,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 26.0,
+      "max": 27.0,
+      "source": "ASM Handbook Vol 2"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 17,
+      "max": 19,
+      "source": "ASM Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 170,
+      "max": 250,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 10,
+      "max": 16,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.3,
+      "max": 0.45,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 15,
+      "max": 25,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 1.0,
+      "max": 1.8,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

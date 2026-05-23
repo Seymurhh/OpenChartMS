@@ -1,0 +1,101 @@
+{
+  "id": "magnesium-az31b",
+  "name": "Magnesium AZ31B (wrought)",
+  "family": "metals",
+  "short_name": "Mg AZ31B",
+  "subfamily": "magnesium-alloys",
+  "applications": [
+    "Laptop casings",
+    "Camera bodies",
+    "Aerospace panels",
+    "Automotive instrument panels"
+  ],
+  "notes": "Most common wrought Mg alloy. H24 condition (strain hardened + partially annealed).",
+  "properties": {
+    "density_kg_m3": {
+      "min": 1770,
+      "max": 1780,
+      "source": "ASM Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 4.5,
+      "max": 6.5,
+      "source": "ASM Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 44,
+      "max": 46,
+      "source": "ASM Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 180,
+      "max": 220,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 240,
+      "max": 290,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 15,
+      "max": 25,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.12,
+      "max": 0.18,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 605,
+      "max": 630,
+      "source": "ASM Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1000,
+      "max": 1050,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 96,
+      "max": 100,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 26.0,
+      "max": 26.8,
+      "source": "ASM Handbook Vol 2"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 9.2,
+      "max": 9.5,
+      "source": "ASM Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 170,
+      "max": 250,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 10,
+      "max": 16,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.3,
+      "max": 0.45,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 15,
+      "max": 25,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 1.0,
+      "max": 1.8,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

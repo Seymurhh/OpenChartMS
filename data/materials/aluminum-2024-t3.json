@@ -1,0 +1,101 @@
+{
+  "id": "aluminum-2024-t3",
+  "name": "Aluminum 2024-T3",
+  "family": "metals",
+  "short_name": "Al 2024-T3",
+  "subfamily": "aluminum-alloys",
+  "applications": [
+    "Aircraft fuselage skins",
+    "Wing structures",
+    "Rivet stock",
+    "Aerospace fittings"
+  ],
+  "notes": "Cu-Mg alloy; T3 = solution treated + cold worked. High fatigue resistance.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 2770,
+      "max": 2790,
+      "source": "ASM Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 3.5,
+      "max": 5.0,
+      "source": "ASM Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 73,
+      "max": 74,
+      "source": "ASM Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 345,
+      "max": 380,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 483,
+      "max": 510,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 26,
+      "max": 37,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.12,
+      "max": 0.18,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 502,
+      "max": 638,
+      "source": "ASM Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 875,
+      "max": 900,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 120,
+      "max": 135,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 23.2,
+      "max": 23.2,
+      "source": "ASM Handbook Vol 2"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 5.6,
+      "max": 6.1,
+      "source": "ASM Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 155,
+      "max": 210,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 9.0,
+      "max": 12.5,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.3,
+      "max": 0.4,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 11,
+      "max": 17,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.6,
+      "max": 1.0,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

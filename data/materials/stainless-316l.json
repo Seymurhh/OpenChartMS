@@ -1,0 +1,101 @@
+{
+  "id": "stainless-316l",
+  "name": "Stainless steel 316L",
+  "family": "metals",
+  "short_name": "SS 316L",
+  "subfamily": "ferrous-metals",
+  "applications": [
+    "Marine hardware",
+    "Surgical implants",
+    "Chemical processing",
+    "Pharmaceutical equipment"
+  ],
+  "notes": "Mo-bearing austenitic SS; superior pitting/crevice corrosion resistance. Low-C grade prevents sensitization.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 7980,
+      "max": 8010,
+      "source": "ASM Handbook Vol 1"
+    },
+    "price_USD_kg": {
+      "min": 3.5,
+      "max": 5.0,
+      "source": "ASM Handbook Vol 1"
+    },
+    "youngs_modulus_GPa": {
+      "min": 193,
+      "max": 200,
+      "source": "ASM Handbook Vol 1"
+    },
+    "yield_strength_MPa": {
+      "min": 170,
+      "max": 310,
+      "source": "ASM Handbook Vol 1"
+    },
+    "ultimate_strength_MPa": {
+      "min": 485,
+      "max": 620,
+      "source": "ASM Handbook Vol 1"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 100,
+      "max": 200,
+      "source": "ASM Handbook Vol 1"
+    },
+    "elongation": {
+      "min": 0.35,
+      "max": 0.5,
+      "source": "ASM Handbook Vol 1"
+    },
+    "melting_point_C": {
+      "min": 1370,
+      "max": 1400,
+      "source": "ASM Handbook Vol 1"
+    },
+    "specific_heat_J_kgK": {
+      "min": 500,
+      "max": 510,
+      "source": "ASM Handbook Vol 1"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 16.0,
+      "max": 16.5,
+      "source": "ASM Handbook Vol 1"
+    },
+    "thermal_expansion_uK": {
+      "min": 16.0,
+      "max": 16.5,
+      "source": "ASM Handbook Vol 1"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 73,
+      "max": 75,
+      "source": "ASM Handbook Vol 1"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 55,
+      "max": 65,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 6.1,
+      "max": 7.2,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.65,
+      "max": 0.8,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 10,
+      "max": 18,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.7,
+      "max": 1.2,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "id": "steel-4140",
+  "name": "Alloy steel 4140 (Q&T)",
+  "family": "metals",
+  "short_name": "4140 steel",
+  "subfamily": "ferrous-metals",
+  "applications": [
+    "Gears and shafts",
+    "Die casting dies",
+    "Drilling equipment",
+    "Connecting rods"
+  ],
+  "notes": "Cr-Mo low-alloy steel, quenched & tempered at 315\u00b0C. Good toughness-to-strength balance.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 7850,
+      "max": 7870,
+      "source": "ASM Handbook Vol 1"
+    },
+    "price_USD_kg": {
+      "min": 1.5,
+      "max": 2.0,
+      "source": "ASM Handbook Vol 1"
+    },
+    "youngs_modulus_GPa": {
+      "min": 200,
+      "max": 210,
+      "source": "ASM Handbook Vol 1"
+    },
+    "yield_strength_MPa": {
+      "min": 655,
+      "max": 980,
+      "source": "ASM Handbook Vol 1"
+    },
+    "ultimate_strength_MPa": {
+      "min": 690,
+      "max": 1030,
+      "source": "ASM Handbook Vol 1"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 50,
+      "max": 80,
+      "source": "ASM Handbook Vol 1"
+    },
+    "elongation": {
+      "min": 0.12,
+      "max": 0.18,
+      "source": "ASM Handbook Vol 1"
+    },
+    "melting_point_C": {
+      "min": 1427,
+      "max": 1510,
+      "source": "ASM Handbook Vol 1"
+    },
+    "specific_heat_J_kgK": {
+      "min": 460,
+      "max": 480,
+      "source": "ASM Handbook Vol 1"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 42,
+      "max": 48,
+      "source": "ASM Handbook Vol 1"
+    },
+    "thermal_expansion_uK": {
+      "min": 12.3,
+      "max": 13.0,
+      "source": "ASM Handbook Vol 1"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 22,
+      "max": 25,
+      "source": "ASM Handbook Vol 1"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 32,
+      "max": 38,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 2.4,
+      "max": 2.9,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.4,
+      "max": 0.55,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 8,
+      "max": 12,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.6,
+      "max": 0.9,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

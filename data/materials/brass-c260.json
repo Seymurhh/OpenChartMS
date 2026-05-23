@@ -1,0 +1,101 @@
+{
+  "id": "brass-c260",
+  "name": "Brass C260 (cartridge brass, 70Cu-30Zn)",
+  "family": "metals",
+  "short_name": "Brass C260",
+  "subfamily": "copper-alloys",
+  "applications": [
+    "Ammunition cartridges",
+    "Musical instruments",
+    "Hardware fittings",
+    "Radiator cores"
+  ],
+  "notes": "Most common single-phase brass. Excellent cold workability and corrosion resistance.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 8520,
+      "max": 8540,
+      "source": "ASM Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 6.0,
+      "max": 10.0,
+      "source": "ASM Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 110,
+      "max": 115,
+      "source": "ASM Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 75,
+      "max": 400,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 300,
+      "max": 530,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 30,
+      "max": 50,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.05,
+      "max": 0.5,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 915,
+      "max": 955,
+      "source": "ASM Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 375,
+      "max": 380,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 120,
+      "max": 128,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 19.9,
+      "max": 19.9,
+      "source": "ASM Handbook Vol 2"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 6.2,
+      "max": 6.5,
+      "source": "ASM Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 55,
+      "max": 85,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 3.3,
+      "max": 5.0,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.4,
+      "max": 0.55,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 5,
+      "max": 12,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.3,
+      "max": 0.7,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "polyimide",
+  "name": "Polyimide (PI, Kapton-type)",
+  "family": "polymers",
+  "short_name": "Polyimide",
+  "subfamily": "thermoplastics",
+  "applications": [
+    "Flexible printed circuit substrates",
+    "High-temperature insulation",
+    "Jet engine wire wrap",
+    "Space blankets"
+  ],
+  "notes": "No melting point (decomposes ~500\u00b0C). Continuous service to ~260\u00b0C. Excellent dielectric.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 1410,
+      "max": 1430,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 80,
+      "max": 200,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 2.5,
+      "max": 3.1,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 80,
+      "max": 120,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 90,
+      "max": 140,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 1.0,
+      "max": 1.8,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.03,
+      "max": 0.08,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "glass_temperature_C": {
+      "min": 360,
+      "max": 410,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1090,
+      "max": 1130,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.1,
+      "max": 0.35,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 20,
+      "max": 30,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "dielectric_constant": {
+      "min": 3.4,
+      "max": 3.6,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 200,
+      "max": 350,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 12,
+      "max": 22,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

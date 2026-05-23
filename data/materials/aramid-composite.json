@@ -1,0 +1,81 @@
+{
+  "id": "aramid-composite",
+  "name": "Aramid/Kevlar composite (60% Vf, Kevlar 49/epoxy)",
+  "family": "composites",
+  "short_name": "Kevlar composite",
+  "subfamily": "aramid-fiber-composites",
+  "applications": [
+    "Ballistic vests",
+    "Helmets",
+    "Pressure vessels",
+    "Marine hulls"
+  ],
+  "notes": "Fiber-direction tensile properties. Poor in compression (fibers buckle). Excellent specific strength.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 1300,
+      "max": 1380,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "price_USD_kg": {
+      "min": 25,
+      "max": 60,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 70,
+      "max": 85,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "yield_strength_MPa": {
+      "min": 1200,
+      "max": 1450,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 1400,
+      "max": 1800,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 5,
+      "max": 15,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "elongation": {
+      "min": 0.015,
+      "max": 0.028,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1100,
+      "max": 1300,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.04,
+      "max": 0.16,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_expansion_uK": {
+      "min": -2.0,
+      "max": 2.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 150,
+      "max": 250,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 9,
+      "max": 16,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.02,
+      "max": 0.1,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

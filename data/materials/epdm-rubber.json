@@ -1,0 +1,82 @@
+{
+  "id": "epdm-rubber",
+  "name": "EPDM rubber (ethylene propylene diene)",
+  "family": "elastomers",
+  "short_name": "EPDM",
+  "subfamily": "synthetic-rubber",
+  "applications": [
+    "Automotive door seals",
+    "Roofing membranes",
+    "Radiator hoses",
+    "Window gaskets",
+    "Outdoor seals"
+  ],
+  "notes": "Excellent UV, ozone and weather resistance. Operating range \u221250 to +150\u00b0C.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 860,
+      "max": 880,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 2.0,
+      "max": 4.0,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 0.003,
+      "max": 0.01,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 7,
+      "max": 18,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 10,
+      "max": 22,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 2.0,
+      "max": 6.0,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "glass_temperature_C": {
+      "min": -60,
+      "max": -50,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1900,
+      "max": 2100,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.25,
+      "max": 0.4,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 160,
+      "max": 220,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 70,
+      "max": 100,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 3.5,
+      "max": 5.0,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.05,
+      "max": 0.15,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

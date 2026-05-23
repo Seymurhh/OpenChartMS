@@ -1,0 +1,101 @@
+{
+  "id": "bronze-c932",
+  "name": "Bronze C932 (SAE 660 bearing bronze)",
+  "family": "metals",
+  "short_name": "Bronze C932",
+  "subfamily": "copper-alloys",
+  "applications": [
+    "Plain bearings",
+    "Bushings",
+    "Thrust washers",
+    "Pump impellers"
+  ],
+  "notes": "Cu-Sn-Pb bronze; low friction against steel. The standard bearing/bushing bronze.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 8880,
+      "max": 8960,
+      "source": "ASM Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 8.0,
+      "max": 14.0,
+      "source": "ASM Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 103,
+      "max": 110,
+      "source": "ASM Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 138,
+      "max": 193,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 240,
+      "max": 310,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 25,
+      "max": 35,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.15,
+      "max": 0.2,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 854,
+      "max": 1000,
+      "source": "ASM Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 376,
+      "max": 385,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 72,
+      "max": 76,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 17.5,
+      "max": 18.5,
+      "source": "ASM Handbook Vol 2"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 12,
+      "max": 15,
+      "source": "ASM Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 55,
+      "max": 85,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 3.3,
+      "max": 5.0,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.4,
+      "max": 0.55,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 5,
+      "max": 12,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.3,
+      "max": 0.7,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "id": "stainless-17-4ph",
+  "name": "Stainless steel 17-4 PH (H900)",
+  "family": "metals",
+  "short_name": "SS 17-4PH",
+  "subfamily": "ferrous-metals",
+  "applications": [
+    "Aerospace components",
+    "Oil and gas valves",
+    "Nuclear reactors",
+    "Pump shafts"
+  ],
+  "notes": "Precipitation-hardened martensitic SS. H900 condition (aged at 900\u00b0F / 482\u00b0C) = peak strength.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 7780,
+      "max": 7800,
+      "source": "ASM Handbook Vol 1"
+    },
+    "price_USD_kg": {
+      "min": 8.0,
+      "max": 15.0,
+      "source": "ASM Handbook Vol 1"
+    },
+    "youngs_modulus_GPa": {
+      "min": 196,
+      "max": 200,
+      "source": "ASM Handbook Vol 1"
+    },
+    "yield_strength_MPa": {
+      "min": 1170,
+      "max": 1310,
+      "source": "ASM Handbook Vol 1"
+    },
+    "ultimate_strength_MPa": {
+      "min": 1310,
+      "max": 1380,
+      "source": "ASM Handbook Vol 1"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 55,
+      "max": 77,
+      "source": "ASM Handbook Vol 1"
+    },
+    "elongation": {
+      "min": 0.05,
+      "max": 0.1,
+      "source": "ASM Handbook Vol 1"
+    },
+    "melting_point_C": {
+      "min": 1400,
+      "max": 1440,
+      "source": "ASM Handbook Vol 1"
+    },
+    "specific_heat_J_kgK": {
+      "min": 460,
+      "max": 480,
+      "source": "ASM Handbook Vol 1"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 17.8,
+      "max": 18.4,
+      "source": "ASM Handbook Vol 1"
+    },
+    "thermal_expansion_uK": {
+      "min": 10.8,
+      "max": 11.2,
+      "source": "ASM Handbook Vol 1"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 77,
+      "max": 80,
+      "source": "ASM Handbook Vol 1"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 55,
+      "max": 70,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 6.0,
+      "max": 7.5,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.6,
+      "max": 0.75,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 10,
+      "max": 18,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.7,
+      "max": 1.2,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

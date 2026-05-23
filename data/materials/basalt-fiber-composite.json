@@ -1,0 +1,76 @@
+{
+  "id": "basalt-fiber-composite",
+  "name": "Basalt fiber composite (55% Vf, UD/epoxy)",
+  "family": "composites",
+  "short_name": "Basalt composite",
+  "subfamily": "mineral-fiber-composites",
+  "applications": [
+    "Rebar in concrete",
+    "Wind turbine blades",
+    "Pipe linings",
+    "Automotive body panels"
+  ],
+  "notes": "Lower cost than CFRP; better temperature resistance than GFRP. Sustainable \u2014 made from volcanic rock.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 1900,
+      "max": 2100,
+      "source": "Fibre Glast / published literature"
+    },
+    "price_USD_kg": {
+      "min": 8,
+      "max": 20,
+      "source": "Fibre Glast / published literature"
+    },
+    "youngs_modulus_GPa": {
+      "min": 55,
+      "max": 75,
+      "source": "Fibre Glast / published literature"
+    },
+    "yield_strength_MPa": {
+      "min": 800,
+      "max": 1150,
+      "source": "Fibre Glast / published literature"
+    },
+    "ultimate_strength_MPa": {
+      "min": 900,
+      "max": 1200,
+      "source": "Fibre Glast / published literature"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 20,
+      "max": 35,
+      "source": "Fibre Glast / published literature"
+    },
+    "elongation": {
+      "min": 0.015,
+      "max": 0.025,
+      "source": "Fibre Glast / published literature"
+    },
+    "specific_heat_J_kgK": {
+      "min": 850,
+      "max": 1000,
+      "source": "Fibre Glast / published literature"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.5,
+      "max": 1.5,
+      "source": "Fibre Glast / published literature"
+    },
+    "thermal_expansion_uK": {
+      "min": 6.0,
+      "max": 9.0,
+      "source": "Fibre Glast / published literature"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 15,
+      "max": 35,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 1.0,
+      "max": 2.5,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

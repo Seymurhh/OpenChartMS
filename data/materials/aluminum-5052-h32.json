@@ -1,0 +1,101 @@
+{
+  "id": "aluminum-5052-h32",
+  "name": "Aluminum 5052-H32",
+  "family": "metals",
+  "short_name": "Al 5052-H32",
+  "subfamily": "aluminum-alloys",
+  "applications": [
+    "Marine hull plating",
+    "Fuel tanks",
+    "Pressure vessels",
+    "Sheet metal work"
+  ],
+  "notes": "Mg alloy; excellent corrosion resistance. H32 = strain hardened + stabilized.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 2680,
+      "max": 2690,
+      "source": "ASM Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 2.8,
+      "max": 3.5,
+      "source": "ASM Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 70,
+      "max": 71,
+      "source": "ASM Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 193,
+      "max": 207,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 228,
+      "max": 262,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 25,
+      "max": 35,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.12,
+      "max": 0.17,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 607,
+      "max": 649,
+      "source": "ASM Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 880,
+      "max": 900,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 134,
+      "max": 142,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 23.6,
+      "max": 23.8,
+      "source": "ASM Handbook Vol 2"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 4.9,
+      "max": 5.1,
+      "source": "ASM Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 155,
+      "max": 200,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 8.1,
+      "max": 11.5,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.35,
+      "max": 0.45,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 11,
+      "max": 17,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.6,
+      "max": 1.0,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "id": "stainless-304",
+  "name": "Stainless steel 304 (18-8)",
+  "family": "metals",
+  "short_name": "SS 304",
+  "subfamily": "ferrous-metals",
+  "applications": [
+    "Food processing equipment",
+    "Kitchen appliances",
+    "Chemical tanks",
+    "Architectural panels"
+  ],
+  "notes": "Most common austenitic SS. 18% Cr, 8% Ni. Annealed condition.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 7900,
+      "max": 8000,
+      "source": "ASM Handbook Vol 1"
+    },
+    "price_USD_kg": {
+      "min": 3.0,
+      "max": 4.5,
+      "source": "ASM Handbook Vol 1"
+    },
+    "youngs_modulus_GPa": {
+      "min": 193,
+      "max": 200,
+      "source": "ASM Handbook Vol 1"
+    },
+    "yield_strength_MPa": {
+      "min": 170,
+      "max": 310,
+      "source": "ASM Handbook Vol 1"
+    },
+    "ultimate_strength_MPa": {
+      "min": 480,
+      "max": 650,
+      "source": "ASM Handbook Vol 1"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 100,
+      "max": 200,
+      "source": "ASM Handbook Vol 1"
+    },
+    "elongation": {
+      "min": 0.4,
+      "max": 0.55,
+      "source": "ASM Handbook Vol 1"
+    },
+    "melting_point_C": {
+      "min": 1400,
+      "max": 1450,
+      "source": "ASM Handbook Vol 1"
+    },
+    "specific_heat_J_kgK": {
+      "min": 500,
+      "max": 510,
+      "source": "ASM Handbook Vol 1"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 16.2,
+      "max": 16.3,
+      "source": "ASM Handbook Vol 1"
+    },
+    "thermal_expansion_uK": {
+      "min": 17.2,
+      "max": 17.8,
+      "source": "ASM Handbook Vol 1"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 72,
+      "max": 74,
+      "source": "ASM Handbook Vol 1"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 50,
+      "max": 60,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 5.5,
+      "max": 6.8,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.65,
+      "max": 0.8,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 10,
+      "max": 18,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.7,
+      "max": 1.2,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

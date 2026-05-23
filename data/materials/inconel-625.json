@@ -1,0 +1,101 @@
+{
+  "id": "inconel-625",
+  "name": "Inconel 625 (nickel superalloy)",
+  "family": "metals",
+  "short_name": "Inconel 625",
+  "subfamily": "nickel-alloys",
+  "applications": [
+    "Aerospace exhaust ducts",
+    "Marine propellers",
+    "Chemical processing",
+    "Nuclear reactors"
+  ],
+  "notes": "Ni-Cr-Mo alloy. Excellent corrosion and oxidation resistance to 980\u00b0C. Solid-solution strengthened.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 8440,
+      "max": 8450,
+      "source": "ASM Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 40,
+      "max": 80,
+      "source": "ASM Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 207,
+      "max": 215,
+      "source": "ASM Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 414,
+      "max": 690,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 827,
+      "max": 1000,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 70,
+      "max": 110,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.3,
+      "max": 0.42,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 1290,
+      "max": 1350,
+      "source": "ASM Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 410,
+      "max": 430,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 9.8,
+      "max": 10.8,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 12.8,
+      "max": 13.0,
+      "source": "ASM Handbook Vol 2"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 128,
+      "max": 132,
+      "source": "ASM Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 180,
+      "max": 260,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 13,
+      "max": 20,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.3,
+      "max": 0.45,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 15,
+      "max": 30,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 1.0,
+      "max": 2.0,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

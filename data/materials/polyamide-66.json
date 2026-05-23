@@ -1,0 +1,101 @@
+{
+  "id": "polyamide-66",
+  "name": "Polyamide 6/6 (Nylon 66, PA66)",
+  "family": "polymers",
+  "short_name": "Nylon 66",
+  "subfamily": "thermoplastics",
+  "applications": [
+    "Gears and bearings",
+    "Zip ties",
+    "Electrical connectors",
+    "Toothbrush bristles"
+  ],
+  "notes": "Higher melting point (255\u2013265\u00b0C) and modulus than PA6. Moisture absorbs \u2192 properties change.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 1130,
+      "max": 1150,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 3.5,
+      "max": 6.0,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 2.0,
+      "max": 3.5,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 55,
+      "max": 85,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 75,
+      "max": 95,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 2.5,
+      "max": 4.0,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.15,
+      "max": 0.6,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 255,
+      "max": 265,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "glass_temperature_C": {
+      "min": 47,
+      "max": 80,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1600,
+      "max": 1700,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.24,
+      "max": 0.27,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 80,
+      "max": 100,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 138,
+      "max": 160,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 6.1,
+      "max": 8.0,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.1,
+      "max": 0.25,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 12,
+      "max": 20,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.8,
+      "max": 1.4,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "id": "inconel-718",
+  "name": "Inconel 718 (nickel superalloy)",
+  "family": "metals",
+  "short_name": "Inconel 718",
+  "subfamily": "nickel-alloys",
+  "applications": [
+    "Jet engine turbine discs",
+    "Rocket motor casings",
+    "Nuclear fuel spacers",
+    "Cryogenic tankage"
+  ],
+  "notes": "Ni-Fe-Cr alloy, precipitation hardened. Workhorse of high-temperature gas turbines.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 8190,
+      "max": 8220,
+      "source": "ASM Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 40,
+      "max": 90,
+      "source": "ASM Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 200,
+      "max": 211,
+      "source": "ASM Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 1000,
+      "max": 1185,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 1240,
+      "max": 1380,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 50,
+      "max": 90,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.12,
+      "max": 0.18,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 1260,
+      "max": 1336,
+      "source": "ASM Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 430,
+      "max": 440,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 11.4,
+      "max": 11.8,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 13.0,
+      "max": 13.2,
+      "source": "ASM Handbook Vol 2"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 120,
+      "max": 130,
+      "source": "ASM Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 180,
+      "max": 270,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 13,
+      "max": 21,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.3,
+      "max": 0.45,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 15,
+      "max": 30,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 1.0,
+      "max": 2.0,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

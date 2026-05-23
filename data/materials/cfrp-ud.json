@@ -1,0 +1,91 @@
+{
+  "id": "cfrp-ud",
+  "name": "CFRP, unidirectional (60% Vf, T300/epoxy)",
+  "family": "composites",
+  "short_name": "CFRP UD",
+  "subfamily": "carbon-fiber-composites",
+  "applications": [
+    "Aerospace spars",
+    "Formula 1 monocoques",
+    "Bicycle frames",
+    "Wind turbine blades"
+  ],
+  "notes": "Fiber-direction (0\u00b0) properties. T300 carbon fiber, 60% Vf. Transverse properties ~10\u00d7 lower.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 1550,
+      "max": 1600,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "price_USD_kg": {
+      "min": 25,
+      "max": 80,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 120,
+      "max": 145,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "yield_strength_MPa": {
+      "min": 1000,
+      "max": 1600,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 1000,
+      "max": 1600,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 25,
+      "max": 45,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "elongation": {
+      "min": 0.006,
+      "max": 0.015,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 900,
+      "max": 1100,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 2.0,
+      "max": 10.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "thermal_expansion_uK": {
+      "min": -0.5,
+      "max": 2.0,
+      "source": "Ashby App A (6th ed., 2025)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 230,
+      "max": 450,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 14,
+      "max": 28,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.05,
+      "max": 0.2,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 20,
+      "max": 50,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 1.5,
+      "max": 4.0,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

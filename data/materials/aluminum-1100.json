@@ -1,0 +1,100 @@
+{
+  "id": "aluminum-1100",
+  "name": "Aluminum 1100 (commercially pure)",
+  "family": "metals",
+  "short_name": "Al 1100",
+  "subfamily": "aluminum-alloys",
+  "applications": [
+    "Food packaging",
+    "Chemical equipment",
+    "Heat exchangers",
+    "Decorative trim"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 2710,
+      "max": 2720,
+      "source": "ASM Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 2.0,
+      "max": 2.5,
+      "source": "ASM Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 69,
+      "max": 70,
+      "source": "ASM Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 97,
+      "max": 125,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 110,
+      "max": 130,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 35,
+      "max": 45,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.09,
+      "max": 0.15,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 643,
+      "max": 657,
+      "source": "ASM Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 904,
+      "max": 920,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 218,
+      "max": 222,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 23.6,
+      "max": 23.6,
+      "source": "ASM Handbook Vol 2"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 2.9,
+      "max": 3.1,
+      "source": "ASM Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 155,
+      "max": 200,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 8.1,
+      "max": 11.5,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.35,
+      "max": 0.45,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 11,
+      "max": 17,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.6,
+      "max": 1.0,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

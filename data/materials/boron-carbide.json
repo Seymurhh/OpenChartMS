@@ -1,0 +1,71 @@
+{
+  "id": "boron-carbide",
+  "name": "Boron carbide (B\u2084C)",
+  "family": "ceramics-technical",
+  "short_name": "B\u2084C",
+  "subfamily": "carbide-ceramics",
+  "applications": [
+    "Ballistic armor (lightest)",
+    "Abrasive blasting nozzles",
+    "Nuclear control rods",
+    "Sandblast equipment"
+  ],
+  "notes": "3rd hardest material after diamond and CBN. Lightest hard ceramic.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 2490,
+      "max": 2520,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "price_USD_kg": {
+      "min": 40,
+      "max": 200,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "youngs_modulus_GPa": {
+      "min": 440,
+      "max": 470,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "yield_strength_MPa": {
+      "min": 300,
+      "max": 500,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 2.5,
+      "max": 3.5,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "melting_point_C": {
+      "min": 2450,
+      "max": 2450,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "specific_heat_J_kgK": {
+      "min": 950,
+      "max": 1000,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 30,
+      "max": 35,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "thermal_expansion_uK": {
+      "min": 5.0,
+      "max": 6.0,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 400,
+      "max": 800,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 25,
+      "max": 50,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "id": "beryllium-copper",
+  "name": "Beryllium copper C17200 (AT)",
+  "family": "metals",
+  "short_name": "BeCu C17200",
+  "subfamily": "copper-alloys",
+  "applications": [
+    "Springs",
+    "Electrical connectors",
+    "Precision instruments",
+    "Non-sparking tools"
+  ],
+  "notes": "Highest-strength Cu alloy. AT (age tempered) condition. Beryllium dust is toxic \u2014 safety precautions required.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 8250,
+      "max": 8300,
+      "source": "ASM Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 60,
+      "max": 140,
+      "source": "ASM Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 128,
+      "max": 134,
+      "source": "ASM Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 1100,
+      "max": 1280,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 1250,
+      "max": 1400,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 30,
+      "max": 50,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.01,
+      "max": 0.05,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 865,
+      "max": 980,
+      "source": "ASM Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 418,
+      "max": 430,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 105,
+      "max": 115,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 17.0,
+      "max": 17.8,
+      "source": "ASM Handbook Vol 2"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 6.8,
+      "max": 7.5,
+      "source": "ASM Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 250,
+      "max": 400,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 15,
+      "max": 25,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.35,
+      "max": 0.5,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 20,
+      "max": 40,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 1.5,
+      "max": 3.0,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

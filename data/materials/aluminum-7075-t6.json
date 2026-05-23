@@ -1,0 +1,101 @@
+{
+  "id": "aluminum-7075-t6",
+  "name": "Aluminum 7075-T6",
+  "family": "metals",
+  "short_name": "Al 7075-T6",
+  "subfamily": "aluminum-alloys",
+  "applications": [
+    "Airframe spars",
+    "Gears and shafts",
+    "Missile components",
+    "Bicycle frames (high-end)"
+  ],
+  "notes": "Zn-Mg-Cu alloy; highest-strength common Al alloy. Lower toughness than 2024.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 2800,
+      "max": 2820,
+      "source": "ASM Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 4.0,
+      "max": 5.5,
+      "source": "ASM Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 71,
+      "max": 72,
+      "source": "ASM Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 503,
+      "max": 530,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 572,
+      "max": 590,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 22,
+      "max": 29,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.08,
+      "max": 0.11,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 477,
+      "max": 635,
+      "source": "ASM Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 955,
+      "max": 965,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 130,
+      "max": 145,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 23.4,
+      "max": 23.6,
+      "source": "ASM Handbook Vol 2"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 5.1,
+      "max": 5.4,
+      "source": "ASM Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 155,
+      "max": 210,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 9.0,
+      "max": 13.0,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.3,
+      "max": 0.4,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 11,
+      "max": 17,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.6,
+      "max": 1.0,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}
