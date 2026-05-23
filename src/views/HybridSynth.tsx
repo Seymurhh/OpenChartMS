@@ -19,11 +19,6 @@ function geomean(a: number, b: number): number {
   return Math.sqrt(a * b);
 }
 
-const ELIGIBLE = materials.filter(
-  (m) => m.properties.youngs_modulus_GPa && m.properties.density_kg_m3,
-);
-
-
 // Build a sweep of f ∈ [0, 1] for composites, ρ̄ ∈ [0.01, 0.5] for foams, t/c ∈ [0.02, 0.4] for sandwiches.
 function sweep(kind: HybridKind, m1: Material, m2: Material): HybridResult[] {
   const N = 40;
@@ -56,15 +51,23 @@ function sweep(kind: HybridKind, m1: Material, m2: Material): HybridResult[] {
   return out;
 }
 
-export function HybridSynth() {
+export function HybridSynth({ whitelist }: { whitelist?: Set<string> }) {
   const [kind, setKind] = useState<HybridKind>('composite');
   const [m1Id, setM1Id] = useState('cfrp');
   const [m2Id, setM2Id] = useState('epoxy');
   const [fSlider, setFSlider] = useState(50); // 0..100, used for f, ρ̄, or t/c depending on kind
   const [showLabels, setShowLabels] = useState(false);
 
-  const m1 = ELIGIBLE.find((m) => m.id === m1Id) ?? ELIGIBLE[0];
-  const m2 = ELIGIBLE.find((m) => m.id === m2Id) ?? ELIGIBLE[0];
+  const eligible = useMemo(
+    () => materials.filter(
+      (m) => m.properties.youngs_modulus_GPa && m.properties.density_kg_m3 &&
+             (!whitelist || whitelist.has(m.id)),
+    ),
+    [whitelist],
+  );
+
+  const m1 = eligible.find((m) => m.id === m1Id) ?? eligible[0];
+  const m2 = eligible.find((m) => m.id === m2Id) ?? eligible[0];
 
   // Map slider position to the parameter range for the current hybrid kind.
   const param = useMemo(() => {
@@ -100,7 +103,7 @@ export function HybridSynth() {
   // identity comes from the marker dots and legend, not the ellipse fill.
   const ellipses: Partial<Shape>[] = useMemo(
     () =>
-      ELIGIBLE.map((m) => {
+      eligible.map((m) => {
         const r = m.properties.density_kg_m3!;
         const e = m.properties.youngs_modulus_GPa!;
         return {
@@ -128,7 +131,7 @@ export function HybridSynth() {
   const familyTraces: Partial<PlotData>[] = useMemo(
     () =>
       families.map((f) => {
-        const items = ELIGIBLE.filter((m) => m.family === f.id);
+        const items = eligible.filter((m) => m.family === f.id);
         const isHighlighted = isFoamMode && f.id === 'foams';
         const isDimmed = isFoamMode && f.id !== 'foams';
         return {
@@ -337,7 +340,7 @@ export function HybridSynth() {
               {kind === 'sandwich' ? 'Face material:' : kind.startsWith('foam') ? 'Solid material:' : 'Material 1:'}
             </label>
             <select id="m1" value={m1Id} onChange={(e) => setM1Id(e.target.value)}>
-              {ELIGIBLE.map((m) => (
+              {eligible.map((m) => (
                 <option key={m.id} value={m.id}>
                   {m.name}
                 </option>
@@ -348,7 +351,7 @@ export function HybridSynth() {
             <div className="control-group">
               <label htmlFor="m2">{kind === 'sandwich' ? 'Core material:' : 'Material 2:'}</label>
               <select id="m2" value={m2Id} onChange={(e) => setM2Id(e.target.value)}>
-                {ELIGIBLE.map((m) => (
+                {eligible.map((m) => (
                   <option key={m.id} value={m.id}>
                     {m.name}
                   </option>

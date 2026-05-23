@@ -68,13 +68,7 @@ const matById: Record<string, Material> = Object.fromEntries(
   materials.map((m) => [m.id, m]),
 );
 
-// Only materials with embodied-energy data are eligible for the BOM dropdown.
-const ecoMaterials = materials
-  .filter((m) => m.properties.embodied_energy_MJ_kg !== undefined)
-  .sort((a, b) => {
-    if (a.family !== b.family) return a.family.localeCompare(b.family);
-    return a.name.localeCompare(b.name);
-  });
+// ecoMaterials is computed inside the component so it can react to the whitelist prop.
 
 const initialBOM: BOMRow[] = [
   { id: 'r1', materialId: 'low-carbon-steel', mass_kg: 8 },
@@ -109,7 +103,7 @@ interface ComponentImpact {
   eol_co2: number;
 }
 
-export function EcoAudit() {
+export function EcoAudit({ whitelist }: { whitelist?: Set<string> }) {
   const [bom, setBom] = useState<BOMRow[]>(initialBOM);
   const [mfgEnergyPerKg, setMfgEnergyPerKg] = useState<number>(15); // MJ/kg, typical shaping
   const [mfgCO2PerKg, setMfgCO2PerKg] = useState<number>(1.0); // kg CO₂ / kg
@@ -120,6 +114,21 @@ export function EcoAudit() {
   const [usePresetId, setUsePresetId] = useState<string>('none');
   const [recycleEnabled, setRecycleEnabled] = useState(true);
   const [metric, setMetric] = useState<Metric>('energy');
+
+  const ecoMaterials = useMemo(
+    () =>
+      materials
+        .filter(
+          (m) =>
+            m.properties.embodied_energy_MJ_kg !== undefined &&
+            (!whitelist || whitelist.has(m.id)),
+        )
+        .sort((a, b) => {
+          if (a.family !== b.family) return a.family.localeCompare(b.family);
+          return a.name.localeCompare(b.name);
+        }),
+    [whitelist],
+  );
 
   const totalMass_kg = useMemo(() => bom.reduce((s, r) => s + r.mass_kg, 0), [bom]);
 

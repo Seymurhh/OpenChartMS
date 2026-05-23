@@ -7,7 +7,6 @@ import { materials } from '../data/loadMaterials';
 import { CHART_INDICES, makeCustomIndex, type MaterialIndex } from '../data/chartIndices';
 import { WORKED_EXAMPLES } from '../data/examples';
 import { PROPERTY_META } from '../data/types';
-import { CORE_IDS } from '../data/coreIds';
 
 interface ChartPreset {
   id: string;
@@ -20,14 +19,14 @@ interface ChartPreset {
 }
 
 const PRESETS: ChartPreset[] = [
-  // Fig 3.3 — E vs ρ: foams (ρ~50) through Ir (ρ~22500); elastomers (E~0.0001) through diamond (E~1100)
-  { id: 'E-rho',        label: "Young's modulus E vs Density ρ (Fig 3.3)",        x: 'density_kg_m3',        y: 'youngs_modulus_GPa',            xRange: [10,    25000], yRange: [1e-5,  1500]   },
-  // Fig 3.4 — σ vs ρ: same density span; strength from elastomers (0.01) to ultra-high (10000 MPa)
-  { id: 'sigma-rho',    label: 'Yield strength σf vs Density ρ (Fig 3.4)',        x: 'density_kg_m3',        y: 'yield_strength_MPa',            xRange: [10,    25000], yRange: [0.01,  15000]  },
+  // Fig 3.3 — E vs ρ: foams (ρ~50) through Ir (ρ~22500); softest foams (E~0.001 GPa) through diamond (E~1100 GPa)
+  { id: 'E-rho',        label: "Young's modulus E vs Density ρ (Fig 3.3)",        x: 'density_kg_m3',        y: 'youngs_modulus_GPa',            xRange: [10,     25000], yRange: [5e-4,  1500]   },
+  // Fig 3.4 — σ vs ρ: same density span; strength from soft foams (~0.1 MPa) to ultra-high (10 000 MPa)
+  { id: 'sigma-rho',    label: 'Yield strength σf vs Density ρ (Fig 3.4)',        x: 'density_kg_m3',        y: 'yield_strength_MPa',            xRange: [10,     25000], yRange: [0.05,  15000]  },
   // Fig 3.5 — E vs σ
-  { id: 'E-sigma',      label: 'Modulus E vs Strength σf (Fig 3.5)',              x: 'yield_strength_MPa',   y: 'youngs_modulus_GPa',            xRange: [0.01,  15000], yRange: [1e-5,  1500]   },
+  { id: 'E-sigma',      label: 'Modulus E vs Strength σf (Fig 3.5)',              x: 'yield_strength_MPa',   y: 'youngs_modulus_GPa',            xRange: [0.05,   15000], yRange: [5e-4,  1500]   },
   // Fig 3.7 — K1c vs E
-  { id: 'K1c-E',        label: 'Fracture toughness K1c vs Modulus E (Fig 3.7)',   x: 'youngs_modulus_GPa',   y: 'fracture_toughness_MPa_sqrt_m', xRange: [1e-4,  1500],  yRange: [0.01,  300]    },
+  { id: 'K1c-E',        label: 'Fracture toughness K1c vs Modulus E (Fig 3.7)',   x: 'youngs_modulus_GPa',   y: 'fracture_toughness_MPa_sqrt_m', xRange: [5e-4,   1500],  yRange: [0.01,  300]    },
   // Fig 3.8 — K1c vs σ
   { id: 'K1c-sigma',    label: 'Fracture toughness K1c vs Strength σf (Fig 3.8)', x: 'yield_strength_MPa',   y: 'fracture_toughness_MPa_sqrt_m', xRange: [0.01,  15000], yRange: [0.01,  300]    },
   // Thermal: α spans ~0.1 (Si, invar) to ~700 µK⁻¹ (elastomers); λ spans ~0.01 to ~2500 (diamond)
@@ -42,7 +41,7 @@ function geomean(a: number, b: number): number {
   return Math.sqrt(a * b);
 }
 
-export function ChartView() {
+export function ChartView({ whitelist }: { whitelist?: Set<string> }) {
   const [presetId, setPresetId] = useState(PRESETS[0].id);
   const [showLabels, setShowLabels] = useState(false);
   const [showEnvelopes, setShowEnvelopes] = useState(true);
@@ -54,9 +53,6 @@ export function ChartView() {
   const [lassoMode, setLassoMode] = useState(false);
   const [graphicalSelection, setGraphicalSelection] = useState<Set<string> | undefined>(undefined);
   const [activeExampleId, setActiveExampleId] = useState<string>('');
-  const [coreOnly, setCoreOnly] = useState(false);
-
-  const whitelist = coreOnly ? CORE_IDS : undefined;
 
   const activeExample = WORKED_EXAMPLES.find((e) => e.id === activeExampleId);
 
@@ -229,21 +225,6 @@ export function ChartView() {
           />
           Lasso select
         </label>
-
-        <div className="dataset-toggle" title="Teaching: 56 core Ashby materials — cleaner for lectures. Extended: all 159 materials — for problem sets and exploration.">
-          <button
-            className={`dataset-btn${!coreOnly ? ' active' : ''}`}
-            onClick={() => setCoreOnly(false)}
-          >
-            Extended <span className="dataset-count">159</span>
-          </button>
-          <button
-            className={`dataset-btn${coreOnly ? ' active' : ''}`}
-            onClick={() => setCoreOnly(true)}
-          >
-            Teaching <span className="dataset-count">56</span>
-          </button>
-        </div>
 
         {graphicalSelection && (
           <span className="selection-count">

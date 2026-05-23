@@ -48,6 +48,14 @@
 
 .attribution a:hover { color: var(--accent); }
 
+/* ----- Header right column (toggle + tabs stacked) ----- */
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
 /* ----- Tabs ----- */
 .tabs {
   display: flex;

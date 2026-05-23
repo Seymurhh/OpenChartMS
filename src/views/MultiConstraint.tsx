@@ -11,7 +11,7 @@ interface RankedRow {
   minmax: number;
 }
 
-export function MultiConstraint() {
+export function MultiConstraint({ whitelist }: { whitelist?: Set<string> }) {
   const [i1Id, setI1Id] = useState('tie-stiffness');
   const [i2Id, setI2Id] = useState('tie-strength');
   const [ccSliderPos, setCcSliderPos] = useState(50);
@@ -27,7 +27,7 @@ export function MultiConstraint() {
   // (default/100, default·100).
   const { Cc, CcMin, CcMax, defaultCc, rankedRows } = useMemo(() => {
     const rows: RankedRow[] = [];
-    for (const m of materials) {
+    for (const m of materials.filter((m) => !whitelist || whitelist.has(m.id))) {
       const I1 = index1.computeI(m);
       const I2 = index2.computeI(m);
       if (
@@ -57,7 +57,7 @@ export function MultiConstraint() {
     rows.sort((a, b) => a.minmax - b.minmax);
 
     return { Cc: c, CcMin: cMin, CcMax: cMax, defaultCc: natural, rankedRows: rows };
-  }, [index1, index2, ccSliderPos]);
+  }, [index1, index2, ccSliderPos, whitelist]);
 
   return (
     <>

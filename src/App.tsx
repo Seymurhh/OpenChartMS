@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { ChartView } from './views/ChartView';
 import { TradeOff } from './views/TradeOff';
 import { MultiConstraint } from './views/MultiConstraint';
@@ -5,6 +6,7 @@ import { HybridSynth } from './views/HybridSynth';
 import { ProcessSelection } from './views/ProcessSelection';
 import { EcoAudit } from './views/EcoAudit';
 import { materials } from './data/loadMaterials';
+import { CORE_IDS } from './data/coreIds';
 import { useHashTab } from './lib/useHashTab';
 import './App.css';
 
@@ -22,6 +24,9 @@ const TAB_LABELS: Record<Tab, string> = {
 
 export function App() {
   const [tab, setTab] = useHashTab<Tab>('charts', TABS);
+  const [coreOnly, setCoreOnly] = useState(false);
+  const whitelist = coreOnly ? CORE_IDS : undefined;
+  const matCount = coreOnly ? CORE_IDS.size : materials.length;
 
   return (
     <div className="app">
@@ -29,7 +34,7 @@ export function App() {
         <div className="app-title">
           <h1>OpenChartMS</h1>
           <p className="tagline">
-            Open Ashby material-selection charts · {materials.length} materials
+            Open Ashby material-selection charts · {matCount} materials
           </p>
           <p className="attribution">
             Method &amp; reference data from Ashby,{' '}
@@ -43,25 +48,44 @@ export function App() {
             </a>
           </p>
         </div>
-        <nav className="tabs">
-          {TABS.map((t) => (
+        <div className="header-right">
+          <div
+            className="dataset-toggle"
+            title="Teaching: 56 core Ashby Appendix A materials — clean envelopes for lectures. Extended: all 159 materials — for problem sets and exploration."
+          >
             <button
-              key={t}
-              className={tab === t ? 'tab active' : 'tab'}
-              onClick={() => setTab(t)}
+              className={`dataset-btn${!coreOnly ? ' active' : ''}`}
+              onClick={() => setCoreOnly(false)}
             >
-              {TAB_LABELS[t]}
+              Extended <span className="dataset-count">159</span>
             </button>
-          ))}
-        </nav>
+            <button
+              className={`dataset-btn${coreOnly ? ' active' : ''}`}
+              onClick={() => setCoreOnly(true)}
+            >
+              Teaching <span className="dataset-count">56</span>
+            </button>
+          </div>
+          <nav className="tabs">
+            {TABS.map((t) => (
+              <button
+                key={t}
+                className={tab === t ? 'tab active' : 'tab'}
+                onClick={() => setTab(t)}
+              >
+                {TAB_LABELS[t]}
+              </button>
+            ))}
+          </nav>
+        </div>
       </header>
 
-      {tab === 'charts' && <ChartView />}
-      {tab === 'tradeoff' && <TradeOff />}
-      {tab === 'multi' && <MultiConstraint />}
-      {tab === 'hybrid' && <HybridSynth />}
+      {tab === 'charts' && <ChartView whitelist={whitelist} />}
+      {tab === 'tradeoff' && <TradeOff whitelist={whitelist} />}
+      {tab === 'multi' && <MultiConstraint whitelist={whitelist} />}
+      {tab === 'hybrid' && <HybridSynth whitelist={whitelist} />}
       {tab === 'process' && <ProcessSelection />}
-      {tab === 'eco' && <EcoAudit />}
+      {tab === 'eco' && <EcoAudit whitelist={whitelist} />}
 
       <footer className="app-footer">
         <p>

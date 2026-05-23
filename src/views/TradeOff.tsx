@@ -24,7 +24,7 @@ interface MaterialPoint {
   material: Material;
 }
 
-export function TradeOff() {
+export function TradeOff({ whitelist }: { whitelist?: Set<string> }) {
   const [xKey, setXKey] = useState<PropertyKey>('price_USD_kg');
   const [yKey, setYKey] = useState<PropertyKey>('density_kg_m3');
   const [alphaSliderPos, setAlphaSliderPos] = useState(50);
@@ -40,7 +40,7 @@ export function TradeOff() {
   // Slider maps log-linearly across (default/1000, default*1000).
   const { alpha, alphaMin, alphaMax, defaultAlpha, points } = useMemo(() => {
     const pts: MaterialPoint[] = materials
-      .filter((m) => m.properties[xKey] && m.properties[yKey])
+      .filter((m) => m.properties[xKey] && m.properties[yKey] && (!whitelist || whitelist.has(m.id)))
       .map((m) => ({
         id: m.id,
         x: m.properties[xKey]!.min,
@@ -59,7 +59,7 @@ export function TradeOff() {
     const aMax = natural * 1000;
     const a = aMin * Math.pow(aMax / aMin, alphaSliderPos / 100);
     return { alpha: a, alphaMin: aMin, alphaMax: aMax, defaultAlpha: natural, points: pts };
-  }, [xKey, yKey, alphaSliderPos]);
+  }, [xKey, yKey, alphaSliderPos, whitelist]);
 
   const { paretoMaterials, optimum, optimumZ } = useMemo(() => {
     const paretoIds = paretoFront(points);
