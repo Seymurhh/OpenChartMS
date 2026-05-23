@@ -133,6 +133,49 @@
 .checkbox:hover { color: var(--text); }
 .checkbox input { cursor: pointer; accent-color: var(--accent); }
 
+/* ----- Dataset toggle (Teaching / Extended) ----- */
+.dataset-toggle {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-left: auto;
+}
+
+.dataset-btn {
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: inherit;
+  background: var(--surface-2);
+  border: none;
+  color: var(--text-2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.15s, color 0.15s;
+  border-right: 1px solid var(--border);
+}
+
+.dataset-btn:last-child { border-right: none; }
+
+.dataset-btn:hover { background: var(--surface); color: var(--text); }
+
+.dataset-btn.active {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.dataset-count {
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.75;
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+.dataset-btn.active .dataset-count { opacity: 0.9; }
+
 /* ----- Index line panel ----- */
 .index-panel {
   margin: 8px 0 16px;

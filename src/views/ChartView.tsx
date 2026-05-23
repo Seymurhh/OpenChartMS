@@ -7,6 +7,7 @@ import { materials } from '../data/loadMaterials';
 import { CHART_INDICES, makeCustomIndex, type MaterialIndex } from '../data/chartIndices';
 import { WORKED_EXAMPLES } from '../data/examples';
 import { PROPERTY_META } from '../data/types';
+import { CORE_IDS } from '../data/coreIds';
 
 interface ChartPreset {
   id: string;
@@ -53,6 +54,9 @@ export function ChartView() {
   const [lassoMode, setLassoMode] = useState(false);
   const [graphicalSelection, setGraphicalSelection] = useState<Set<string> | undefined>(undefined);
   const [activeExampleId, setActiveExampleId] = useState<string>('');
+  const [coreOnly, setCoreOnly] = useState(false);
+
+  const whitelist = coreOnly ? CORE_IDS : undefined;
 
   const activeExample = WORKED_EXAMPLES.find((e) => e.id === activeExampleId);
 
@@ -88,7 +92,10 @@ export function ChartView() {
   // index-line spec, and slider bounds.
   const sel = useMemo(() => {
     const validMaterials = materials.filter(
-      (m) => m.properties[preset.x] && m.properties[preset.y],
+      (m) =>
+        m.properties[preset.x] &&
+        m.properties[preset.y] &&
+        (!whitelist || whitelist.has(m.id)),
     );
 
     // Compute index M for every material that has both axes populated.
@@ -142,7 +149,7 @@ export function ChartView() {
       M,
       isFiltered,
     };
-  }, [activeIndex, sliderPos, limits, preset, graphicalSelection]);
+  }, [activeIndex, sliderPos, limits, preset, graphicalSelection, whitelist]);
 
   const indexLine: IndexLineSpec | undefined = activeIndex
     ? { expr: activeIndex.expr, slope: activeIndex.slope, M: sel.M, lineY: activeIndex.lineY }
@@ -222,6 +229,21 @@ export function ChartView() {
           />
           Lasso select
         </label>
+
+        <div className="dataset-toggle" title="Teaching: 56 core Ashby materials — cleaner for lectures. Extended: all 159 materials — for problem sets and exploration.">
+          <button
+            className={`dataset-btn${!coreOnly ? ' active' : ''}`}
+            onClick={() => setCoreOnly(false)}
+          >
+            Extended <span className="dataset-count">159</span>
+          </button>
+          <button
+            className={`dataset-btn${coreOnly ? ' active' : ''}`}
+            onClick={() => setCoreOnly(true)}
+          >
+            Teaching <span className="dataset-count">56</span>
+          </button>
+        </div>
 
         {graphicalSelection && (
           <span className="selection-count">
@@ -346,6 +368,7 @@ export function ChartView() {
         onLassoSelect={setGraphicalSelection}
         xRangeFixed={preset.xRange}
         yRangeFixed={preset.yRange}
+        materialWhitelist={whitelist}
       />
 
       <SelectedMaterialsPanel

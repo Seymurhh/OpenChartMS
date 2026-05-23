@@ -28,6 +28,8 @@ interface Props {
   /** Fixed initial axis view in linear scale, e.g. [10, 25000]. If omitted, computed from data. */
   xRangeFixed?: [number, number];
   yRangeFixed?: [number, number];
+  /** If provided, only materials whose id is in this set are rendered. */
+  materialWhitelist?: Set<string>;
 }
 
 function geomean(a: number, b: number): number {
@@ -45,6 +47,7 @@ export function AshbyChart({
   onLassoSelect,
   xRangeFixed,
   yRangeFixed,
+  materialWhitelist,
 }: Props) {
   const xMeta = PROPERTY_META[xKey];
   const yMeta = PROPERTY_META[yKey];
@@ -58,8 +61,13 @@ export function AshbyChart({
   }, [xKey, yKey]);
 
   const valid = useMemo(
-    () => materials.filter((m) => m.properties[xKey] && m.properties[yKey]),
-    [xKey, yKey],
+    () => materials.filter(
+      (m) =>
+        m.properties[xKey] &&
+        m.properties[yKey] &&
+        (!materialWhitelist || materialWhitelist.has(m.id)),
+    ),
+    [xKey, yKey, materialWhitelist],
   );
 
   // Data ranges for both axes — used to lock the view and extend the index line.
