@@ -56,6 +56,10 @@ export function AshbyChart({
   // family's scatter trace by default, but the ellipses and envelopes are shapes,
   // not traces — so we filter them here. Reset whenever the chart preset changes.
   const [hiddenFamilies, setHiddenFamilies] = useState<Set<FamilyId>>(new Set());
+  // Incremented when the user clicks Autoscale/Home in the modebar; changing this
+  // makes uirevision unique, so Plotly discards its user-modified range state and
+  // re-applies autorange:false with our canonical fixed ranges.
+  const [layoutVersion, setLayoutVersion] = useState(0);
   useEffect(() => {
     setHiddenFamilies(new Set());
   }, [xKey, yKey]);
@@ -111,10 +115,17 @@ export function AshbyChart({
       if (items.length < 2) continue;
 
       // Geometric midpoints in log space — used for PCA orientation.
-      const mids: Point[] = items.map((m) => ({
-        x: Math.log10(geomean(m.properties[xKey]!.min, m.properties[xKey]!.max)),
-        y: Math.log10(geomean(m.properties[yKey]!.min, m.properties[yKey]!.max)),
-      }));
+      // Skip any material whose property range contains non-positive values (log undefined).
+      const mids: Point[] = items
+        .filter((m) => {
+          const xr = m.properties[xKey]!;
+          const yr = m.properties[yKey]!;
+          return xr.min > 0 && xr.max > 0 && yr.min > 0 && yr.max > 0;
+        })
+        .map((m) => ({
+          x: Math.log10(geomean(m.properties[xKey]!.min, m.properties[xKey]!.max)),
+          y: Math.log10(geomean(m.properties[yKey]!.min, m.properties[yKey]!.max)),
+        }));
 
       // All four corners of each material's property range — used to size the ellipse
       // so it actually encloses the full spread, not just the midpoints.
@@ -122,6 +133,8 @@ export function AshbyChart({
       for (const m of items) {
         const xr = m.properties[xKey]!;
         const yr = m.properties[yKey]!;
+        // Skip corners where any coordinate is non-positive (log undefined).
+        if (xr.min <= 0 || xr.max <= 0 || yr.min <= 0 || yr.max <= 0) continue;
         corners.push(
           { x: Math.log10(xr.min), y: Math.log10(yr.min) },
           { x: Math.log10(xr.min), y: Math.log10(yr.max) },
@@ -205,7 +218,14 @@ export function AshbyChart({
   const ellipses: Partial<Shape>[] = useMemo(
     () =>
       valid
-        .filter((m) => !hiddenFamilies.has(m.family))
+        .filter((m) => {
+          if (hiddenFamilies.has(m.family)) return false;
+          // Skip materials with non-positive property values on log axes to prevent
+          // Plotly receiving negative coordinates, which corrupts its autoscale.
+          const xr = m.properties[xKey]!;
+          const yr = m.properties[yKey]!;
+          return xr.min > 0 && yr.min > 0;
+        })
         .map((m) => {
         const xr = m.properties[xKey]!;
         const yr = m.properties[yKey]!;
@@ -364,8 +384,10 @@ export function AshbyChart({
     hovermode: 'closest',
     dragmode: dragMode,
     hoverlabel: HOVER_LABEL,
-    // Preserve zoom/pan when slider or filter changes; only reset when the chart type changes.
-    uirevision: `${xKey}-${yKey}`,
+    // Preserve zoom/pan when slider or filter changes; reset when chart type changes OR
+    // when the user clicks Autoscale/Home (layoutVersion increments) so we restore
+    // canonical ranges instead of letting Plotly compute them from raw data.
+    uirevision: `${xKey}-${yKey}-${layoutVersion}`,
     transition: { duration: 250, easing: 'cubic-in-out' },
   };
 
@@ -424,6 +446,16 @@ export function AshbyChart({
       }}
       onDeselect={() => {
         if (onLassoSelect) onLassoSelect(undefined);
+      }}
+      onRelayout={(event) => {
+        // When the user clicks Autoscale or Home in the modebar, Plotly fires this
+        // with autorange:true and would compute ranges from raw data — which can
+        // include physically-invalid values that produce nonsensical axes. Intercept
+        // the event and restore our canonical fixed ranges instead.
+        const ev = event as Record<string, unknown>;
+        if (ev['xaxis.autorange'] === true || ev['yaxis.autorange'] === true) {
+          setLayoutVersion((v) => v + 1);
+        }
       }}
     />
   );

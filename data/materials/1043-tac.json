@@ -18,9 +18,9 @@
       "source": "Materials Project mp-1043 (DFT)"
     },
     "youngs_modulus_GPa": {
-      "min": -3.1,
-      "max": -3.6,
-      "source": "Materials Project mp-1043 (DFT, E = 9KG/(3K+G))"
+      "min": 500,
+      "max": 560,
+      "source": "ASM EH Vol 4 (literature ~537 GPa; DFT value from mp-1043 was anomalous)"
     },
     "yield_strength_MPa": {
       "min": 400,

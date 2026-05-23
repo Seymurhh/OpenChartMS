@@ -57,6 +57,9 @@ export function HybridSynth({ whitelist }: { whitelist?: Set<string> }) {
   const [m2Id, setM2Id] = useState('epoxy');
   const [fSlider, setFSlider] = useState(50); // 0..100, used for f, ρ̄, or t/c depending on kind
   const [showLabels, setShowLabels] = useState(false);
+  // Incremented when the user clicks Autoscale/Home; changing uirevision forces Plotly
+  // to discard its user-modified range and re-apply canonical fixed ranges.
+  const [layoutVersion, setLayoutVersion] = useState(0);
 
   const eligible = useMemo(
     () => materials.filter(
@@ -101,26 +104,30 @@ export function HybridSynth({ whitelist }: { whitelist?: Set<string> }) {
 
   // Textbook-style material ellipses: white fill, thin dark outline. Family
   // identity comes from the marker dots and legend, not the ellipse fill.
+  // Guard against non-positive E values — log axis can't handle them and they
+  // corrupt Plotly's internal range calculation.
   const ellipses: Partial<Shape>[] = useMemo(
     () =>
-      eligible.map((m) => {
-        const r = m.properties.density_kg_m3!;
-        const e = m.properties.youngs_modulus_GPa!;
-        return {
-          type: 'circle',
-          xref: 'x',
-          yref: 'y',
-          x0: r.min,
-          x1: r.max,
-          y0: e.min,
-          y1: e.max,
-          fillcolor: 'rgba(255,255,255,0.85)',
-          opacity: 1,
-          line: { color: '#2a2a26', width: 1 },
-          layer: 'below',
-        } satisfies Partial<Shape>;
-      }),
-    [],
+      eligible
+        .filter((m) => m.properties.youngs_modulus_GPa!.min > 0)
+        .map((m) => {
+          const r = m.properties.density_kg_m3!;
+          const e = m.properties.youngs_modulus_GPa!;
+          return {
+            type: 'circle',
+            xref: 'x',
+            yref: 'y',
+            x0: r.min,
+            x1: r.max,
+            y0: e.min,
+            y1: e.max,
+            fillcolor: 'rgba(255,255,255,0.85)',
+            opacity: 1,
+            line: { color: '#2a2a26', width: 1 },
+            layer: 'below',
+          } satisfies Partial<Shape>;
+        }),
+    [eligible],
   );
 
   // In foam mode, highlight real foams (the family the prediction targets); dim
@@ -159,7 +166,7 @@ export function HybridSynth({ whitelist }: { whitelist?: Set<string> }) {
           hovertemplate: '<b>%{text}</b><br>ρ=%{x:.3g} kg/m³<br>E=%{y:.3g} GPa<extra></extra>',
         };
       }),
-    [isFoamMode, showLabels],
+    [eligible, isFoamMode, showLabels],
   );
 
   // Sweep trace (Voigt curve, Reuss curve, foam scaling line, etc.) For composites
@@ -269,11 +276,17 @@ export function HybridSynth({ whitelist }: { whitelist?: Set<string> }) {
       ...AXIS_STYLE,
       title: { text: 'Density ρ [kg/m³]', font: { color: '#52524E', size: 13 } },
       type: 'log',
+      // Canonical E-vs-ρ range: 10–25 000 kg/m³ (matches Ashby ChartView preset).
+      range: [Math.log10(10), Math.log10(25000)],
+      autorange: false,
     },
     yaxis: {
       ...AXIS_STYLE,
       title: { text: "Young's modulus E [GPa]", font: { color: '#52524E', size: 13 } },
       type: 'log',
+      // Canonical range: 5×10⁻⁴ – 1500 GPa.
+      range: [Math.log10(5e-4), Math.log10(1500)],
+      autorange: false,
     },
     shapes: ellipses,
     showlegend: true,
@@ -283,6 +296,9 @@ export function HybridSynth({ whitelist }: { whitelist?: Set<string> }) {
     paper_bgcolor: PAPER_BG,
     hovermode: 'closest',
     hoverlabel: HOVER_LABEL,
+    // Preserve zoom/pan when slider or labels toggle; reset only when kind or
+    // component materials change, or when the user clicks Autoscale (layoutVersion).
+    uirevision: `hybrid-${kind}-${m1Id}-${m2Id}-${layoutVersion}`,
   };
 
   const needsTwoMaterials = kind === 'composite' || kind === 'sandwich';
@@ -389,9 +405,15 @@ export function HybridSynth({ whitelist }: { whitelist?: Set<string> }) {
       <Plot
         data={[...familyTraces, ...sweepTraces, currentTrace]}
         layout={layout}
-        config={{ responsive: true, displaylogo: false }}
+        config={{ responsive: true, displaylogo: false, displayModeBar: true }}
         style={{ width: '100%', height: '640px' }}
         useResizeHandler
+        onRelayout={(event) => {
+          const ev = event as Record<string, unknown>;
+          if (ev['xaxis.autorange'] === true || ev['yaxis.autorange'] === true) {
+            setLayoutVersion((v) => v + 1);
+          }
+        }}
       />
 
       <section className="trade-off-section">

@@ -1,6 +1,6 @@
 {
   "count": 159,
-  "source": "Ashby App A (6th ed., 2025) + ASM Handbooks + Bath ICE v3.0 + Materials Project API",
+  "source": "OpenChartMS – compiled from data/materials/*.json",
   "materials": [
     {
       "id": "101-iridium",
@@ -169,7 +169,7 @@
         "Nuclear reactor moderator",
         "Microwave tube windows"
       ],
-      "notes": "Exceptionally high thermal conductivity for a ceramic (~250 W/mK). BeO dust is highly toxic \u2014 strict handling controls required.",
+      "notes": "Exceptionally high thermal conductivity for a ceramic (~250 W/mK). BeO dust is highly toxic — strict handling controls required.",
       "properties": {
         "density_kg_m3": {
           "min": 3643.0,
@@ -235,7 +235,7 @@
         "Rocket motor nozzles",
         "Diffusion barriers"
       ],
-      "notes": "TaC has the highest melting point of any binary compound (~3880\u00b0C). Added to WC tools to inhibit grain growth.",
+      "notes": "TaC has the highest melting point of any binary compound (~3880°C). Added to WC tools to inhibit grain growth.",
       "properties": {
         "density_kg_m3": {
           "min": 9424.0,
@@ -243,9 +243,9 @@
           "source": "Materials Project mp-1043 (DFT)"
         },
         "youngs_modulus_GPa": {
-          "min": -3.1,
-          "max": -3.6,
-          "source": "Materials Project mp-1043 (DFT, E = 9KG/(3K+G))"
+          "min": 500,
+          "max": 560,
+          "source": "ASM EH Vol 4 (literature ~537 GPa; DFT value from mp-1043 was anomalous)"
         },
         "yield_strength_MPa": {
           "min": 400,
@@ -375,7 +375,7 @@
         "High-temperature oxidation-resistant components",
         "Research on ordered intermetallics"
       ],
-      "notes": "Ordered intermetallic \u2014 higher specific stiffness and strength at temperature than Ni superalloys, but brittle at RT.",
+      "notes": "Ordered intermetallic — higher specific stiffness and strength at temperature than Ni superalloys, but brittle at RT.",
       "properties": {
         "density_kg_m3": {
           "min": 6953.0,
@@ -436,16 +436,16 @@
     },
     {
       "id": "1174-mosi2",
-      "name": "Molybdenum disilicide (MoSi\u2082)",
+      "name": "Molybdenum disilicide (MoSi₂)",
       "family": "ceramics-technical",
-      "short_name": "MoSi\u2082",
+      "short_name": "MoSi₂",
       "subfamily": "silicide-ceramics",
       "applications": [
         "High-temperature furnace heating elements (Kanthal Super)",
         "Gas turbine coatings",
         "MEMS devices"
       ],
-      "notes": "Metallic conductivity + self-healing SiO\u2082 scale at high T. Maximum use temperature ~1700\u00b0C.",
+      "notes": "Metallic conductivity + self-healing SiO₂ scale at high T. Maximum use temperature ~1700°C.",
       "properties": {
         "density_kg_m3": {
           "min": 2423.0,
@@ -515,7 +515,7 @@
         "Josephson junctions",
         "Hard coatings"
       ],
-      "notes": "Superconducting below ~16 K \u2014 one of highest-Tc conventional superconductors. Hard refractory nitride.",
+      "notes": "Superconducting below ~16 K — one of highest-Tc conventional superconductors. Hard refractory nitride.",
       "properties": {
         "density_kg_m3": {
           "min": 5174.0,
@@ -561,16 +561,16 @@
     },
     {
       "id": "1550-zrb2",
-      "name": "Zirconium diboride (ZrB\u2082)",
+      "name": "Zirconium diboride (ZrB₂)",
       "family": "ceramics-technical",
-      "short_name": "ZrB\u2082",
+      "short_name": "ZrB₂",
       "subfamily": "boride-ceramics",
       "applications": [
         "Ultra-high temperature ceramics (UHTC) for hypersonic vehicles",
         "Electrode materials",
         "Hard coatings"
       ],
-      "notes": "Stable to >2500\u00b0C. Key UHTC for hypersonic leading edges alongside HfB\u2082.",
+      "notes": "Stable to >2500°C. Key UHTC for hypersonic leading edges alongside HfB₂.",
       "properties": {
         "density_kg_m3": {
           "min": 2301.0,
@@ -631,16 +631,16 @@
     },
     {
       "id": "1551-cr3c2",
-      "name": "Chromium carbide (Cr\u2083C\u2082)",
+      "name": "Chromium carbide (Cr₃C₂)",
       "family": "ceramics-technical",
-      "short_name": "Cr\u2083C\u2082",
+      "short_name": "Cr₃C₂",
       "subfamily": "carbide-ceramics",
       "applications": [
         "Thermal-spray wear coatings",
         "Corrosion/oxidation resistant coatings",
         "Cutting tools"
       ],
-      "notes": "Used in Cr\u2083C\u2082\u2013NiCr thermal spray coatings for elevated-temperature wear and corrosion resistance.",
+      "notes": "Used in Cr₃C₂–NiCr thermal spray coatings for elevated-temperature wear and corrosion resistance.",
       "properties": {
         "density_kg_m3": {
           "min": 10008.0,
@@ -701,9 +701,9 @@
     },
     {
       "id": "19399-cr2o3",
-      "name": "Chromia (Cr\u2082O\u2083, eskolaite)",
+      "name": "Chromia (Cr₂O₃, eskolaite)",
       "family": "ceramics-technical",
-      "short_name": "Cr\u2082O\u2083",
+      "short_name": "Cr₂O₃",
       "subfamily": "oxide-ceramics",
       "applications": [
         "Green pigment",
@@ -762,9 +762,9 @@
     },
     {
       "id": "1966-hfb2",
-      "name": "Hafnium diboride (HfB\u2082)",
+      "name": "Hafnium diboride (HfB₂)",
       "family": "ceramics-technical",
-      "short_name": "HfB\u2082",
+      "short_name": "HfB₂",
       "subfamily": "boride-ceramics",
       "applications": [
         "Hypersonic leading edges (Mach 10+ re-entry)",
@@ -827,9 +827,9 @@
     },
     {
       "id": "19770-fe2o3",
-      "name": "Haematite (Fe\u2082O\u2083)",
+      "name": "Haematite (Fe₂O₃)",
       "family": "ceramics-nontechnical",
-      "short_name": "Fe\u2082O\u2083",
+      "short_name": "Fe₂O₃",
       "subfamily": "mineral-ceramics",
       "applications": [
         "Iron ore (primary feed)",
@@ -888,9 +888,9 @@
     },
     {
       "id": "20194-ceo2",
-      "name": "Ceria (CeO\u2082, cerianite)",
+      "name": "Ceria (CeO₂, cerianite)",
       "family": "ceramics-technical",
-      "short_name": "CeO\u2082",
+      "short_name": "CeO₂",
       "subfamily": "oxide-ceramics",
       "applications": [
         "Catalytic converter washcoat",
@@ -898,7 +898,7 @@
         "Glass polishing",
         "UV filters"
       ],
-      "notes": "Excellent oxygen storage capacity (Ce\u00b3\u207a\u2194Ce\u2074\u207a). Used in 3-way catalysts for emission control.",
+      "notes": "Excellent oxygen storage capacity (Ce³⁺↔Ce⁴⁺). Used in 3-way catalysts for emission control.",
       "properties": {
         "density_kg_m3": {
           "min": 6855.0,
@@ -964,7 +964,7 @@
         "Solar cells",
         "THz devices"
       ],
-      "notes": "Direct bandgap (1.34 eV). Substrate for InGaAsP and InGaAs devices \u2014 critical for optical communications.",
+      "notes": "Direct bandgap (1.34 eV). Substrate for InGaAsP and InGaAs devices — critical for optical communications.",
       "properties": {
         "density_kg_m3": {
           "min": 4611.0,
@@ -1097,7 +1097,7 @@
         "Solar cells (record efficiency)",
         "LED pioneer"
       ],
-      "notes": "Direct bandgap (1.42 eV) \u2014 efficient light emitter unlike Si. High electron mobility (8500 cm\u00b2/V\u00b7s).",
+      "notes": "Direct bandgap (1.42 eV) — efficient light emitter unlike Si. High electron mobility (8500 cm²/V·s).",
       "properties": {
         "density_kg_m3": {
           "min": 4952.0,
@@ -1158,16 +1158,16 @@
     },
     {
       "id": "2593-ni3al-gamma-prime",
-      "name": "Nickel aluminide (Ni\u2083Al, \u03b3\u2032 phase)",
+      "name": "Nickel aluminide (Ni₃Al, γ′ phase)",
       "family": "metals",
-      "short_name": "Ni\u2083Al (\u03b3\u2032)",
+      "short_name": "Ni₃Al (γ′)",
       "subfamily": "intermetallics",
       "applications": [
         "Strengthening precipitate in Ni superalloys",
         "Structural intermetallic research",
         "Oxidation-resistant coatings"
       ],
-      "notes": "\u03b3\u2032 precipitate phase responsible for high-temperature strength in Ni-base superalloys. Yield strength increases with temperature up to ~800\u00b0C.",
+      "notes": "γ′ precipitate phase responsible for high-temperature strength in Ni-base superalloys. Yield strength increases with temperature up to ~800°C.",
       "properties": {
         "density_kg_m3": {
           "min": 7557.0,
@@ -1218,9 +1218,9 @@
     },
     {
       "id": "2652-y2o3",
-      "name": "Yttria (Y\u2082O\u2083)",
+      "name": "Yttria (Y₂O₃)",
       "family": "ceramics-technical",
-      "short_name": "Y\u2082O\u2083",
+      "short_name": "Y₂O₃",
       "subfamily": "oxide-ceramics",
       "applications": [
         "Stabiliser in Y-TZP zirconia",
@@ -1284,9 +1284,9 @@
     },
     {
       "id": "2657-tio2-rutile",
-      "name": "Titanium dioxide, rutile (TiO\u2082)",
+      "name": "Titanium dioxide, rutile (TiO₂)",
       "family": "ceramics-technical",
-      "short_name": "TiO\u2082 (rutile)",
+      "short_name": "TiO₂ (rutile)",
       "subfamily": "oxide-ceramics",
       "applications": [
         "White pigment",
@@ -1295,7 +1295,7 @@
         "Gas sensors",
         "Solar cells"
       ],
-      "notes": "Most stable TiO\u2082 polymorph. Wide bandgap (~3.0 eV). Photocatalytic activity under UV.",
+      "notes": "Most stable TiO₂ polymorph. Wide bandgap (~3.0 eV). Photocatalytic activity under UV.",
       "properties": {
         "density_kg_m3": {
           "min": 4151.0,
@@ -1356,7 +1356,7 @@
       "short_name": "Germanium",
       "subfamily": "semiconductors",
       "applications": [
-        "IR optics (2\u201315 \u00b5m window)",
+        "IR optics (2–15 µm window)",
         "Transistors (legacy)",
         "Gamma-ray detector substrates",
         "SiGe solar cells"
@@ -1508,7 +1508,7 @@
     },
     {
       "id": "3536-spinel",
-      "name": "Spinel (MgAl\u2082O\u2084)",
+      "name": "Spinel (MgAl₂O₄)",
       "family": "ceramics-technical",
       "short_name": "Spinel",
       "subfamily": "oxide-ceramics",
@@ -1669,7 +1669,7 @@
         "Heat spreaders in electronics",
         "Optical windows (IR)"
       ],
-      "notes": "Hardest natural material, highest thermal conductivity of any solid (>2000 W/mK). Graphitises above ~1800\u00b0C in air.",
+      "notes": "Hardest natural material, highest thermal conductivity of any solid (>2000 W/mK). Graphitises above ~1800°C in air.",
       "properties": {
         "density_kg_m3": {
           "min": 3463.0,
@@ -1825,7 +1825,7 @@
         "Thermocouple wire (W-Re)",
         "Catalysts for gasoline reforming"
       ],
-      "notes": "3rd highest melting point after W and Os. Critical rhenium addition (3\u20136%) enables 2nd/3rd gen Ni superalloys. Extremely scarce.",
+      "notes": "3rd highest melting point after W and Os. Critical rhenium addition (3–6%) enables 2nd/3rd gen Ni superalloys. Extremely scarce.",
       "properties": {
         "density_kg_m3": {
           "min": 20456.0,
@@ -1972,7 +1972,7 @@
         "Furnace heating elements",
         "Kinetic energy penetrators"
       ],
-      "notes": "Highest melting point of all metals (3422\u00b0C). Very high density. Brittle below ~300\u00b0C (DBTT).",
+      "notes": "Highest melting point of all metals (3422°C). Very high density. Brittle below ~300°C (DBTT).",
       "properties": {
         "density_kg_m3": {
           "min": 18777.0,
@@ -3021,7 +3021,7 @@
         "Lightweight structural sandwich cores",
         "Heat shields"
       ],
-      "notes": "Density range 0.2\u20130.9 \u00d7 solid Al. Gibson\u2013Ashby scaling: E \u221d \u03c1\u00b2, \u03c3 \u221d \u03c1^1.5. Unique on Ashby charts.",
+      "notes": "Density range 0.2–0.9 × solid Al. Gibson–Ashby scaling: E ∝ ρ², σ ∝ ρ^1.5. Unique on Ashby charts.",
       "properties": {
         "density_kg_m3": {
           "min": 150,
@@ -3092,7 +3092,7 @@
         "Fluid filtration",
         "Bone scaffold implant research"
       ],
-      "notes": "Reticulated open network. Very high specific surface area \u2014 suited for heat/mass transfer.",
+      "notes": "Reticulated open network. Very high specific surface area — suited for heat/mass transfer.",
       "properties": {
         "density_kg_m3": {
           "min": 70,
@@ -3320,7 +3320,7 @@
         "Sandwich core panels (wind turbine blades, boats)",
         "Shock absorber cores"
       ],
-      "notes": "Lightest structural wood. Extremely distinctive on Ashby charts \u2014 ultra-low density end of natural materials.",
+      "notes": "Lightest structural wood. Extremely distinctive on Ashby charts — ultra-low density end of natural materials.",
       "properties": {
         "density_kg_m3": {
           "min": 90,
@@ -3478,7 +3478,7 @@
         "Pipe linings",
         "Automotive body panels"
       ],
-      "notes": "Lower cost than CFRP; better temperature resistance than GFRP. Sustainable \u2014 made from volcanic rock.",
+      "notes": "Lower cost than CFRP; better temperature resistance than GFRP. Sustainable — made from volcanic rock.",
       "properties": {
         "density_kg_m3": {
           "min": 1900,
@@ -3554,7 +3554,7 @@
         "Precision instruments",
         "Non-sparking tools"
       ],
-      "notes": "Highest-strength Cu alloy. AT (age tempered) condition. Beryllium dust is toxic \u2014 safety precautions required.",
+      "notes": "Highest-strength Cu alloy. AT (age tempered) condition. Beryllium dust is toxic — safety precautions required.",
       "properties": {
         "density_kg_m3": {
           "min": 8250,
@@ -3700,9 +3700,9 @@
     },
     {
       "id": "boron-carbide",
-      "name": "Boron carbide (B\u2084C)",
+      "name": "Boron carbide (B₄C)",
       "family": "ceramics-technical",
-      "short_name": "B\u2084C",
+      "short_name": "B₄C",
       "subfamily": "carbide-ceramics",
       "applications": [
         "Ballistic armor (lightest)",
@@ -4246,7 +4246,7 @@
         "Furnace hot-zone structures",
         "Re-entry vehicle nose tips"
       ],
-      "notes": "Retains strength to >2000\u00b0C in inert atmosphere. Oxidises above 400\u00b0C \u2014 needs coating for air use.",
+      "notes": "Retains strength to >2000°C in inert atmosphere. Oxidises above 400°C — needs coating for air use.",
       "properties": {
         "density_kg_m3": {
           "min": 1500,
@@ -4485,7 +4485,7 @@
     },
     {
       "id": "cfrp-quasi-iso",
-      "name": "CFRP quasi-isotropic laminate ([0/\u00b145/90]\u209b)",
+      "name": "CFRP quasi-isotropic laminate ([0/±45/90]ₛ)",
       "family": "composites",
       "short_name": "CFRP QI",
       "subfamily": "carbon-fiber-composites",
@@ -4495,7 +4495,7 @@
         "Sports equipment panels",
         "Racing monocoques"
       ],
-      "notes": "Balanced lay-up \u2014 in-plane properties isotropic. Much lower modulus than UD but directionally uniform.",
+      "notes": "Balanced lay-up — in-plane properties isotropic. Much lower modulus than UD but directionally uniform.",
       "properties": {
         "density_kg_m3": {
           "min": 1520,
@@ -4586,7 +4586,7 @@
         "Bicycle frames",
         "Wind turbine blades"
       ],
-      "notes": "Fiber-direction (0\u00b0) properties. T300 carbon fiber, 60% Vf. Transverse properties ~10\u00d7 lower.",
+      "notes": "Fiber-direction (0°) properties. T300 carbon fiber, 60% Vf. Transverse properties ~10× lower.",
       "properties": {
         "density_kg_m3": {
           "min": 1550,
@@ -5171,7 +5171,7 @@
         "Window gaskets",
         "Outdoor seals"
       ],
-      "notes": "Excellent UV, ozone and weather resistance. Operating range \u221250 to +150\u00b0C.",
+      "notes": "Excellent UV, ozone and weather resistance. Operating range −50 to +150°C.",
       "properties": {
         "density_kg_m3": {
           "min": 860,
@@ -5419,7 +5419,7 @@
         "Marine deck fittings",
         "Packaging inserts"
       ],
-      "notes": "Sustainable alternative to GFRP. Lower embodied energy and CO\u2082 than glass or carbon fibre composites.",
+      "notes": "Sustainable alternative to GFRP. Lower embodied energy and CO₂ than glass or carbon fibre composites.",
       "properties": {
         "density_kg_m3": {
           "min": 1300,
@@ -6504,7 +6504,7 @@
         "Orthopaedic coatings",
         "Drug delivery carriers"
       ],
-      "notes": "Main mineral of bone. Bioactive, osteoconductive. Brittle \u2014 not for load-bearing alone.",
+      "notes": "Main mineral of bone. Bioactive, osteoconductive. Brittle — not for load-bearing alone.",
       "properties": {
         "density_kg_m3": {
           "min": 3100,
@@ -6565,7 +6565,7 @@
         "Chemical processing",
         "Nuclear reactors"
       ],
-      "notes": "Ni-Cr-Mo alloy. Excellent corrosion and oxidation resistance to 980\u00b0C. Solid-solution strengthened.",
+      "notes": "Ni-Cr-Mo alloy. Excellent corrosion and oxidation resistance to 980°C. Solid-solution strengthened.",
       "properties": {
         "density_kg_m3": {
           "min": 8440,
@@ -8166,7 +8166,7 @@
         "Textile yarns",
         "Automotive air intake manifolds"
       ],
-      "notes": "Lower Tm (220\u00b0C) and modulus than PA66 but tougher and cheaper. High moisture sensitivity.",
+      "notes": "Lower Tm (220°C) and modulus than PA66 but tougher and cheaper. High moisture sensitivity.",
       "properties": {
         "density_kg_m3": {
           "min": 1120,
@@ -8545,7 +8545,7 @@
         "Microwave cookware",
         "FDM 3D printing filament"
       ],
-      "notes": "Amorphous; excellent flame retardancy (UL94 V-0) without additives. Tg \u2248 217\u00b0C.",
+      "notes": "Amorphous; excellent flame retardancy (UL94 V-0) without additives. Tg ≈ 217°C.",
       "properties": {
         "density_kg_m3": {
           "min": 1270,
@@ -8809,7 +8809,7 @@
         "Boat hulls",
         "Furniture"
       ],
-      "notes": "Cross-ply construction \u2014 nearly isotropic in-plane properties. Stiffer and more uniform than solid wood.",
+      "notes": "Cross-ply construction — nearly isotropic in-plane properties. Stiffer and more uniform than solid wood.",
       "properties": {
         "density_kg_m3": {
           "min": 500,
@@ -8979,7 +8979,7 @@
         "Electrical connectors",
         "Toothbrush bristles"
       ],
-      "notes": "Higher melting point (255\u2013265\u00b0C) and modulus than PA6. Moisture absorbs \u2192 properties change.",
+      "notes": "Higher melting point (255–265°C) and modulus than PA6. Moisture absorbs → properties change.",
       "properties": {
         "density_kg_m3": {
           "min": 1130,
@@ -9529,7 +9529,7 @@
         "Jet engine wire wrap",
         "Space blankets"
       ],
-      "notes": "No melting point (decomposes ~500\u00b0C). Continuous service to ~260\u00b0C. Excellent dielectric.",
+      "notes": "No melting point (decomposes ~500°C). Continuous service to ~260°C. Excellent dielectric.",
       "properties": {
         "density_kg_m3": {
           "min": 1410,
@@ -9803,7 +9803,7 @@
         "Circuit boards",
         "Plumbing fittings"
       ],
-      "notes": "Amorphous high-performance thermoplastic. Tg ~185\u00b0C; autoclave sterilisable.",
+      "notes": "Amorphous high-performance thermoplastic. Tg ~185°C; autoclave sterilisable.",
       "properties": {
         "density_kg_m3": {
           "min": 1240,
@@ -9978,7 +9978,7 @@
         "Tableware",
         "Chemical laboratory ware"
       ],
-      "notes": "Kaolin + feldspar + quartz, fired ~1250\u00b0C. Dense (< 0.5% porosity). Good electrical insulation.",
+      "notes": "Kaolin + feldspar + quartz, fired ~1250°C. Dense (< 0.5% porosity). Good electrical insulation.",
       "properties": {
         "density_kg_m3": {
           "min": 2300,
@@ -10333,7 +10333,7 @@
         "Li-ion battery binders",
         "Membranes"
       ],
-      "notes": "Semi-fluorinated; good chemical resistance. \u03b2-phase is strongly piezoelectric and pyroelectric.",
+      "notes": "Semi-fluorinated; good chemical resistance. β-phase is strongly piezoelectric and pyroelectric.",
       "properties": {
         "density_kg_m3": {
           "min": 1760,
@@ -10751,9 +10751,9 @@
     },
     {
       "id": "silicon-nitride",
-      "name": "Silicon nitride (Si\u2083N\u2084, RBSN/HPSN)",
+      "name": "Silicon nitride (Si₃N₄, RBSN/HPSN)",
       "family": "ceramics-technical",
-      "short_name": "Si\u2083N\u2084",
+      "short_name": "Si₃N₄",
       "subfamily": "nitride-ceramics",
       "applications": [
         "Cutting tool inserts",
@@ -10999,7 +10999,7 @@
         "Brazing alloys",
         "Antibacterial coatings"
       ],
-      "notes": "Highest electrical and thermal conductivity of all metals. Tarnishes in H\u2082S environments.",
+      "notes": "Highest electrical and thermal conductivity of all metals. Tarnishes in H₂S environments.",
       "properties": {
         "density_kg_m3": {
           "min": 10490,
@@ -11271,7 +11271,7 @@
         "Nuclear reactors",
         "Pump shafts"
       ],
-      "notes": "Precipitation-hardened martensitic SS. H900 condition (aged at 900\u00b0F / 482\u00b0C) = peak strength.",
+      "notes": "Precipitation-hardened martensitic SS. H900 condition (aged at 900°F / 482°C) = peak strength.",
       "properties": {
         "density_kg_m3": {
           "min": 7780,
@@ -11673,7 +11673,7 @@
         "Drilling equipment",
         "Connecting rods"
       ],
-      "notes": "Cr-Mo low-alloy steel, quenched & tempered at 315\u00b0C. Good toughness-to-strength balance.",
+      "notes": "Cr-Mo low-alloy steel, quenched & tempered at 315°C. Good toughness-to-strength balance.",
       "properties": {
         "density_kg_m3": {
           "min": 7850,
@@ -11875,7 +11875,7 @@
         "Cam followers",
         "Precision shafts"
       ],
-      "notes": "1% C, 1.5% Cr steel. The dominant bearing steel worldwide. Hardened 58\u201365 HRC.",
+      "notes": "1% C, 1.5% Cr steel. The dominant bearing steel worldwide. Hardened 58–65 HRC.",
       "properties": {
         "density_kg_m3": {
           "min": 7800,
@@ -12078,7 +12078,7 @@
         "Saw blades",
         "Broaches"
       ],
-      "notes": "W-Mo-Cr-V-Co high-speed steel. Maintains hardness to ~600\u00b0C. Hardened 62\u201365 HRC.",
+      "notes": "W-Mo-Cr-V-Co high-speed steel. Maintains hardness to ~600°C. Hardened 62–65 HRC.",
       "properties": {
         "density_kg_m3": {
           "min": 8150,
@@ -13331,7 +13331,7 @@
         "Lithography stages",
         "Precision metrology"
       ],
-      "notes": "Near-zero thermal expansion (CTE \u2248 0 \u00b1 0.02 \u00b5m/K over 0\u201350\u00b0C). Made by Schott AG.",
+      "notes": "Near-zero thermal expansion (CTE ≈ 0 ± 0.02 µm/K over 0–50°C). Made by Schott AG.",
       "properties": {
         "density_kg_m3": {
           "min": 2530,
@@ -13506,7 +13506,7 @@
         "Hip-joint heads",
         "Oxygen sensors"
       ],
-      "notes": "Transformation-toughened zirconia \u2014 highest fracture toughness of oxide ceramics (8\u201312 MPa\u221am).",
+      "notes": "Transformation-toughened zirconia — highest fracture toughness of oxide ceramics (8–12 MPa√m).",
       "properties": {
         "density_kg_m3": {
           "min": 5600,

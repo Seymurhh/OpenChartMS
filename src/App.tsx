@@ -112,16 +112,7 @@ export function App() {
           >
             Materials Project
           </a>{' '}
-          (Jain et al., <em>APL Materials</em> 1, 011002, 2013) — CC BY 4.0.{' '}
-          See{' '}
-          <a
-            href="https://github.com/Seymurhh/OpenChartMS/blob/main/docs/DATA_SOURCES.md"
-            target="_blank"
-            rel="noreferrer"
-          >
-            docs/DATA_SOURCES.md
-          </a>{' '}
-          for full provenance and per-cell citations.
+          (Jain et al., <em>APL Materials</em> 1, 011002, 2013) — CC BY 4.0.
         </p>
         <p>
           <strong>No affiliation.</strong>{' '}
@@ -129,14 +120,7 @@ export function App() {
           and Ansys logos are trademarks of Ansys, Inc. This tool is not
           affiliated with or endorsed by Ansys, Elsevier, Cambridge University,
           or the Materials Project.{' '}
-          Software: MIT licence —{' '}
-          <a
-            href="https://github.com/Seymurhh/OpenChartMS"
-            target="_blank"
-            rel="noreferrer"
-          >
-            github.com/Seymurhh/OpenChartMS
-          </a>.
+          Software: MIT licence.
         </p>
       </footer>
     </div>
