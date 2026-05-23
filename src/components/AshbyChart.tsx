@@ -60,6 +60,9 @@ export function AshbyChart({
   // makes uirevision unique, so Plotly discards its user-modified range state and
   // re-applies autorange:false with our canonical fixed ranges.
   const [layoutVersion, setLayoutVersion] = useState(0);
+  // Incremented on every legend click so react-plotly.js is forced to diff the
+  // shapes array (it sometimes skips nested layout diffs without a revision bump).
+  const [shapeRevision, setShapeRevision] = useState(0);
   useEffect(() => {
     setHiddenFamilies(new Set());
   }, [xKey, yKey]);
@@ -395,6 +398,7 @@ export function AshbyChart({
     <Plot
       data={traces}
       layout={layout}
+      revision={shapeRevision + layoutVersion}
       config={{
         responsive: true,
         displayModeBar: true,
@@ -412,6 +416,7 @@ export function AshbyChart({
           else next.add(f.id);
           return next;
         });
+        setShapeRevision((r) => r + 1);
         return true; // let Plotly also toggle the trace marker visibility
       }}
       onLegendDoubleClick={(event) => {
@@ -427,6 +432,7 @@ export function AshbyChart({
           for (const other of families) if (other.id !== f.id) next.add(other.id);
           return next;
         });
+        setShapeRevision((r) => r + 1);
         return true;
       }}
       onSelected={(event) => {

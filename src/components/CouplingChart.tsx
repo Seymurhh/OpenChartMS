@@ -187,13 +187,38 @@ export function CouplingChart({
     };
   }, [showPareto, paretoLine]);
 
+  // Explicit axis ranges from data bounds (log10 units, since axis type='log').
+  // Without this, Plotly's auto-range can be pulled out by shape/annotation positions.
+  const xRange = useMemo<[number, number] | undefined>(() => {
+    if (points.length === 0) return undefined;
+    const xs = points.map((p) => p.x);
+    return [Math.log10(Math.min(...xs) * 0.3), Math.log10(Math.max(...xs) * 3)];
+  }, [points]);
+
+  const yRange = useMemo<[number, number] | undefined>(() => {
+    if (points.length === 0) return undefined;
+    const ys = points.map((p) => p.y);
+    return [Math.log10(Math.min(...ys) * 0.3), Math.log10(Math.max(...ys) * 3)];
+  }, [points]);
+
   // Optimum + reference annotations. Order matters: later entries draw on top, so
   // the optimum annotation is placed LAST to ensure it sits above the quadrant
-  // pills and any selection-box overlay. axref/ayref MUST be 'pixel' explicitly:
-  // Plotly's default copies xref, which on log axes treats ax as a data value
-  // and pushes the annotation light-years off-chart.
+  // pills and any selection-box overlay.
+  //
+  // IMPORTANT: On Plotly log axes, annotation x/y with xref/yref='x'/'y' are
+  // treated as log₁₀ values (not actual data values), causing the arrow tip to
+  // land at 10^(data_value) instead of the intended position. To avoid this,
+  // we convert the optimum's data coordinates to paper (0-1) fractions and use
+  // xref/yref='paper' — these are unambiguous regardless of axis type.
   const annotations: Partial<Annotations>[] = useMemo(() => {
-    if (!optimum.point) return [];
+    if (!optimum.point || !xRange || !yRange) return [];
+
+    // Paper-space position of the optimum point (0=left/bottom, 1=right/top).
+    const xPaper =
+      (Math.log10(optimum.point.x) - xRange[0]) / (xRange[1] - xRange[0]);
+    const yPaper =
+      (Math.log10(optimum.point.y) - yRange[0]) / (yRange[1] - yRange[0]);
+
     return [
       // Coupling-line label, anchored to paper coords so it can't push out the axes.
       {
@@ -247,11 +272,12 @@ export function CouplingChart({
         align: 'left',
       },
       // Optimum callout — last so it draws above quadrant pills.
+      // xref/yref='paper' avoids Plotly's log-axis annotation coordinate bug.
       {
-        x: optimum.point.x,
-        y: optimum.point.y,
-        xref: 'x',
-        yref: 'y',
+        x: xPaper,
+        y: yPaper,
+        xref: 'paper',
+        yref: 'paper',
         ax: 100,
         ay: -90,
         axref: 'pixel',
@@ -272,21 +298,7 @@ export function CouplingChart({
         align: 'left',
       },
     ];
-  }, [optimum, Cc]);
-
-  // Explicit axis ranges from data bounds (log10 units, since axis type='log').
-  // Without this, Plotly's auto-range can be pulled out by shape/annotation positions.
-  const xRange = useMemo<[number, number] | undefined>(() => {
-    if (points.length === 0) return undefined;
-    const xs = points.map((p) => p.x);
-    return [Math.log10(Math.min(...xs) * 0.3), Math.log10(Math.max(...xs) * 3)];
-  }, [points]);
-
-  const yRange = useMemo<[number, number] | undefined>(() => {
-    if (points.length === 0) return undefined;
-    const ys = points.map((p) => p.y);
-    return [Math.log10(Math.min(...ys) * 0.3), Math.log10(Math.max(...ys) * 3)];
-  }, [points]);
+  }, [optimum, Cc, xRange, yRange]);
 
   const allShapes: Partial<Shape>[] = [];
   if (selectionBoxShape) allShapes.push(selectionBoxShape);
