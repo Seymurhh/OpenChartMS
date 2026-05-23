@@ -1,0 +1,91 @@
+{
+  "id": "pvdf",
+  "name": "Polyvinylidene fluoride (PVDF)",
+  "family": "polymers",
+  "short_name": "PVDF",
+  "subfamily": "thermoplastics",
+  "applications": [
+    "Chemical-resistant piping",
+    "Piezoelectric sensors and actuators",
+    "Li-ion battery binders",
+    "Membranes"
+  ],
+  "notes": "Semi-fluorinated; good chemical resistance. \u03b2-phase is strongly piezoelectric and pyroelectric.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 1760,
+      "max": 1800,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 8,
+      "max": 18,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 1.5,
+      "max": 2.8,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 34,
+      "max": 60,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 38,
+      "max": 65,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 2.0,
+      "max": 3.5,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.25,
+      "max": 0.5,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 155,
+      "max": 175,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "glass_temperature_C": {
+      "min": -40,
+      "max": -30,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1200,
+      "max": 1400,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.19,
+      "max": 0.21,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 90,
+      "max": 130,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "dielectric_constant": {
+      "min": 8.0,
+      "max": 12.0,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 70,
+      "max": 110,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 4.5,
+      "max": 7.0,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

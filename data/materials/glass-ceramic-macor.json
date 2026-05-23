@@ -1,0 +1,76 @@
+{
+  "id": "glass-ceramic-macor",
+  "name": "Macor (machinable glass-ceramic, Corning)",
+  "family": "glasses",
+  "short_name": "Macor",
+  "subfamily": "glass-ceramics",
+  "applications": [
+    "Precision vacuum components",
+    "Electrical insulators",
+    "Laser parts",
+    "Prototyping of ceramic parts"
+  ],
+  "notes": "Unique: can be machined with conventional metal-working tools. No post-firing needed.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 2520,
+      "max": 2550,
+      "source": "Corning Macor datasheet"
+    },
+    "price_USD_kg": {
+      "min": 100,
+      "max": 400,
+      "source": "Corning Macor datasheet"
+    },
+    "youngs_modulus_GPa": {
+      "min": 66,
+      "max": 67,
+      "source": "Corning Macor datasheet"
+    },
+    "yield_strength_MPa": {
+      "min": 94,
+      "max": 102,
+      "source": "Corning Macor datasheet"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 1.5,
+      "max": 2.0,
+      "source": "Corning Macor datasheet"
+    },
+    "glass_temperature_C": {
+      "min": 800,
+      "max": 830,
+      "source": "Corning Macor datasheet"
+    },
+    "specific_heat_J_kgK": {
+      "min": 790,
+      "max": 800,
+      "source": "Corning Macor datasheet"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 1.46,
+      "max": 1.6,
+      "source": "Corning Macor datasheet"
+    },
+    "thermal_expansion_uK": {
+      "min": 12.6,
+      "max": 13.0,
+      "source": "Corning Macor datasheet"
+    },
+    "dielectric_constant": {
+      "min": 5.9,
+      "max": 6.1,
+      "source": "Corning Macor datasheet"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 20,
+      "max": 40,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 1.0,
+      "max": 2.5,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

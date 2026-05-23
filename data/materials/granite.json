@@ -1,0 +1,70 @@
+{
+  "id": "granite",
+  "name": "Granite (typical igneous rock)",
+  "family": "ceramics-nontechnical",
+  "short_name": "Granite",
+  "subfamily": "natural-rock",
+  "applications": [
+    "Building cladding",
+    "Countertops",
+    "Bridge abutments",
+    "Paving stones"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 2600,
+      "max": 2800,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "price_USD_kg": {
+      "min": 0.3,
+      "max": 1.5,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 40,
+      "max": 80,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "yield_strength_MPa": {
+      "min": 60,
+      "max": 250,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 0.5,
+      "max": 1.5,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 750,
+      "max": 900,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 2.0,
+      "max": 4.0,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "thermal_expansion_uK": {
+      "min": 7.0,
+      "max": 12.0,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 0.5,
+      "max": 1.5,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 0.05,
+      "max": 0.15,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.1,
+      "max": 0.3,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

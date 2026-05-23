@@ -1,0 +1,101 @@
+{
+  "id": "zamak-3",
+  "name": "Zinc die casting alloy Zamak 3",
+  "family": "metals",
+  "short_name": "Zamak 3",
+  "subfamily": "zinc-alloys",
+  "applications": [
+    "Consumer electronics housings",
+    "Toy car bodies",
+    "Hardware fittings",
+    "Plumbing components"
+  ],
+  "notes": "Most common die-casting alloy. Excellent fluidity; good dimensional accuracy.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 6550,
+      "max": 6620,
+      "source": "ASTM B86 / ASM Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 2.5,
+      "max": 4.0,
+      "source": "ASTM B86 / ASM Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 82,
+      "max": 86,
+      "source": "ASTM B86 / ASM Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 218,
+      "max": 240,
+      "source": "ASTM B86 / ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 283,
+      "max": 330,
+      "source": "ASTM B86 / ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 18,
+      "max": 25,
+      "source": "ASTM B86 / ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.06,
+      "max": 0.1,
+      "source": "ASTM B86 / ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 381,
+      "max": 387,
+      "source": "ASTM B86 / ASM Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 419,
+      "max": 430,
+      "source": "ASTM B86 / ASM Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 113,
+      "max": 118,
+      "source": "ASTM B86 / ASM Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 27.4,
+      "max": 27.4,
+      "source": "ASTM B86 / ASM Handbook Vol 2"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 6.2,
+      "max": 6.6,
+      "source": "ASTM B86 / ASM Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 50,
+      "max": 75,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 3.0,
+      "max": 4.5,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.3,
+      "max": 0.5,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 6,
+      "max": 12,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.4,
+      "max": 0.8,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

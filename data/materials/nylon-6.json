@@ -1,0 +1,101 @@
+{
+  "id": "nylon-6",
+  "name": "Polyamide 6 (Nylon 6, PA6)",
+  "family": "polymers",
+  "short_name": "Nylon 6",
+  "subfamily": "thermoplastics",
+  "applications": [
+    "Rope and fibre",
+    "Gears",
+    "Textile yarns",
+    "Automotive air intake manifolds"
+  ],
+  "notes": "Lower Tm (220\u00b0C) and modulus than PA66 but tougher and cheaper. High moisture sensitivity.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 1120,
+      "max": 1140,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 2.5,
+      "max": 4.5,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 1.5,
+      "max": 3.0,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 45,
+      "max": 75,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 60,
+      "max": 85,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 3.0,
+      "max": 5.0,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.2,
+      "max": 0.6,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 215,
+      "max": 225,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "glass_temperature_C": {
+      "min": 40,
+      "max": 60,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1600,
+      "max": 1700,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.23,
+      "max": 0.26,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 80,
+      "max": 100,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 120,
+      "max": 145,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 5.5,
+      "max": 7.5,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.05,
+      "max": 0.2,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 12,
+      "max": 20,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.8,
+      "max": 1.4,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

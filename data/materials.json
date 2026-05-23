@@ -1,5 +1,5 @@
 {
-  "count": 91,
+  "count": 130,
   "source": "Ashby App A (6th ed., 2025) + ASM Handbooks + Bath ICE v3.0",
   "materials": [
     {
@@ -93,6 +93,87 @@
           "min": 1.2,
           "max": 1.2,
           "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "al-sic-mmc",
+      "name": "Aluminium/SiC MMC (20 vol% SiC particulate)",
+      "family": "composites",
+      "short_name": "Al/SiC MMC",
+      "subfamily": "metal-matrix-composites",
+      "applications": [
+        "Electronic heat sinks",
+        "Automotive brake rotors",
+        "Bicycle components",
+        "Aerospace structures"
+      ],
+      "notes": "Particulate-reinforced Al alloy (6061 matrix). Higher stiffness and lower CTE than Al alone.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 2770,
+          "max": 2870,
+          "source": "CES EduPack / ASM Handbook Vol 21"
+        },
+        "price_USD_kg": {
+          "min": 15,
+          "max": 40,
+          "source": "CES EduPack / ASM Handbook Vol 21"
+        },
+        "youngs_modulus_GPa": {
+          "min": 90,
+          "max": 105,
+          "source": "CES EduPack / ASM Handbook Vol 21"
+        },
+        "yield_strength_MPa": {
+          "min": 250,
+          "max": 380,
+          "source": "CES EduPack / ASM Handbook Vol 21"
+        },
+        "ultimate_strength_MPa": {
+          "min": 310,
+          "max": 450,
+          "source": "CES EduPack / ASM Handbook Vol 21"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 14,
+          "max": 22,
+          "source": "CES EduPack / ASM Handbook Vol 21"
+        },
+        "elongation": {
+          "min": 0.01,
+          "max": 0.06,
+          "source": "CES EduPack / ASM Handbook Vol 21"
+        },
+        "specific_heat_J_kgK": {
+          "min": 860,
+          "max": 920,
+          "source": "CES EduPack / ASM Handbook Vol 21"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 120,
+          "max": 160,
+          "source": "CES EduPack / ASM Handbook Vol 21"
+        },
+        "thermal_expansion_uK": {
+          "min": 16,
+          "max": 20,
+          "source": "CES EduPack / ASM Handbook Vol 21"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 200,
+          "max": 350,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 12,
+          "max": 22,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "recycle_fraction": {
+          "min": 0.2,
+          "max": 0.4,
+          "source": "Bath ICE v3.0 (estimate)"
         }
       }
     },
@@ -685,6 +766,107 @@
       }
     },
     {
+      "id": "aluminum-a356-t6",
+      "name": "Aluminum A356-T6 (Al-Si casting alloy)",
+      "family": "metals",
+      "short_name": "Al A356-T6",
+      "subfamily": "aluminum-alloys",
+      "applications": [
+        "Automotive wheel rims",
+        "Engine blocks",
+        "Aircraft pump housings",
+        "Marine castings"
+      ],
+      "notes": "Al-7Si-0.35Mg. Most common structural Al casting alloy. T6 heat treated.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 2685,
+          "max": 2700,
+          "source": "ASM Handbook Vol 2"
+        },
+        "price_USD_kg": {
+          "min": 2.5,
+          "max": 3.5,
+          "source": "ASM Handbook Vol 2"
+        },
+        "youngs_modulus_GPa": {
+          "min": 68,
+          "max": 72,
+          "source": "ASM Handbook Vol 2"
+        },
+        "yield_strength_MPa": {
+          "min": 193,
+          "max": 240,
+          "source": "ASM Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 262,
+          "max": 295,
+          "source": "ASM Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 22,
+          "max": 30,
+          "source": "ASM Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.06,
+          "max": 0.12,
+          "source": "ASM Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 557,
+          "max": 613,
+          "source": "ASM Handbook Vol 2"
+        },
+        "specific_heat_J_kgK": {
+          "min": 900,
+          "max": 920,
+          "source": "ASM Handbook Vol 2"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 150,
+          "max": 167,
+          "source": "ASM Handbook Vol 2"
+        },
+        "thermal_expansion_uK": {
+          "min": 21.4,
+          "max": 22.5,
+          "source": "ASM Handbook Vol 2"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 4.4,
+          "max": 5.0,
+          "source": "ASM Handbook Vol 2"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 155,
+          "max": 200,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 8.1,
+          "max": 11.5,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.35,
+          "max": 0.45,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 11,
+          "max": 17,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.6,
+          "max": 1.0,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
       "id": "aluminum-alloys",
       "name": "Aluminum alloys",
       "family": "metals",
@@ -780,6 +962,143 @@
           "min": 2.6,
           "max": 2.6,
           "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "aluminum-foam-closed",
+      "name": "Aluminium foam, closed-cell (Alporas type)",
+      "family": "foams",
+      "short_name": "Al foam (closed)",
+      "subfamily": "metal-foams",
+      "applications": [
+        "Automotive crash absorbers",
+        "Blast protection panels",
+        "Lightweight structural sandwich cores",
+        "Heat shields"
+      ],
+      "notes": "Density range 0.2\u20130.9 \u00d7 solid Al. Gibson\u2013Ashby scaling: E \u221d \u03c1\u00b2, \u03c3 \u221d \u03c1^1.5. Unique on Ashby charts.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 150,
+          "max": 600,
+          "source": "Ashby, 'Metal Foams' (2000)"
+        },
+        "price_USD_kg": {
+          "min": 20,
+          "max": 80,
+          "source": "Ashby, 'Metal Foams' (2000)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.1,
+          "max": 2.5,
+          "source": "Ashby, 'Metal Foams' (2000)"
+        },
+        "yield_strength_MPa": {
+          "min": 0.4,
+          "max": 7.0,
+          "source": "Ashby, 'Metal Foams' (2000)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.1,
+          "max": 1.5,
+          "source": "Ashby, 'Metal Foams' (2000)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 896,
+          "max": 920,
+          "source": "Ashby, 'Metal Foams' (2000)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 1.0,
+          "max": 10.0,
+          "source": "Ashby, 'Metal Foams' (2000)"
+        },
+        "thermal_expansion_uK": {
+          "min": 22,
+          "max": 24,
+          "source": "Ashby, 'Metal Foams' (2000)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 200,
+          "max": 350,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 12,
+          "max": 22,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "recycle_fraction": {
+          "min": 0.3,
+          "max": 0.5,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "aluminum-foam-open",
+      "name": "Aluminium foam, open-cell (ERG Duocel type)",
+      "family": "foams",
+      "short_name": "Al foam (open)",
+      "subfamily": "metal-foams",
+      "applications": [
+        "Heat exchangers",
+        "Acoustic absorbers",
+        "Fluid filtration",
+        "Bone scaffold implant research"
+      ],
+      "notes": "Reticulated open network. Very high specific surface area \u2014 suited for heat/mass transfer.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 70,
+          "max": 400,
+          "source": "Ashby, 'Metal Foams' (2000)"
+        },
+        "price_USD_kg": {
+          "min": 50,
+          "max": 200,
+          "source": "Ashby, 'Metal Foams' (2000)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.02,
+          "max": 1.0,
+          "source": "Ashby, 'Metal Foams' (2000)"
+        },
+        "yield_strength_MPa": {
+          "min": 0.1,
+          "max": 2.0,
+          "source": "Ashby, 'Metal Foams' (2000)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.05,
+          "max": 0.5,
+          "source": "Ashby, 'Metal Foams' (2000)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 896,
+          "max": 920,
+          "source": "Ashby, 'Metal Foams' (2000)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.5,
+          "max": 6.0,
+          "source": "Ashby, 'Metal Foams' (2000)"
+        },
+        "thermal_expansion_uK": {
+          "min": 22,
+          "max": 24,
+          "source": "Ashby, 'Metal Foams' (2000)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 200,
+          "max": 400,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 12,
+          "max": 25,
+          "source": "Bath ICE v3.0 (estimate)"
         }
       }
     },
@@ -942,6 +1261,81 @@
         "recycle_fraction": {
           "min": 0.02,
           "max": 0.1,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
+      "id": "balsa-wood",
+      "name": "Balsa wood (Ochroma pyramidale, along grain)",
+      "family": "natural",
+      "short_name": "Balsa",
+      "subfamily": "natural-plant",
+      "applications": [
+        "Model aircraft",
+        "Sandwich core panels (wind turbine blades, boats)",
+        "Shock absorber cores"
+      ],
+      "notes": "Lightest structural wood. Extremely distinctive on Ashby charts \u2014 ultra-low density end of natural materials.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 90,
+          "max": 220,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "price_USD_kg": {
+          "min": 5,
+          "max": 20,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 2.5,
+          "max": 8.0,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "yield_strength_MPa": {
+          "min": 15,
+          "max": 50,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.3,
+          "max": 1.5,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "elongation": {
+          "min": 0.01,
+          "max": 0.03,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1300,
+          "max": 1600,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.04,
+          "max": 0.08,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "thermal_expansion_uK": {
+          "min": 3,
+          "max": 7,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 0.5,
+          "max": 3.0,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": -2.0,
+          "max": 0.2,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.5,
+          "max": 0.9,
           "source": "Bath ICE v3.0"
         }
       }
@@ -1797,6 +2191,77 @@
       }
     },
     {
+      "id": "carbon-carbon",
+      "name": "Carbon-carbon composite (C/C)",
+      "family": "composites",
+      "short_name": "C/C composite",
+      "subfamily": "carbon-fiber-composites",
+      "applications": [
+        "Rocket nozzles",
+        "Brake discs (aircraft, F1)",
+        "Furnace hot-zone structures",
+        "Re-entry vehicle nose tips"
+      ],
+      "notes": "Retains strength to >2000\u00b0C in inert atmosphere. Oxidises above 400\u00b0C \u2014 needs coating for air use.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 1500,
+          "max": 1900,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "price_USD_kg": {
+          "min": 200,
+          "max": 2000,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "youngs_modulus_GPa": {
+          "min": 30,
+          "max": 100,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "yield_strength_MPa": {
+          "min": 100,
+          "max": 300,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 6,
+          "max": 15,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "melting_point_C": {
+          "min": 3500,
+          "max": 3600,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "specific_heat_J_kgK": {
+          "min": 700,
+          "max": 1000,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 50,
+          "max": 300,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "thermal_expansion_uK": {
+          "min": 0.5,
+          "max": 2.0,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 400,
+          "max": 1000,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 25,
+          "max": 65,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
       "id": "cast-iron-ductile",
       "name": "Cast iron, ductile (nodular)",
       "family": "metals",
@@ -1971,6 +2436,97 @@
           "min": 0.69,
           "max": 0.69,
           "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "cfrp-quasi-iso",
+      "name": "CFRP quasi-isotropic laminate ([0/\u00b145/90]\u209b)",
+      "family": "composites",
+      "short_name": "CFRP QI",
+      "subfamily": "carbon-fiber-composites",
+      "applications": [
+        "Aerospace skin panels",
+        "Satellite structures",
+        "Sports equipment panels",
+        "Racing monocoques"
+      ],
+      "notes": "Balanced lay-up \u2014 in-plane properties isotropic. Much lower modulus than UD but directionally uniform.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 1520,
+          "max": 1580,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "price_USD_kg": {
+          "min": 20,
+          "max": 60,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 45,
+          "max": 70,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "yield_strength_MPa": {
+          "min": 400,
+          "max": 700,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 400,
+          "max": 700,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 20,
+          "max": 40,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "elongation": {
+          "min": 0.008,
+          "max": 0.015,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 900,
+          "max": 1100,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 2.0,
+          "max": 8.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "thermal_expansion_uK": {
+          "min": 1.0,
+          "max": 4.0,
+          "source": "Ashby App A (6th ed., 2025)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 230,
+          "max": 450,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 14,
+          "max": 28,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.05,
+          "max": 0.2,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 20,
+          "max": 50,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 1.5,
+          "max": 4.0,
+          "source": "Bath ICE v3.0"
         }
       }
     },
@@ -2489,6 +3045,76 @@
       }
     },
     {
+      "id": "cubic-bn",
+      "name": "Cubic boron nitride (cBN, sintered)",
+      "family": "ceramics-technical",
+      "short_name": "cBN",
+      "subfamily": "nitride-ceramics",
+      "applications": [
+        "Cutting tools for hardened steel",
+        "Grinding wheels",
+        "Abrasive films"
+      ],
+      "notes": "2nd hardest material after diamond. Chemically stable in ferrous alloys unlike diamond.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 3470,
+          "max": 3490,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "price_USD_kg": {
+          "min": 200,
+          "max": 500,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "youngs_modulus_GPa": {
+          "min": 700,
+          "max": 900,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "yield_strength_MPa": {
+          "min": 400,
+          "max": 700,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 3.0,
+          "max": 4.5,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "melting_point_C": {
+          "min": 2973,
+          "max": 3000,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "specific_heat_J_kgK": {
+          "min": 750,
+          "max": 800,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 100,
+          "max": 400,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "thermal_expansion_uK": {
+          "min": 1.2,
+          "max": 2.0,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 800,
+          "max": 2000,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 50,
+          "max": 130,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
       "id": "epdm-rubber",
       "name": "EPDM rubber (ethylene propylene diene)",
       "family": "elastomers",
@@ -2738,6 +3364,87 @@
       }
     },
     {
+      "id": "flax-epoxy",
+      "name": "Flax/epoxy composite (50 vol% UD)",
+      "family": "composites",
+      "short_name": "Flax/epoxy",
+      "subfamily": "natural-fiber-composites",
+      "applications": [
+        "Automotive interior panels",
+        "Sports equipment",
+        "Marine deck fittings",
+        "Packaging inserts"
+      ],
+      "notes": "Sustainable alternative to GFRP. Lower embodied energy and CO\u2082 than glass or carbon fibre composites.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 1300,
+          "max": 1450,
+          "source": "Published literature (Summerscales et al., 2010)"
+        },
+        "price_USD_kg": {
+          "min": 5,
+          "max": 15,
+          "source": "Published literature"
+        },
+        "youngs_modulus_GPa": {
+          "min": 25,
+          "max": 40,
+          "source": "Published literature"
+        },
+        "yield_strength_MPa": {
+          "min": 180,
+          "max": 290,
+          "source": "Published literature"
+        },
+        "ultimate_strength_MPa": {
+          "min": 200,
+          "max": 310,
+          "source": "Published literature"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 10,
+          "max": 20,
+          "source": "Published literature"
+        },
+        "elongation": {
+          "min": 0.008,
+          "max": 0.02,
+          "source": "Published literature"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1200,
+          "max": 1500,
+          "source": "Published literature"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.2,
+          "max": 0.5,
+          "source": "Published literature"
+        },
+        "thermal_expansion_uK": {
+          "min": 5,
+          "max": 12,
+          "source": "Published literature"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 5,
+          "max": 15,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 0.5,
+          "max": 1.5,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.1,
+          "max": 0.3,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
       "id": "flexible-foam-ld",
       "name": "Flexible polymer foam (low density)",
       "family": "foams",
@@ -2977,6 +3684,386 @@
       }
     },
     {
+      "id": "glass-ceramic-macor",
+      "name": "Macor (machinable glass-ceramic, Corning)",
+      "family": "glasses",
+      "short_name": "Macor",
+      "subfamily": "glass-ceramics",
+      "applications": [
+        "Precision vacuum components",
+        "Electrical insulators",
+        "Laser parts",
+        "Prototyping of ceramic parts"
+      ],
+      "notes": "Unique: can be machined with conventional metal-working tools. No post-firing needed.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 2520,
+          "max": 2550,
+          "source": "Corning Macor datasheet"
+        },
+        "price_USD_kg": {
+          "min": 100,
+          "max": 400,
+          "source": "Corning Macor datasheet"
+        },
+        "youngs_modulus_GPa": {
+          "min": 66,
+          "max": 67,
+          "source": "Corning Macor datasheet"
+        },
+        "yield_strength_MPa": {
+          "min": 94,
+          "max": 102,
+          "source": "Corning Macor datasheet"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 1.5,
+          "max": 2.0,
+          "source": "Corning Macor datasheet"
+        },
+        "glass_temperature_C": {
+          "min": 800,
+          "max": 830,
+          "source": "Corning Macor datasheet"
+        },
+        "specific_heat_J_kgK": {
+          "min": 790,
+          "max": 800,
+          "source": "Corning Macor datasheet"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 1.46,
+          "max": 1.6,
+          "source": "Corning Macor datasheet"
+        },
+        "thermal_expansion_uK": {
+          "min": 12.6,
+          "max": 13.0,
+          "source": "Corning Macor datasheet"
+        },
+        "dielectric_constant": {
+          "min": 5.9,
+          "max": 6.1,
+          "source": "Corning Macor datasheet"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 20,
+          "max": 40,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 1.0,
+          "max": 2.5,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "gold-pure",
+      "name": "Gold (pure, 24 carat)",
+      "family": "metals",
+      "short_name": "Gold",
+      "subfamily": "precious-metals",
+      "applications": [
+        "Electronics bonding wire",
+        "Connectors",
+        "Dental alloys",
+        "Jewellery",
+        "Radiation shielding"
+      ],
+      "notes": "Excellent corrosion resistance; extreme electrical/thermal conductivity. Very high density and cost.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 19270,
+          "max": 19310,
+          "source": "ASM Handbook Vol 2"
+        },
+        "price_USD_kg": {
+          "min": 55000,
+          "max": 75000,
+          "source": "London Bullion Market (spot, ~2024)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 78,
+          "max": 80,
+          "source": "ASM Handbook Vol 2"
+        },
+        "yield_strength_MPa": {
+          "min": 30,
+          "max": 100,
+          "source": "ASM Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 120,
+          "max": 220,
+          "source": "ASM Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 40,
+          "max": 60,
+          "source": "ASM Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.25,
+          "max": 0.45,
+          "source": "ASM Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 1064,
+          "max": 1064,
+          "source": "ASM Handbook Vol 2"
+        },
+        "specific_heat_J_kgK": {
+          "min": 128,
+          "max": 130,
+          "source": "ASM Handbook Vol 2"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 314,
+          "max": 320,
+          "source": "ASM Handbook Vol 2"
+        },
+        "thermal_expansion_uK": {
+          "min": 14.1,
+          "max": 14.3,
+          "source": "ASM Handbook Vol 2"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 2.27,
+          "max": 2.44,
+          "source": "ASM Handbook Vol 2"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 80000,
+          "max": 120000,
+          "source": "Bath ICE v3.0 (estimate, mining+refining)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 5000,
+          "max": 15000,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "recycle_fraction": {
+          "min": 0.7,
+          "max": 0.9,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
+      "id": "granite",
+      "name": "Granite (typical igneous rock)",
+      "family": "ceramics-nontechnical",
+      "short_name": "Granite",
+      "subfamily": "natural-rock",
+      "applications": [
+        "Building cladding",
+        "Countertops",
+        "Bridge abutments",
+        "Paving stones"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 2600,
+          "max": 2800,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "price_USD_kg": {
+          "min": 0.3,
+          "max": 1.5,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 40,
+          "max": 80,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "yield_strength_MPa": {
+          "min": 60,
+          "max": 250,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.5,
+          "max": 1.5,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 750,
+          "max": 900,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 2.0,
+          "max": 4.0,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "thermal_expansion_uK": {
+          "min": 7.0,
+          "max": 12.0,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 0.5,
+          "max": 1.5,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 0.05,
+          "max": 0.15,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.1,
+          "max": 0.3,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
+      "id": "graphite-polycrystalline",
+      "name": "Graphite, polycrystalline (isostatically pressed)",
+      "family": "ceramics-technical",
+      "short_name": "Graphite",
+      "subfamily": "carbon-ceramics",
+      "applications": [
+        "Electrodes",
+        "Crucibles",
+        "EDM electrodes",
+        "Seals",
+        "Rocket nozzle inserts"
+      ],
+      "notes": "Unusual: lubricating, thermally conductive, electrically conductive. Weak in tension, strong in compression.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 1650,
+          "max": 1900,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "price_USD_kg": {
+          "min": 5,
+          "max": 40,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "youngs_modulus_GPa": {
+          "min": 4,
+          "max": 15,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "yield_strength_MPa": {
+          "min": 20,
+          "max": 80,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.5,
+          "max": 1.5,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "melting_point_C": {
+          "min": 3600,
+          "max": 3650,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "specific_heat_J_kgK": {
+          "min": 710,
+          "max": 800,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 80,
+          "max": 150,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "thermal_expansion_uK": {
+          "min": 2.0,
+          "max": 4.0,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 500,
+          "max": 2000,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 45,
+          "max": 90,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 3.0,
+          "max": 6.0,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
+      "id": "gypsum",
+      "name": "Gypsum (plaster of Paris, set)",
+      "family": "ceramics-nontechnical",
+      "short_name": "Gypsum",
+      "subfamily": "mineral-ceramics",
+      "applications": [
+        "Building plasterboard",
+        "Surgical casts",
+        "Art moulds",
+        "Fire-resistant linings"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 1700,
+          "max": 2300,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "price_USD_kg": {
+          "min": 0.2,
+          "max": 0.5,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 8,
+          "max": 20,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "yield_strength_MPa": {
+          "min": 4,
+          "max": 20,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.2,
+          "max": 0.5,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 900,
+          "max": 1100,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.3,
+          "max": 0.7,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "thermal_expansion_uK": {
+          "min": 12,
+          "max": 20,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 1.7,
+          "max": 3.0,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 0.1,
+          "max": 0.2,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
       "id": "hardwood",
       "name": "Hardwood",
       "family": "natural",
@@ -3056,6 +4143,209 @@
           "min": 0.09,
           "max": 0.09,
           "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "hastelloy-c276",
+      "name": "Hastelloy C-276 (Ni-Mo-Cr alloy)",
+      "family": "metals",
+      "short_name": "Hastelloy C-276",
+      "subfamily": "nickel-alloys",
+      "applications": [
+        "Chemical process vessels",
+        "Flue gas desulfurisation",
+        "Marine applications",
+        "Nuclear waste handling"
+      ],
+      "notes": "Outstanding resistance to pitting, crevice, and stress corrosion. Ni-Mo alloy, no sensitisation.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 8870,
+          "max": 8920,
+          "source": "ASM Handbook Vol 2"
+        },
+        "price_USD_kg": {
+          "min": 35,
+          "max": 80,
+          "source": "ASM Handbook Vol 2"
+        },
+        "youngs_modulus_GPa": {
+          "min": 200,
+          "max": 210,
+          "source": "ASM Handbook Vol 2"
+        },
+        "yield_strength_MPa": {
+          "min": 283,
+          "max": 415,
+          "source": "ASM Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 690,
+          "max": 850,
+          "source": "ASM Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 80,
+          "max": 120,
+          "source": "ASM Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.4,
+          "max": 0.6,
+          "source": "ASM Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 1323,
+          "max": 1371,
+          "source": "ASM Handbook Vol 2"
+        },
+        "specific_heat_J_kgK": {
+          "min": 415,
+          "max": 430,
+          "source": "ASM Handbook Vol 2"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 10.2,
+          "max": 11.6,
+          "source": "ASM Handbook Vol 2"
+        },
+        "thermal_expansion_uK": {
+          "min": 11.1,
+          "max": 11.5,
+          "source": "ASM Handbook Vol 2"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 129,
+          "max": 133,
+          "source": "ASM Handbook Vol 2"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 180,
+          "max": 260,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 13,
+          "max": 20,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.3,
+          "max": 0.45,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 15,
+          "max": 30,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 1.0,
+          "max": 2.0,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
+      "id": "hdpe",
+      "name": "Polyethylene, high density (HDPE)",
+      "family": "polymers",
+      "short_name": "HDPE",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Pipes and fittings",
+        "Milk bottles",
+        "Fuel tanks",
+        "Geomembranes",
+        "Children's toys"
+      ],
+      "notes": "Linear chain; stiffer and stronger than LDPE. Most widely recycled plastic (code 2).",
+      "properties": {
+        "density_kg_m3": {
+          "min": 940,
+          "max": 970,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "price_USD_kg": {
+          "min": 1.0,
+          "max": 1.5,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.7,
+          "max": 1.4,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "yield_strength_MPa": {
+          "min": 20,
+          "max": 37,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 22,
+          "max": 45,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 1.5,
+          "max": 3.5,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.5,
+          "max": 2.0,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 126,
+          "max": 135,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "glass_temperature_C": {
+          "min": -120,
+          "max": -90,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1800,
+          "max": 2200,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.45,
+          "max": 0.52,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "thermal_expansion_uK": {
+          "min": 100,
+          "max": 200,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 76,
+          "max": 90,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.0,
+          "max": 2.7,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.3,
+          "max": 0.45,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 10,
+          "max": 18,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.7,
+          "max": 1.2,
+          "source": "Bath ICE v3.0"
         }
       }
     },
@@ -3422,6 +4712,193 @@
       }
     },
     {
+      "id": "lcp",
+      "name": "Liquid crystal polymer (LCP, Vectra type)",
+      "family": "polymers",
+      "short_name": "LCP",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Miniaturised electrical connectors",
+        "Antenna substrates (5G)",
+        "Surgical devices",
+        "Optical fibre ferrules"
+      ],
+      "notes": "Self-reinforcing; very low warpage and moisture absorption. Near-metallic CTE in flow direction.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 1390,
+          "max": 1410,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "price_USD_kg": {
+          "min": 15,
+          "max": 30,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "youngs_modulus_GPa": {
+          "min": 10,
+          "max": 15,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "yield_strength_MPa": {
+          "min": 180,
+          "max": 250,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 185,
+          "max": 260,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 1.5,
+          "max": 2.5,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.01,
+          "max": 0.02,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 270,
+          "max": 350,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1100,
+          "max": 1300,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.22,
+          "max": 0.28,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "thermal_expansion_uK": {
+          "min": 2,
+          "max": 7,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "dielectric_constant": {
+          "min": 2.9,
+          "max": 3.5,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 100,
+          "max": 170,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 6,
+          "max": 11,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "ldpe",
+      "name": "Polyethylene, low density (LDPE)",
+      "family": "polymers",
+      "short_name": "LDPE",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Plastic bags",
+        "Stretch wrap",
+        "Squeeze bottles",
+        "Flexible packaging film"
+      ],
+      "notes": "Highly branched; flexible and tough at room temperature. Widely recycled (code 4).",
+      "properties": {
+        "density_kg_m3": {
+          "min": 910,
+          "max": 940,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "price_USD_kg": {
+          "min": 1.2,
+          "max": 1.8,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.1,
+          "max": 0.4,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "yield_strength_MPa": {
+          "min": 8,
+          "max": 22,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 10,
+          "max": 25,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 2.0,
+          "max": 4.5,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 3.0,
+          "max": 8.0,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 103,
+          "max": 120,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "glass_temperature_C": {
+          "min": -125,
+          "max": -100,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "specific_heat_J_kgK": {
+          "min": 2000,
+          "max": 2300,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.32,
+          "max": 0.38,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "thermal_expansion_uK": {
+          "min": 200,
+          "max": 250,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 78,
+          "max": 92,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.1,
+          "max": 2.8,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.15,
+          "max": 0.3,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 10,
+          "max": 18,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.7,
+          "max": 1.2,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
       "id": "lead-alloys",
       "name": "Lead alloys",
       "family": "metals",
@@ -3517,6 +4994,77 @@
           "min": 0.67,
           "max": 0.67,
           "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "leather",
+      "name": "Leather (bovine, vegetable tanned)",
+      "family": "natural",
+      "short_name": "Leather",
+      "subfamily": "natural-bio",
+      "applications": [
+        "Footwear",
+        "Belts and straps",
+        "Upholstery",
+        "Gaskets",
+        "Bookbinding"
+      ],
+      "properties": {
+        "density_kg_m3": {
+          "min": 800,
+          "max": 1000,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "price_USD_kg": {
+          "min": 10,
+          "max": 30,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.05,
+          "max": 0.2,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "yield_strength_MPa": {
+          "min": 5,
+          "max": 25,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "ultimate_strength_MPa": {
+          "min": 15,
+          "max": 35,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "elongation": {
+          "min": 0.3,
+          "max": 0.8,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1400,
+          "max": 1800,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.14,
+          "max": 0.18,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "thermal_expansion_uK": {
+          "min": 40,
+          "max": 120,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 35,
+          "max": 100,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 3.0,
+          "max": 10.0,
+          "source": "Bath ICE v3.0"
         }
       }
     },
@@ -3715,6 +5263,77 @@
           "min": 0.64,
           "max": 0.64,
           "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "magnesia",
+      "name": "Magnesia (MgO, sintered)",
+      "family": "ceramics-technical",
+      "short_name": "MgO",
+      "subfamily": "oxide-ceramics",
+      "applications": [
+        "Refractory furnace linings",
+        "Single-crystal substrates",
+        "Crucibles for Mg and steel",
+        "Nuclear fuel cladding cores"
+      ],
+      "notes": "High melting point, good thermal conductivity, excellent chemical stability in basic slags.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 3560,
+          "max": 3580,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "price_USD_kg": {
+          "min": 1.0,
+          "max": 8.0,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "youngs_modulus_GPa": {
+          "min": 280,
+          "max": 310,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "yield_strength_MPa": {
+          "min": 80,
+          "max": 160,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 1.0,
+          "max": 2.0,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "melting_point_C": {
+          "min": 2827,
+          "max": 2852,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "specific_heat_J_kgK": {
+          "min": 875,
+          "max": 900,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 37,
+          "max": 40,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "thermal_expansion_uK": {
+          "min": 13.0,
+          "max": 13.5,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 10,
+          "max": 20,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 0.9,
+          "max": 1.5,
+          "source": "Bath ICE v3.0 (estimate)"
         }
       }
     },
@@ -4019,6 +5638,107 @@
       }
     },
     {
+      "id": "maraging-300",
+      "name": "Maraging steel 300 (C300)",
+      "family": "metals",
+      "short_name": "Maraging 300",
+      "subfamily": "ferrous-metals",
+      "applications": [
+        "Rocket motor cases",
+        "Aircraft undercarriage",
+        "High-speed machinery shafts",
+        "Tooling"
+      ],
+      "notes": "Ultra-high strength with exceptional toughness/strength ratio. Ni-Co-Mo-Ti strengthened.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 7990,
+          "max": 8010,
+          "source": "ASM Handbook Vol 1"
+        },
+        "price_USD_kg": {
+          "min": 20,
+          "max": 45,
+          "source": "ASM Handbook Vol 1"
+        },
+        "youngs_modulus_GPa": {
+          "min": 190,
+          "max": 200,
+          "source": "ASM Handbook Vol 1"
+        },
+        "yield_strength_MPa": {
+          "min": 1900,
+          "max": 2050,
+          "source": "ASM Handbook Vol 1"
+        },
+        "ultimate_strength_MPa": {
+          "min": 1950,
+          "max": 2100,
+          "source": "ASM Handbook Vol 1"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 55,
+          "max": 80,
+          "source": "ASM Handbook Vol 1"
+        },
+        "elongation": {
+          "min": 0.08,
+          "max": 0.11,
+          "source": "ASM Handbook Vol 1"
+        },
+        "melting_point_C": {
+          "min": 1413,
+          "max": 1450,
+          "source": "ASM Handbook Vol 1"
+        },
+        "specific_heat_J_kgK": {
+          "min": 460,
+          "max": 480,
+          "source": "ASM Handbook Vol 1"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 20,
+          "max": 24,
+          "source": "ASM Handbook Vol 1"
+        },
+        "thermal_expansion_uK": {
+          "min": 10.0,
+          "max": 11.0,
+          "source": "ASM Handbook Vol 1"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 50,
+          "max": 60,
+          "source": "ASM Handbook Vol 1"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 50,
+          "max": 75,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 4.0,
+          "max": 5.5,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.4,
+          "max": 0.55,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 8,
+          "max": 12,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.6,
+          "max": 0.9,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
       "id": "medium-carbon-steel",
       "name": "Medium carbon steel",
       "family": "metals",
@@ -4114,6 +5834,97 @@
           "min": 0.67,
           "max": 0.67,
           "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "molybdenum",
+      "name": "Molybdenum (pure wrought)",
+      "family": "metals",
+      "short_name": "Molybdenum",
+      "subfamily": "refractory-metals",
+      "applications": [
+        "Furnace heating elements",
+        "TFT-LCD electrodes",
+        "Crucibles",
+        "X-ray tube anodes"
+      ],
+      "notes": "2nd highest melting point of metals after W. Very high stiffness-to-density ratio.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 10220,
+          "max": 10280,
+          "source": "ASM Handbook Vol 2"
+        },
+        "price_USD_kg": {
+          "min": 40,
+          "max": 80,
+          "source": "ASM Handbook Vol 2"
+        },
+        "youngs_modulus_GPa": {
+          "min": 320,
+          "max": 340,
+          "source": "ASM Handbook Vol 2"
+        },
+        "yield_strength_MPa": {
+          "min": 400,
+          "max": 700,
+          "source": "ASM Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 700,
+          "max": 1000,
+          "source": "ASM Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 20,
+          "max": 50,
+          "source": "ASM Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.2,
+          "max": 0.4,
+          "source": "ASM Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 2623,
+          "max": 2623,
+          "source": "ASM Handbook Vol 2"
+        },
+        "specific_heat_J_kgK": {
+          "min": 248,
+          "max": 252,
+          "source": "ASM Handbook Vol 2"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 138,
+          "max": 142,
+          "source": "ASM Handbook Vol 2"
+        },
+        "thermal_expansion_uK": {
+          "min": 4.7,
+          "max": 4.9,
+          "source": "ASM Handbook Vol 2"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 5.2,
+          "max": 5.6,
+          "source": "ASM Handbook Vol 2"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 250,
+          "max": 400,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 18,
+          "max": 28,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.3,
+          "max": 0.5,
+          "source": "Bath ICE v3.0"
         }
       }
     },
@@ -4300,6 +6111,107 @@
       }
     },
     {
+      "id": "nylon-6",
+      "name": "Polyamide 6 (Nylon 6, PA6)",
+      "family": "polymers",
+      "short_name": "Nylon 6",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Rope and fibre",
+        "Gears",
+        "Textile yarns",
+        "Automotive air intake manifolds"
+      ],
+      "notes": "Lower Tm (220\u00b0C) and modulus than PA66 but tougher and cheaper. High moisture sensitivity.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 1120,
+          "max": 1140,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "price_USD_kg": {
+          "min": 2.5,
+          "max": 4.5,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "youngs_modulus_GPa": {
+          "min": 1.5,
+          "max": 3.0,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "yield_strength_MPa": {
+          "min": 45,
+          "max": 75,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 60,
+          "max": 85,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 3.0,
+          "max": 5.0,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.2,
+          "max": 0.6,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 215,
+          "max": 225,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "glass_temperature_C": {
+          "min": 40,
+          "max": 60,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1600,
+          "max": 1700,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.23,
+          "max": 0.26,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "thermal_expansion_uK": {
+          "min": 80,
+          "max": 100,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 120,
+          "max": 145,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 5.5,
+          "max": 7.5,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.05,
+          "max": 0.2,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 12,
+          "max": 20,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.8,
+          "max": 1.4,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
       "id": "paper",
       "name": "Paper and cardboard",
       "family": "natural",
@@ -4389,6 +6301,97 @@
           "min": 0.7,
           "max": 0.7,
           "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "pbt",
+      "name": "Polybutylene terephthalate (PBT)",
+      "family": "polymers",
+      "short_name": "PBT",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Electrical connectors",
+        "Automotive headlight housings",
+        "Pump components",
+        "Keyboard keycaps"
+      ],
+      "notes": "Fast-crystallising semi-crystalline polyester. Lower moisture absorption than PET.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 1300,
+          "max": 1310,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "price_USD_kg": {
+          "min": 3.0,
+          "max": 5.5,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "youngs_modulus_GPa": {
+          "min": 2.0,
+          "max": 3.0,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "yield_strength_MPa": {
+          "min": 50,
+          "max": 65,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 55,
+          "max": 70,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 2.5,
+          "max": 3.5,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.15,
+          "max": 0.4,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 222,
+          "max": 228,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "glass_temperature_C": {
+          "min": 20,
+          "max": 40,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1200,
+          "max": 1350,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.21,
+          "max": 0.23,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "thermal_expansion_uK": {
+          "min": 60,
+          "max": 80,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 75,
+          "max": 100,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 3.8,
+          "max": 5.5,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.1,
+          "max": 0.25,
+          "source": "Bath ICE v3.0"
         }
       }
     },
@@ -4483,6 +6486,92 @@
           "min": 5.7,
           "max": 5.7,
           "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "pei-ultem",
+      "name": "Polyetherimide (PEI / Ultem)",
+      "family": "polymers",
+      "short_name": "PEI (Ultem)",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Medical instrument handles (autoclavable)",
+        "Aircraft interior components",
+        "Microwave cookware",
+        "FDM 3D printing filament"
+      ],
+      "notes": "Amorphous; excellent flame retardancy (UL94 V-0) without additives. Tg \u2248 217\u00b0C.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 1270,
+          "max": 1290,
+          "source": "SABIC Ultem datasheet"
+        },
+        "price_USD_kg": {
+          "min": 25,
+          "max": 50,
+          "source": "SABIC Ultem datasheet"
+        },
+        "youngs_modulus_GPa": {
+          "min": 3.0,
+          "max": 3.3,
+          "source": "SABIC Ultem datasheet"
+        },
+        "yield_strength_MPa": {
+          "min": 95,
+          "max": 130,
+          "source": "SABIC Ultem datasheet"
+        },
+        "ultimate_strength_MPa": {
+          "min": 100,
+          "max": 140,
+          "source": "SABIC Ultem datasheet"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 1.8,
+          "max": 2.5,
+          "source": "SABIC Ultem datasheet"
+        },
+        "elongation": {
+          "min": 0.05,
+          "max": 0.1,
+          "source": "SABIC Ultem datasheet"
+        },
+        "glass_temperature_C": {
+          "min": 215,
+          "max": 220,
+          "source": "SABIC Ultem datasheet"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1100,
+          "max": 1200,
+          "source": "SABIC Ultem datasheet"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.22,
+          "max": 0.25,
+          "source": "SABIC Ultem datasheet"
+        },
+        "thermal_expansion_uK": {
+          "min": 56,
+          "max": 60,
+          "source": "SABIC Ultem datasheet"
+        },
+        "dielectric_constant": {
+          "min": 3.15,
+          "max": 3.2,
+          "source": "SABIC Ultem datasheet"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 130,
+          "max": 180,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 7.5,
+          "max": 11.0,
+          "source": "Bath ICE v3.0 (estimate)"
         }
       }
     },
@@ -4661,6 +6750,77 @@
           "min": 0.007,
           "max": 0.007,
           "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "plywood-structural",
+      "name": "Plywood, structural (Douglas fir, 5-ply)",
+      "family": "natural",
+      "short_name": "Plywood",
+      "subfamily": "natural-plant",
+      "applications": [
+        "Structural sheathing",
+        "Formwork",
+        "Boat hulls",
+        "Furniture"
+      ],
+      "notes": "Cross-ply construction \u2014 nearly isotropic in-plane properties. Stiffer and more uniform than solid wood.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 500,
+          "max": 700,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "price_USD_kg": {
+          "min": 0.8,
+          "max": 2.0,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 8,
+          "max": 14,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "yield_strength_MPa": {
+          "min": 20,
+          "max": 40,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 1.0,
+          "max": 3.0,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1300,
+          "max": 1700,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.12,
+          "max": 0.2,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "thermal_expansion_uK": {
+          "min": 3,
+          "max": 8,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 8,
+          "max": 18,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": -0.5,
+          "max": 1.0,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.2,
+          "max": 0.5,
+          "source": "Bath ICE v3.0"
         }
       }
     },
@@ -5763,6 +7923,173 @@
       }
     },
     {
+      "id": "porcelain",
+      "name": "Porcelain (fired, technical grade)",
+      "family": "ceramics-nontechnical",
+      "short_name": "Porcelain",
+      "subfamily": "silicate-ceramics",
+      "applications": [
+        "Electrical insulators",
+        "Sanitaryware",
+        "Tableware",
+        "Chemical laboratory ware"
+      ],
+      "notes": "Kaolin + feldspar + quartz, fired ~1250\u00b0C. Dense (< 0.5% porosity). Good electrical insulation.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 2300,
+          "max": 2500,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "price_USD_kg": {
+          "min": 1.0,
+          "max": 5.0,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 55,
+          "max": 75,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "yield_strength_MPa": {
+          "min": 50,
+          "max": 100,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.8,
+          "max": 1.5,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "melting_point_C": {
+          "min": 1250,
+          "max": 1400,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "specific_heat_J_kgK": {
+          "min": 800,
+          "max": 900,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 1.5,
+          "max": 3.0,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "thermal_expansion_uK": {
+          "min": 4.0,
+          "max": 7.0,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "dielectric_constant": {
+          "min": 5.0,
+          "max": 8.0,
+          "source": "Cambridge Materials Data Book (2011)"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 8.0,
+          "max": 15.0,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 0.5,
+          "max": 1.1,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.0,
+          "max": 0.05,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
+      "id": "pps",
+      "name": "Polyphenylene sulphide (PPS)",
+      "family": "polymers",
+      "short_name": "PPS",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Electrical/electronic connectors",
+        "Automotive under-bonnet parts",
+        "Pump and valve components",
+        "Chemical-resistant piping"
+      ],
+      "notes": "Semi-crystalline. Very low moisture absorption; inherently flame-retardant (LOI ~44%). Often glass-filled.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 1340,
+          "max": 1360,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "price_USD_kg": {
+          "min": 8,
+          "max": 15,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "youngs_modulus_GPa": {
+          "min": 3.4,
+          "max": 4.0,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "yield_strength_MPa": {
+          "min": 75,
+          "max": 95,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 80,
+          "max": 100,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 2.0,
+          "max": 2.8,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.01,
+          "max": 0.03,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 280,
+          "max": 295,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "glass_temperature_C": {
+          "min": 85,
+          "max": 95,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1000,
+          "max": 1100,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.28,
+          "max": 0.3,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "thermal_expansion_uK": {
+          "min": 50,
+          "max": 60,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 90,
+          "max": 130,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 5.0,
+          "max": 8.0,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
       "id": "ptfe",
       "name": "Polytetrafluoroethylene (PTFE/Teflon)",
       "family": "polymers",
@@ -5947,6 +8274,97 @@
           "min": 1.1,
           "max": 1.1,
           "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "pvdf",
+      "name": "Polyvinylidene fluoride (PVDF)",
+      "family": "polymers",
+      "short_name": "PVDF",
+      "subfamily": "thermoplastics",
+      "applications": [
+        "Chemical-resistant piping",
+        "Piezoelectric sensors and actuators",
+        "Li-ion battery binders",
+        "Membranes"
+      ],
+      "notes": "Semi-fluorinated; good chemical resistance. \u03b2-phase is strongly piezoelectric and pyroelectric.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 1760,
+          "max": 1800,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "price_USD_kg": {
+          "min": 8,
+          "max": 18,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "youngs_modulus_GPa": {
+          "min": 1.5,
+          "max": 2.8,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "yield_strength_MPa": {
+          "min": 34,
+          "max": 60,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 38,
+          "max": 65,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 2.0,
+          "max": 3.5,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.25,
+          "max": 0.5,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 155,
+          "max": 175,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "glass_temperature_C": {
+          "min": -40,
+          "max": -30,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1200,
+          "max": 1400,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.19,
+          "max": 0.21,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "thermal_expansion_uK": {
+          "min": 90,
+          "max": 130,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "dielectric_constant": {
+          "min": 8.0,
+          "max": 12.0,
+          "source": "ASM Engineered Materials Handbook Vol 2"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 70,
+          "max": 110,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 4.5,
+          "max": 7.0,
+          "source": "Bath ICE v3.0 (estimate)"
         }
       }
     },
@@ -6521,6 +8939,98 @@
           "min": 0.001,
           "max": 0.001,
           "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "silver-pure",
+      "name": "Silver (pure)",
+      "family": "metals",
+      "short_name": "Silver",
+      "subfamily": "precious-metals",
+      "applications": [
+        "Electrical contacts",
+        "Solar cell busbars",
+        "Photography",
+        "Brazing alloys",
+        "Antibacterial coatings"
+      ],
+      "notes": "Highest electrical and thermal conductivity of all metals. Tarnishes in H\u2082S environments.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 10490,
+          "max": 10510,
+          "source": "ASM Handbook Vol 2"
+        },
+        "price_USD_kg": {
+          "min": 700,
+          "max": 1200,
+          "source": "London Bullion Market (spot, ~2024)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 76,
+          "max": 83,
+          "source": "ASM Handbook Vol 2"
+        },
+        "yield_strength_MPa": {
+          "min": 55,
+          "max": 200,
+          "source": "ASM Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 140,
+          "max": 350,
+          "source": "ASM Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 30,
+          "max": 55,
+          "source": "ASM Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.1,
+          "max": 0.5,
+          "source": "ASM Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 961,
+          "max": 961,
+          "source": "ASM Handbook Vol 2"
+        },
+        "specific_heat_J_kgK": {
+          "min": 232,
+          "max": 238,
+          "source": "ASM Handbook Vol 2"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 420,
+          "max": 430,
+          "source": "ASM Handbook Vol 2"
+        },
+        "thermal_expansion_uK": {
+          "min": 18.9,
+          "max": 19.1,
+          "source": "ASM Handbook Vol 2"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 1.59,
+          "max": 1.63,
+          "source": "ASM Handbook Vol 2"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 1500,
+          "max": 3000,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 100,
+          "max": 200,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.65,
+          "max": 0.85,
+          "source": "Bath ICE v3.0"
         }
       }
     },
@@ -7310,6 +9820,396 @@
       }
     },
     {
+      "id": "steel-52100",
+      "name": "Bearing steel 52100 (hardened)",
+      "family": "metals",
+      "short_name": "52100 bearing",
+      "subfamily": "ferrous-metals",
+      "applications": [
+        "Ball and roller bearings",
+        "Races",
+        "Cam followers",
+        "Precision shafts"
+      ],
+      "notes": "1% C, 1.5% Cr steel. The dominant bearing steel worldwide. Hardened 58\u201365 HRC.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 7800,
+          "max": 7830,
+          "source": "ASM Handbook Vol 1"
+        },
+        "price_USD_kg": {
+          "min": 1.5,
+          "max": 2.5,
+          "source": "ASM Handbook Vol 1"
+        },
+        "youngs_modulus_GPa": {
+          "min": 200,
+          "max": 210,
+          "source": "ASM Handbook Vol 1"
+        },
+        "yield_strength_MPa": {
+          "min": 1500,
+          "max": 1900,
+          "source": "ASM Handbook Vol 1"
+        },
+        "ultimate_strength_MPa": {
+          "min": 1700,
+          "max": 2100,
+          "source": "ASM Handbook Vol 1"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 15,
+          "max": 25,
+          "source": "ASM Handbook Vol 1"
+        },
+        "elongation": {
+          "min": 0.003,
+          "max": 0.01,
+          "source": "ASM Handbook Vol 1"
+        },
+        "melting_point_C": {
+          "min": 1427,
+          "max": 1480,
+          "source": "ASM Handbook Vol 1"
+        },
+        "specific_heat_J_kgK": {
+          "min": 460,
+          "max": 480,
+          "source": "ASM Handbook Vol 1"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 46,
+          "max": 50,
+          "source": "ASM Handbook Vol 1"
+        },
+        "thermal_expansion_uK": {
+          "min": 12.3,
+          "max": 12.8,
+          "source": "ASM Handbook Vol 1"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 29,
+          "max": 33,
+          "source": "ASM Handbook Vol 1"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 32,
+          "max": 38,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.4,
+          "max": 2.9,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.4,
+          "max": 0.55,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 8,
+          "max": 12,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.6,
+          "max": 0.9,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
+      "id": "steel-h13",
+      "name": "Tool steel H13 (hot work, hardened)",
+      "family": "metals",
+      "short_name": "H13 tool steel",
+      "subfamily": "ferrous-metals",
+      "applications": [
+        "Die casting dies",
+        "Extrusion tooling",
+        "Hot forging dies",
+        "Injection moulding inserts"
+      ],
+      "notes": "Cr-Mo-V hot-work tool steel. Excellent thermal fatigue resistance. Hardened ~48 HRC.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 7750,
+          "max": 7800,
+          "source": "ASM Handbook Vol 1"
+        },
+        "price_USD_kg": {
+          "min": 8.0,
+          "max": 15.0,
+          "source": "ASM Handbook Vol 1"
+        },
+        "youngs_modulus_GPa": {
+          "min": 207,
+          "max": 215,
+          "source": "ASM Handbook Vol 1"
+        },
+        "yield_strength_MPa": {
+          "min": 1000,
+          "max": 1580,
+          "source": "ASM Handbook Vol 1"
+        },
+        "ultimate_strength_MPa": {
+          "min": 1100,
+          "max": 1700,
+          "source": "ASM Handbook Vol 1"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 20,
+          "max": 45,
+          "source": "ASM Handbook Vol 1"
+        },
+        "elongation": {
+          "min": 0.08,
+          "max": 0.13,
+          "source": "ASM Handbook Vol 1"
+        },
+        "melting_point_C": {
+          "min": 1427,
+          "max": 1480,
+          "source": "ASM Handbook Vol 1"
+        },
+        "specific_heat_J_kgK": {
+          "min": 460,
+          "max": 480,
+          "source": "ASM Handbook Vol 1"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 24,
+          "max": 28,
+          "source": "ASM Handbook Vol 1"
+        },
+        "thermal_expansion_uK": {
+          "min": 11.2,
+          "max": 11.8,
+          "source": "ASM Handbook Vol 1"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 55,
+          "max": 65,
+          "source": "ASM Handbook Vol 1"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 35,
+          "max": 45,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.6,
+          "max": 3.2,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.4,
+          "max": 0.55,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 8,
+          "max": 12,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.6,
+          "max": 0.9,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
+      "id": "steel-m2",
+      "name": "Tool steel M2 (high speed, hardened)",
+      "family": "metals",
+      "short_name": "M2 HSS",
+      "subfamily": "ferrous-metals",
+      "applications": [
+        "Drill bits",
+        "End mills",
+        "Taps and dies",
+        "Saw blades",
+        "Broaches"
+      ],
+      "notes": "W-Mo-Cr-V-Co high-speed steel. Maintains hardness to ~600\u00b0C. Hardened 62\u201365 HRC.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 8150,
+          "max": 8170,
+          "source": "ASM Handbook Vol 1"
+        },
+        "price_USD_kg": {
+          "min": 15,
+          "max": 25,
+          "source": "ASM Handbook Vol 1"
+        },
+        "youngs_modulus_GPa": {
+          "min": 220,
+          "max": 235,
+          "source": "ASM Handbook Vol 1"
+        },
+        "yield_strength_MPa": {
+          "min": 1900,
+          "max": 2200,
+          "source": "ASM Handbook Vol 1"
+        },
+        "ultimate_strength_MPa": {
+          "min": 2100,
+          "max": 2400,
+          "source": "ASM Handbook Vol 1"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 14,
+          "max": 18,
+          "source": "ASM Handbook Vol 1"
+        },
+        "elongation": {
+          "min": 0.005,
+          "max": 0.02,
+          "source": "ASM Handbook Vol 1"
+        },
+        "melting_point_C": {
+          "min": 1390,
+          "max": 1430,
+          "source": "ASM Handbook Vol 1"
+        },
+        "specific_heat_J_kgK": {
+          "min": 420,
+          "max": 440,
+          "source": "ASM Handbook Vol 1"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 20,
+          "max": 24,
+          "source": "ASM Handbook Vol 1"
+        },
+        "thermal_expansion_uK": {
+          "min": 11.0,
+          "max": 11.5,
+          "source": "ASM Handbook Vol 1"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 55,
+          "max": 70,
+          "source": "ASM Handbook Vol 1"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 40,
+          "max": 55,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 3.0,
+          "max": 4.0,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.4,
+          "max": 0.55,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 8,
+          "max": 12,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.6,
+          "max": 0.9,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
+      "id": "stellite-6",
+      "name": "Stellite 6 (Co-Cr-W hardfacing alloy)",
+      "family": "metals",
+      "short_name": "Stellite 6",
+      "subfamily": "cobalt-alloys",
+      "applications": [
+        "Valve seats and gates",
+        "Saw teeth",
+        "Hardfacing overlays",
+        "Hot scissors"
+      ],
+      "notes": "Co-Cr-W alloy; exceptional wear, oxidation and corrosion resistance. Cast or weld-deposited.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 8300,
+          "max": 8440,
+          "source": "ASM Handbook Vol 2"
+        },
+        "price_USD_kg": {
+          "min": 30,
+          "max": 70,
+          "source": "ASM Handbook Vol 2"
+        },
+        "youngs_modulus_GPa": {
+          "min": 240,
+          "max": 255,
+          "source": "ASM Handbook Vol 2"
+        },
+        "yield_strength_MPa": {
+          "min": 500,
+          "max": 700,
+          "source": "ASM Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 900,
+          "max": 1100,
+          "source": "ASM Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 14,
+          "max": 20,
+          "source": "ASM Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.01,
+          "max": 0.03,
+          "source": "ASM Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 1285,
+          "max": 1395,
+          "source": "ASM Handbook Vol 2"
+        },
+        "specific_heat_J_kgK": {
+          "min": 420,
+          "max": 440,
+          "source": "ASM Handbook Vol 2"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 14,
+          "max": 16,
+          "source": "ASM Handbook Vol 2"
+        },
+        "thermal_expansion_uK": {
+          "min": 12.3,
+          "max": 13.0,
+          "source": "ASM Handbook Vol 2"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 80,
+          "max": 95,
+          "source": "ASM Handbook Vol 2"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 200,
+          "max": 320,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 14,
+          "max": 22,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
       "id": "stone",
       "name": "Stone",
       "family": "ceramics-nontechnical",
@@ -7384,6 +10284,71 @@
           "min": 3.4,
           "max": 3.4,
           "source": "Ashby App A (6th ed., 2025)"
+        }
+      }
+    },
+    {
+      "id": "syntactic-foam",
+      "name": "Syntactic foam (glass microsphere/epoxy)",
+      "family": "foams",
+      "short_name": "Syntactic foam",
+      "subfamily": "polymer-foams",
+      "applications": [
+        "Deep-sea buoyancy modules",
+        "Subsea pipeline insulation",
+        "Structural sandwich cores"
+      ],
+      "notes": "Hollow glass microspheres in polymer matrix. Near-constant properties with depth (no gas pockets).",
+      "properties": {
+        "density_kg_m3": {
+          "min": 300,
+          "max": 700,
+          "source": "ASTM C271 / published literature"
+        },
+        "price_USD_kg": {
+          "min": 8,
+          "max": 50,
+          "source": "ASTM C271 / published literature"
+        },
+        "youngs_modulus_GPa": {
+          "min": 0.5,
+          "max": 4.0,
+          "source": "ASTM C271 / published literature"
+        },
+        "yield_strength_MPa": {
+          "min": 20,
+          "max": 90,
+          "source": "ASTM C271 / published literature"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.3,
+          "max": 1.5,
+          "source": "ASTM C271 / published literature"
+        },
+        "specific_heat_J_kgK": {
+          "min": 900,
+          "max": 1200,
+          "source": "ASTM C271 / published literature"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 0.15,
+          "max": 0.5,
+          "source": "ASTM C271 / published literature"
+        },
+        "thermal_expansion_uK": {
+          "min": 20,
+          "max": 40,
+          "source": "ASTM C271 / published literature"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 60,
+          "max": 120,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 3.5,
+          "max": 7.5,
+          "source": "Bath ICE v3.0 (estimate)"
         }
       }
     },
@@ -7588,6 +10553,77 @@
       }
     },
     {
+      "id": "titanium-carbide",
+      "name": "Titanium carbide (TiC, sintered)",
+      "family": "ceramics-technical",
+      "short_name": "TiC",
+      "subfamily": "carbide-ceramics",
+      "applications": [
+        "Cemented carbide binders",
+        "Cutting tool inserts",
+        "Wear-resistant coatings",
+        "Cermets"
+      ],
+      "notes": "Hard, high-melting refractory carbide. Used in cermet cutting tools (TiC+Ni/Mo binder).",
+      "properties": {
+        "density_kg_m3": {
+          "min": 4920,
+          "max": 4940,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "price_USD_kg": {
+          "min": 30,
+          "max": 100,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "youngs_modulus_GPa": {
+          "min": 400,
+          "max": 440,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "yield_strength_MPa": {
+          "min": 400,
+          "max": 600,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 3.5,
+          "max": 5.5,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "melting_point_C": {
+          "min": 3067,
+          "max": 3067,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "specific_heat_J_kgK": {
+          "min": 540,
+          "max": 560,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 17,
+          "max": 22,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "thermal_expansion_uK": {
+          "min": 7.4,
+          "max": 7.7,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 200,
+          "max": 450,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 14,
+          "max": 30,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
       "id": "titanium-grade-2",
       "name": "Titanium Grade 2 (commercially pure)",
       "family": "metals",
@@ -7685,6 +10721,81 @@
           "min": 3.0,
           "max": 5.5,
           "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
+      "id": "titanium-nitride",
+      "name": "Titanium nitride (TiN, PVD coating / bulk)",
+      "family": "ceramics-technical",
+      "short_name": "TiN",
+      "subfamily": "nitride-ceramics",
+      "applications": [
+        "Cutting tool PVD coatings",
+        "Decorative gold-coloured coatings",
+        "Diffusion barriers in microelectronics"
+      ],
+      "notes": "Electrically conductive ceramic (metal-like). Hard, refractory, chemically stable.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 5220,
+          "max": 5440,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "price_USD_kg": {
+          "min": 50,
+          "max": 200,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "youngs_modulus_GPa": {
+          "min": 450,
+          "max": 600,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "yield_strength_MPa": {
+          "min": 800,
+          "max": 1200,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 4,
+          "max": 7,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "melting_point_C": {
+          "min": 2930,
+          "max": 2950,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "specific_heat_J_kgK": {
+          "min": 545,
+          "max": 560,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 19,
+          "max": 29,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "thermal_expansion_uK": {
+          "min": 9.2,
+          "max": 9.6,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 25,
+          "max": 33,
+          "source": "ASM Engineered Materials Handbook Vol 4"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 300,
+          "max": 600,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 20,
+          "max": 40,
+          "source": "Bath ICE v3.0 (estimate)"
         }
       }
     },
@@ -8060,6 +11171,183 @@
           "min": 0.7,
           "max": 1.2,
           "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
+      "id": "zamak-3",
+      "name": "Zinc die casting alloy Zamak 3",
+      "family": "metals",
+      "short_name": "Zamak 3",
+      "subfamily": "zinc-alloys",
+      "applications": [
+        "Consumer electronics housings",
+        "Toy car bodies",
+        "Hardware fittings",
+        "Plumbing components"
+      ],
+      "notes": "Most common die-casting alloy. Excellent fluidity; good dimensional accuracy.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 6550,
+          "max": 6620,
+          "source": "ASTM B86 / ASM Handbook Vol 2"
+        },
+        "price_USD_kg": {
+          "min": 2.5,
+          "max": 4.0,
+          "source": "ASTM B86 / ASM Handbook Vol 2"
+        },
+        "youngs_modulus_GPa": {
+          "min": 82,
+          "max": 86,
+          "source": "ASTM B86 / ASM Handbook Vol 2"
+        },
+        "yield_strength_MPa": {
+          "min": 218,
+          "max": 240,
+          "source": "ASTM B86 / ASM Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 283,
+          "max": 330,
+          "source": "ASTM B86 / ASM Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 18,
+          "max": 25,
+          "source": "ASTM B86 / ASM Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.06,
+          "max": 0.1,
+          "source": "ASTM B86 / ASM Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 381,
+          "max": 387,
+          "source": "ASTM B86 / ASM Handbook Vol 2"
+        },
+        "specific_heat_J_kgK": {
+          "min": 419,
+          "max": 430,
+          "source": "ASTM B86 / ASM Handbook Vol 2"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 113,
+          "max": 118,
+          "source": "ASTM B86 / ASM Handbook Vol 2"
+        },
+        "thermal_expansion_uK": {
+          "min": 27.4,
+          "max": 27.4,
+          "source": "ASTM B86 / ASM Handbook Vol 2"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 6.2,
+          "max": 6.6,
+          "source": "ASTM B86 / ASM Handbook Vol 2"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 50,
+          "max": 75,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 3.0,
+          "max": 4.5,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.3,
+          "max": 0.5,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_energy_MJ_kg": {
+          "min": 6,
+          "max": 12,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_co2_kg_kg": {
+          "min": 0.4,
+          "max": 0.8,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
+      "id": "zerodur",
+      "name": "Zerodur (lithium aluminosilicate glass-ceramic)",
+      "family": "glasses",
+      "short_name": "Zerodur",
+      "subfamily": "glass-ceramics",
+      "applications": [
+        "Telescope mirror substrates",
+        "Laser ring gyroscopes",
+        "Lithography stages",
+        "Precision metrology"
+      ],
+      "notes": "Near-zero thermal expansion (CTE \u2248 0 \u00b1 0.02 \u00b5m/K over 0\u201350\u00b0C). Made by Schott AG.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 2530,
+          "max": 2540,
+          "source": "Schott ZERODUR datasheet"
+        },
+        "price_USD_kg": {
+          "min": 500,
+          "max": 5000,
+          "source": "Schott ZERODUR datasheet"
+        },
+        "youngs_modulus_GPa": {
+          "min": 90,
+          "max": 92,
+          "source": "Schott ZERODUR datasheet"
+        },
+        "yield_strength_MPa": {
+          "min": 40,
+          "max": 60,
+          "source": "Schott ZERODUR datasheet"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.8,
+          "max": 1.0,
+          "source": "Schott ZERODUR datasheet"
+        },
+        "glass_temperature_C": {
+          "min": 620,
+          "max": 640,
+          "source": "Schott ZERODUR datasheet"
+        },
+        "specific_heat_J_kgK": {
+          "min": 800,
+          "max": 830,
+          "source": "Schott ZERODUR datasheet"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 1.46,
+          "max": 1.64,
+          "source": "Schott ZERODUR datasheet"
+        },
+        "thermal_expansion_uK": {
+          "min": -0.02,
+          "max": 0.02,
+          "source": "Schott ZERODUR datasheet"
+        },
+        "dielectric_constant": {
+          "min": 7.2,
+          "max": 7.5,
+          "source": "Schott ZERODUR datasheet"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 30,
+          "max": 60,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 1.5,
+          "max": 3.5,
+          "source": "Bath ICE v3.0 (estimate)"
         }
       }
     },

@@ -1,0 +1,102 @@
+{
+  "id": "steel-m2",
+  "name": "Tool steel M2 (high speed, hardened)",
+  "family": "metals",
+  "short_name": "M2 HSS",
+  "subfamily": "ferrous-metals",
+  "applications": [
+    "Drill bits",
+    "End mills",
+    "Taps and dies",
+    "Saw blades",
+    "Broaches"
+  ],
+  "notes": "W-Mo-Cr-V-Co high-speed steel. Maintains hardness to ~600\u00b0C. Hardened 62\u201365 HRC.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 8150,
+      "max": 8170,
+      "source": "ASM Handbook Vol 1"
+    },
+    "price_USD_kg": {
+      "min": 15,
+      "max": 25,
+      "source": "ASM Handbook Vol 1"
+    },
+    "youngs_modulus_GPa": {
+      "min": 220,
+      "max": 235,
+      "source": "ASM Handbook Vol 1"
+    },
+    "yield_strength_MPa": {
+      "min": 1900,
+      "max": 2200,
+      "source": "ASM Handbook Vol 1"
+    },
+    "ultimate_strength_MPa": {
+      "min": 2100,
+      "max": 2400,
+      "source": "ASM Handbook Vol 1"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 14,
+      "max": 18,
+      "source": "ASM Handbook Vol 1"
+    },
+    "elongation": {
+      "min": 0.005,
+      "max": 0.02,
+      "source": "ASM Handbook Vol 1"
+    },
+    "melting_point_C": {
+      "min": 1390,
+      "max": 1430,
+      "source": "ASM Handbook Vol 1"
+    },
+    "specific_heat_J_kgK": {
+      "min": 420,
+      "max": 440,
+      "source": "ASM Handbook Vol 1"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 20,
+      "max": 24,
+      "source": "ASM Handbook Vol 1"
+    },
+    "thermal_expansion_uK": {
+      "min": 11.0,
+      "max": 11.5,
+      "source": "ASM Handbook Vol 1"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 55,
+      "max": 70,
+      "source": "ASM Handbook Vol 1"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 40,
+      "max": 55,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 3.0,
+      "max": 4.0,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.4,
+      "max": 0.55,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 8,
+      "max": 12,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.6,
+      "max": 0.9,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

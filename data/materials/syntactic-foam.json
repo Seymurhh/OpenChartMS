@@ -1,0 +1,65 @@
+{
+  "id": "syntactic-foam",
+  "name": "Syntactic foam (glass microsphere/epoxy)",
+  "family": "foams",
+  "short_name": "Syntactic foam",
+  "subfamily": "polymer-foams",
+  "applications": [
+    "Deep-sea buoyancy modules",
+    "Subsea pipeline insulation",
+    "Structural sandwich cores"
+  ],
+  "notes": "Hollow glass microspheres in polymer matrix. Near-constant properties with depth (no gas pockets).",
+  "properties": {
+    "density_kg_m3": {
+      "min": 300,
+      "max": 700,
+      "source": "ASTM C271 / published literature"
+    },
+    "price_USD_kg": {
+      "min": 8,
+      "max": 50,
+      "source": "ASTM C271 / published literature"
+    },
+    "youngs_modulus_GPa": {
+      "min": 0.5,
+      "max": 4.0,
+      "source": "ASTM C271 / published literature"
+    },
+    "yield_strength_MPa": {
+      "min": 20,
+      "max": 90,
+      "source": "ASTM C271 / published literature"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 0.3,
+      "max": 1.5,
+      "source": "ASTM C271 / published literature"
+    },
+    "specific_heat_J_kgK": {
+      "min": 900,
+      "max": 1200,
+      "source": "ASTM C271 / published literature"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.15,
+      "max": 0.5,
+      "source": "ASTM C271 / published literature"
+    },
+    "thermal_expansion_uK": {
+      "min": 20,
+      "max": 40,
+      "source": "ASTM C271 / published literature"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 60,
+      "max": 120,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 3.5,
+      "max": 7.5,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

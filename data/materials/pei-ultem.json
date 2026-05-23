@@ -1,0 +1,86 @@
+{
+  "id": "pei-ultem",
+  "name": "Polyetherimide (PEI / Ultem)",
+  "family": "polymers",
+  "short_name": "PEI (Ultem)",
+  "subfamily": "thermoplastics",
+  "applications": [
+    "Medical instrument handles (autoclavable)",
+    "Aircraft interior components",
+    "Microwave cookware",
+    "FDM 3D printing filament"
+  ],
+  "notes": "Amorphous; excellent flame retardancy (UL94 V-0) without additives. Tg \u2248 217\u00b0C.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 1270,
+      "max": 1290,
+      "source": "SABIC Ultem datasheet"
+    },
+    "price_USD_kg": {
+      "min": 25,
+      "max": 50,
+      "source": "SABIC Ultem datasheet"
+    },
+    "youngs_modulus_GPa": {
+      "min": 3.0,
+      "max": 3.3,
+      "source": "SABIC Ultem datasheet"
+    },
+    "yield_strength_MPa": {
+      "min": 95,
+      "max": 130,
+      "source": "SABIC Ultem datasheet"
+    },
+    "ultimate_strength_MPa": {
+      "min": 100,
+      "max": 140,
+      "source": "SABIC Ultem datasheet"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 1.8,
+      "max": 2.5,
+      "source": "SABIC Ultem datasheet"
+    },
+    "elongation": {
+      "min": 0.05,
+      "max": 0.1,
+      "source": "SABIC Ultem datasheet"
+    },
+    "glass_temperature_C": {
+      "min": 215,
+      "max": 220,
+      "source": "SABIC Ultem datasheet"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1100,
+      "max": 1200,
+      "source": "SABIC Ultem datasheet"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.22,
+      "max": 0.25,
+      "source": "SABIC Ultem datasheet"
+    },
+    "thermal_expansion_uK": {
+      "min": 56,
+      "max": 60,
+      "source": "SABIC Ultem datasheet"
+    },
+    "dielectric_constant": {
+      "min": 3.15,
+      "max": 3.2,
+      "source": "SABIC Ultem datasheet"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 130,
+      "max": 180,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 7.5,
+      "max": 11.0,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

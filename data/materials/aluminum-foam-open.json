@@ -1,0 +1,66 @@
+{
+  "id": "aluminum-foam-open",
+  "name": "Aluminium foam, open-cell (ERG Duocel type)",
+  "family": "foams",
+  "short_name": "Al foam (open)",
+  "subfamily": "metal-foams",
+  "applications": [
+    "Heat exchangers",
+    "Acoustic absorbers",
+    "Fluid filtration",
+    "Bone scaffold implant research"
+  ],
+  "notes": "Reticulated open network. Very high specific surface area \u2014 suited for heat/mass transfer.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 70,
+      "max": 400,
+      "source": "Ashby, 'Metal Foams' (2000)"
+    },
+    "price_USD_kg": {
+      "min": 50,
+      "max": 200,
+      "source": "Ashby, 'Metal Foams' (2000)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 0.02,
+      "max": 1.0,
+      "source": "Ashby, 'Metal Foams' (2000)"
+    },
+    "yield_strength_MPa": {
+      "min": 0.1,
+      "max": 2.0,
+      "source": "Ashby, 'Metal Foams' (2000)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 0.05,
+      "max": 0.5,
+      "source": "Ashby, 'Metal Foams' (2000)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 896,
+      "max": 920,
+      "source": "Ashby, 'Metal Foams' (2000)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.5,
+      "max": 6.0,
+      "source": "Ashby, 'Metal Foams' (2000)"
+    },
+    "thermal_expansion_uK": {
+      "min": 22,
+      "max": 24,
+      "source": "Ashby, 'Metal Foams' (2000)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 200,
+      "max": 400,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 12,
+      "max": 25,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "id": "maraging-300",
+  "name": "Maraging steel 300 (C300)",
+  "family": "metals",
+  "short_name": "Maraging 300",
+  "subfamily": "ferrous-metals",
+  "applications": [
+    "Rocket motor cases",
+    "Aircraft undercarriage",
+    "High-speed machinery shafts",
+    "Tooling"
+  ],
+  "notes": "Ultra-high strength with exceptional toughness/strength ratio. Ni-Co-Mo-Ti strengthened.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 7990,
+      "max": 8010,
+      "source": "ASM Handbook Vol 1"
+    },
+    "price_USD_kg": {
+      "min": 20,
+      "max": 45,
+      "source": "ASM Handbook Vol 1"
+    },
+    "youngs_modulus_GPa": {
+      "min": 190,
+      "max": 200,
+      "source": "ASM Handbook Vol 1"
+    },
+    "yield_strength_MPa": {
+      "min": 1900,
+      "max": 2050,
+      "source": "ASM Handbook Vol 1"
+    },
+    "ultimate_strength_MPa": {
+      "min": 1950,
+      "max": 2100,
+      "source": "ASM Handbook Vol 1"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 55,
+      "max": 80,
+      "source": "ASM Handbook Vol 1"
+    },
+    "elongation": {
+      "min": 0.08,
+      "max": 0.11,
+      "source": "ASM Handbook Vol 1"
+    },
+    "melting_point_C": {
+      "min": 1413,
+      "max": 1450,
+      "source": "ASM Handbook Vol 1"
+    },
+    "specific_heat_J_kgK": {
+      "min": 460,
+      "max": 480,
+      "source": "ASM Handbook Vol 1"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 20,
+      "max": 24,
+      "source": "ASM Handbook Vol 1"
+    },
+    "thermal_expansion_uK": {
+      "min": 10.0,
+      "max": 11.0,
+      "source": "ASM Handbook Vol 1"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 50,
+      "max": 60,
+      "source": "ASM Handbook Vol 1"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 50,
+      "max": 75,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 4.0,
+      "max": 5.5,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.4,
+      "max": 0.55,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 8,
+      "max": 12,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.6,
+      "max": 0.9,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

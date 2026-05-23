@@ -1,0 +1,101 @@
+{
+  "id": "steel-h13",
+  "name": "Tool steel H13 (hot work, hardened)",
+  "family": "metals",
+  "short_name": "H13 tool steel",
+  "subfamily": "ferrous-metals",
+  "applications": [
+    "Die casting dies",
+    "Extrusion tooling",
+    "Hot forging dies",
+    "Injection moulding inserts"
+  ],
+  "notes": "Cr-Mo-V hot-work tool steel. Excellent thermal fatigue resistance. Hardened ~48 HRC.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 7750,
+      "max": 7800,
+      "source": "ASM Handbook Vol 1"
+    },
+    "price_USD_kg": {
+      "min": 8.0,
+      "max": 15.0,
+      "source": "ASM Handbook Vol 1"
+    },
+    "youngs_modulus_GPa": {
+      "min": 207,
+      "max": 215,
+      "source": "ASM Handbook Vol 1"
+    },
+    "yield_strength_MPa": {
+      "min": 1000,
+      "max": 1580,
+      "source": "ASM Handbook Vol 1"
+    },
+    "ultimate_strength_MPa": {
+      "min": 1100,
+      "max": 1700,
+      "source": "ASM Handbook Vol 1"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 20,
+      "max": 45,
+      "source": "ASM Handbook Vol 1"
+    },
+    "elongation": {
+      "min": 0.08,
+      "max": 0.13,
+      "source": "ASM Handbook Vol 1"
+    },
+    "melting_point_C": {
+      "min": 1427,
+      "max": 1480,
+      "source": "ASM Handbook Vol 1"
+    },
+    "specific_heat_J_kgK": {
+      "min": 460,
+      "max": 480,
+      "source": "ASM Handbook Vol 1"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 24,
+      "max": 28,
+      "source": "ASM Handbook Vol 1"
+    },
+    "thermal_expansion_uK": {
+      "min": 11.2,
+      "max": 11.8,
+      "source": "ASM Handbook Vol 1"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 55,
+      "max": 65,
+      "source": "ASM Handbook Vol 1"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 35,
+      "max": 45,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 2.6,
+      "max": 3.2,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.4,
+      "max": 0.55,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 8,
+      "max": 12,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.6,
+      "max": 0.9,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

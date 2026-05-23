@@ -1,0 +1,101 @@
+{
+  "id": "aluminum-a356-t6",
+  "name": "Aluminum A356-T6 (Al-Si casting alloy)",
+  "family": "metals",
+  "short_name": "Al A356-T6",
+  "subfamily": "aluminum-alloys",
+  "applications": [
+    "Automotive wheel rims",
+    "Engine blocks",
+    "Aircraft pump housings",
+    "Marine castings"
+  ],
+  "notes": "Al-7Si-0.35Mg. Most common structural Al casting alloy. T6 heat treated.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 2685,
+      "max": 2700,
+      "source": "ASM Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 2.5,
+      "max": 3.5,
+      "source": "ASM Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 68,
+      "max": 72,
+      "source": "ASM Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 193,
+      "max": 240,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 262,
+      "max": 295,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 22,
+      "max": 30,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.06,
+      "max": 0.12,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 557,
+      "max": 613,
+      "source": "ASM Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 900,
+      "max": 920,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 150,
+      "max": 167,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 21.4,
+      "max": 22.5,
+      "source": "ASM Handbook Vol 2"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 4.4,
+      "max": 5.0,
+      "source": "ASM Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 155,
+      "max": 200,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 8.1,
+      "max": 11.5,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.35,
+      "max": 0.45,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 11,
+      "max": 17,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.6,
+      "max": 1.0,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

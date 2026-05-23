@@ -1,0 +1,71 @@
+{
+  "id": "plywood-structural",
+  "name": "Plywood, structural (Douglas fir, 5-ply)",
+  "family": "natural",
+  "short_name": "Plywood",
+  "subfamily": "natural-plant",
+  "applications": [
+    "Structural sheathing",
+    "Formwork",
+    "Boat hulls",
+    "Furniture"
+  ],
+  "notes": "Cross-ply construction \u2014 nearly isotropic in-plane properties. Stiffer and more uniform than solid wood.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 500,
+      "max": 700,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "price_USD_kg": {
+      "min": 0.8,
+      "max": 2.0,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 8,
+      "max": 14,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "yield_strength_MPa": {
+      "min": 20,
+      "max": 40,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 1.0,
+      "max": 3.0,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1300,
+      "max": 1700,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.12,
+      "max": 0.2,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "thermal_expansion_uK": {
+      "min": 3,
+      "max": 8,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 8,
+      "max": 18,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": -0.5,
+      "max": 1.0,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.2,
+      "max": 0.5,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

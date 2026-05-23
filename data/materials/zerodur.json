@@ -1,0 +1,76 @@
+{
+  "id": "zerodur",
+  "name": "Zerodur (lithium aluminosilicate glass-ceramic)",
+  "family": "glasses",
+  "short_name": "Zerodur",
+  "subfamily": "glass-ceramics",
+  "applications": [
+    "Telescope mirror substrates",
+    "Laser ring gyroscopes",
+    "Lithography stages",
+    "Precision metrology"
+  ],
+  "notes": "Near-zero thermal expansion (CTE \u2248 0 \u00b1 0.02 \u00b5m/K over 0\u201350\u00b0C). Made by Schott AG.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 2530,
+      "max": 2540,
+      "source": "Schott ZERODUR datasheet"
+    },
+    "price_USD_kg": {
+      "min": 500,
+      "max": 5000,
+      "source": "Schott ZERODUR datasheet"
+    },
+    "youngs_modulus_GPa": {
+      "min": 90,
+      "max": 92,
+      "source": "Schott ZERODUR datasheet"
+    },
+    "yield_strength_MPa": {
+      "min": 40,
+      "max": 60,
+      "source": "Schott ZERODUR datasheet"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 0.8,
+      "max": 1.0,
+      "source": "Schott ZERODUR datasheet"
+    },
+    "glass_temperature_C": {
+      "min": 620,
+      "max": 640,
+      "source": "Schott ZERODUR datasheet"
+    },
+    "specific_heat_J_kgK": {
+      "min": 800,
+      "max": 830,
+      "source": "Schott ZERODUR datasheet"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 1.46,
+      "max": 1.64,
+      "source": "Schott ZERODUR datasheet"
+    },
+    "thermal_expansion_uK": {
+      "min": -0.02,
+      "max": 0.02,
+      "source": "Schott ZERODUR datasheet"
+    },
+    "dielectric_constant": {
+      "min": 7.2,
+      "max": 7.5,
+      "source": "Schott ZERODUR datasheet"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 30,
+      "max": 60,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 1.5,
+      "max": 3.5,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

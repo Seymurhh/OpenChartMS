@@ -1,0 +1,86 @@
+{
+  "id": "pps",
+  "name": "Polyphenylene sulphide (PPS)",
+  "family": "polymers",
+  "short_name": "PPS",
+  "subfamily": "thermoplastics",
+  "applications": [
+    "Electrical/electronic connectors",
+    "Automotive under-bonnet parts",
+    "Pump and valve components",
+    "Chemical-resistant piping"
+  ],
+  "notes": "Semi-crystalline. Very low moisture absorption; inherently flame-retardant (LOI ~44%). Often glass-filled.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 1340,
+      "max": 1360,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 8,
+      "max": 15,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 3.4,
+      "max": 4.0,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 75,
+      "max": 95,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 80,
+      "max": 100,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 2.0,
+      "max": 2.8,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.01,
+      "max": 0.03,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 280,
+      "max": 295,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "glass_temperature_C": {
+      "min": 85,
+      "max": 95,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1000,
+      "max": 1100,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.28,
+      "max": 0.3,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 50,
+      "max": 60,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 90,
+      "max": 130,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 5.0,
+      "max": 8.0,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

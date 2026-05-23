@@ -1,0 +1,101 @@
+{
+  "id": "steel-52100",
+  "name": "Bearing steel 52100 (hardened)",
+  "family": "metals",
+  "short_name": "52100 bearing",
+  "subfamily": "ferrous-metals",
+  "applications": [
+    "Ball and roller bearings",
+    "Races",
+    "Cam followers",
+    "Precision shafts"
+  ],
+  "notes": "1% C, 1.5% Cr steel. The dominant bearing steel worldwide. Hardened 58\u201365 HRC.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 7800,
+      "max": 7830,
+      "source": "ASM Handbook Vol 1"
+    },
+    "price_USD_kg": {
+      "min": 1.5,
+      "max": 2.5,
+      "source": "ASM Handbook Vol 1"
+    },
+    "youngs_modulus_GPa": {
+      "min": 200,
+      "max": 210,
+      "source": "ASM Handbook Vol 1"
+    },
+    "yield_strength_MPa": {
+      "min": 1500,
+      "max": 1900,
+      "source": "ASM Handbook Vol 1"
+    },
+    "ultimate_strength_MPa": {
+      "min": 1700,
+      "max": 2100,
+      "source": "ASM Handbook Vol 1"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 15,
+      "max": 25,
+      "source": "ASM Handbook Vol 1"
+    },
+    "elongation": {
+      "min": 0.003,
+      "max": 0.01,
+      "source": "ASM Handbook Vol 1"
+    },
+    "melting_point_C": {
+      "min": 1427,
+      "max": 1480,
+      "source": "ASM Handbook Vol 1"
+    },
+    "specific_heat_J_kgK": {
+      "min": 460,
+      "max": 480,
+      "source": "ASM Handbook Vol 1"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 46,
+      "max": 50,
+      "source": "ASM Handbook Vol 1"
+    },
+    "thermal_expansion_uK": {
+      "min": 12.3,
+      "max": 12.8,
+      "source": "ASM Handbook Vol 1"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 29,
+      "max": 33,
+      "source": "ASM Handbook Vol 1"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 32,
+      "max": 38,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 2.4,
+      "max": 2.9,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.4,
+      "max": 0.55,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 8,
+      "max": 12,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.6,
+      "max": 0.9,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

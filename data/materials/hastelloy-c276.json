@@ -1,0 +1,101 @@
+{
+  "id": "hastelloy-c276",
+  "name": "Hastelloy C-276 (Ni-Mo-Cr alloy)",
+  "family": "metals",
+  "short_name": "Hastelloy C-276",
+  "subfamily": "nickel-alloys",
+  "applications": [
+    "Chemical process vessels",
+    "Flue gas desulfurisation",
+    "Marine applications",
+    "Nuclear waste handling"
+  ],
+  "notes": "Outstanding resistance to pitting, crevice, and stress corrosion. Ni-Mo alloy, no sensitisation.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 8870,
+      "max": 8920,
+      "source": "ASM Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 35,
+      "max": 80,
+      "source": "ASM Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 200,
+      "max": 210,
+      "source": "ASM Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 283,
+      "max": 415,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 690,
+      "max": 850,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 80,
+      "max": 120,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.4,
+      "max": 0.6,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 1323,
+      "max": 1371,
+      "source": "ASM Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 415,
+      "max": 430,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 10.2,
+      "max": 11.6,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 11.1,
+      "max": 11.5,
+      "source": "ASM Handbook Vol 2"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 129,
+      "max": 133,
+      "source": "ASM Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 180,
+      "max": 260,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 13,
+      "max": 20,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.3,
+      "max": 0.45,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 15,
+      "max": 30,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 1.0,
+      "max": 2.0,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

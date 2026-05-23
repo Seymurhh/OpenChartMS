@@ -1,0 +1,71 @@
+{
+  "id": "leather",
+  "name": "Leather (bovine, vegetable tanned)",
+  "family": "natural",
+  "short_name": "Leather",
+  "subfamily": "natural-bio",
+  "applications": [
+    "Footwear",
+    "Belts and straps",
+    "Upholstery",
+    "Gaskets",
+    "Bookbinding"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 800,
+      "max": 1000,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "price_USD_kg": {
+      "min": 10,
+      "max": 30,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 0.05,
+      "max": 0.2,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "yield_strength_MPa": {
+      "min": 5,
+      "max": 25,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "ultimate_strength_MPa": {
+      "min": 15,
+      "max": 35,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "elongation": {
+      "min": 0.3,
+      "max": 0.8,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1400,
+      "max": 1800,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.14,
+      "max": 0.18,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "thermal_expansion_uK": {
+      "min": 40,
+      "max": 120,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 35,
+      "max": 100,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 3.0,
+      "max": 10.0,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

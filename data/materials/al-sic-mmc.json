@@ -1,0 +1,81 @@
+{
+  "id": "al-sic-mmc",
+  "name": "Aluminium/SiC MMC (20 vol% SiC particulate)",
+  "family": "composites",
+  "short_name": "Al/SiC MMC",
+  "subfamily": "metal-matrix-composites",
+  "applications": [
+    "Electronic heat sinks",
+    "Automotive brake rotors",
+    "Bicycle components",
+    "Aerospace structures"
+  ],
+  "notes": "Particulate-reinforced Al alloy (6061 matrix). Higher stiffness and lower CTE than Al alone.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 2770,
+      "max": 2870,
+      "source": "CES EduPack / ASM Handbook Vol 21"
+    },
+    "price_USD_kg": {
+      "min": 15,
+      "max": 40,
+      "source": "CES EduPack / ASM Handbook Vol 21"
+    },
+    "youngs_modulus_GPa": {
+      "min": 90,
+      "max": 105,
+      "source": "CES EduPack / ASM Handbook Vol 21"
+    },
+    "yield_strength_MPa": {
+      "min": 250,
+      "max": 380,
+      "source": "CES EduPack / ASM Handbook Vol 21"
+    },
+    "ultimate_strength_MPa": {
+      "min": 310,
+      "max": 450,
+      "source": "CES EduPack / ASM Handbook Vol 21"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 14,
+      "max": 22,
+      "source": "CES EduPack / ASM Handbook Vol 21"
+    },
+    "elongation": {
+      "min": 0.01,
+      "max": 0.06,
+      "source": "CES EduPack / ASM Handbook Vol 21"
+    },
+    "specific_heat_J_kgK": {
+      "min": 860,
+      "max": 920,
+      "source": "CES EduPack / ASM Handbook Vol 21"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 120,
+      "max": 160,
+      "source": "CES EduPack / ASM Handbook Vol 21"
+    },
+    "thermal_expansion_uK": {
+      "min": 16,
+      "max": 20,
+      "source": "CES EduPack / ASM Handbook Vol 21"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 200,
+      "max": 350,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 12,
+      "max": 22,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "recycle_fraction": {
+      "min": 0.2,
+      "max": 0.4,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

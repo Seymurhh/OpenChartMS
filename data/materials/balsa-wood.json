@@ -1,0 +1,75 @@
+{
+  "id": "balsa-wood",
+  "name": "Balsa wood (Ochroma pyramidale, along grain)",
+  "family": "natural",
+  "short_name": "Balsa",
+  "subfamily": "natural-plant",
+  "applications": [
+    "Model aircraft",
+    "Sandwich core panels (wind turbine blades, boats)",
+    "Shock absorber cores"
+  ],
+  "notes": "Lightest structural wood. Extremely distinctive on Ashby charts \u2014 ultra-low density end of natural materials.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 90,
+      "max": 220,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "price_USD_kg": {
+      "min": 5,
+      "max": 20,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 2.5,
+      "max": 8.0,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "yield_strength_MPa": {
+      "min": 15,
+      "max": 50,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 0.3,
+      "max": 1.5,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "elongation": {
+      "min": 0.01,
+      "max": 0.03,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1300,
+      "max": 1600,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.04,
+      "max": 0.08,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "thermal_expansion_uK": {
+      "min": 3,
+      "max": 7,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 0.5,
+      "max": 3.0,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": -2.0,
+      "max": 0.2,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.5,
+      "max": 0.9,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

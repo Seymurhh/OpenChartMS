@@ -1,0 +1,81 @@
+{
+  "id": "porcelain",
+  "name": "Porcelain (fired, technical grade)",
+  "family": "ceramics-nontechnical",
+  "short_name": "Porcelain",
+  "subfamily": "silicate-ceramics",
+  "applications": [
+    "Electrical insulators",
+    "Sanitaryware",
+    "Tableware",
+    "Chemical laboratory ware"
+  ],
+  "notes": "Kaolin + feldspar + quartz, fired ~1250\u00b0C. Dense (< 0.5% porosity). Good electrical insulation.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 2300,
+      "max": 2500,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "price_USD_kg": {
+      "min": 1.0,
+      "max": 5.0,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 55,
+      "max": 75,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "yield_strength_MPa": {
+      "min": 50,
+      "max": 100,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 0.8,
+      "max": 1.5,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "melting_point_C": {
+      "min": 1250,
+      "max": 1400,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 800,
+      "max": 900,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 1.5,
+      "max": 3.0,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "thermal_expansion_uK": {
+      "min": 4.0,
+      "max": 7.0,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "dielectric_constant": {
+      "min": 5.0,
+      "max": 8.0,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 8.0,
+      "max": 15.0,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 0.5,
+      "max": 1.1,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.0,
+      "max": 0.05,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

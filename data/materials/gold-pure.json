@@ -1,0 +1,92 @@
+{
+  "id": "gold-pure",
+  "name": "Gold (pure, 24 carat)",
+  "family": "metals",
+  "short_name": "Gold",
+  "subfamily": "precious-metals",
+  "applications": [
+    "Electronics bonding wire",
+    "Connectors",
+    "Dental alloys",
+    "Jewellery",
+    "Radiation shielding"
+  ],
+  "notes": "Excellent corrosion resistance; extreme electrical/thermal conductivity. Very high density and cost.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 19270,
+      "max": 19310,
+      "source": "ASM Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 55000,
+      "max": 75000,
+      "source": "London Bullion Market (spot, ~2024)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 78,
+      "max": 80,
+      "source": "ASM Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 30,
+      "max": 100,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 120,
+      "max": 220,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 40,
+      "max": 60,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.25,
+      "max": 0.45,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 1064,
+      "max": 1064,
+      "source": "ASM Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 128,
+      "max": 130,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 314,
+      "max": 320,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 14.1,
+      "max": 14.3,
+      "source": "ASM Handbook Vol 2"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 2.27,
+      "max": 2.44,
+      "source": "ASM Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 80000,
+      "max": 120000,
+      "source": "Bath ICE v3.0 (estimate, mining+refining)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 5000,
+      "max": 15000,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "recycle_fraction": {
+      "min": 0.7,
+      "max": 0.9,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

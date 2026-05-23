@@ -1,0 +1,71 @@
+{
+  "id": "titanium-carbide",
+  "name": "Titanium carbide (TiC, sintered)",
+  "family": "ceramics-technical",
+  "short_name": "TiC",
+  "subfamily": "carbide-ceramics",
+  "applications": [
+    "Cemented carbide binders",
+    "Cutting tool inserts",
+    "Wear-resistant coatings",
+    "Cermets"
+  ],
+  "notes": "Hard, high-melting refractory carbide. Used in cermet cutting tools (TiC+Ni/Mo binder).",
+  "properties": {
+    "density_kg_m3": {
+      "min": 4920,
+      "max": 4940,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "price_USD_kg": {
+      "min": 30,
+      "max": 100,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "youngs_modulus_GPa": {
+      "min": 400,
+      "max": 440,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "yield_strength_MPa": {
+      "min": 400,
+      "max": 600,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 3.5,
+      "max": 5.5,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "melting_point_C": {
+      "min": 3067,
+      "max": 3067,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "specific_heat_J_kgK": {
+      "min": 540,
+      "max": 560,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 17,
+      "max": 22,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "thermal_expansion_uK": {
+      "min": 7.4,
+      "max": 7.7,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 200,
+      "max": 450,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 14,
+      "max": 30,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

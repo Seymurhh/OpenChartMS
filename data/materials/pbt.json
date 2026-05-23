@@ -1,0 +1,91 @@
+{
+  "id": "pbt",
+  "name": "Polybutylene terephthalate (PBT)",
+  "family": "polymers",
+  "short_name": "PBT",
+  "subfamily": "thermoplastics",
+  "applications": [
+    "Electrical connectors",
+    "Automotive headlight housings",
+    "Pump components",
+    "Keyboard keycaps"
+  ],
+  "notes": "Fast-crystallising semi-crystalline polyester. Lower moisture absorption than PET.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 1300,
+      "max": 1310,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 3.0,
+      "max": 5.5,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 2.0,
+      "max": 3.0,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 50,
+      "max": 65,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 55,
+      "max": 70,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 2.5,
+      "max": 3.5,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.15,
+      "max": 0.4,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 222,
+      "max": 228,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "glass_temperature_C": {
+      "min": 20,
+      "max": 40,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1200,
+      "max": 1350,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.21,
+      "max": 0.23,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 60,
+      "max": 80,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 75,
+      "max": 100,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 3.8,
+      "max": 5.5,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.1,
+      "max": 0.25,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

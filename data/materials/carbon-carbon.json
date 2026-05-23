@@ -1,0 +1,71 @@
+{
+  "id": "carbon-carbon",
+  "name": "Carbon-carbon composite (C/C)",
+  "family": "composites",
+  "short_name": "C/C composite",
+  "subfamily": "carbon-fiber-composites",
+  "applications": [
+    "Rocket nozzles",
+    "Brake discs (aircraft, F1)",
+    "Furnace hot-zone structures",
+    "Re-entry vehicle nose tips"
+  ],
+  "notes": "Retains strength to >2000\u00b0C in inert atmosphere. Oxidises above 400\u00b0C \u2014 needs coating for air use.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 1500,
+      "max": 1900,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "price_USD_kg": {
+      "min": 200,
+      "max": 2000,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "youngs_modulus_GPa": {
+      "min": 30,
+      "max": 100,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "yield_strength_MPa": {
+      "min": 100,
+      "max": 300,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 6,
+      "max": 15,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "melting_point_C": {
+      "min": 3500,
+      "max": 3600,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "specific_heat_J_kgK": {
+      "min": 700,
+      "max": 1000,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 50,
+      "max": 300,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "thermal_expansion_uK": {
+      "min": 0.5,
+      "max": 2.0,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 400,
+      "max": 1000,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 25,
+      "max": 65,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

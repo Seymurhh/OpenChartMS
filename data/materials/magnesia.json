@@ -1,0 +1,71 @@
+{
+  "id": "magnesia",
+  "name": "Magnesia (MgO, sintered)",
+  "family": "ceramics-technical",
+  "short_name": "MgO",
+  "subfamily": "oxide-ceramics",
+  "applications": [
+    "Refractory furnace linings",
+    "Single-crystal substrates",
+    "Crucibles for Mg and steel",
+    "Nuclear fuel cladding cores"
+  ],
+  "notes": "High melting point, good thermal conductivity, excellent chemical stability in basic slags.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 3560,
+      "max": 3580,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "price_USD_kg": {
+      "min": 1.0,
+      "max": 8.0,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "youngs_modulus_GPa": {
+      "min": 280,
+      "max": 310,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "yield_strength_MPa": {
+      "min": 80,
+      "max": 160,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 1.0,
+      "max": 2.0,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "melting_point_C": {
+      "min": 2827,
+      "max": 2852,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "specific_heat_J_kgK": {
+      "min": 875,
+      "max": 900,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 37,
+      "max": 40,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "thermal_expansion_uK": {
+      "min": 13.0,
+      "max": 13.5,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 10,
+      "max": 20,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 0.9,
+      "max": 1.5,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

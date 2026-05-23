@@ -1,0 +1,92 @@
+{
+  "id": "silver-pure",
+  "name": "Silver (pure)",
+  "family": "metals",
+  "short_name": "Silver",
+  "subfamily": "precious-metals",
+  "applications": [
+    "Electrical contacts",
+    "Solar cell busbars",
+    "Photography",
+    "Brazing alloys",
+    "Antibacterial coatings"
+  ],
+  "notes": "Highest electrical and thermal conductivity of all metals. Tarnishes in H\u2082S environments.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 10490,
+      "max": 10510,
+      "source": "ASM Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 700,
+      "max": 1200,
+      "source": "London Bullion Market (spot, ~2024)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 76,
+      "max": 83,
+      "source": "ASM Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 55,
+      "max": 200,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 140,
+      "max": 350,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 30,
+      "max": 55,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.1,
+      "max": 0.5,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 961,
+      "max": 961,
+      "source": "ASM Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 232,
+      "max": 238,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 420,
+      "max": 430,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 18.9,
+      "max": 19.1,
+      "source": "ASM Handbook Vol 2"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 1.59,
+      "max": 1.63,
+      "source": "ASM Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 1500,
+      "max": 3000,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 100,
+      "max": 200,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.65,
+      "max": 0.85,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

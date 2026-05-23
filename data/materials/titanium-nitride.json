@@ -1,0 +1,75 @@
+{
+  "id": "titanium-nitride",
+  "name": "Titanium nitride (TiN, PVD coating / bulk)",
+  "family": "ceramics-technical",
+  "short_name": "TiN",
+  "subfamily": "nitride-ceramics",
+  "applications": [
+    "Cutting tool PVD coatings",
+    "Decorative gold-coloured coatings",
+    "Diffusion barriers in microelectronics"
+  ],
+  "notes": "Electrically conductive ceramic (metal-like). Hard, refractory, chemically stable.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 5220,
+      "max": 5440,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "price_USD_kg": {
+      "min": 50,
+      "max": 200,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "youngs_modulus_GPa": {
+      "min": 450,
+      "max": 600,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "yield_strength_MPa": {
+      "min": 800,
+      "max": 1200,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 4,
+      "max": 7,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "melting_point_C": {
+      "min": 2930,
+      "max": 2950,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "specific_heat_J_kgK": {
+      "min": 545,
+      "max": 560,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 19,
+      "max": 29,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "thermal_expansion_uK": {
+      "min": 9.2,
+      "max": 9.6,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 25,
+      "max": 33,
+      "source": "ASM Engineered Materials Handbook Vol 4"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 300,
+      "max": 600,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 20,
+      "max": 40,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

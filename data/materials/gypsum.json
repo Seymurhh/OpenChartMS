@@ -1,0 +1,65 @@
+{
+  "id": "gypsum",
+  "name": "Gypsum (plaster of Paris, set)",
+  "family": "ceramics-nontechnical",
+  "short_name": "Gypsum",
+  "subfamily": "mineral-ceramics",
+  "applications": [
+    "Building plasterboard",
+    "Surgical casts",
+    "Art moulds",
+    "Fire-resistant linings"
+  ],
+  "properties": {
+    "density_kg_m3": {
+      "min": 1700,
+      "max": 2300,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "price_USD_kg": {
+      "min": 0.2,
+      "max": 0.5,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 8,
+      "max": 20,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "yield_strength_MPa": {
+      "min": 4,
+      "max": 20,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 0.2,
+      "max": 0.5,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "specific_heat_J_kgK": {
+      "min": 900,
+      "max": 1100,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.3,
+      "max": 0.7,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "thermal_expansion_uK": {
+      "min": 12,
+      "max": 20,
+      "source": "Cambridge Materials Data Book (2011)"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 1.7,
+      "max": 3.0,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 0.1,
+      "max": 0.2,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

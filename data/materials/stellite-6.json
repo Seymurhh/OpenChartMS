@@ -1,0 +1,86 @@
+{
+  "id": "stellite-6",
+  "name": "Stellite 6 (Co-Cr-W hardfacing alloy)",
+  "family": "metals",
+  "short_name": "Stellite 6",
+  "subfamily": "cobalt-alloys",
+  "applications": [
+    "Valve seats and gates",
+    "Saw teeth",
+    "Hardfacing overlays",
+    "Hot scissors"
+  ],
+  "notes": "Co-Cr-W alloy; exceptional wear, oxidation and corrosion resistance. Cast or weld-deposited.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 8300,
+      "max": 8440,
+      "source": "ASM Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 30,
+      "max": 70,
+      "source": "ASM Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 240,
+      "max": 255,
+      "source": "ASM Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 500,
+      "max": 700,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 900,
+      "max": 1100,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 14,
+      "max": 20,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.01,
+      "max": 0.03,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 1285,
+      "max": 1395,
+      "source": "ASM Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 420,
+      "max": 440,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 14,
+      "max": 16,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 12.3,
+      "max": 13.0,
+      "source": "ASM Handbook Vol 2"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 80,
+      "max": 95,
+      "source": "ASM Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 200,
+      "max": 320,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 14,
+      "max": 22,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

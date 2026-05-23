@@ -1,0 +1,86 @@
+{
+  "id": "lcp",
+  "name": "Liquid crystal polymer (LCP, Vectra type)",
+  "family": "polymers",
+  "short_name": "LCP",
+  "subfamily": "thermoplastics",
+  "applications": [
+    "Miniaturised electrical connectors",
+    "Antenna substrates (5G)",
+    "Surgical devices",
+    "Optical fibre ferrules"
+  ],
+  "notes": "Self-reinforcing; very low warpage and moisture absorption. Near-metallic CTE in flow direction.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 1390,
+      "max": 1410,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 15,
+      "max": 30,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 10,
+      "max": 15,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 180,
+      "max": 250,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 185,
+      "max": 260,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 1.5,
+      "max": 2.5,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.01,
+      "max": 0.02,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 270,
+      "max": 350,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1100,
+      "max": 1300,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.22,
+      "max": 0.28,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 2,
+      "max": 7,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "dielectric_constant": {
+      "min": 2.9,
+      "max": 3.5,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 100,
+      "max": 170,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 6,
+      "max": 11,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

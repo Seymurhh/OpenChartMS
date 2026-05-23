@@ -1,0 +1,101 @@
+{
+  "id": "ldpe",
+  "name": "Polyethylene, low density (LDPE)",
+  "family": "polymers",
+  "short_name": "LDPE",
+  "subfamily": "thermoplastics",
+  "applications": [
+    "Plastic bags",
+    "Stretch wrap",
+    "Squeeze bottles",
+    "Flexible packaging film"
+  ],
+  "notes": "Highly branched; flexible and tough at room temperature. Widely recycled (code 4).",
+  "properties": {
+    "density_kg_m3": {
+      "min": 910,
+      "max": 940,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 1.2,
+      "max": 1.8,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 0.1,
+      "max": 0.4,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 8,
+      "max": 22,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 10,
+      "max": 25,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 2.0,
+      "max": 4.5,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 3.0,
+      "max": 8.0,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 103,
+      "max": 120,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "glass_temperature_C": {
+      "min": -125,
+      "max": -100,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 2000,
+      "max": 2300,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 0.32,
+      "max": 0.38,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 200,
+      "max": 250,
+      "source": "ASM Engineered Materials Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 78,
+      "max": 92,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 2.1,
+      "max": 2.8,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.15,
+      "max": 0.3,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_energy_MJ_kg": {
+      "min": 10,
+      "max": 18,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_co2_kg_kg": {
+      "min": 0.7,
+      "max": 1.2,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

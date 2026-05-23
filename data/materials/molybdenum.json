@@ -1,0 +1,91 @@
+{
+  "id": "molybdenum",
+  "name": "Molybdenum (pure wrought)",
+  "family": "metals",
+  "short_name": "Molybdenum",
+  "subfamily": "refractory-metals",
+  "applications": [
+    "Furnace heating elements",
+    "TFT-LCD electrodes",
+    "Crucibles",
+    "X-ray tube anodes"
+  ],
+  "notes": "2nd highest melting point of metals after W. Very high stiffness-to-density ratio.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 10220,
+      "max": 10280,
+      "source": "ASM Handbook Vol 2"
+    },
+    "price_USD_kg": {
+      "min": 40,
+      "max": 80,
+      "source": "ASM Handbook Vol 2"
+    },
+    "youngs_modulus_GPa": {
+      "min": 320,
+      "max": 340,
+      "source": "ASM Handbook Vol 2"
+    },
+    "yield_strength_MPa": {
+      "min": 400,
+      "max": 700,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 700,
+      "max": 1000,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 20,
+      "max": 50,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.2,
+      "max": 0.4,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 2623,
+      "max": 2623,
+      "source": "ASM Handbook Vol 2"
+    },
+    "specific_heat_J_kgK": {
+      "min": 248,
+      "max": 252,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 138,
+      "max": 142,
+      "source": "ASM Handbook Vol 2"
+    },
+    "thermal_expansion_uK": {
+      "min": 4.7,
+      "max": 4.9,
+      "source": "ASM Handbook Vol 2"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 5.2,
+      "max": 5.6,
+      "source": "ASM Handbook Vol 2"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 250,
+      "max": 400,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 18,
+      "max": 28,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.3,
+      "max": 0.5,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}
