@@ -115,6 +115,19 @@ export function TradeOffChart({
     [paretoLine],
   );
 
+  // Explicit axis ranges to keep auto-zoom pinned to data bounds.
+  const xRange = useMemo<[number, number] | undefined>(() => {
+    if (points.length === 0) return undefined;
+    const xs = points.map((p) => p.x);
+    return [Math.log10(Math.min(...xs) * 0.5), Math.log10(Math.max(...xs) * 2)];
+  }, [points]);
+
+  const yRange = useMemo<[number, number] | undefined>(() => {
+    if (points.length === 0) return undefined;
+    const ys = points.map((p) => p.y);
+    return [Math.log10(Math.min(...ys) * 0.5), Math.log10(Math.max(...ys) * 2)];
+  }, [points]);
+
   // Iso-Z contours. Z = x + alpha*y. Sampled across the data x-range so they
   // render as smooth curves on log-log axes.
   const isoZShapes: Partial<Shape>[] = useMemo(() => {
@@ -159,17 +172,18 @@ export function TradeOffChart({
     return out;
   }, [showContours, points, optimum, alpha]);
 
-  // Optimum annotation. axref/ayref must be 'pixel' explicitly: Plotly's default
-  // for axref equals xref, so on log axes ax=80 would be interpreted as data and
-  // push the annotation off-chart.
+  // Optimum annotation. xref/yref='paper' avoids Plotly's log-axis coordinate
+  // bug where data values are interpreted as log₁₀ values.
   const annotations: Partial<Annotations>[] = useMemo(() => {
-    if (!optimum.point) return [];
+    if (!optimum.point || !xRange || !yRange) return [];
+    const xPaper = (Math.log10(optimum.point.x) - xRange[0]) / (xRange[1] - xRange[0]);
+    const yPaper = (Math.log10(optimum.point.y) - yRange[0]) / (yRange[1] - yRange[0]);
     return [
       {
-        x: optimum.point.x,
-        y: optimum.point.y,
-        xref: 'x',
-        yref: 'y',
+        x: xPaper,
+        y: yPaper,
+        xref: 'paper',
+        yref: 'paper',
         ax: 80,
         ay: -60,
         axref: 'pixel',
@@ -186,7 +200,7 @@ export function TradeOffChart({
         align: 'left',
       },
     ];
-  }, [optimum]);
+  }, [optimum, xRange, yRange]);
 
   // Baseline material: find its (x0, y0) and add quadrant lines through it.
   const baseline = useMemo(
@@ -230,25 +244,24 @@ export function TradeOffChart({
   }, [baseline, points]);
 
   // Quadrant labels (A/B/C/D per Ashby Fig 9.9): A is lower-left of baseline = better on both.
+  // All positions in paper-space to avoid Plotly's log-axis annotation coordinate bug.
   const baselineAnnotations: Partial<Annotations>[] = useMemo(() => {
-    if (!baseline || points.length === 0) return [];
-    const xs = points.map((p) => p.x);
-    const ys = points.map((p) => p.y);
-    const xLo = Math.min(...xs) * 0.6;
-    const xHi = Math.max(...xs) * 1.5;
-    const yLo = Math.min(...ys) * 0.6;
-    const yHi = Math.max(...ys) * 1.5;
+    if (!baseline || !xRange || !yRange) return [];
+
+    const bxPaper = (Math.log10(baseline.x) - xRange[0]) / (xRange[1] - xRange[0]);
+    const byPaper = (Math.log10(baseline.y) - yRange[0]) / (yRange[1] - yRange[0]);
+
     const label = (
-      x: number,
-      y: number,
+      xPaper: number,
+      yPaper: number,
       letter: string,
       title: string,
       colour: string,
     ): Partial<Annotations> => ({
-      x,
-      y,
-      xref: 'x',
-      yref: 'y',
+      x: xPaper,
+      y: yPaper,
+      xref: 'paper',
+      yref: 'paper',
       text: `<b>${letter}</b>: ${title}`,
       showarrow: false,
       bgcolor: 'rgba(255,255,255,0.85)',
@@ -257,17 +270,17 @@ export function TradeOffChart({
       borderpad: 3,
       font: { size: 10, color: colour },
     });
+
     return [
-      label(Math.sqrt(xLo * baseline.x), Math.sqrt(yLo * baseline.y), 'A', 'better on both', '#2a7a4a'),
-      label(Math.sqrt(xHi * baseline.x), Math.sqrt(yLo * baseline.y), 'B', 'cheaper but heavier', '#888'),
-      label(Math.sqrt(xLo * baseline.x), Math.sqrt(yHi * baseline.y), 'C', 'lighter but pricier', '#888'),
-      label(Math.sqrt(xHi * baseline.x), Math.sqrt(yHi * baseline.y), 'D', 'worse on both', '#c00'),
-      // Mark the baseline material itself
+      label(bxPaper / 2, byPaper / 2, 'A', 'better on both', '#2a7a4a'),
+      label((1 + bxPaper) / 2, byPaper / 2, 'B', 'cheaper but heavier', '#888'),
+      label(bxPaper / 2, (1 + byPaper) / 2, 'C', 'lighter but pricier', '#888'),
+      label((1 + bxPaper) / 2, (1 + byPaper) / 2, 'D', 'worse on both', '#c00'),
       {
-        x: baseline.x,
-        y: baseline.y,
-        xref: 'x',
-        yref: 'y',
+        x: bxPaper,
+        y: byPaper,
+        xref: 'paper',
+        yref: 'paper',
         ax: 80,
         ay: -60,
         axref: 'pixel',
@@ -283,20 +296,7 @@ export function TradeOffChart({
         font: { size: 11, color: '#1a1a1a' },
       },
     ];
-  }, [baseline, points]);
-
-  // Explicit axis ranges to keep auto-zoom pinned to data bounds.
-  const xRange = useMemo<[number, number] | undefined>(() => {
-    if (points.length === 0) return undefined;
-    const xs = points.map((p) => p.x);
-    return [Math.log10(Math.min(...xs) * 0.5), Math.log10(Math.max(...xs) * 2)];
-  }, [points]);
-
-  const yRange = useMemo<[number, number] | undefined>(() => {
-    if (points.length === 0) return undefined;
-    const ys = points.map((p) => p.y);
-    return [Math.log10(Math.min(...ys) * 0.5), Math.log10(Math.max(...ys) * 2)];
-  }, [points]);
+  }, [baseline, xRange, yRange]);
 
   const layout: Partial<Layout> = {
     title: {
