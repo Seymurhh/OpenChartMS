@@ -1,0 +1,71 @@
+{
+  "id": "66-diamond",
+  "name": "Diamond (C, cubic)",
+  "family": "ceramics-technical",
+  "short_name": "Diamond",
+  "subfamily": "carbon-ceramics",
+  "applications": [
+    "Cutting tools (non-ferrous)",
+    "Grinding/polishing abrasives",
+    "Heat spreaders in electronics",
+    "Optical windows (IR)"
+  ],
+  "notes": "Hardest natural material, highest thermal conductivity of any solid (>2000 W/mK). Graphitises above ~1800\u00b0C in air.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 3463.0,
+      "max": 3605.0,
+      "source": "Materials Project mp-66 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 1037.5,
+      "max": 1193.6,
+      "source": "Materials Project mp-66 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 3000,
+      "max": 5000,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 3.0,
+      "max": 5.0,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 4027,
+      "max": 4027,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 510,
+      "max": 530,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 1000,
+      "max": 2500,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 1.0,
+      "max": 1.3,
+      "source": "CRC Handbook"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 10000000000000.0,
+      "max": 1e+17,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 5000,
+      "max": 50000,
+      "source": "Bath ICE v3.0 (estimate, synthetic CVD)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 300,
+      "max": 3000,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

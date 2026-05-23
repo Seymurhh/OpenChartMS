@@ -1,0 +1,70 @@
+{
+  "id": "1550-zrb2",
+  "name": "Zirconium diboride (ZrB\u2082)",
+  "family": "ceramics-technical",
+  "short_name": "ZrB\u2082",
+  "subfamily": "boride-ceramics",
+  "applications": [
+    "Ultra-high temperature ceramics (UHTC) for hypersonic vehicles",
+    "Electrode materials",
+    "Hard coatings"
+  ],
+  "notes": "Stable to >2500\u00b0C. Key UHTC for hypersonic leading edges alongside HfB\u2082.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 2301.0,
+      "max": 2395.0,
+      "source": "Materials Project mp-1550 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 111.1,
+      "max": 127.8,
+      "source": "Materials Project mp-1550 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 200,
+      "max": 400,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 3.5,
+      "max": 5.0,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 3245,
+      "max": 3245,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 430,
+      "max": 450,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 57,
+      "max": 75,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 5.9,
+      "max": 6.8,
+      "source": "CRC Handbook"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 9,
+      "max": 11,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 300,
+      "max": 700,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 20,
+      "max": 50,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

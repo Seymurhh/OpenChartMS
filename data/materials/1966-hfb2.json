@@ -1,0 +1,65 @@
+{
+  "id": "1966-hfb2",
+  "name": "Hafnium diboride (HfB\u2082)",
+  "family": "ceramics-technical",
+  "short_name": "HfB\u2082",
+  "subfamily": "boride-ceramics",
+  "applications": [
+    "Hypersonic leading edges (Mach 10+ re-entry)",
+    "Plasma arc electrodes",
+    "Ultra-high temperature ceramics"
+  ],
+  "notes": "One of the densest UHTC materials. Critical for nose caps and wing leading edges of hypersonic vehicles.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 7881.0,
+      "max": 8203.0,
+      "source": "Materials Project mp-1966 (DFT)"
+    },
+    "yield_strength_MPa": {
+      "min": 200,
+      "max": 380,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 3.0,
+      "max": 4.5,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 3250,
+      "max": 3380,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 240,
+      "max": 260,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 60,
+      "max": 104,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 6.3,
+      "max": 7.6,
+      "source": "CRC Handbook"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 10,
+      "max": 15,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 400,
+      "max": 1000,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 28,
+      "max": 70,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

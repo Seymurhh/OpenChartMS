@@ -1,0 +1,67 @@
+{
+  "id": "2657-tio2-rutile",
+  "name": "Titanium dioxide, rutile (TiO\u2082)",
+  "family": "ceramics-technical",
+  "short_name": "TiO\u2082 (rutile)",
+  "subfamily": "oxide-ceramics",
+  "applications": [
+    "White pigment",
+    "Photocatalysts (UV)",
+    "Optical coatings",
+    "Gas sensors",
+    "Solar cells"
+  ],
+  "notes": "Most stable TiO\u2082 polymorph. Wide bandgap (~3.0 eV). Photocatalytic activity under UV.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 4151.0,
+      "max": 4321.0,
+      "source": "Materials Project mp-2657 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 255.7,
+      "max": 294.2,
+      "source": "Materials Project mp-2657 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 100,
+      "max": 200,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 2.5,
+      "max": 3.5,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 1843,
+      "max": 1843,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 680,
+      "max": 710,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 4.8,
+      "max": 11.8,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 7.1,
+      "max": 9.2,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 30,
+      "max": 60,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 2.0,
+      "max": 4.0,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "72-tantalum",
+  "name": "Tantalum (Ta, pure)",
+  "family": "metals",
+  "short_name": "Tantalum",
+  "subfamily": "refractory-metals",
+  "applications": [
+    "Electrolytic capacitors",
+    "Chemical processing equipment",
+    "Surgical implants",
+    "Sputtering targets"
+  ],
+  "notes": "Excellent corrosion resistance (comparable to glass). Critical for miniaturised capacitors in mobile devices.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 4577.0,
+      "max": 4764.0,
+      "source": "Materials Project mp-72 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 146.7,
+      "max": 168.8,
+      "source": "Materials Project mp-72 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 200,
+      "max": 400,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 270,
+      "max": 500,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 70,
+      "max": 100,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.2,
+      "max": 0.4,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 3017,
+      "max": 3017,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 138,
+      "max": 142,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 55,
+      "max": 58,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 6.3,
+      "max": 6.6,
+      "source": "CRC Handbook"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 12.1,
+      "max": 13.5,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 600,
+      "max": 1500,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 40,
+      "max": 100,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.25,
+      "max": 0.45,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

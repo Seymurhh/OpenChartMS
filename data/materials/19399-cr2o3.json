@@ -1,0 +1,61 @@
+{
+  "id": "19399-cr2o3",
+  "name": "Chromia (Cr\u2082O\u2083, eskolaite)",
+  "family": "ceramics-technical",
+  "short_name": "Cr\u2082O\u2083",
+  "subfamily": "oxide-ceramics",
+  "applications": [
+    "Green pigment",
+    "Refractory wear linings",
+    "Hard coatings",
+    "Abrasives"
+  ],
+  "notes": "Extremely hard oxide (Vickers ~2800). Forms protective passive layer on stainless steel.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 5065.0,
+      "max": 5271.0,
+      "source": "Materials Project mp-19399 (DFT)"
+    },
+    "yield_strength_MPa": {
+      "min": 150,
+      "max": 300,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 2.0,
+      "max": 3.5,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 2435,
+      "max": 2435,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 750,
+      "max": 760,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 12,
+      "max": 15,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 7.5,
+      "max": 9.5,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 40,
+      "max": 80,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 3.0,
+      "max": 6.0,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

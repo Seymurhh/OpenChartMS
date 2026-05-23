@@ -1,0 +1,66 @@
+{
+  "id": "804-gan",
+  "name": "Gallium nitride (GaN)",
+  "family": "ceramics-technical",
+  "short_name": "GaN",
+  "subfamily": "nitride-ceramics",
+  "applications": [
+    "Blue/UV LEDs and lasers",
+    "High-electron-mobility transistors (HEMT)",
+    "5G power amplifiers",
+    "Electric vehicle inverters"
+  ],
+  "notes": "Wide bandgap (3.4 eV) semiconductor. Enabling material for solid-state lighting and high-power/high-frequency electronics.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 5959.0,
+      "max": 6203.0,
+      "source": "Materials Project mp-804 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 243.2,
+      "max": 279.8,
+      "source": "Materials Project mp-804 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 200,
+      "max": 400,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 0.5,
+      "max": 1.5,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 2500,
+      "max": 2500,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 485,
+      "max": 495,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 130,
+      "max": 200,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 5.4,
+      "max": 5.8,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 500,
+      "max": 2000,
+      "source": "Bath ICE v3.0 (estimate, MOCVD wafer)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 35,
+      "max": 130,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

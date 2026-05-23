@@ -1,0 +1,55 @@
+{
+  "id": "1219-nbn",
+  "name": "Niobium nitride (NbN)",
+  "family": "ceramics-technical",
+  "short_name": "NbN",
+  "subfamily": "nitride-ceramics",
+  "applications": [
+    "Superconducting single-photon detectors",
+    "Josephson junctions",
+    "Hard coatings"
+  ],
+  "notes": "Superconducting below ~16 K \u2014 one of highest-Tc conventional superconductors. Hard refractory nitride.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 5174.0,
+      "max": 5385.0,
+      "source": "Materials Project mp-1219 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 56.2,
+      "max": 64.7,
+      "source": "Materials Project mp-1219 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 400,
+      "max": 700,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 2.0,
+      "max": 4.0,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 2300,
+      "max": 2400,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 4,
+      "max": 8,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 10,
+      "max": 12,
+      "source": "CRC Handbook"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 54,
+      "max": 200,
+      "source": "CRC Handbook"
+    }
+  }
+}

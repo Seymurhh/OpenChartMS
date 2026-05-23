@@ -1,0 +1,71 @@
+{
+  "id": "32-germanium",
+  "name": "Germanium (Ge)",
+  "family": "ceramics-technical",
+  "short_name": "Germanium",
+  "subfamily": "semiconductors",
+  "applications": [
+    "IR optics (2\u201315 \u00b5m window)",
+    "Transistors (legacy)",
+    "Gamma-ray detector substrates",
+    "SiGe solar cells"
+  ],
+  "notes": "Transparent to thermal IR; used in FLIR camera lenses. Narrow bandgap (0.67 eV).",
+  "properties": {
+    "density_kg_m3": {
+      "min": 5175.0,
+      "max": 5386.0,
+      "source": "Materials Project mp-32 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 99.8,
+      "max": 114.9,
+      "source": "Materials Project mp-32 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 80,
+      "max": 150,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 0.6,
+      "max": 0.8,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 938,
+      "max": 938,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 318,
+      "max": 322,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 58,
+      "max": 62,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 5.7,
+      "max": 5.9,
+      "source": "CRC Handbook"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 46000000.0,
+      "max": 46000000.0,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 800,
+      "max": 2500,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 55,
+      "max": 170,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "1551-cr3c2",
+  "name": "Chromium carbide (Cr\u2083C\u2082)",
+  "family": "ceramics-technical",
+  "short_name": "Cr\u2083C\u2082",
+  "subfamily": "carbide-ceramics",
+  "applications": [
+    "Thermal-spray wear coatings",
+    "Corrosion/oxidation resistant coatings",
+    "Cutting tools"
+  ],
+  "notes": "Used in Cr\u2083C\u2082\u2013NiCr thermal spray coatings for elevated-temperature wear and corrosion resistance.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 10008.0,
+      "max": 10417.0,
+      "source": "Materials Project mp-1551 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 112.4,
+      "max": 129.3,
+      "source": "Materials Project mp-1551 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 300,
+      "max": 600,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 2.5,
+      "max": 5.0,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 1895,
+      "max": 1895,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 560,
+      "max": 580,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 19,
+      "max": 22,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 10.0,
+      "max": 11.0,
+      "source": "CRC Handbook"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 75,
+      "max": 125,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 100,
+      "max": 250,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 7,
+      "max": 18,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

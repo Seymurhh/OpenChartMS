@@ -1,0 +1,86 @@
+{
+  "id": "39-niobium",
+  "name": "Niobium (Nb, pure)",
+  "family": "metals",
+  "short_name": "Niobium",
+  "subfamily": "refractory-metals",
+  "applications": [
+    "Microalloying agent in high-strength steels",
+    "Superconducting MRI magnets (Nb-Ti)",
+    "Jet engine alloys",
+    "Capacitor electrodes"
+  ],
+  "notes": "Critical for high-strength low-alloy (HSLA) steels. Superconducting below 9.2 K (pure Nb).",
+  "properties": {
+    "density_kg_m3": {
+      "min": 11111.0,
+      "max": 11565.0,
+      "source": "Materials Project mp-39 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 9.3,
+      "max": 10.7,
+      "source": "Materials Project mp-39 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 210,
+      "max": 320,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 290,
+      "max": 430,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 40,
+      "max": 80,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.25,
+      "max": 0.4,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 2477,
+      "max": 2477,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 265,
+      "max": 270,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 51,
+      "max": 54,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 7.2,
+      "max": 7.4,
+      "source": "CRC Handbook"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 15,
+      "max": 16,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 250,
+      "max": 500,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 18,
+      "max": 35,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.3,
+      "max": 0.5,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

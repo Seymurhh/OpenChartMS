@@ -1,0 +1,70 @@
+{
+  "id": "1025-zrn",
+  "name": "Zirconium nitride (ZrN)",
+  "family": "ceramics-technical",
+  "short_name": "ZrN",
+  "subfamily": "nitride-ceramics",
+  "applications": [
+    "Gold-coloured PVD coatings",
+    "Cutting tool wear coatings",
+    "Diffusion barriers in microelectronics"
+  ],
+  "notes": "Similar colour and properties to TiN. Lower chemical reactivity; used where TiN would react.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 14922.0,
+      "max": 15531.0,
+      "source": "Materials Project mp-1025 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 93.4,
+      "max": 107.4,
+      "source": "Materials Project mp-1025 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 600,
+      "max": 900,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 3.0,
+      "max": 5.0,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 2980,
+      "max": 2980,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 390,
+      "max": 410,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 10,
+      "max": 12,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 7.2,
+      "max": 7.5,
+      "source": "CRC Handbook"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 13,
+      "max": 21,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 300,
+      "max": 700,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 20,
+      "max": 50,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

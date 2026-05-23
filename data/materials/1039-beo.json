@@ -1,0 +1,65 @@
+{
+  "id": "1039-beo",
+  "name": "Beryllia (BeO)",
+  "family": "ceramics-technical",
+  "short_name": "BeO",
+  "subfamily": "oxide-ceramics",
+  "applications": [
+    "High-power electronics substrates",
+    "Nuclear reactor moderator",
+    "Microwave tube windows"
+  ],
+  "notes": "Exceptionally high thermal conductivity for a ceramic (~250 W/mK). BeO dust is highly toxic \u2014 strict handling controls required.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 3643.0,
+      "max": 3792.0,
+      "source": "Materials Project mp-1039 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 31.9,
+      "max": 36.7,
+      "source": "Materials Project mp-1039 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 200,
+      "max": 350,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 2.0,
+      "max": 3.5,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 2530,
+      "max": 2530,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 1020,
+      "max": 1050,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 230,
+      "max": 300,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 7.5,
+      "max": 8.5,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 300,
+      "max": 600,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 20,
+      "max": 40,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "2593-ni3al-gamma-prime",
+  "name": "Nickel aluminide (Ni\u2083Al, \u03b3\u2032 phase)",
+  "family": "metals",
+  "short_name": "Ni\u2083Al (\u03b3\u2032)",
+  "subfamily": "intermetallics",
+  "applications": [
+    "Strengthening precipitate in Ni superalloys",
+    "Structural intermetallic research",
+    "Oxidation-resistant coatings"
+  ],
+  "notes": "\u03b3\u2032 precipitate phase responsible for high-temperature strength in Ni-base superalloys. Yield strength increases with temperature up to ~800\u00b0C.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 7557.0,
+      "max": 7865.0,
+      "source": "Materials Project mp-2593 (DFT)"
+    },
+    "yield_strength_MPa": {
+      "min": 180,
+      "max": 500,
+      "source": "ASM EH Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 10,
+      "max": 25,
+      "source": "ASM EH Vol 2"
+    },
+    "melting_point_C": {
+      "min": 1385,
+      "max": 1400,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 440,
+      "max": 460,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 23,
+      "max": 30,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 12.5,
+      "max": 13.5,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 130,
+      "max": 220,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 9,
+      "max": 16,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

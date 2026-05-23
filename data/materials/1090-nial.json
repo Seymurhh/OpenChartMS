@@ -1,0 +1,70 @@
+{
+  "id": "1090-nial",
+  "name": "Nickel aluminide (NiAl, B2 phase)",
+  "family": "metals",
+  "short_name": "NiAl",
+  "subfamily": "intermetallics",
+  "applications": [
+    "Bond coat for thermal barrier coatings",
+    "High-temperature oxidation-resistant components",
+    "Research on ordered intermetallics"
+  ],
+  "notes": "Ordered intermetallic \u2014 higher specific stiffness and strength at temperature than Ni superalloys, but brittle at RT.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 6953.0,
+      "max": 7237.0,
+      "source": "Materials Project mp-1090 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 87.9,
+      "max": 101.1,
+      "source": "Materials Project mp-1090 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 200,
+      "max": 800,
+      "source": "ASM EH Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 5,
+      "max": 15,
+      "source": "ASM EH Vol 2"
+    },
+    "melting_point_C": {
+      "min": 1638,
+      "max": 1638,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 500,
+      "max": 530,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 72,
+      "max": 80,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 13.0,
+      "max": 14.0,
+      "source": "CRC Handbook"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 25,
+      "max": 32,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 130,
+      "max": 220,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 9,
+      "max": 16,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

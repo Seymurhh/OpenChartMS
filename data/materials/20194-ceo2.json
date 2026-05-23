@@ -1,0 +1,66 @@
+{
+  "id": "20194-ceo2",
+  "name": "Ceria (CeO\u2082, cerianite)",
+  "family": "ceramics-technical",
+  "short_name": "CeO\u2082",
+  "subfamily": "oxide-ceramics",
+  "applications": [
+    "Catalytic converter washcoat",
+    "Solid oxide fuel cell electrolytes",
+    "Glass polishing",
+    "UV filters"
+  ],
+  "notes": "Excellent oxygen storage capacity (Ce\u00b3\u207a\u2194Ce\u2074\u207a). Used in 3-way catalysts for emission control.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 6855.0,
+      "max": 7135.0,
+      "source": "Materials Project mp-20194 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 180.3,
+      "max": 207.4,
+      "source": "Materials Project mp-20194 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 100,
+      "max": 200,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 1.5,
+      "max": 2.5,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 2400,
+      "max": 2400,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 435,
+      "max": 450,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 11,
+      "max": 12,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 11.0,
+      "max": 12.0,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 100,
+      "max": 250,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 7,
+      "max": 18,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

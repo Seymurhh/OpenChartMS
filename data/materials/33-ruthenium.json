@@ -1,0 +1,86 @@
+{
+  "id": "33-ruthenium",
+  "name": "Ruthenium (Ru, pure)",
+  "family": "metals",
+  "short_name": "Ruthenium",
+  "subfamily": "precious-metals",
+  "applications": [
+    "Ni superalloy addition (strengthening)",
+    "Electrical contacts",
+    "Wear-resistant coatings",
+    "Catalysts (ammonia synthesis)"
+  ],
+  "notes": "Platinum group metal; often used as hardener in Pt/Pd alloys. Extremely hard for a metal.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 12137.0,
+      "max": 12633.0,
+      "source": "Materials Project mp-33 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 447.6,
+      "max": 515.0,
+      "source": "Materials Project mp-33 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 400,
+      "max": 700,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 500,
+      "max": 900,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 8,
+      "max": 20,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.01,
+      "max": 0.06,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 2334,
+      "max": 2334,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 238,
+      "max": 242,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 117,
+      "max": 120,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 6.4,
+      "max": 6.6,
+      "source": "CRC Handbook"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 7.1,
+      "max": 7.6,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 5000,
+      "max": 30000,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 350,
+      "max": 2000,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "recycle_fraction": {
+      "min": 0.5,
+      "max": 0.8,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

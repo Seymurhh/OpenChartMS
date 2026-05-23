@@ -1,7 +1,2051 @@
 {
-  "count": 130,
-  "source": "Ashby App A (6th ed., 2025) + ASM Handbooks + Bath ICE v3.0",
+  "count": 159,
+  "source": "Ashby App A (6th ed., 2025) + ASM Handbooks + Bath ICE v3.0 + Materials Project API",
   "materials": [
+    {
+      "id": "101-iridium",
+      "name": "Iridium (Ir, pure)",
+      "family": "metals",
+      "short_name": "Iridium",
+      "subfamily": "precious-metals",
+      "applications": [
+        "Spark plug electrodes",
+        "Crucibles for high-temperature crystal growth",
+        "Satellite thruster nozzles",
+        "International kilogram standard"
+      ],
+      "notes": "Densest element with stable oxidation resistance. Former international kilogram prototype (IPK) is Pt-Ir alloy.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 21858.0,
+          "max": 22750.0,
+          "source": "Materials Project mp-101 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 485.0,
+          "max": 558.0,
+          "source": "Materials Project mp-101 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 700,
+          "max": 1100,
+          "source": "ASM Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 900,
+          "max": 1300,
+          "source": "ASM Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 5,
+          "max": 15,
+          "source": "ASM Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.01,
+          "max": 0.06,
+          "source": "ASM Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 2446,
+          "max": 2446,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 130,
+          "max": 134,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 147,
+          "max": 150,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 6.4,
+          "max": 6.5,
+          "source": "CRC Handbook"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 5.1,
+          "max": 5.5,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 5000,
+          "max": 50000,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 350,
+          "max": 3500,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "recycle_fraction": {
+          "min": 0.5,
+          "max": 0.8,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
+      "id": "1025-zrn",
+      "name": "Zirconium nitride (ZrN)",
+      "family": "ceramics-technical",
+      "short_name": "ZrN",
+      "subfamily": "nitride-ceramics",
+      "applications": [
+        "Gold-coloured PVD coatings",
+        "Cutting tool wear coatings",
+        "Diffusion barriers in microelectronics"
+      ],
+      "notes": "Similar colour and properties to TiN. Lower chemical reactivity; used where TiN would react.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 14922.0,
+          "max": 15531.0,
+          "source": "Materials Project mp-1025 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 93.4,
+          "max": 107.4,
+          "source": "Materials Project mp-1025 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 600,
+          "max": 900,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 3.0,
+          "max": 5.0,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 2980,
+          "max": 2980,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 390,
+          "max": 410,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 10,
+          "max": 12,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 7.2,
+          "max": 7.5,
+          "source": "CRC Handbook"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 13,
+          "max": 21,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 300,
+          "max": 700,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 20,
+          "max": 50,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "1039-beo",
+      "name": "Beryllia (BeO)",
+      "family": "ceramics-technical",
+      "short_name": "BeO",
+      "subfamily": "oxide-ceramics",
+      "applications": [
+        "High-power electronics substrates",
+        "Nuclear reactor moderator",
+        "Microwave tube windows"
+      ],
+      "notes": "Exceptionally high thermal conductivity for a ceramic (~250 W/mK). BeO dust is highly toxic \u2014 strict handling controls required.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 3643.0,
+          "max": 3792.0,
+          "source": "Materials Project mp-1039 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 31.9,
+          "max": 36.7,
+          "source": "Materials Project mp-1039 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 200,
+          "max": 350,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 2.0,
+          "max": 3.5,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 2530,
+          "max": 2530,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 1020,
+          "max": 1050,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 230,
+          "max": 300,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 7.5,
+          "max": 8.5,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 300,
+          "max": 600,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 20,
+          "max": 40,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "1043-tac",
+      "name": "Tantalum carbide (TaC)",
+      "family": "ceramics-technical",
+      "short_name": "TaC",
+      "subfamily": "carbide-ceramics",
+      "applications": [
+        "Cemented carbide binders",
+        "Cutting tools",
+        "Rocket motor nozzles",
+        "Diffusion barriers"
+      ],
+      "notes": "TaC has the highest melting point of any binary compound (~3880\u00b0C). Added to WC tools to inhibit grain growth.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 9424.0,
+          "max": 9809.0,
+          "source": "Materials Project mp-1043 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": -3.1,
+          "max": -3.6,
+          "source": "Materials Project mp-1043 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 400,
+          "max": 600,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 4.0,
+          "max": 6.0,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 3880,
+          "max": 3880,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 185,
+          "max": 195,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 22,
+          "max": 24,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 6.3,
+          "max": 6.6,
+          "source": "CRC Handbook"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 30,
+          "max": 42,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 300,
+          "max": 800,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 20,
+          "max": 55,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "1065-nbc",
+      "name": "Niobium carbide (NbC)",
+      "family": "ceramics-technical",
+      "short_name": "NbC",
+      "subfamily": "carbide-ceramics",
+      "applications": [
+        "Cemented carbide grain growth inhibitor",
+        "Wear-resistant coatings",
+        "Cutting tools"
+      ],
+      "notes": "",
+      "properties": {
+        "density_kg_m3": {
+          "min": 6004.0,
+          "max": 6249.0,
+          "source": "Materials Project mp-1065 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 66.0,
+          "max": 75.9,
+          "source": "Materials Project mp-1065 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 300,
+          "max": 500,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 2.5,
+          "max": 4.0,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 3490,
+          "max": 3490,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 270,
+          "max": 285,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 14,
+          "max": 17,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 6.6,
+          "max": 7.2,
+          "source": "CRC Handbook"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 35,
+          "max": 75,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 200,
+          "max": 500,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 14,
+          "max": 35,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "1090-nial",
+      "name": "Nickel aluminide (NiAl, B2 phase)",
+      "family": "metals",
+      "short_name": "NiAl",
+      "subfamily": "intermetallics",
+      "applications": [
+        "Bond coat for thermal barrier coatings",
+        "High-temperature oxidation-resistant components",
+        "Research on ordered intermetallics"
+      ],
+      "notes": "Ordered intermetallic \u2014 higher specific stiffness and strength at temperature than Ni superalloys, but brittle at RT.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 6953.0,
+          "max": 7237.0,
+          "source": "Materials Project mp-1090 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 87.9,
+          "max": 101.1,
+          "source": "Materials Project mp-1090 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 200,
+          "max": 800,
+          "source": "ASM EH Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 5,
+          "max": 15,
+          "source": "ASM EH Vol 2"
+        },
+        "melting_point_C": {
+          "min": 1638,
+          "max": 1638,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 500,
+          "max": 530,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 72,
+          "max": 80,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 13.0,
+          "max": 14.0,
+          "source": "CRC Handbook"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 25,
+          "max": 32,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 130,
+          "max": 220,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 9,
+          "max": 16,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "1174-mosi2",
+      "name": "Molybdenum disilicide (MoSi\u2082)",
+      "family": "ceramics-technical",
+      "short_name": "MoSi\u2082",
+      "subfamily": "silicide-ceramics",
+      "applications": [
+        "High-temperature furnace heating elements (Kanthal Super)",
+        "Gas turbine coatings",
+        "MEMS devices"
+      ],
+      "notes": "Metallic conductivity + self-healing SiO\u2082 scale at high T. Maximum use temperature ~1700\u00b0C.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 2423.0,
+          "max": 2522.0,
+          "source": "Materials Project mp-1174 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 66.2,
+          "max": 76.2,
+          "source": "Materials Project mp-1174 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 200,
+          "max": 400,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 2.0,
+          "max": 3.5,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 2030,
+          "max": 2030,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 435,
+          "max": 445,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 52,
+          "max": 63,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 8.1,
+          "max": 8.5,
+          "source": "CRC Handbook"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 21,
+          "max": 22,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 200,
+          "max": 500,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 14,
+          "max": 35,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "1219-nbn",
+      "name": "Niobium nitride (NbN)",
+      "family": "ceramics-technical",
+      "short_name": "NbN",
+      "subfamily": "nitride-ceramics",
+      "applications": [
+        "Superconducting single-photon detectors",
+        "Josephson junctions",
+        "Hard coatings"
+      ],
+      "notes": "Superconducting below ~16 K \u2014 one of highest-Tc conventional superconductors. Hard refractory nitride.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 5174.0,
+          "max": 5385.0,
+          "source": "Materials Project mp-1219 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 56.2,
+          "max": 64.7,
+          "source": "Materials Project mp-1219 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 400,
+          "max": 700,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 2.0,
+          "max": 4.0,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 2300,
+          "max": 2400,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 4,
+          "max": 8,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 10,
+          "max": 12,
+          "source": "CRC Handbook"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 54,
+          "max": 200,
+          "source": "CRC Handbook"
+        }
+      }
+    },
+    {
+      "id": "1550-zrb2",
+      "name": "Zirconium diboride (ZrB\u2082)",
+      "family": "ceramics-technical",
+      "short_name": "ZrB\u2082",
+      "subfamily": "boride-ceramics",
+      "applications": [
+        "Ultra-high temperature ceramics (UHTC) for hypersonic vehicles",
+        "Electrode materials",
+        "Hard coatings"
+      ],
+      "notes": "Stable to >2500\u00b0C. Key UHTC for hypersonic leading edges alongside HfB\u2082.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 2301.0,
+          "max": 2395.0,
+          "source": "Materials Project mp-1550 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 111.1,
+          "max": 127.8,
+          "source": "Materials Project mp-1550 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 200,
+          "max": 400,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 3.5,
+          "max": 5.0,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 3245,
+          "max": 3245,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 430,
+          "max": 450,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 57,
+          "max": 75,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 5.9,
+          "max": 6.8,
+          "source": "CRC Handbook"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 9,
+          "max": 11,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 300,
+          "max": 700,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 20,
+          "max": 50,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "1551-cr3c2",
+      "name": "Chromium carbide (Cr\u2083C\u2082)",
+      "family": "ceramics-technical",
+      "short_name": "Cr\u2083C\u2082",
+      "subfamily": "carbide-ceramics",
+      "applications": [
+        "Thermal-spray wear coatings",
+        "Corrosion/oxidation resistant coatings",
+        "Cutting tools"
+      ],
+      "notes": "Used in Cr\u2083C\u2082\u2013NiCr thermal spray coatings for elevated-temperature wear and corrosion resistance.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 10008.0,
+          "max": 10417.0,
+          "source": "Materials Project mp-1551 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 112.4,
+          "max": 129.3,
+          "source": "Materials Project mp-1551 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 300,
+          "max": 600,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 2.5,
+          "max": 5.0,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 1895,
+          "max": 1895,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 560,
+          "max": 580,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 19,
+          "max": 22,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 10.0,
+          "max": 11.0,
+          "source": "CRC Handbook"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 75,
+          "max": 125,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 100,
+          "max": 250,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 7,
+          "max": 18,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "19399-cr2o3",
+      "name": "Chromia (Cr\u2082O\u2083, eskolaite)",
+      "family": "ceramics-technical",
+      "short_name": "Cr\u2082O\u2083",
+      "subfamily": "oxide-ceramics",
+      "applications": [
+        "Green pigment",
+        "Refractory wear linings",
+        "Hard coatings",
+        "Abrasives"
+      ],
+      "notes": "Extremely hard oxide (Vickers ~2800). Forms protective passive layer on stainless steel.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 5065.0,
+          "max": 5271.0,
+          "source": "Materials Project mp-19399 (DFT)"
+        },
+        "yield_strength_MPa": {
+          "min": 150,
+          "max": 300,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 2.0,
+          "max": 3.5,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 2435,
+          "max": 2435,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 750,
+          "max": 760,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 12,
+          "max": 15,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 7.5,
+          "max": 9.5,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 40,
+          "max": 80,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 3.0,
+          "max": 6.0,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "1966-hfb2",
+      "name": "Hafnium diboride (HfB\u2082)",
+      "family": "ceramics-technical",
+      "short_name": "HfB\u2082",
+      "subfamily": "boride-ceramics",
+      "applications": [
+        "Hypersonic leading edges (Mach 10+ re-entry)",
+        "Plasma arc electrodes",
+        "Ultra-high temperature ceramics"
+      ],
+      "notes": "One of the densest UHTC materials. Critical for nose caps and wing leading edges of hypersonic vehicles.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 7881.0,
+          "max": 8203.0,
+          "source": "Materials Project mp-1966 (DFT)"
+        },
+        "yield_strength_MPa": {
+          "min": 200,
+          "max": 380,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 3.0,
+          "max": 4.5,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 3250,
+          "max": 3380,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 240,
+          "max": 260,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 60,
+          "max": 104,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 6.3,
+          "max": 7.6,
+          "source": "CRC Handbook"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 10,
+          "max": 15,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 400,
+          "max": 1000,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 28,
+          "max": 70,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "19770-fe2o3",
+      "name": "Haematite (Fe\u2082O\u2083)",
+      "family": "ceramics-nontechnical",
+      "short_name": "Fe\u2082O\u2083",
+      "subfamily": "mineral-ceramics",
+      "applications": [
+        "Iron ore (primary feed)",
+        "Red/yellow pigment",
+        "Magnetic recording media",
+        "Photocatalyst"
+      ],
+      "notes": "Most stable iron oxide. Antiferromagnetic below 955 K (Morin transition).",
+      "properties": {
+        "density_kg_m3": {
+          "min": 5041.0,
+          "max": 5246.0,
+          "source": "Materials Project mp-19770 (DFT)"
+        },
+        "yield_strength_MPa": {
+          "min": 50,
+          "max": 150,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 1.0,
+          "max": 1.5,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 1565,
+          "max": 1565,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 650,
+          "max": 680,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 10,
+          "max": 12,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 12,
+          "max": 14,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 0.5,
+          "max": 2.0,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 0.05,
+          "max": 0.2,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
+      "id": "20194-ceo2",
+      "name": "Ceria (CeO\u2082, cerianite)",
+      "family": "ceramics-technical",
+      "short_name": "CeO\u2082",
+      "subfamily": "oxide-ceramics",
+      "applications": [
+        "Catalytic converter washcoat",
+        "Solid oxide fuel cell electrolytes",
+        "Glass polishing",
+        "UV filters"
+      ],
+      "notes": "Excellent oxygen storage capacity (Ce\u00b3\u207a\u2194Ce\u2074\u207a). Used in 3-way catalysts for emission control.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 6855.0,
+          "max": 7135.0,
+          "source": "Materials Project mp-20194 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 180.3,
+          "max": 207.4,
+          "source": "Materials Project mp-20194 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 100,
+          "max": 200,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 1.5,
+          "max": 2.5,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 2400,
+          "max": 2400,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 435,
+          "max": 450,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 11,
+          "max": 12,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 11.0,
+          "max": 12.0,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 100,
+          "max": 250,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 7,
+          "max": 18,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "20351-inp",
+      "name": "Indium phosphide (InP)",
+      "family": "ceramics-technical",
+      "short_name": "InP",
+      "subfamily": "semiconductors",
+      "applications": [
+        "Fibre-optic laser diodes (1310/1550 nm)",
+        "High-speed photonic ICs",
+        "Solar cells",
+        "THz devices"
+      ],
+      "notes": "Direct bandgap (1.34 eV). Substrate for InGaAsP and InGaAs devices \u2014 critical for optical communications.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 4611.0,
+          "max": 4800.0,
+          "source": "Materials Project mp-20351 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 75.0,
+          "max": 86.3,
+          "source": "Materials Project mp-20351 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 60,
+          "max": 100,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.4,
+          "max": 0.7,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 1062,
+          "max": 1062,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 310,
+          "max": 320,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 68,
+          "max": 72,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 4.5,
+          "max": 4.8,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 600,
+          "max": 2000,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 40,
+          "max": 130,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "2133-zno",
+      "name": "Zinc oxide (ZnO, wurtzite)",
+      "family": "ceramics-technical",
+      "short_name": "ZnO",
+      "subfamily": "oxide-ceramics",
+      "applications": [
+        "Varistors",
+        "Sunscreen (UV absorber)",
+        "Piezoelectric transducers",
+        "Transparent electrodes",
+        "Anti-corrosion coatings"
+      ],
+      "notes": "Wide bandgap (3.37 eV), strong room-temperature piezoelectric response. Wurtzite structure.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 5590.0,
+          "max": 5818.0,
+          "source": "Materials Project mp-2133 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 107.7,
+          "max": 123.9,
+          "source": "Materials Project mp-2133 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 100,
+          "max": 200,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.8,
+          "max": 1.5,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 1975,
+          "max": 1975,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 490,
+          "max": 510,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 30,
+          "max": 55,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 2.9,
+          "max": 4.7,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 20,
+          "max": 50,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 1.5,
+          "max": 3.5,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "2534-gaas",
+      "name": "Gallium arsenide (GaAs)",
+      "family": "ceramics-technical",
+      "short_name": "GaAs",
+      "subfamily": "semiconductors",
+      "applications": [
+        "High-frequency transistors (RF, microwave)",
+        "Laser diodes",
+        "Solar cells (record efficiency)",
+        "LED pioneer"
+      ],
+      "notes": "Direct bandgap (1.42 eV) \u2014 efficient light emitter unlike Si. High electron mobility (8500 cm\u00b2/V\u00b7s).",
+      "properties": {
+        "density_kg_m3": {
+          "min": 4952.0,
+          "max": 5154.0,
+          "source": "Materials Project mp-2534 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 92.8,
+          "max": 106.8,
+          "source": "Materials Project mp-2534 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 70,
+          "max": 120,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.4,
+          "max": 0.6,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 1238,
+          "max": 1238,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 346,
+          "max": 352,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 44,
+          "max": 48,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 5.8,
+          "max": 6.2,
+          "source": "CRC Handbook"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 100000.0,
+          "max": 1000000000.0,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 600,
+          "max": 2000,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 40,
+          "max": 130,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "2593-ni3al-gamma-prime",
+      "name": "Nickel aluminide (Ni\u2083Al, \u03b3\u2032 phase)",
+      "family": "metals",
+      "short_name": "Ni\u2083Al (\u03b3\u2032)",
+      "subfamily": "intermetallics",
+      "applications": [
+        "Strengthening precipitate in Ni superalloys",
+        "Structural intermetallic research",
+        "Oxidation-resistant coatings"
+      ],
+      "notes": "\u03b3\u2032 precipitate phase responsible for high-temperature strength in Ni-base superalloys. Yield strength increases with temperature up to ~800\u00b0C.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 7557.0,
+          "max": 7865.0,
+          "source": "Materials Project mp-2593 (DFT)"
+        },
+        "yield_strength_MPa": {
+          "min": 180,
+          "max": 500,
+          "source": "ASM EH Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 10,
+          "max": 25,
+          "source": "ASM EH Vol 2"
+        },
+        "melting_point_C": {
+          "min": 1385,
+          "max": 1400,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 440,
+          "max": 460,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 23,
+          "max": 30,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 12.5,
+          "max": 13.5,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 130,
+          "max": 220,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 9,
+          "max": 16,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "2652-y2o3",
+      "name": "Yttria (Y\u2082O\u2083)",
+      "family": "ceramics-technical",
+      "short_name": "Y\u2082O\u2083",
+      "subfamily": "oxide-ceramics",
+      "applications": [
+        "Stabiliser in Y-TZP zirconia",
+        "Phosphors",
+        "Laser gain medium host",
+        "Infrared windows"
+      ],
+      "notes": "Critical dopant for stabilising tetragonal zirconia. Also used as a phosphor host lattice.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 4926.0,
+          "max": 5127.0,
+          "source": "Materials Project mp-2652 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 150.9,
+          "max": 173.6,
+          "source": "Materials Project mp-2652 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 150,
+          "max": 220,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 1.5,
+          "max": 2.5,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 2430,
+          "max": 2430,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 455,
+          "max": 465,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 13,
+          "max": 15,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 8.0,
+          "max": 8.3,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 200,
+          "max": 500,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 14,
+          "max": 35,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "2657-tio2-rutile",
+      "name": "Titanium dioxide, rutile (TiO\u2082)",
+      "family": "ceramics-technical",
+      "short_name": "TiO\u2082 (rutile)",
+      "subfamily": "oxide-ceramics",
+      "applications": [
+        "White pigment",
+        "Photocatalysts (UV)",
+        "Optical coatings",
+        "Gas sensors",
+        "Solar cells"
+      ],
+      "notes": "Most stable TiO\u2082 polymorph. Wide bandgap (~3.0 eV). Photocatalytic activity under UV.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 4151.0,
+          "max": 4321.0,
+          "source": "Materials Project mp-2657 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 255.7,
+          "max": 294.2,
+          "source": "Materials Project mp-2657 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 100,
+          "max": 200,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 2.5,
+          "max": 3.5,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 1843,
+          "max": 1843,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 680,
+          "max": 710,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 4.8,
+          "max": 11.8,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 7.1,
+          "max": 9.2,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 30,
+          "max": 60,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 2.0,
+          "max": 4.0,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "32-germanium",
+      "name": "Germanium (Ge)",
+      "family": "ceramics-technical",
+      "short_name": "Germanium",
+      "subfamily": "semiconductors",
+      "applications": [
+        "IR optics (2\u201315 \u00b5m window)",
+        "Transistors (legacy)",
+        "Gamma-ray detector substrates",
+        "SiGe solar cells"
+      ],
+      "notes": "Transparent to thermal IR; used in FLIR camera lenses. Narrow bandgap (0.67 eV).",
+      "properties": {
+        "density_kg_m3": {
+          "min": 5175.0,
+          "max": 5386.0,
+          "source": "Materials Project mp-32 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 99.8,
+          "max": 114.9,
+          "source": "Materials Project mp-32 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 80,
+          "max": 150,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.6,
+          "max": 0.8,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 938,
+          "max": 938,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 318,
+          "max": 322,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 58,
+          "max": 62,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 5.7,
+          "max": 5.9,
+          "source": "CRC Handbook"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 46000000.0,
+          "max": 46000000.0,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 800,
+          "max": 2500,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 55,
+          "max": 170,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "33-ruthenium",
+      "name": "Ruthenium (Ru, pure)",
+      "family": "metals",
+      "short_name": "Ruthenium",
+      "subfamily": "precious-metals",
+      "applications": [
+        "Ni superalloy addition (strengthening)",
+        "Electrical contacts",
+        "Wear-resistant coatings",
+        "Catalysts (ammonia synthesis)"
+      ],
+      "notes": "Platinum group metal; often used as hardener in Pt/Pd alloys. Extremely hard for a metal.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 12137.0,
+          "max": 12633.0,
+          "source": "Materials Project mp-33 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 447.6,
+          "max": 515.0,
+          "source": "Materials Project mp-33 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 400,
+          "max": 700,
+          "source": "ASM Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 500,
+          "max": 900,
+          "source": "ASM Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 8,
+          "max": 20,
+          "source": "ASM Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.01,
+          "max": 0.06,
+          "source": "ASM Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 2334,
+          "max": 2334,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 238,
+          "max": 242,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 117,
+          "max": 120,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 6.4,
+          "max": 6.6,
+          "source": "CRC Handbook"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 7.1,
+          "max": 7.6,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 5000,
+          "max": 30000,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 350,
+          "max": 2000,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "recycle_fraction": {
+          "min": 0.5,
+          "max": 0.8,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
+      "id": "3536-spinel",
+      "name": "Spinel (MgAl\u2082O\u2084)",
+      "family": "ceramics-technical",
+      "short_name": "Spinel",
+      "subfamily": "oxide-ceramics",
+      "applications": [
+        "Transparent armour windows",
+        "Refractory linings (steel-making)",
+        "Optical domes"
+      ],
+      "notes": "Optically transparent from UV to mid-IR. High hardness and thermal shock resistance.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 3510.0,
+          "max": 3654.0,
+          "source": "Materials Project mp-3536 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 232.5,
+          "max": 267.4,
+          "source": "Materials Project mp-3536 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 150,
+          "max": 270,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 1.5,
+          "max": 2.5,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 2135,
+          "max": 2135,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 815,
+          "max": 830,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 15,
+          "max": 20,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 7.6,
+          "max": 8.5,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 20,
+          "max": 50,
+          "source": "Bath ICE v3.0 (estimate)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 1.5,
+          "max": 4.0,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "39-niobium",
+      "name": "Niobium (Nb, pure)",
+      "family": "metals",
+      "short_name": "Niobium",
+      "subfamily": "refractory-metals",
+      "applications": [
+        "Microalloying agent in high-strength steels",
+        "Superconducting MRI magnets (Nb-Ti)",
+        "Jet engine alloys",
+        "Capacitor electrodes"
+      ],
+      "notes": "Critical for high-strength low-alloy (HSLA) steels. Superconducting below 9.2 K (pure Nb).",
+      "properties": {
+        "density_kg_m3": {
+          "min": 11111.0,
+          "max": 11565.0,
+          "source": "Materials Project mp-39 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 9.3,
+          "max": 10.7,
+          "source": "Materials Project mp-39 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 210,
+          "max": 320,
+          "source": "ASM Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 290,
+          "max": 430,
+          "source": "ASM Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 40,
+          "max": 80,
+          "source": "ASM Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.25,
+          "max": 0.4,
+          "source": "ASM Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 2477,
+          "max": 2477,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 265,
+          "max": 270,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 51,
+          "max": 54,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 7.2,
+          "max": 7.4,
+          "source": "CRC Handbook"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 15,
+          "max": 16,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 250,
+          "max": 500,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 18,
+          "max": 35,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.3,
+          "max": 0.5,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
+      "id": "66-diamond",
+      "name": "Diamond (C, cubic)",
+      "family": "ceramics-technical",
+      "short_name": "Diamond",
+      "subfamily": "carbon-ceramics",
+      "applications": [
+        "Cutting tools (non-ferrous)",
+        "Grinding/polishing abrasives",
+        "Heat spreaders in electronics",
+        "Optical windows (IR)"
+      ],
+      "notes": "Hardest natural material, highest thermal conductivity of any solid (>2000 W/mK). Graphitises above ~1800\u00b0C in air.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 3463.0,
+          "max": 3605.0,
+          "source": "Materials Project mp-66 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 1037.5,
+          "max": 1193.6,
+          "source": "Materials Project mp-66 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 3000,
+          "max": 5000,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 3.0,
+          "max": 5.0,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 4027,
+          "max": 4027,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 510,
+          "max": 530,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 1000,
+          "max": 2500,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 1.0,
+          "max": 1.3,
+          "source": "CRC Handbook"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 10000000000000.0,
+          "max": 1e+17,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 5000,
+          "max": 50000,
+          "source": "Bath ICE v3.0 (estimate, synthetic CVD)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 300,
+          "max": 3000,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "72-tantalum",
+      "name": "Tantalum (Ta, pure)",
+      "family": "metals",
+      "short_name": "Tantalum",
+      "subfamily": "refractory-metals",
+      "applications": [
+        "Electrolytic capacitors",
+        "Chemical processing equipment",
+        "Surgical implants",
+        "Sputtering targets"
+      ],
+      "notes": "Excellent corrosion resistance (comparable to glass). Critical for miniaturised capacitors in mobile devices.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 4577.0,
+          "max": 4764.0,
+          "source": "Materials Project mp-72 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 146.7,
+          "max": 168.8,
+          "source": "Materials Project mp-72 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 200,
+          "max": 400,
+          "source": "ASM Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 270,
+          "max": 500,
+          "source": "ASM Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 70,
+          "max": 100,
+          "source": "ASM Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.2,
+          "max": 0.4,
+          "source": "ASM Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 3017,
+          "max": 3017,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 138,
+          "max": 142,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 55,
+          "max": 58,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 6.3,
+          "max": 6.6,
+          "source": "CRC Handbook"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 12.1,
+          "max": 13.5,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 600,
+          "max": 1500,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 40,
+          "max": 100,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.25,
+          "max": 0.45,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
+    {
+      "id": "8-rhenium",
+      "name": "Rhenium (Re, pure)",
+      "family": "metals",
+      "short_name": "Rhenium",
+      "subfamily": "refractory-metals",
+      "applications": [
+        "Jet engine single-crystal turbine blade alloy additions",
+        "Thermocouple wire (W-Re)",
+        "Catalysts for gasoline reforming"
+      ],
+      "notes": "3rd highest melting point after W and Os. Critical rhenium addition (3\u20136%) enables 2nd/3rd gen Ni superalloys. Extremely scarce.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 20456.0,
+          "max": 21291.0,
+          "source": "Materials Project mp-8 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 406.5,
+          "max": 467.7,
+          "source": "Materials Project mp-8 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 550,
+          "max": 1100,
+          "source": "ASM Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 1040,
+          "max": 1400,
+          "source": "ASM Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 20,
+          "max": 45,
+          "source": "ASM Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.1,
+          "max": 0.25,
+          "source": "ASM Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 3185,
+          "max": 3185,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 136,
+          "max": 140,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 47,
+          "max": 49,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 6.2,
+          "max": 6.4,
+          "source": "CRC Handbook"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 17,
+          "max": 20,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 5000,
+          "max": 15000,
+          "source": "Bath ICE v3.0 (estimate, by-product of Mo mining)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 350,
+          "max": 1000,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "804-gan",
+      "name": "Gallium nitride (GaN)",
+      "family": "ceramics-technical",
+      "short_name": "GaN",
+      "subfamily": "nitride-ceramics",
+      "applications": [
+        "Blue/UV LEDs and lasers",
+        "High-electron-mobility transistors (HEMT)",
+        "5G power amplifiers",
+        "Electric vehicle inverters"
+      ],
+      "notes": "Wide bandgap (3.4 eV) semiconductor. Enabling material for solid-state lighting and high-power/high-frequency electronics.",
+      "properties": {
+        "density_kg_m3": {
+          "min": 5959.0,
+          "max": 6203.0,
+          "source": "Materials Project mp-804 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 243.2,
+          "max": 279.8,
+          "source": "Materials Project mp-804 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 200,
+          "max": 400,
+          "source": "ASM EH Vol 4"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 0.5,
+          "max": 1.5,
+          "source": "ASM EH Vol 4"
+        },
+        "melting_point_C": {
+          "min": 2500,
+          "max": 2500,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 485,
+          "max": 495,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 130,
+          "max": 200,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 5.4,
+          "max": 5.8,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 500,
+          "max": 2000,
+          "source": "Bath ICE v3.0 (estimate, MOCVD wafer)"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 35,
+          "max": 130,
+          "source": "Bath ICE v3.0 (estimate)"
+        }
+      }
+    },
+    {
+      "id": "91-tungsten",
+      "name": "Tungsten (W, pure wrought)",
+      "family": "metals",
+      "short_name": "Tungsten",
+      "subfamily": "refractory-metals",
+      "applications": [
+        "Incandescent lamp filaments",
+        "X-ray tube anodes",
+        "Furnace heating elements",
+        "Kinetic energy penetrators"
+      ],
+      "notes": "Highest melting point of all metals (3422\u00b0C). Very high density. Brittle below ~300\u00b0C (DBTT).",
+      "properties": {
+        "density_kg_m3": {
+          "min": 18777.0,
+          "max": 19544.0,
+          "source": "Materials Project mp-91 (DFT)"
+        },
+        "youngs_modulus_GPa": {
+          "min": 355.3,
+          "max": 408.8,
+          "source": "Materials Project mp-91 (DFT, E = 9KG/(3K+G))"
+        },
+        "yield_strength_MPa": {
+          "min": 500,
+          "max": 750,
+          "source": "ASM Handbook Vol 2"
+        },
+        "ultimate_strength_MPa": {
+          "min": 620,
+          "max": 950,
+          "source": "ASM Handbook Vol 2"
+        },
+        "fracture_toughness_MPa_sqrt_m": {
+          "min": 20,
+          "max": 50,
+          "source": "ASM Handbook Vol 2"
+        },
+        "elongation": {
+          "min": 0.02,
+          "max": 0.25,
+          "source": "ASM Handbook Vol 2"
+        },
+        "melting_point_C": {
+          "min": 3422,
+          "max": 3422,
+          "source": "CRC Handbook"
+        },
+        "specific_heat_J_kgK": {
+          "min": 134,
+          "max": 136,
+          "source": "CRC Handbook"
+        },
+        "thermal_conductivity_W_mK": {
+          "min": 170,
+          "max": 177,
+          "source": "CRC Handbook"
+        },
+        "thermal_expansion_uK": {
+          "min": 4.4,
+          "max": 4.6,
+          "source": "CRC Handbook"
+        },
+        "electrical_resistivity_uohm_cm": {
+          "min": 5.3,
+          "max": 5.7,
+          "source": "CRC Handbook"
+        },
+        "embodied_energy_MJ_kg": {
+          "min": 600,
+          "max": 1200,
+          "source": "Bath ICE v3.0"
+        },
+        "co2_footprint_kg_kg": {
+          "min": 40,
+          "max": 80,
+          "source": "Bath ICE v3.0"
+        },
+        "recycle_fraction": {
+          "min": 0.35,
+          "max": 0.55,
+          "source": "Bath ICE v3.0"
+        }
+      }
+    },
     {
       "id": "abs",
       "name": "Acrylonitrile butadiene styrene (ABS)",

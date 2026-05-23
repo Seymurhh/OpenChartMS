@@ -1,0 +1,71 @@
+{
+  "id": "1043-tac",
+  "name": "Tantalum carbide (TaC)",
+  "family": "ceramics-technical",
+  "short_name": "TaC",
+  "subfamily": "carbide-ceramics",
+  "applications": [
+    "Cemented carbide binders",
+    "Cutting tools",
+    "Rocket motor nozzles",
+    "Diffusion barriers"
+  ],
+  "notes": "TaC has the highest melting point of any binary compound (~3880\u00b0C). Added to WC tools to inhibit grain growth.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 9424.0,
+      "max": 9809.0,
+      "source": "Materials Project mp-1043 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": -3.1,
+      "max": -3.6,
+      "source": "Materials Project mp-1043 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 400,
+      "max": 600,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 4.0,
+      "max": 6.0,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 3880,
+      "max": 3880,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 185,
+      "max": 195,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 22,
+      "max": 24,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 6.3,
+      "max": 6.6,
+      "source": "CRC Handbook"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 30,
+      "max": 42,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 300,
+      "max": 800,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 20,
+      "max": 55,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

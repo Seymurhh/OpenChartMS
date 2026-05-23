@@ -1,0 +1,61 @@
+{
+  "id": "19770-fe2o3",
+  "name": "Haematite (Fe\u2082O\u2083)",
+  "family": "ceramics-nontechnical",
+  "short_name": "Fe\u2082O\u2083",
+  "subfamily": "mineral-ceramics",
+  "applications": [
+    "Iron ore (primary feed)",
+    "Red/yellow pigment",
+    "Magnetic recording media",
+    "Photocatalyst"
+  ],
+  "notes": "Most stable iron oxide. Antiferromagnetic below 955 K (Morin transition).",
+  "properties": {
+    "density_kg_m3": {
+      "min": 5041.0,
+      "max": 5246.0,
+      "source": "Materials Project mp-19770 (DFT)"
+    },
+    "yield_strength_MPa": {
+      "min": 50,
+      "max": 150,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 1.0,
+      "max": 1.5,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 1565,
+      "max": 1565,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 650,
+      "max": 680,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 10,
+      "max": 12,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 12,
+      "max": 14,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 0.5,
+      "max": 2.0,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 0.05,
+      "max": 0.2,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

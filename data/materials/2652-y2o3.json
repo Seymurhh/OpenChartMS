@@ -1,0 +1,66 @@
+{
+  "id": "2652-y2o3",
+  "name": "Yttria (Y\u2082O\u2083)",
+  "family": "ceramics-technical",
+  "short_name": "Y\u2082O\u2083",
+  "subfamily": "oxide-ceramics",
+  "applications": [
+    "Stabiliser in Y-TZP zirconia",
+    "Phosphors",
+    "Laser gain medium host",
+    "Infrared windows"
+  ],
+  "notes": "Critical dopant for stabilising tetragonal zirconia. Also used as a phosphor host lattice.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 4926.0,
+      "max": 5127.0,
+      "source": "Materials Project mp-2652 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 150.9,
+      "max": 173.6,
+      "source": "Materials Project mp-2652 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 150,
+      "max": 220,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 1.5,
+      "max": 2.5,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 2430,
+      "max": 2430,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 455,
+      "max": 465,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 13,
+      "max": 15,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 8.0,
+      "max": 8.3,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 200,
+      "max": 500,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 14,
+      "max": 35,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

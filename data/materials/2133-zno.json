@@ -1,0 +1,67 @@
+{
+  "id": "2133-zno",
+  "name": "Zinc oxide (ZnO, wurtzite)",
+  "family": "ceramics-technical",
+  "short_name": "ZnO",
+  "subfamily": "oxide-ceramics",
+  "applications": [
+    "Varistors",
+    "Sunscreen (UV absorber)",
+    "Piezoelectric transducers",
+    "Transparent electrodes",
+    "Anti-corrosion coatings"
+  ],
+  "notes": "Wide bandgap (3.37 eV), strong room-temperature piezoelectric response. Wurtzite structure.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 5590.0,
+      "max": 5818.0,
+      "source": "Materials Project mp-2133 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 107.7,
+      "max": 123.9,
+      "source": "Materials Project mp-2133 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 100,
+      "max": 200,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 0.8,
+      "max": 1.5,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 1975,
+      "max": 1975,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 490,
+      "max": 510,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 30,
+      "max": 55,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 2.9,
+      "max": 4.7,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 20,
+      "max": 50,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 1.5,
+      "max": 3.5,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

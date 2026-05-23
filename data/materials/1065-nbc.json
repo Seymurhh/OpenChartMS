@@ -1,0 +1,70 @@
+{
+  "id": "1065-nbc",
+  "name": "Niobium carbide (NbC)",
+  "family": "ceramics-technical",
+  "short_name": "NbC",
+  "subfamily": "carbide-ceramics",
+  "applications": [
+    "Cemented carbide grain growth inhibitor",
+    "Wear-resistant coatings",
+    "Cutting tools"
+  ],
+  "notes": "",
+  "properties": {
+    "density_kg_m3": {
+      "min": 6004.0,
+      "max": 6249.0,
+      "source": "Materials Project mp-1065 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 66.0,
+      "max": 75.9,
+      "source": "Materials Project mp-1065 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 300,
+      "max": 500,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 2.5,
+      "max": 4.0,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 3490,
+      "max": 3490,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 270,
+      "max": 285,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 14,
+      "max": 17,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 6.6,
+      "max": 7.2,
+      "source": "CRC Handbook"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 35,
+      "max": 75,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 200,
+      "max": 500,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 14,
+      "max": 35,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "2534-gaas",
+  "name": "Gallium arsenide (GaAs)",
+  "family": "ceramics-technical",
+  "short_name": "GaAs",
+  "subfamily": "semiconductors",
+  "applications": [
+    "High-frequency transistors (RF, microwave)",
+    "Laser diodes",
+    "Solar cells (record efficiency)",
+    "LED pioneer"
+  ],
+  "notes": "Direct bandgap (1.42 eV) \u2014 efficient light emitter unlike Si. High electron mobility (8500 cm\u00b2/V\u00b7s).",
+  "properties": {
+    "density_kg_m3": {
+      "min": 4952.0,
+      "max": 5154.0,
+      "source": "Materials Project mp-2534 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 92.8,
+      "max": 106.8,
+      "source": "Materials Project mp-2534 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 70,
+      "max": 120,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 0.4,
+      "max": 0.6,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 1238,
+      "max": 1238,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 346,
+      "max": 352,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 44,
+      "max": 48,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 5.8,
+      "max": 6.2,
+      "source": "CRC Handbook"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 100000.0,
+      "max": 1000000000.0,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 600,
+      "max": 2000,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 40,
+      "max": 130,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

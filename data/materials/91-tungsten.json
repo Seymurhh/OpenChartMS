@@ -1,0 +1,86 @@
+{
+  "id": "91-tungsten",
+  "name": "Tungsten (W, pure wrought)",
+  "family": "metals",
+  "short_name": "Tungsten",
+  "subfamily": "refractory-metals",
+  "applications": [
+    "Incandescent lamp filaments",
+    "X-ray tube anodes",
+    "Furnace heating elements",
+    "Kinetic energy penetrators"
+  ],
+  "notes": "Highest melting point of all metals (3422\u00b0C). Very high density. Brittle below ~300\u00b0C (DBTT).",
+  "properties": {
+    "density_kg_m3": {
+      "min": 18777.0,
+      "max": 19544.0,
+      "source": "Materials Project mp-91 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 355.3,
+      "max": 408.8,
+      "source": "Materials Project mp-91 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 500,
+      "max": 750,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 620,
+      "max": 950,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 20,
+      "max": 50,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.02,
+      "max": 0.25,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 3422,
+      "max": 3422,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 134,
+      "max": 136,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 170,
+      "max": 177,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 4.4,
+      "max": 4.6,
+      "source": "CRC Handbook"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 5.3,
+      "max": 5.7,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 600,
+      "max": 1200,
+      "source": "Bath ICE v3.0"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 40,
+      "max": 80,
+      "source": "Bath ICE v3.0"
+    },
+    "recycle_fraction": {
+      "min": 0.35,
+      "max": 0.55,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

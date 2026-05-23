@@ -1,0 +1,86 @@
+{
+  "id": "101-iridium",
+  "name": "Iridium (Ir, pure)",
+  "family": "metals",
+  "short_name": "Iridium",
+  "subfamily": "precious-metals",
+  "applications": [
+    "Spark plug electrodes",
+    "Crucibles for high-temperature crystal growth",
+    "Satellite thruster nozzles",
+    "International kilogram standard"
+  ],
+  "notes": "Densest element with stable oxidation resistance. Former international kilogram prototype (IPK) is Pt-Ir alloy.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 21858.0,
+      "max": 22750.0,
+      "source": "Materials Project mp-101 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 485.0,
+      "max": 558.0,
+      "source": "Materials Project mp-101 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 700,
+      "max": 1100,
+      "source": "ASM Handbook Vol 2"
+    },
+    "ultimate_strength_MPa": {
+      "min": 900,
+      "max": 1300,
+      "source": "ASM Handbook Vol 2"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 5,
+      "max": 15,
+      "source": "ASM Handbook Vol 2"
+    },
+    "elongation": {
+      "min": 0.01,
+      "max": 0.06,
+      "source": "ASM Handbook Vol 2"
+    },
+    "melting_point_C": {
+      "min": 2446,
+      "max": 2446,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 130,
+      "max": 134,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 147,
+      "max": 150,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 6.4,
+      "max": 6.5,
+      "source": "CRC Handbook"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 5.1,
+      "max": 5.5,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 5000,
+      "max": 50000,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 350,
+      "max": 3500,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "recycle_fraction": {
+      "min": 0.5,
+      "max": 0.8,
+      "source": "Bath ICE v3.0"
+    }
+  }
+}

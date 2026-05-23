@@ -1,0 +1,70 @@
+{
+  "id": "1174-mosi2",
+  "name": "Molybdenum disilicide (MoSi\u2082)",
+  "family": "ceramics-technical",
+  "short_name": "MoSi\u2082",
+  "subfamily": "silicide-ceramics",
+  "applications": [
+    "High-temperature furnace heating elements (Kanthal Super)",
+    "Gas turbine coatings",
+    "MEMS devices"
+  ],
+  "notes": "Metallic conductivity + self-healing SiO\u2082 scale at high T. Maximum use temperature ~1700\u00b0C.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 2423.0,
+      "max": 2522.0,
+      "source": "Materials Project mp-1174 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 66.2,
+      "max": 76.2,
+      "source": "Materials Project mp-1174 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 200,
+      "max": 400,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 2.0,
+      "max": 3.5,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 2030,
+      "max": 2030,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 435,
+      "max": 445,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 52,
+      "max": 63,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 8.1,
+      "max": 8.5,
+      "source": "CRC Handbook"
+    },
+    "electrical_resistivity_uohm_cm": {
+      "min": 21,
+      "max": 22,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 200,
+      "max": 500,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 14,
+      "max": 35,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}

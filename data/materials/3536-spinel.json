@@ -1,0 +1,65 @@
+{
+  "id": "3536-spinel",
+  "name": "Spinel (MgAl\u2082O\u2084)",
+  "family": "ceramics-technical",
+  "short_name": "Spinel",
+  "subfamily": "oxide-ceramics",
+  "applications": [
+    "Transparent armour windows",
+    "Refractory linings (steel-making)",
+    "Optical domes"
+  ],
+  "notes": "Optically transparent from UV to mid-IR. High hardness and thermal shock resistance.",
+  "properties": {
+    "density_kg_m3": {
+      "min": 3510.0,
+      "max": 3654.0,
+      "source": "Materials Project mp-3536 (DFT)"
+    },
+    "youngs_modulus_GPa": {
+      "min": 232.5,
+      "max": 267.4,
+      "source": "Materials Project mp-3536 (DFT, E = 9KG/(3K+G))"
+    },
+    "yield_strength_MPa": {
+      "min": 150,
+      "max": 270,
+      "source": "ASM EH Vol 4"
+    },
+    "fracture_toughness_MPa_sqrt_m": {
+      "min": 1.5,
+      "max": 2.5,
+      "source": "ASM EH Vol 4"
+    },
+    "melting_point_C": {
+      "min": 2135,
+      "max": 2135,
+      "source": "CRC Handbook"
+    },
+    "specific_heat_J_kgK": {
+      "min": 815,
+      "max": 830,
+      "source": "CRC Handbook"
+    },
+    "thermal_conductivity_W_mK": {
+      "min": 15,
+      "max": 20,
+      "source": "CRC Handbook"
+    },
+    "thermal_expansion_uK": {
+      "min": 7.6,
+      "max": 8.5,
+      "source": "CRC Handbook"
+    },
+    "embodied_energy_MJ_kg": {
+      "min": 20,
+      "max": 50,
+      "source": "Bath ICE v3.0 (estimate)"
+    },
+    "co2_footprint_kg_kg": {
+      "min": 1.5,
+      "max": 4.0,
+      "source": "Bath ICE v3.0 (estimate)"
+    }
+  }
+}
