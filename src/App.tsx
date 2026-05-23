@@ -32,9 +32,9 @@ export function App() {
     <div className="app">
       <header className="app-header">
         <div className="app-title">
-          <h1>OpenChartMS</h1>
+          <h1>MatSel</h1>
           <p className="tagline">
-            Open Ashby material-selection charts · {matCount} materials
+            OpenChartMS · Open Ashby material-selection charts · {matCount} materials
           </p>
           <p className="attribution">
             Method &amp; reference data from Ashby,{' '}
