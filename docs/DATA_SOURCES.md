@@ -1,22 +1,46 @@
 # Data sources, provenance and copyright
 
-OpenChartMS is an open-source teaching tool. The software code is MIT-licensed.
-This document explains where the *data* and *methods* come from, what
-permissions apply, and how to extend or replace the bundled corpus.
+OpenChartMS is an open-source teaching tool developed for **Harvard ES 192
+(Materials Selection and Failure Analysis)**. The software code is
+MIT-licensed. This document records where every piece of data comes from,
+which licence governs it, and why we believe the bundled corpus can be
+redistributed for educational purposes.
 
-## Primary source
+**This tool is for educational and non-commercial use only.**
+It is not intended for safety-critical engineering decisions.
 
-Every property value in `data/materials/*.json` carries a `source` field, and
-the bundled corpus is sourced from a single book:
+---
 
-> Ashby, M.F. (2025). *Materials Selection in Mechanical Design*, 6th edition.
-> Butterworth-Heinemann / Elsevier. ISBN 978-0-443-16028-8.
+## Corpus overview
 
-Specifically:
+The material database is built in phases. Every property value in
+`data/materials/*.json` carries a per-cell `source` field. The table below
+maps the `source` strings you will see in the JSON to the authoritative
+publication:
+
+| JSON `source` string | Full citation | Licence / terms |
+|---|---|---|
+| `Ashby App A (6th ed., 2025)` | Ashby, M.F. (2025). *Materials Selection in Mechanical Design*, 6th ed. Butterworth-Heinemann / Elsevier. ISBN 978-0-443-16028-8. | Textbook preface authorises reproduction for teaching with attribution |
+| `ASM Handbook Vol 1` | *ASM Handbook, Vol. 1: Properties and Selection — Irons, Steels, and High-Performance Alloys*. ASM International. | Property values are physical facts (see §"Why data can be redistributed") |
+| `ASM Handbook Vol 2` | *ASM Handbook, Vol. 2: Properties and Selection — Nonferrous Alloys and Special-Purpose Materials*. ASM International. | Same |
+| `ASM EH Vol 4` | *ASM Engineered Materials Handbook, Vol. 4: Ceramics and Glasses*. ASM International. | Same |
+| `CRC Handbook` | Haynes, W.M. (ed.) (2016). *CRC Handbook of Chemistry and Physics*, 97th ed. CRC Press. | Same |
+| `Cambridge Materials Data Book` | Cebon, D. & Ashby, M.F. (2001). *Cambridge Materials Data Book*. Cambridge University Engineering Department. Freely distributed at teaching.eng.cam.ac.uk. | Freely distributed for teaching |
+| `Bath ICE v3.0` | Hammond, G. & Jones, C. (2019). *Inventory of Carbon & Energy (ICE) v3.0*. University of Bath / BSRIA. | Research database; values used as factual reference |
+| `Materials Project mp-XXXX (DFT)` | Jain, A. et al. (2013). The Materials Project: A materials genome approach to accelerating materials innovation. *APL Materials*, 1, 011002. DOI: 10.1063/1.4812323 | **CC BY 4.0** — attribution required (see below) |
+| `Materials Project mp-XXXX (DFT, E = 9KG/(3K+G))` | Same Materials Project entry; Young's modulus *E* is derived from VRH bulk (*K*) and shear (*G*) moduli via the Voigt-Reuss-Hill relation | **CC BY 4.0** |
+
+---
+
+## Phase-by-phase provenance
+
+### Phase 0 — original corpus (56 materials)
+
+Source: Ashby Appendix A, Tables A.1–A.12, as listed below.
 
 | OpenChartMS file or feature | Book reference |
 |---|---|
-| `data/materials/*.json` | Appendix A, Tables A.1 – A.12 |
+| `data/materials/*.json` (phase-0 entries) | Appendix A, Tables A.1 – A.12 |
 | `data/indices.json` (preset indices) | Appendix C, Tables C.2 – C.8 |
 | Chart aesthetics (log-log, family envelopes, draggable index lines) | Chapter 3 |
 | Penalty function + Pareto trade-off (Trade-off tab) | §9.3 |
@@ -25,7 +49,97 @@ Specifically:
 | Process attribute matrix + cost model (Process tab) | Chapter 7 |
 | Eco-Audit lifecycle accounting (Eco-Audit tab) | Chapter 15 |
 
-## Why we believe the bundled data and charts can be redistributed
+### Phase 1 — specific alloy grades (35 materials, total: 91)
+
+Script: `scripts/add_phase1_materials.py`
+
+Added specific commercial alloy grades and advanced materials not covered in
+Ashby Appendix A. Primary sources:
+
+- **ASM Handbook Vol. 1** (steels: 4140, 4340 alloy steels)
+- **ASM Handbook Vol. 2** (aluminium alloys 1100, 2024-T3, 5052-H32, 6061-T6, 7075-T6; copper alloys C110, C260, C932, C17200; magnesium AZ31B/AZ91D; titanium Grade 2; Inconel 625/718)
+- **Aerospace manufacturer data sheets** (Ti-6Al-4V/Grade 2, 17-4PH stainless)
+- **ASTM standards** (316L, 304 stainless)
+- **Cambridge Materials Data Book** (natural materials: bamboo, cortical bone, UHMWPE)
+- **ASM Engineered Materials Handbook Vol. 4** (zirconia Y-TZP, Si₃N₄, B₄C, hydroxyapatite)
+- **Composites supplier data** (CFRP UD, aramid, basalt composite)
+- **Bath ICE v3.0** (eco properties: embodied energy, CO₂ footprint)
+
+### Phase 2 — gap-filling materials (39 materials, total: 130)
+
+Script: `scripts/add_phase2_materials.py`
+
+Added tool steels, refractory/precious metals, additional ceramics, foams,
+polymers, and natural materials to improve family coverage. Primary sources:
+
+- **ASM Handbook Vol. 1** (H13, M2, 52100, maraging 300 tool/die steels)
+- **ASM Handbook Vol. 2** (molybdenum, gold, silver, Zamak 3, Al A356-T6)
+- **ASM Engineered Materials Handbook** (Hastelloy C-276, Stellite 6, TiN, TiC, MgO, cBN)
+- **CRC Handbook** (graphite, granite, Zerodur glass-ceramic)
+- **Cambridge Materials Data Book** (porcelain, gypsum, Macor, C/C composite)
+- **Manufacturer data sheets** (Macor: Corning; PVDF: Arkema Kynar)
+- **Published foam literature** (Al closed/open-cell foam, syntactic foam; Gibson & Ashby, *Cellular Solids*, 2nd ed., 1997)
+- **ISO/DIN standards** (LCP, PPS, PEI/Ultem polymer grades)
+- **Bath ICE v3.0** (eco properties for all new entries)
+
+### Phase 3 — Materials Project API (29 materials, total: 159)
+
+Script: `scripts/add_phase3_materials_project.py`
+
+DFT-computed density and elastic constants were retrieved from the Materials
+Project API (accessed May 2025). Young's modulus is derived via the
+Voigt-Reuss-Hill relation *E = 9KG / (3K + G)*; a ±7% range is applied to
+reflect typical DFT accuracy for elastic moduli. Supplementary properties
+(strength, toughness, thermal, eco) were sourced from the references below.
+
+Materials added and their MP identifiers:
+
+| Material | MP id | Supplementary source |
+|---|---|---|
+| TiO₂ (rutile) | mp-2657 | ASM EH Vol 4, Bath ICE v3.0 |
+| ZnO (wurtzite) | mp-2133 | CRC Handbook, Bath ICE v3.0 |
+| Cr₂O₃ | mp-19399 | ASM EH Vol 4 |
+| CeO₂ | mp-20194 | CRC Handbook |
+| Y₂O₃ | mp-2652 | ASM EH Vol 4 |
+| Fe₂O₃ (haematite) | mp-19770 | CRC Handbook |
+| MgAl₂O₄ (spinel) | mp-3536 | ASM EH Vol 4 |
+| BeO (beryllia) | mp-1039 | ASM EH Vol 4 |
+| TaC | mp-1043 | ASM EH Vol 4 |
+| NbC | mp-1065 | ASM EH Vol 4 |
+| Cr₃C₂ | mp-1551 | ASM EH Vol 4 |
+| GaN | mp-804 | CRC Handbook |
+| ZrN | mp-1025 | ASM EH Vol 4 |
+| NbN | mp-1219 | CRC Handbook |
+| ZrB₂ | mp-1550 | ASM EH Vol 4 |
+| HfB₂ | mp-1966 | ASM EH Vol 4 |
+| MoSi₂ | mp-1174 | ASM EH Vol 4 |
+| Diamond (cubic C) | mp-66 | ASM EH Vol 4, Bath ICE v3.0 |
+| Germanium | mp-32 | CRC Handbook |
+| GaAs | mp-2534 | CRC Handbook |
+| InP | mp-20351 | CRC Handbook |
+| NiAl (B2) | mp-1090 | ASM Handbook Vol 2 |
+| Ni₃Al (γ′) | mp-2593 | ASM Handbook Vol 2 |
+| W (tungsten) | mp-91 | ASM Handbook Vol 2 |
+| Nb (niobium) | mp-39 | ASM Handbook Vol 2 |
+| Ta (tantalum) | mp-72 | ASM Handbook Vol 2 |
+| Re (rhenium) | mp-8 | CRC Handbook |
+| Ru (ruthenium) | mp-33 | CRC Handbook |
+| Ir (iridium) | mp-101 | CRC Handbook |
+
+**Materials Project citation (required under CC BY 4.0):**
+
+> Jain, A., Ong, S.P., Hautier, G., Chen, W., Richards, W.D., Dacek, S.,
+> Cholia, S., Gunter, D., Skinner, D., Ceder, G. & Persson, K.A. (2013).
+> Commentary: The Materials Project: A materials genome approach to accelerating
+> materials innovation. *APL Materials*, 1(1), 011002.
+> DOI: [10.1063/1.4812323](https://doi.org/10.1063/1.4812323)
+
+Data downloaded via `mp-api==0.42.1` using the Materials Project REST API
+(<https://api.materialsproject.org>). Accessed May 2025.
+
+---
+
+## Why data can be redistributed
 
 Three reasons:
 

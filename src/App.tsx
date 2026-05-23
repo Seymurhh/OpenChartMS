@@ -62,6 +62,59 @@ export function App() {
       {tab === 'hybrid' && <HybridSynth />}
       {tab === 'process' && <ProcessSelection />}
       {tab === 'eco' && <EcoAudit />}
+
+      <footer className="app-footer">
+        <p>
+          <strong>Educational use only — non-commercial.</strong>{' '}
+          OpenChartMS is an open-source teaching tool developed for{' '}
+          <strong>Harvard ES 192 (Materials Selection and Failure Analysis)</strong>.
+          Property values are provided for instructional purposes and are{' '}
+          <em>not</em> suitable for safety-critical engineering decisions.
+          For production work use MMPDS, ASM Handbook, NIST WebBook, or
+          manufacturer data sheets.
+        </p>
+        <p>
+          <strong>Data sources &amp; attribution.</strong>{' '}
+          Original corpus: Ashby, <em>Materials Selection in Mechanical Design</em> (6th ed., 2025) — Appendix A.{' '}
+          Alloy grades: ASM Handbooks Vol. 1 &amp; 2.{' '}
+          Ceramics &amp; glasses: ASM Engineered Materials Handbook Vol. 4.{' '}
+          Eco properties: Bath ICE v3.0 (Univ. of Bath / BSRIA).{' '}
+          Thermophysical data: CRC Handbook of Chemistry &amp; Physics.{' '}
+          DFT elastic constants (Phase 3 materials):{' '}
+          <a
+            href="https://materialsproject.org"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Materials Project
+          </a>{' '}
+          (Jain et al., <em>APL Materials</em> 1, 011002, 2013) — CC BY 4.0.{' '}
+          See{' '}
+          <a
+            href="https://github.com/Seymurhh/OpenChartMS/blob/main/docs/DATA_SOURCES.md"
+            target="_blank"
+            rel="noreferrer"
+          >
+            docs/DATA_SOURCES.md
+          </a>{' '}
+          for full provenance and per-cell citations.
+        </p>
+        <p>
+          <strong>No affiliation.</strong>{' '}
+          OpenChartMS is an independent academic project. "Granta", "EduPack",
+          and Ansys logos are trademarks of Ansys, Inc. This tool is not
+          affiliated with or endorsed by Ansys, Elsevier, Cambridge University,
+          or the Materials Project.{' '}
+          Software: MIT licence —{' '}
+          <a
+            href="https://github.com/Seymurhh/OpenChartMS"
+            target="_blank"
+            rel="noreferrer"
+          >
+            github.com/Seymurhh/OpenChartMS
+          </a>.
+        </p>
+      </footer>
     </div>
   );
 }

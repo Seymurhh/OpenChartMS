@@ -18,7 +18,20 @@
 
 ## Data
 
-56 materials × up to 22 properties, sourced from Ashby Appendix A (Tables A.1–A.12) and presented as factual reference data with per-cell citation. Applications descriptions are paraphrased rather than quoted. See [data/README.md](./data/README.md) for the schema and [docs/DATA_SOURCES.md](./docs/DATA_SOURCES.md) for the licensing rationale.
+**159 materials × up to 22 properties**, built in three phases:
+
+| Phase | Materials | Source |
+|---|---|---|
+| 0 — original corpus | 56 | Ashby App A, Tables A.1–A.12 (6th ed., 2025) |
+| 1 — specific alloy grades | +35 | ASM Handbooks Vol. 1 &amp; 2, manufacturer datasheets |
+| 2 — gap-filling materials | +39 | ASM EH Vol. 4, CRC Handbook, Bath ICE v3.0, Cambridge Materials Data Book |
+| 3 — Materials Project API | +29 | DFT density &amp; elasticity via Materials Project (CC BY 4.0) |
+
+Every property value carries a per-cell `source` citation in the JSON.
+Applications descriptions are paraphrased (not quoted) from Ashby Table A.1.
+See [data/README.md](./data/README.md) for the schema and
+[docs/DATA_SOURCES.md](./docs/DATA_SOURCES.md) for full provenance and
+licensing rationale.
 
 ## Run locally
 
@@ -63,6 +76,15 @@ Vite + React 18 + TypeScript + Plotly.js. Data is a static JSON corpus alias-imp
 
 ## Disclaimers
 
-OpenChartMS values are intended for teaching, not for safety-critical engineering design. For production work use MMPDS, ASM Handbook, NIST WebBook, or manufacturer data sheets.
+**Educational use only — non-commercial.** OpenChartMS is developed for
+Harvard ES 192 (Materials Selection and Failure Analysis) and is intended
+solely for teaching and non-commercial academic use.
 
-This is an independent academic project. "Granta", "EduPack", and Ansys logos are trademarks of Ansys, Inc. and are not used by this project. OpenChartMS is not affiliated with or endorsed by Ansys, Elsevier, or Cambridge University.
+Property values are for instructional purposes only and are **not** suitable
+for safety-critical engineering decisions. For production work use MMPDS,
+ASM Handbook, NIST WebBook, or manufacturer data sheets.
+
+This is an independent academic project. "Granta", "EduPack", and Ansys logos
+are trademarks of Ansys, Inc. and are not used by this project. OpenChartMS
+is not affiliated with or endorsed by Ansys, Elsevier, Cambridge University,
+or the Materials Project.
