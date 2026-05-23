@@ -3,8 +3,9 @@ import Plot from 'react-plotly.js';
 import type { Annotations, Layout, PlotData, Shape } from 'plotly.js';
 import { families, materials } from '../data/loadMaterials';
 import { PROPERTY_META, type FamilyId, type PropertyKey } from '../data/types';
-import { convexHull, type Point } from '../lib/hull';
 import { AXIS_STYLE, HOVER_LABEL, LEGEND_STYLE, PAPER_BG, PLOT_BG } from '../lib/chartStyle';
+
+interface Point { x: number; y: number; }
 
 export interface IndexLineSpec {
   expr: string;
@@ -24,6 +25,9 @@ interface Props {
   selectedIds?: Set<string>; // when present, materials NOT in this set are dimmed
   dragMode?: DragMode;
   onLassoSelect?: (ids: Set<string> | undefined) => void;
+  /** Fixed initial axis view in linear scale, e.g. [10, 25000]. If omitted, computed from data. */
+  xRangeFixed?: [number, number];
+  yRangeFixed?: [number, number];
 }
 
 function geomean(a: number, b: number): number {
@@ -39,6 +43,8 @@ export function AshbyChart({
   selectedIds,
   dragMode = 'zoom',
   onLassoSelect,
+  xRangeFixed,
+  yRangeFixed,
 }: Props) {
   const xMeta = PROPERTY_META[xKey];
   const yMeta = PROPERTY_META[yKey];
@@ -82,8 +88,10 @@ export function AshbyChart({
     return !selectedIds.has(id);
   };
 
-  // Family envelopes: convex hull smoothed with quadratic Bézier curves (textbook blob style),
-  // plus a family-name label at the centroid so the chart is legible without the legend.
+  // Family envelopes: PCA-oriented ellipse fitted in log-log space.
+  // Using PCA (rather than convex hull) gives the organic "Ashby bubble" look — the
+  // major axis follows the natural data correlation, so elongated families like metals
+  // produce a proper slanted oval instead of a distorted wedge.
   const envelopeData = useMemo(() => {
     const shapes: Partial<Shape>[] = [];
     const labels: Partial<Annotations>[] = [];
@@ -94,11 +102,19 @@ export function AshbyChart({
       const items = valid.filter((m) => m.family === f.id);
       if (items.length < 2) continue;
 
-      const pts: Point[] = [];
+      // Geometric midpoints in log space — used for PCA orientation.
+      const mids: Point[] = items.map((m) => ({
+        x: Math.log10(geomean(m.properties[xKey]!.min, m.properties[xKey]!.max)),
+        y: Math.log10(geomean(m.properties[yKey]!.min, m.properties[yKey]!.max)),
+      }));
+
+      // All four corners of each material's property range — used to size the ellipse
+      // so it actually encloses the full spread, not just the midpoints.
+      const corners: Point[] = [];
       for (const m of items) {
         const xr = m.properties[xKey]!;
         const yr = m.properties[yKey]!;
-        pts.push(
+        corners.push(
           { x: Math.log10(xr.min), y: Math.log10(yr.min) },
           { x: Math.log10(xr.min), y: Math.log10(yr.max) },
           { x: Math.log10(xr.max), y: Math.log10(yr.min) },
@@ -106,31 +122,49 @@ export function AshbyChart({
         );
       }
 
-      const hull = convexHull(pts);
-      if (hull.length < 3) continue;
-
-      // Inflate hull outward from centroid in log space for a bit of breathing room.
-      const cx = hull.reduce((s, p) => s + p.x, 0) / hull.length;
-      const cy = hull.reduce((s, p) => s + p.y, 0) / hull.length;
-      const inflated = hull.map((p) => ({
-        x: cx + (p.x - cx) * 1.12,
-        y: cy + (p.y - cy) * 1.12,
-      }));
-
-      // Smooth the polygon: midpoints of each edge become the Bézier anchors,
-      // original vertices become control points → gives the organic blob look.
-      const n = inflated.length;
-      const mids = inflated.map((p, i) => ({
-        x: (p.x + inflated[(i + 1) % n].x) / 2,
-        y: (p.y + inflated[(i + 1) % n].y) / 2,
-      }));
-      const L = (p: Point) => `${Math.pow(10, p.x)},${Math.pow(10, p.y)}`;
-      const start = mids[0];
-      let path = `M ${L(start)}`;
-      for (let i = 0; i < n; i++) {
-        path += ` Q ${L(inflated[(i + 1) % n])} ${L(mids[(i + 1) % n])}`;
+      // PCA on midpoints: compute centroid and 2×2 covariance.
+      const n = mids.length;
+      const cx = mids.reduce((s: number, p: Point) => s + p.x, 0) / n;
+      const cy = mids.reduce((s: number, p: Point) => s + p.y, 0) / n;
+      let sxx = 0, sxy = 0, syy = 0;
+      for (const p of mids) {
+        const dx = p.x - cx, dy = p.y - cy;
+        sxx += dx * dx; sxy += dx * dy; syy += dy * dy;
       }
-      path += ' Z';
+      sxx /= n; sxy /= n; syy /= n;
+
+      // Eigendecomposition of the 2×2 symmetric covariance matrix.
+      const trace = sxx + syy;
+      const disc = Math.sqrt(Math.max(0, trace * trace / 4 - (sxx * syy - sxy * sxy)));
+      const lambda1 = trace / 2 + disc;
+      const theta = Math.atan2(lambda1 - sxx, sxy || 1e-10);
+      const cosT = Math.cos(theta), sinT = Math.sin(theta);
+
+      // Scale the ellipse so it encloses all property-range corners (not just midpoints).
+      let maxA = 0, maxB = 0;
+      for (const p of corners) {
+        const dx = p.x - cx, dy = p.y - cy;
+        const u = Math.abs(dx * cosT + dy * sinT);   // extent along major axis
+        const v = Math.abs(-dx * sinT + dy * cosT);  // extent along minor axis
+        if (u > maxA) maxA = u;
+        if (v > maxB) maxB = v;
+      }
+
+      const pad = 1.20; // 20 % breathing room around all data
+      const a = maxA * pad;
+      const b = Math.max(maxB * pad, a * 0.12, 0.06); // minimum thickness
+      if (a <= 0) continue;
+
+      // Sample 48 evenly-spaced points on the rotated ellipse, convert to linear scale.
+      const N = 48;
+      const segs: string[] = [];
+      for (let i = 0; i <= N; i++) {
+        const t = (2 * Math.PI * i) / N;
+        const lx = cx + a * Math.cos(t) * cosT - b * Math.sin(t) * sinT;
+        const ly = cy + a * Math.cos(t) * sinT + b * Math.sin(t) * cosT;
+        segs.push(`${Math.pow(10, lx)},${Math.pow(10, ly)}`);
+      }
+      const path = `M ${segs[0]} ` + segs.slice(1).map((s: string) => `L ${s}`).join(' ') + ' Z';
 
       shapes.push({
         type: 'path',
@@ -143,7 +177,6 @@ export function AshbyChart({
         layer: 'below',
       } satisfies Partial<Shape>);
 
-      // Textbook style: bold family name in family color, no pill background.
       labels.push({
         x: Math.pow(10, cx),
         y: Math.pow(10, cy),
@@ -286,8 +319,9 @@ export function AshbyChart({
         font: { color: '#52524E', size: 13, family: 'Inter, sans-serif' },
       },
       type: 'log',
-      // Lock range from data + 0.5-decade padding so the index line never expands the axes.
-      range: [Math.log10(xRange.lo) - 0.5, Math.log10(xRange.hi) + 0.5],
+      range: xRangeFixed
+        ? [Math.log10(xRangeFixed[0]), Math.log10(xRangeFixed[1])]
+        : [Math.log10(xRange.lo) - 0.5, Math.log10(xRange.hi) + 0.5],
       autorange: false,
       showspikes: true,
       spikemode: 'across',
@@ -302,8 +336,9 @@ export function AshbyChart({
         font: { color: '#52524E', size: 13, family: 'Inter, sans-serif' },
       },
       type: 'log',
-      // Lock range from data + 0.5-decade padding.
-      range: [Math.log10(yRange.lo) - 0.5, Math.log10(yRange.hi) + 0.5],
+      range: yRangeFixed
+        ? [Math.log10(yRangeFixed[0]), Math.log10(yRangeFixed[1])]
+        : [Math.log10(yRange.lo) - 0.5, Math.log10(yRange.hi) + 0.5],
       autorange: false,
       showspikes: true,
       spikemode: 'across',

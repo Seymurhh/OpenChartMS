@@ -13,17 +13,28 @@ interface ChartPreset {
   label: string;
   x: PropertyKey;
   y: PropertyKey;
+  /** Canonical initial view in linear scale — matches Ashby textbook figure extents. */
+  xRange: [number, number];
+  yRange: [number, number];
 }
 
 const PRESETS: ChartPreset[] = [
-  { id: 'E-rho',         label: "Young's modulus E vs Density ρ (Fig 3.3)",         x: 'density_kg_m3',         y: 'youngs_modulus_GPa' },
-  { id: 'sigma-rho',     label: 'Yield strength σf vs Density ρ (Fig 3.4)',         x: 'density_kg_m3',         y: 'yield_strength_MPa' },
-  { id: 'E-sigma',       label: 'Modulus E vs Strength σf (Fig 3.5)',               x: 'yield_strength_MPa',    y: 'youngs_modulus_GPa' },
-  { id: 'K1c-E',         label: 'Fracture toughness K1c vs Modulus E (Fig 3.7)',    x: 'youngs_modulus_GPa',    y: 'fracture_toughness_MPa_sqrt_m' },
-  { id: 'K1c-sigma',     label: 'Fracture toughness K1c vs Strength σf (Fig 3.8)',  x: 'yield_strength_MPa',    y: 'fracture_toughness_MPa_sqrt_m' },
-  { id: 'lambda-alpha',  label: 'Thermal conductivity λ vs Thermal expansion α',    x: 'thermal_expansion_uK',  y: 'thermal_conductivity_W_mK' },
-  { id: 'embodied-E',    label: 'Embodied energy vs Modulus E',                     x: 'youngs_modulus_GPa',    y: 'embodied_energy_MJ_kg' },
-  { id: 'co2-rho',       label: 'CO₂ footprint vs Density ρ',                       x: 'density_kg_m3',         y: 'co2_footprint_kg_kg' },
+  // Fig 3.3 — E vs ρ: foams (ρ~50) through Ir (ρ~22500); elastomers (E~0.0001) through diamond (E~1100)
+  { id: 'E-rho',        label: "Young's modulus E vs Density ρ (Fig 3.3)",        x: 'density_kg_m3',        y: 'youngs_modulus_GPa',            xRange: [10,    25000], yRange: [1e-5,  1500]   },
+  // Fig 3.4 — σ vs ρ: same density span; strength from elastomers (0.01) to ultra-high (10000 MPa)
+  { id: 'sigma-rho',    label: 'Yield strength σf vs Density ρ (Fig 3.4)',        x: 'density_kg_m3',        y: 'yield_strength_MPa',            xRange: [10,    25000], yRange: [0.01,  15000]  },
+  // Fig 3.5 — E vs σ
+  { id: 'E-sigma',      label: 'Modulus E vs Strength σf (Fig 3.5)',              x: 'yield_strength_MPa',   y: 'youngs_modulus_GPa',            xRange: [0.01,  15000], yRange: [1e-5,  1500]   },
+  // Fig 3.7 — K1c vs E
+  { id: 'K1c-E',        label: 'Fracture toughness K1c vs Modulus E (Fig 3.7)',   x: 'youngs_modulus_GPa',   y: 'fracture_toughness_MPa_sqrt_m', xRange: [1e-4,  1500],  yRange: [0.01,  300]    },
+  // Fig 3.8 — K1c vs σ
+  { id: 'K1c-sigma',    label: 'Fracture toughness K1c vs Strength σf (Fig 3.8)', x: 'yield_strength_MPa',   y: 'fracture_toughness_MPa_sqrt_m', xRange: [0.01,  15000], yRange: [0.01,  300]    },
+  // Thermal: α spans ~0.1 (Si, invar) to ~700 µK⁻¹ (elastomers); λ spans ~0.01 to ~2500 (diamond)
+  { id: 'lambda-alpha', label: 'Thermal conductivity λ vs Thermal expansion α',   x: 'thermal_expansion_uK', y: 'thermal_conductivity_W_mK',     xRange: [0.05,  1000],  yRange: [0.01,  3000]   },
+  // Embodied energy vs E
+  { id: 'embodied-E',   label: 'Embodied energy vs Modulus E',                    x: 'youngs_modulus_GPa',   y: 'embodied_energy_MJ_kg',         xRange: [1e-4,  1500],  yRange: [0.5,   500000] },
+  // CO₂ vs density
+  { id: 'co2-rho',      label: 'CO₂ footprint vs Density ρ',                      x: 'density_kg_m3',        y: 'co2_footprint_kg_kg',           xRange: [10,    25000], yRange: [0.001, 100]    },
 ];
 
 function geomean(a: number, b: number): number {
@@ -333,6 +344,8 @@ export function ChartView() {
         selectedIds={sel.selectedIds}
         dragMode={lassoMode ? 'lasso' : 'zoom'}
         onLassoSelect={setGraphicalSelection}
+        xRangeFixed={preset.xRange}
+        yRangeFixed={preset.yRange}
       />
 
       <SelectedMaterialsPanel
