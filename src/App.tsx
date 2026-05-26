@@ -91,7 +91,7 @@ export function App() {
         <p>
           <strong>Educational use only — non-commercial.</strong>{' '}
           OpenChartMS is an open-source teaching tool developed for{' '}
-          <strong>Harvard ES 192 (Materials Selection and Failure Analysis)</strong>.
+          <strong>Material Selection related courses</strong>.
           Property values are provided for instructional purposes and are{' '}
           <em>not</em> suitable for safety-critical engineering decisions.
           For production work use MMPDS, ASM Handbook, NIST WebBook, or
